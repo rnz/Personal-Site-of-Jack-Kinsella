@@ -1,11 +1,13 @@
 ---
 layout: default
 title: Portfolio 
-subtitle: A selection of web apps I've built and online marketing work I've done.
+subtitle: A selection of web apps I've built or contributed to significantly. 
 ---
 
-* "Most Recent Project: Oxbridge Notes":#oxbridge_notes
-* "Bolivian Expess":#bolivian_express
+* "Oxbridge Notes":#oxbridge_notes
+* "Second Conscience":#second_conscience
+* "Hired Help":#hired_help
+* "Bolivian Express":#bolivian_express
 
 h2(#oxbridge_notes). Oxbridge Notes 
 
@@ -23,7 +25,7 @@ h3. ABTesting and Conversion Optimisation
 
 !images/oxbridge_notes_abtests.png!
 
-In order to maximize sales I integrated an internal ABtesting system.  The example above shows the results of an ongoing test where 50% of users see one version of the checkout page (with a plain checkout button),  and 50% see another version with a pretty green button. The adminstrator learns not only the result of the test but also whether the results are statistically valid.  
+In order to maximize sales I integrated an internal AB testing system.  The example above shows the results of an ongoing test where 50% of users see one version of the checkout page (with a plain checkout button),  and 50% see another version with a pretty green button. The administrator learns not only the result of the test but also whether the results are statistically valid.  
 
 h3. Custom Activity Feed
 
@@ -43,16 +45,27 @@ h3. Financial Reporting
 
 The administrator website has an overview of all the orders made over periods of time, broken down by category and by user. Using this data he can decide what products are the best sellers and so ought to be most heavily advertised.
 
+h2(#second_conscience). Second Conscience
+
+"Visit Second Consience":http://www.secondconscience.com
+
+At the end of every day Benjamin Franklin graded his own adherence of thirteen virtues, attempting to minimize transgressions. This personal project was my attempt to bring this behavioural modification tool into an electronic age. Users add numerous "habits" and attempt to win awards by completing them continuously for extended periods. The website is called second conscience it is an antidote to your own conscience's softness and will harass you with guilt emails if you forget to log on.  The project is not being maintained so it may have degraded somewhat since its inception.  
+
+!images/second_conscience_habits.png!
 
 h2(#bolivian_express). Bolivian Express
 
 "Visit Bolivian Express":http://www.bolivianexpress.org
 
+I was the sole developer and designer for Bolivian Express, Bolivia's major English language newspaper. Features include a CMS for articles built using Refinery, and a bespoke system for managing interns hires and payments via Paypal. I did a Rails 2.0 to Rails 3.0 upgrade on the project.
+
+!images/bolivian_express_calendar.png!
+
+
 h2(#hired_help). Hired Help
 
 "Visit Hired Help":http://www.hiredhelp.ie
 
-h2(#second_conscience). Second Conscience
+Whilst the project was started by another programmer I took over as lead developer in a team of three and, amongst other things, squashed many latent bugs, added automated tests, and built a bespoke search engine gem for faceted searches.
 
-"Visit Second Consience":http://www.secondconscience.com
-
+!images/hired_help_faceted_search.png!
