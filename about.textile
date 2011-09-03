@@ -11,7 +11,7 @@ subtitle: Ruby On Rails Freelancer. Specialising in E-Commerce and conversion op
 
 h2(#services). Professional Services Offered
 
-I am a full-stack web developer who builds web applications such as "Oxbridge Notes":http://www.oxbridgenotes.co.uk and "Bolivian Express":http://www.bolivianexpress.org. I have four years experience with the Ruby on Rails web framework and it associated technologies, namely Javascript and jQuery, CSS, the HTTP protocol, Linux and cloud infrastructure.
+I am a full-stack web developer who builds web applications such as "Oxbridge Notes":http://www.oxbridgenotes.co.uk and "Bolivian Express":http://www.bolivianexpress.org. I have four years experience with Ruby and the Ruby on Rails web framework and it associated technologies, CSS, the HTTP protocol, Linux, the cloud infrastructure, and, to a lesser extent, Javascript.
 
 h2(#why_hire). Why Hire Me?
 
