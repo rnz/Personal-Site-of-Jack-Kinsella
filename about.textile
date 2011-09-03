@@ -5,9 +5,9 @@ subtitle: Ruby On Rails Freelancer. Specialising in E-Commerce and conversion op
 ---
 h2. Professional Services Offered
 
-I am a full-stack web developer who builds web applications such as "Oxbridge Notes":http://www.oxbridgenotes.co.uk and "Bolivian Express":http://www.bolivianexpress.org. I have four years experience with the Ruby on Rails web framework and it associated technologies, namely Javascript and Jquery, CSS, the HTTP protocol, linux and cloud infrastructure.
+I am a full-stack web developer who builds web applications such as "Oxbridge Notes":http://www.oxbridgenotes.co.uk and "Bolivian Express":http://www.bolivianexpress.org. I have four years experience with the Ruby on Rails web framework and it associated technologies, namely Javascript and Jquery, CSS, the HTTP protocol, Linux and cloud infrastructure.
 
-h2. What Other People Have To Say 
+h2. What Other People Say 
 
 bq. "There are absolutely no management issues when working with Jack"
 ??Chee Yeo, Founder, "29 Steps":http://29steps.co.uk/??
@@ -19,9 +19,9 @@ bq. "Jack is an innovative and dedicated professional with strong drive and ener
 ??Sheila Doyle, Chief Information Officer, "British Petroleum":http://www.bp.com??
 
 
-h2. Eduction
+h2. Education
 
-I've been programming since my father brought home a green-text-on-black-background terminal when I was four years old. Over the years I have taught myself to program through tinkering, studying "classic texts in computer science":http://www.cc2e.com/, and watching "MIT open courseware":http://ocw.mit.edu/index.htm lectures in Math and Computer Science. 
+I've been programming since my father brought home a green-text-on-black-background terminal when I was four years old. Over the years I have taught myself to program through tinkering, studying "classic texts in computer science":http://www.cc2e.com/, and watching "MIT open courseware":http://ocw.mit.edu/index.htm lectures in math and computer science. 
 
 From 2006 to 2009 I studied law at the "University of Oxford":http://www.ox.ac.uk/, intending to add business understanding and communication skills to my technical abilities.
 
