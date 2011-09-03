@@ -2,5 +2,12 @@
 layout: default
 title: About 
 ---
-h1 Hire me
-p Please 
+h2. Hire me
+
+Please 
+Please
+
+
+Please
+
+Please
