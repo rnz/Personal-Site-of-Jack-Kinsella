@@ -543,8 +543,8 @@ figcaption {
   margin: 0;
 }
 .links a {
-  display: block;
-  font-weight: bold;
+  /* display: block;*/
+   font-weight: bold;
 }
 .links span {
   display: block;
@@ -554,6 +554,10 @@ figcaption {
   clear: both;
   padding-top: 2.25em;
   padding-bottom: 3em;
+}
+
+p#first_about {
+  margin-top:1.125em;
 }
 /*  
 
@@ -627,7 +631,7 @@ figcaption {
     width: auto;
     position: relative;
   }
-  .contact {
+  .contact, .about {
     margin-bottom: 2.25em;
   }
   .links li {
