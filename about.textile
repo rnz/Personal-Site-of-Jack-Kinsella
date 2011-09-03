@@ -21,7 +21,7 @@ I have a track record of building, deploying, and maintaining web applications s
 
 h3. Reliable, Bug Free Code
 
-I write automated tests for your application which automatically verify your application works following every release. This is huge competitive advantage since your competitors will likely need to hire a tester to run each release through a browser to check each new version.
+I write automated tests for your application which automatically verify your application works following every release. This is huge competitive advantage since your competitors will likely need to hire a tester to manually test every page in a web browser. 
 
 h3. Open Source Technology
 
@@ -56,7 +56,7 @@ bq. "Ever since hiring Jack to do our internet marketing we've never been busier
 
 h2(#education). Education
 
-I've been programming since my father brought home a green-text-on-black-background terminal when I was four years old. Over the years I have taught myself to program through tinkering, studying "classic texts in computer science":http://www.cc2e.com/, and watching "MIT open courseware":http://ocw.mit.edu/index.htm lectures in math and computer science. 
+I've been working with computers ever since my father brought home a green-text-on-black-background terminal when I was four years old. Over the years I taught myself to program through tinkering, studying "classic texts in computer science":http://www.cc2e.com/, and watching "MIT open courseware":http://ocw.mit.edu/index.htm lectures in math and computer science. 
 
 From 2006 to 2009 I studied law at the "University of Oxford":http://www.ox.ac.uk/, intending to add business understanding and communication skills to my technical abilities.
 
