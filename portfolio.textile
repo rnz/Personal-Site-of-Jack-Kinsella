@@ -10,6 +10,8 @@ subtitle: A selection of web apps I've built and online marketing work I've done
 
 h2(#oxbridge_notes). Oxbridge Notes 
 
+!images/oxbridge_notes_home.png!
+
 "Visit Oxbridge Notes":http://www.oxbridgenotes.co.uk
 
 h2(#bolivian_express). Bolivian Express
@@ -23,6 +25,4 @@ h2(#hired_help). Hired Help
 h2(#second_conscience). Second Conscience
 
 "Visit Second Consience":http://www.secondconscience.com
-
-<figure></figure>
 
