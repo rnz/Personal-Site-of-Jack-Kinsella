@@ -17,7 +17,7 @@ h2(#why_hire). Why Hire Me?
 
 h3. Technical Competence 
 
-I have a track record of building, deploying, and maintaining web applications such as those in my "portfolio":/projects.html. I attend "Ruby conferences":http://scottishrubyconference.com/ and "Ruby meetups":http://rubyireland.com/. I've contributed to over fifteen "open source projects":https://github.com/jackkinsella, I "blog about Ruby":/blog.html, I answer programming questions in "forums":http://stackoverflow.com/users/286286/jack-kinsella, and I'm writing a book on Rails best practices.
+I have a track record of building, deploying, and maintaining web applications such as those in my "portfolio":/portfolio.html. I attend "Ruby conferences":http://scottishrubyconference.com/ and "Ruby meetups":http://rubyireland.com/. I've contributed to over fifteen "open source projects":https://github.com/jackkinsella, I "blog about Ruby":/blog.html, I answer programming questions in "forums":http://stackoverflow.com/users/286286/jack-kinsella, and I'm writing a book on Rails best practices.
 
 h3. Reliable, Bug Free Code
 
