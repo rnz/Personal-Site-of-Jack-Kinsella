@@ -34,7 +34,7 @@ A web programmer's job isn't just to program; his job is also to advise on techn
 Drawing from my experience seeing projects grow from napkin scribbles to unmanned money-making machines, I try to point out key features you may be omitting, and, equally, expensive and pointless features you want to include. Here are a small sample of the issues I will advise you on:
 
 * *SEO strategy*: By far the cheapest traffic comes through high ranks in organic search. Through years of experimentation I've found a technique to increase organic traffic dramatically, four-fold in the most recent case. I will help you build SEO into the core of your application.
-* *Tracking Key Performance Indicators*: The three big advantages of doing business online are (a)automation of repetitive tasks, (b)low overheads, and (c)the ability to track and analyse data. By monitoring KPIs such as sign ups, uploads, sales in a particular category and time spent on individual pages, you can make informed decisions about your business, leading to a competitive edge.
+* *Tracking Key Performance Indicators*: The three big advantages of doing business online are automation of repetitive tasks, low overheads, and *the ability to track and analyse data*. By monitoring KPIs such as sign ups, uploads, sales in a particular category and time spent on individual pages, you can make informed decisions about your business, leading to a competitive edge.
 * *Backup Solutions*: Losing your customer's data will at best damage your reputation and at worst, completely ruin your business. I'll help you figure out a sensible way to back up your data.
 * *Security Against Hacking*: Hacked accounts and leaked personal details will cost your business dearly. I use the latest security best practices to prevent common hacks, such as SQL injection, Cross-Site-Forgery-Protection, Cross-Site-Scripting and Mass Assignment hacks.
 
@@ -60,6 +60,6 @@ I've been programming since my father brought home a green-text-on-black-backgro
 
 From 2006 to 2009 I studied law at the "University of Oxford":http://www.ox.ac.uk/, intending to add business understanding and communication skills to my technical abilities.
 
-Before University I scored A1s in math, physics, chemistry, biology and English in the Irish Leaving Certificate, equivalent of British A-Level examinations.
+I scored one of the highest results in Ireland in the Leaving Certificate, earning A1s in math, physics, chemistry, biology and English. 
 
 I speak fluent Spanish, having lived in Spain and worked in Bolivia.
