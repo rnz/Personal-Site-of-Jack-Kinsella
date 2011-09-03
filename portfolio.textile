@@ -19,37 +19,37 @@ h3. E-Commerce and Design
 
 !images/oxbridge_notes_home.png!
 
-The website is a heavily modified open source T-shirt e-commerce shop selling digital downloads. Types of notes are sorted by category and key products are displayed here in the homepage.  Buyers add the digital products to the cart just like any e-commerce website and upon payment the notes are automatically delivered to them. No staff are needed to run the website.
+I cut down on development time by taking an open source e-commerce store for T-Shirts and modifying it to sell digital downloads. Above, you can see categories of notes in the left sidebar and key products displayed on the homepage.  Buyers add packages of notes to the cart just like in standard e-commerce websites, and upon payment the notes are automatically delivered to them. No staff are needed to make or process sales.
  
 h3. ABTesting and Conversion Optimisation
 
 !images/oxbridge_notes_abtests.png!
 
-In order to maximize sales I integrated an internal AB testing system.  The example above shows the results of an ongoing test where 50% of users see one version of the checkout page (with a plain checkout button),  and 50% see another version with a pretty green button. The administrator learns not only the result of the test but also whether the results are statistically valid.  
+In order to maximize sales I integrated an internal AB testing system.  The example above shows the results of an ongoing test whereby 50% of visitors see one version of the checkout page (with a plain checkout button), and the other 50% see an alternate version with a pretty green button. The administrator learns not only the result of the test but also whether he can rely on this result as something statistically valid.  
 
 h3. Custom Activity Feed
 
 !images/oxbridge_notes_activity.png!
 
-Administrators of the website can see all key user activities, giving them awareness of how the business is doing, what their users are up to and the ability to anticipate problems.
+Administrators of the website can see all key user activities, giving them awareness of how the business is doing and what their users are up to. Prior to this the administrators would have to visit many different pages to find the same information.
 
-h3. User Area with File Management
+h3. Seller Area with File Management
  
 !images/oxbridge_notes_file_management.png!
 
-Sellers of notes can manage their inventory in detail. Change they make modify the products within the website. Shown above is one of a screen in their administrative area which lets them delete individual files.
+Sellers of notes can manage their inventory and changes they make will modify the live notes for sale on the website's front end. Shown above is one of screens in the seller's administrative area where they can delete individual files included in certain products.
 
 h3. Financial Reporting
  
 !images/oxbridge_notes_orders_overview.png!
 
-The administrator website has an overview of all the orders made over periods of time, broken down by category and by user. Using this data he can decide what products are the best sellers and so ought to be most heavily advertised.
+The administrator website has an overview of all the orders made over periods of time, broken down by category and by user. Using this data he learns what products sell best and so he knows where he ought to be most focusing his marketing efforts.
 
 h2(#second_conscience). Second Conscience
 
 "Visit Second Consience":http://www.secondconscience.com
 
-At the end of every day Benjamin Franklin graded his own adherence of thirteen virtues, attempting to minimize transgressions. This personal project was my attempt to bring this behavioural modification tool into an electronic age. Users add numerous "habits" and attempt to win awards by completing them continuously for extended periods. The website is called second conscience it is an antidote to your own conscience's softness and will harass you with guilt emails if you forget to log on.  The project is not being maintained so it may have degraded somewhat since its inception.  
+At the end of every day Benjamin Franklin graded his own adherence to thirteen virtues and attempted to minimize transgressions. This personal project was my attempt to bring his behavioural modification tool into the electronic age. Users add numerous "habits" and attempt to win awards by completing them continuously for extended periods. The website is called second conscience because reinforces your own conscience by harassing you with guilt emails if you forget to log in or transgress too frequently.  The project is not being maintained so it may have degraded somewhat.  
 
 !images/second_conscience_habits.png!
 
@@ -66,6 +66,6 @@ h2(#hired_help). Hired Help
 
 "Visit Hired Help":http://www.hiredhelp.ie
 
-Whilst the project was started by another programmer I took over as lead developer in a team of three and, amongst other things, squashed many latent bugs, added automated tests, and built a bespoke search engine gem for faceted searches.
+Whilst the project was started by another programmer I took over as lead developer in a team of three and, amongst other things, squashed latent bugs, added automated tests and backup systems, did heavy refactoring, and built a private search engine gem for the faceted searches you see below.
 
 !images/hired_help_faceted_search.png!
