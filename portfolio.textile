@@ -3,36 +3,46 @@ layout: default
 title: Portfolio 
 subtitle: A selection of web apps I've built and online marketing work I've done.
 ---
-* "Oxbridge Notes":#oxbridge_notes
-* "Bolivian Express":#bolivian_express
-* "Hired Help":#hired_help
-* "Second Conscience":#second_conscience
+
+* "Most Recent Project: Oxbridge Notes":#oxbridge_notes
+* "Bolivian Expess":#bolivian_express
 
 h2(#oxbridge_notes). Oxbridge Notes 
 
-On online marketplace where students can upload their college notes and sell them, earning a commission on every sale. I built, and designed this app from scratch and am the only maintainer.
+"Visit Oxbridge Notes":http://www.oxbridgenotes.co.uk
+
+On online marketplace where students can upload their college notes and sell them, earning a commission on every sale. I built and designed this app from scratch and have maintained it for nearly two years.  
+
+h3. E-Commerce and Design
 
 !images/oxbridge_notes_home.png!
 
-Front page design my own. Key products are displayed on the homepage.  Buyers can visit those pages then add the products to cart. Upon payment the notes are automatically delivered to them.
+The website is a heavily modified open source T-shirt e-commerce shop selling digital downloads. Types of notes are sorted by category and key products are displayed here in the homepage.  Buyers add the digital products to the cart just like any e-commerce website and upon payment the notes are automatically delivered to them. No staff are needed to run the website.
+ 
+h3. ABTesting and Conversion Optimisation
 
 !images/oxbridge_notes_abtests.png!
 
-I added ABingo, an abtest framework into the application, which shows 50% of users one version of the page (in this example, a standard checkout button) and 50% another version (here, a green button) and informs the adminstrator when a statistically valid result has been reached.
+In order to maximize sales I integrated an internal ABtesting system.  The example above shows the results of an ongoing test where 50% of users see one version of the checkout page (with a plain checkout button),  and 50% see another version with a pretty green button. The adminstrator learns not only the result of the test but also whether the results are statistically valid.  
+
+h3. Custom Activity Feed
 
 !images/oxbridge_notes_activity.png!
 
-Administrators of the website have a bird's eye view of key activities, giving them awareness of how the business is doing and what their users are up to.
+Administrators of the website can see all key user activities, giving them awareness of how the business is doing, what their users are up to and the ability to anticipate problems.
 
+h3. User Area with File Management
+ 
 !images/oxbridge_notes_file_management.png!
 
-Sellers of notes can manage their inventory in detail. Shown above is the screen where they can delete individual files, or even entire products. 
+Sellers of notes can manage their inventory in detail. Change they make modify the products within the website. Shown above is one of a screen in their administrative area which lets them delete individual files.
+
+h3. Financial Reporting
  
 !images/oxbridge_notes_orders_overview.png!
 
-The administrator of the website has an overview of all the orders made over a certain period of time, and can break this down by category and by user.
+The administrator website has an overview of all the orders made over periods of time, broken down by category and by user. Using this data he can decide what products are the best sellers and so ought to be most heavily advertised.
 
-"Visit Oxbridge Notes":http://www.oxbridgenotes.co.uk
 
 h2(#bolivian_express). Bolivian Express
 
