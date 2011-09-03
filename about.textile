@@ -1,13 +1,30 @@
 ---
 layout: default
 title: About 
+subtitle: Ruby On Rails Freelancer. Specialising in E-Commerce and conversion optimisation.
 ---
-h2. Hire me
+h2. Professional Services Offered
 
-Please 
-Please
+I am a full-stack web developer who builds web applications such as "Oxbridge Notes":http://www.oxbridgenotes.co.uk and "Bolivian Express":http://www.bolivianexpress.org. I have four years experience with the Ruby on Rails web framework and it associated technologies, namely Javascript and Jquery, CSS, the HTTP protocol, linux and cloud infrastructure.
+
+h2. What Other People Have To Say 
+
+bq. "There are absolutely no management issues when working with Jack"
+??Chee Yeo, Founder, "29 Steps":http://29steps.co.uk/??
+
+bq. "Insanely committed to learning and developing his skills; helped to architect a social networking site driven by his passion for understanding people and the way they think. Not to mention his dizzying energy and work ethic. Work for him, work with him, get him to work for you -really can't go wrong, one in 6 billion."
+??Amaru Villanueva Rance, Innovation Analyst, "giffgaff":http://giffgaff.com/??
+
+bq. "Jack is an innovative and dedicated professional with strong drive and energy. He has a keen eye for commercial opportunities and is honing his skills by developing new business model that exploit emerging technologies and services. Jack is worth meeting, and he will add value to a business idea."
+??Sheila Doyle, Chief Information Officer, "British Petroleum":http://www.bp.com??
 
 
-Please
+h2. Eduction
 
-Please
+I've been programming since my father brought home a green-text-on-black-background terminal when I was four years old. Over the years I have taught myself to program through tinkering, studying "classic texts in computer science":http://www.cc2e.com/, and watching "MIT open courseware":http://ocw.mit.edu/index.htm lectures in Math and Computer Science. 
+
+From 2006 to 2009 I studied law at the "University of Oxford":http://www.ox.ac.uk/, intending to add business understanding and communication skills to my technical abilities.
+
+Before University I scored A1s in math, physics, chemistry, biology and English in the Irish Leaving Certificate, equivalent of British A-Level examinations.
+
+I speak fluent Spanish, having lived in Spain and worked in Bolivia.
