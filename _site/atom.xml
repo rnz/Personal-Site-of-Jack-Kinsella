@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Jack Kinsella</title>
+ <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
+ <link href="http://www.jackkinsella.ie/"/>
+ <updated>2011-09-03T12:36:41+01:00</updated>
+ <id>http://www.jackkinsella.ie/</id>
+ <author>
+   <name>Jack Kinsella</name>
+ </author>
+
+ 
+ 
+</feed>
