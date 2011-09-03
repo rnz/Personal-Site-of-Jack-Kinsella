@@ -1,4 +1,28 @@
 ---
 layout: default
-title: Projects
+title: Portfolio 
+subtitle: A selection of web apps I've built and online marketing work I've done.
 ---
+* "Oxbridge Notes":#oxbridge_notes
+* "Bolivian Express":#bolivian_express
+* "Hired Help":#hired_help
+* "Second Conscience":#second_conscience
+
+h2(#oxbridge_notes). Oxbridge Notes 
+
+"Visit Oxbridge Notes":http://www.oxbridgenotes.co.uk
+
+h2(#bolivian_express). Bolivian Express
+
+"Visit Bolivian Express":http://www.bolivianexpress.org
+
+h2(#hired_help). Hired Help
+
+"Visit Hired Help":http://www.hiredhelp.ie
+
+h2(#second_conscience). Second Conscience
+
+"Visit Second Consience":http://www.secondconscience.com
+
+<figure></figure>
+
