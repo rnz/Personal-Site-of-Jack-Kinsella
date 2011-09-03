@@ -1,0 +1,49 @@
+---
+layout: post
+title: Textmate to Vim
+subtitle: A guide to using your favourite Textmate features in Vim
+/* published: false*/
+
+---
+
+|Command| Textmate| Vim|
+|Search File |@<Ctrl> + S then type method name@|@/def donught@|
+|Search Project Down|
+|Search Project Up|
+|Go To Line|
+|Delete Line|cmd + shift + k ||
+|Automatically Idenent Code|
+|Check for Syntax Errors|
+|Run Current File|
+|Last Migration|
+|Run Tests For Given File|cmd + r |
+|Snippets|
+|Add opposing bracket or quotation mark|
+|Close current html tag|cmd + alt + .|
+|View CSS Colour Wheel|
+|New Tab|
+|Switch Tabs| SHIFT + COMMAND + [ (left) ] (right) |
+|Replace donuts with eclairs in file|
+|Replace donuts with eclairs in project|
+|Save File|
+|Autocomplete method|
+|Autocomplete filename|
+|Merge Current Line With Next Line|ctrl+shift+J
+|Find a specific Method|cmd + shift + t|
+|Vertical Blocks| Alt dragging |
+|Duplicate Line/Selection| ctrl-shift-D|
+|Find Related File| alt-cmd-down |
+|Select A Word |cntrl + w
+|Add Placeholder text|lorem + tab|
+|Move Selected Text Up|cntrl + cmd + up (or down)||
+|Rename A File|space (whilst focus is on project drawer)|
+|Open A File|
+|Run Migrations|cntl + shift + |:Rmigrate
+|Edit ends of selected lines|cmd+opt+a||
+|Select A Word|ctrl+w|
+|Spell Checking|
+|Wrap Selected Text in P tags| SHIFT + CONTROL + W |
+|Upcase Selected Text|CONTROL + SHIFT + U|
+|Titelcase Current Text| CONTROL + OPTION + U |
+|Clipboard History|⌘ + SHIFT + V |
+
