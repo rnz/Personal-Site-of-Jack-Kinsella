@@ -17,7 +17,7 @@ On online marketplace where students can upload their college notes and sell the
 
 h3. E-Commerce and Design
 
-!images/oxbridge_notes_home.png!
+!images/oxbridge_notes_home2.png!
 
 I cut down on development time by taking an open source e-commerce store for T-Shirts and modifying it to sell digital downloads. Above, you can see categories of notes in the left sidebar and key products displayed on the homepage.  Buyers add packages of notes to the cart just like in standard e-commerce websites, and upon payment the notes are automatically delivered to them. No staff are needed to make or process sales.
  
