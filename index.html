@@ -1,10 +1,12 @@
 ---
 layout: default
+title: Ruby on Rails Consultant 
+subtitle: Marketing-driven-developer with an eye for SEO and conversion optimisation.
 ---
-<!-- {% for post in site.posts %}-->
-<!--   <div class="post">-->
-<!--     <h2>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></h2>-->
-<!--     {{ post.content }}-->
-<!--   </div>-->
-<!-- {% endfor %}-->
+{% for post in site.posts %}
+  <div class="post">
+    <h2>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></h2>
+    {{ post.content }}
+  </div>
+{% endfor %}
 
