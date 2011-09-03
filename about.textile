@@ -21,11 +21,11 @@ I have a track record of building, deploying, and maintaining web applications s
 
 h3. Reliable, Bug Free Code
 
-I write automated tests for your application which automatically verify your application works following every release. This is huge competitive advantage since your competitors will likely need to hire a tester to manually test every page in a web browser. 
+I practice TDD, which means I write code that automatically verifies our application works according to specification following every release. This is huge competitive advantage since your competitors will likely need to hire a tester to manually run every page in a web browser. Although TDD takes more time than conventional coding, the guarantees against bugs make it the coding practice of choice for highly successful web companies such as LinkedIn, Facebook and Google.
 
 h3. Open Source Technology
 
-I'm familiar with the key open-source libraries in Ruby/Rails,  and I endeavour to use these instead of re-inventing the wheel and writing custom code. Less custom code means equates to a smaller bill.
+I'm familiar with the key open-source libraries in Ruby/Rails, and I try to use these instead of writing custom code. Less custom code means I spend less time building your application and you receive a smaller bill for my services.
 
 h3. Advice on Key Technical Considerations
 
@@ -35,9 +35,8 @@ Drawing from my experience seeing projects grow from napkin scribbles to unmanne
 
 * *SEO strategy*: By far the cheapest traffic comes through high ranks in organic search. Through years of experimentation I've found a technique to increase organic traffic dramatically, three-fold in the most recent case. I will help you build SEO into the core of your application.
 * *Tracking Key Performance Indicators*: The three big advantages of doing business online are automation of repetitive tasks, low overheads, and *the ability to track and analyse data*. By monitoring KPIs such as sign ups, uploads, sales in a particular category and time spent on individual pages, you can make informed decisions about your business, leading to a competitive edge.
-* *Backup Solutions*: Losing your customer's data will at best damage your reputation and at worst, completely ruin your business. I'll help you figure out a sensible way to back up your data.
-* *Security Against Hacking*: Hacked accounts and leaked personal details will cost your business dearly. I use the latest security best practices to prevent common hacks, such as SQL injection, Cross-Site-Forgery-Protection, Cross-Site-Scripting and Mass Assignment hacks.
-
+* *Backup Solutions*: Losing your customer's data will ruin your business's reputation and may even force you to shut down your business. I'll discuss and implement an approriate backup option for your application. 
+* *Security Against Hacking*: Hacked accounts and leaked personal details will cost your business dearly. I use the latest security best practices to prevent common hacks, such as SQL injection, Cross-Site-Forgery-Protection, Cross-Site-Scripting and Mass Assignment overrides.
 
 h2(#testimonials). What Other People Say 
 
@@ -47,7 +46,7 @@ bq. "There are absolutely no management issues when working with Jack"
 bq. "Insanely committed to learning and developing his skills; helped to architect a social networking site driven by his passion for understanding people and the way they think. Not to mention his dizzying energy and work ethic. Work for him, work with him, get him to work for you -really can't go wrong, one in 6 billion."
 ??Amaru Villanueva Rance, Innovation Analyst, "giffgaff":http://giffgaff.com/??
 
-bq. "Jack is an innovative and dedicated professional with strong drive and energy. He has a keen eye for commercial opportunities and is honing his skills by developing new business model that exploit emerging technologies and services. Jack is worth meeting, and he will add value to a business idea."
+bq. "Jack is an innovative and dedicated professional with strong drive and energy. He has a keen eye for commercial opportunities and is honing his skills by developing new business models that exploit emerging technologies and services. Jack is worth meeting, and he will add value to a business idea."
 ??Sheila Doyle, Chief Information Officer, "British Petroleum":http://www.bp.com??
 
 bq. "Ever since hiring Jack to do our internet marketing we've never been busier -- despite the recession."
