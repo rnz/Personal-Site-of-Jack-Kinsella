@@ -19,7 +19,7 @@ Somtimes you will need to install extra plugins. These go in your janus.rake fil
 
 h2. Opening Up The Editor
 
-|Open project from command line| [in folder] mate. | [in folder] mvim .|
+|Open project from command line| [cd to folder] mate . | [cd to folder] mvim . |
 
 h2. Undo / Redo. 
 
@@ -33,7 +33,7 @@ h2. Opening, closing and creating files
 
 h2. Saving Files
 
-|Save file| CMD + S | :w
+|Save file| CMD + S | :w |
 |Save file as| CMD + Shift + S | :saveas NEWNAME |
 
 
@@ -61,7 +61,7 @@ h2. Running Tests and Files
 
 h2. Moving Around A File
 
-|Go to beginning of line| CTRL + A | ^ | 
+|Go to beginning of line| CTRL + A | ^ |
 |Go to end of line | CTRL + E | $ |
 |Go to top of file | CMD + Up | g |
 |Go to bottom of file | CMD + Down | GG |
@@ -71,7 +71,7 @@ h2. Moving Around A File
 
 h2. Indentation
 
-|Automatically indent code beautifully| Alt + CMD + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle) | gg=G |
+|Automatically indent code beautifully| Alt + CMD + B ("Code Beautifier Plugin":https://github.com/mocoso/code-beautifier.tmbundle) | gg=G |
 |Indent|CMD + [ | > |
 |Unindent| CMD + ] | < |
 
@@ -85,22 +85,22 @@ h2. Spelling
 |Highlight incorrect spellings| ALT + CMD + ; | :set spell |
 |Next incorrect spelling | CMD + : | ] s (opposite directino with [s) - assumes spell checking is enabled |
 
-h2. Rails
+h2. Ruby On Rails
 
-|Call RoR generate script| cntrl + \| [1..8]| :Rgenerate [controller model scaffold] Blog |
-|Go To Last Migration| None | :Rmig  | 
+|Call RoR generate script| cntrl + | [1..8]| :Rgenerate [controller model scaffold] Blog |
+|Go To Last Migration| None | :Rmig  |
 |Run migrations|cntl + shift + \| |:Rmigrate |
 |Switch focus to project drawer| CMD + ALT + ` (check)| <CTRL> + w <CTRL> + w OR VIMRC noremap <tab> <C-w><C-w> |
 |Insert erb's <%= | CNTRL + SHIFT + . | yss= (after text on screen type this to surround line with tags) |
 |Insert erb's <% | CNTRL + SHIT + . (cycle through )| yss- |
 |Run unit test caret inside of | SHIFT + CMD + R | :.Rake (. here represent current line. Substitute for other lines) TEST |
 |Go to test file (e.g. from user.rb to user_spec.rb)| ALT + SHIT + CMD + DOWN | :A (:AV in a new split, :AT new tab)|
-|Find related file| alt-cmd-down | :R (If typed in controller -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))
+|Find related file| alt-cmd-down | R (If typed in controller -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))|
 
 h2. Bookmarks
 
 |Add bookmark| CMD + F2 (Never worked on my mac) | m[a-z] (this letter refers to this bookmark) |
-|Jump to bookmark| F2 (next) + F2 (previosu) | 'a (:marks to sell all marks)
+|Jump to bookmark| F2 (next) + F2 (previosu) | 'a (:marks to sell all marks)|
 
 h2. Searching Files
 

@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T17:51:41+01:00</updated>
+ <updated>2011-09-04T18:15:58+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -27,8 +27,8 @@
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Open project from command line&lt;/td&gt;
-		&lt;td&gt; [in folder] mate. &lt;/td&gt;
-		&lt;td&gt; [in folder] mvim .&lt;/td&gt;
+		&lt;td&gt; [cd to folder] mate . &lt;/td&gt;
+		&lt;td&gt; [cd to folder] mvim . &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Undo / Redo.&lt;/h2&gt;
@@ -62,8 +62,10 @@
 	&lt;tr&gt;
 		&lt;td&gt;Save file&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + S &lt;/td&gt;
-		&lt;td&gt; :w&lt;br /&gt;
-|Save file as&lt;/td&gt;
+		&lt;td&gt; :w &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Save file as&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Shift + S &lt;/td&gt;
 		&lt;td&gt; :saveas &lt;span class=&quot;caps&quot;&gt;NEWNAME&lt;/span&gt; &lt;/td&gt;
 	&lt;/tr&gt;
@@ -136,8 +138,9 @@
 		&lt;td&gt;Go to beginning of line&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + A &lt;/td&gt;
 		&lt;td&gt; ^ &lt;/td&gt;
-		&lt;td&gt; &lt;br /&gt;
-|Go to end of line &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go to end of line &lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + E &lt;/td&gt;
 		&lt;td&gt; $ &lt;/td&gt;
 	&lt;/tr&gt;
@@ -171,7 +174,7 @@
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Automatically indent code beautifully&lt;/td&gt;
-		&lt;td&gt; Alt + &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle) &lt;/td&gt;
+		&lt;td&gt; Alt + &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + B (&lt;a href=&quot;https://github.com/mocoso/code-beautifier.tmbundle&quot;&gt;Code Beautifier Plugin&lt;/a&gt;) &lt;/td&gt;
 		&lt;td&gt; gg=G &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
@@ -210,11 +213,11 @@
 		&lt;td&gt; ] s (opposite directino with [s) &amp;#8211; assumes spell checking is enabled &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2&gt;Rails&lt;/h2&gt;
+&lt;h2&gt;Ruby On Rails&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Call RoR generate script&lt;/td&gt;
-		&lt;td&gt; cntrl + \&lt;/td&gt;
+		&lt;td&gt; cntrl + &lt;/td&gt;
 		&lt;td&gt; [1..8]&lt;/td&gt;
 		&lt;td&gt; :Rgenerate [controller model scaffold] Blog &lt;/td&gt;
 	&lt;/tr&gt;
@@ -222,8 +225,9 @@
 		&lt;td&gt;Go To Last Migration&lt;/td&gt;
 		&lt;td&gt; None &lt;/td&gt;
 		&lt;td&gt; :Rmig  &lt;/td&gt;
-		&lt;td&gt; &lt;br /&gt;
-|Run migrations&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Run migrations&lt;/td&gt;
 		&lt;td&gt;cntl + shift + \&lt;/td&gt;
 		&lt;td&gt; &lt;/td&gt;
 		&lt;td&gt;:Rmigrate &lt;/td&gt;
@@ -256,8 +260,10 @@
 	&lt;tr&gt;
 		&lt;td&gt;Find related file&lt;/td&gt;
 		&lt;td&gt; alt-cmd-down &lt;/td&gt;
+		&lt;td&gt; R (If typed in controller &amp;#8594; View(of method selected); If typed in view &amp;#8594; Controller; Migrations &amp;#8594; Next Migration (:A previous migration))&lt;/td&gt;
+	&lt;/tr&gt;
 &lt;/table&gt;
-:R (If typed in controller -&gt; View(of method selected); If typed in view -&gt; Controller; Migrations -&gt; Next Migration (:A previous migration))&lt;h2&gt;Bookmarks&lt;/h2&gt;
+&lt;h2&gt;Bookmarks&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Add bookmark&lt;/td&gt;
@@ -267,8 +273,10 @@
 	&lt;tr&gt;
 		&lt;td&gt;Jump to bookmark&lt;/td&gt;
 		&lt;td&gt; F2 (next) + F2 (previosu) &lt;/td&gt;
+		&lt;td&gt; &amp;#8217;a (:marks to sell all marks)&lt;/td&gt;
+	&lt;/tr&gt;
 &lt;/table&gt;
-'a (:marks to sell all marks)&lt;h2&gt;Searching Files&lt;/h2&gt;
+&lt;h2&gt;Searching Files&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Search file downwards&lt;/td&gt;

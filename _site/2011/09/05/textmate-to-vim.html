@@ -125,8 +125,8 @@ jQuery(document).ready(function() {
 <table>
 	<tr>
 		<td>Open project from command line</td>
-		<td> [in folder] mate. </td>
-		<td> [in folder] mvim .</td>
+		<td> [cd to folder] mate . </td>
+		<td> [cd to folder] mvim . </td>
 	</tr>
 </table>
 <h2>Undo / Redo.</h2>
@@ -160,8 +160,10 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Save file</td>
 		<td> <span class="caps">CMD</span> + S </td>
-		<td> :w<br />
-|Save file as</td>
+		<td> :w </td>
+	</tr>
+	<tr>
+		<td>Save file as</td>
 		<td> <span class="caps">CMD</span> + Shift + S </td>
 		<td> :saveas <span class="caps">NEWNAME</span> </td>
 	</tr>
@@ -234,8 +236,9 @@ jQuery(document).ready(function() {
 		<td>Go to beginning of line</td>
 		<td> <span class="caps">CTRL</span> + A </td>
 		<td> ^ </td>
-		<td> <br />
-|Go to end of line </td>
+	</tr>
+	<tr>
+		<td>Go to end of line </td>
 		<td> <span class="caps">CTRL</span> + E </td>
 		<td> $ </td>
 	</tr>
@@ -269,7 +272,7 @@ jQuery(document).ready(function() {
 <table>
 	<tr>
 		<td>Automatically indent code beautifully</td>
-		<td> Alt + <span class="caps">CMD</span> + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle) </td>
+		<td> Alt + <span class="caps">CMD</span> + B (<a href="https://github.com/mocoso/code-beautifier.tmbundle">Code Beautifier Plugin</a>) </td>
 		<td> gg=G </td>
 	</tr>
 	<tr>
@@ -308,11 +311,11 @@ jQuery(document).ready(function() {
 		<td> ] s (opposite directino with [s) &#8211; assumes spell checking is enabled </td>
 	</tr>
 </table>
-<h2>Rails</h2>
+<h2>Ruby On Rails</h2>
 <table>
 	<tr>
 		<td>Call RoR generate script</td>
-		<td> cntrl + \</td>
+		<td> cntrl + </td>
 		<td> [1..8]</td>
 		<td> :Rgenerate [controller model scaffold] Blog </td>
 	</tr>
@@ -320,8 +323,9 @@ jQuery(document).ready(function() {
 		<td>Go To Last Migration</td>
 		<td> None </td>
 		<td> :Rmig  </td>
-		<td> <br />
-|Run migrations</td>
+	</tr>
+	<tr>
+		<td>Run migrations</td>
 		<td>cntl + shift + \</td>
 		<td> </td>
 		<td>:Rmigrate </td>
@@ -354,8 +358,10 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Find related file</td>
 		<td> alt-cmd-down </td>
+		<td> R (If typed in controller &#8594; View(of method selected); If typed in view &#8594; Controller; Migrations &#8594; Next Migration (:A previous migration))</td>
+	</tr>
 </table>
-:R (If typed in controller -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))<h2>Bookmarks</h2>
+<h2>Bookmarks</h2>
 <table>
 	<tr>
 		<td>Add bookmark</td>
@@ -365,8 +371,10 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Jump to bookmark</td>
 		<td> F2 (next) + F2 (previosu) </td>
+		<td> &#8217;a (:marks to sell all marks)</td>
+	</tr>
 </table>
-'a (:marks to sell all marks)<h2>Searching Files</h2>
+<h2>Searching Files</h2>
 <table>
 	<tr>
 		<td>Search file downwards</td>

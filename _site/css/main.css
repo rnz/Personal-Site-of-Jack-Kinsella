@@ -227,6 +227,29 @@ pre {
   text-shadow: none;
   color: #d9d4bf;
 }
+table {
+color: white;
+background: #C00;
+border-collapse: collapse;
+width: 100%;
+border: 5px solid #900;
+border-spacing:2px;
+
+}
+td {
+padding: .5em 1em;
+}
+
+tbody tr:nth-child(even)
+{
+	background:transparent url(http://24ways.org/examples/tables-with-style/tr_bg.png) repeat top left;
+}
+tbody td:nth-child(even)
+{
+background:#C00;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24ways.org/examples/tables-with-style/tr_bg.png', sizingMethod='scale');
+}
+
 img::selection {
   background: transparent;
 }
