@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T00:58:07+01:00</updated>
+ <updated>2011-09-04T01:14:38+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -69,6 +69,20 @@
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;View &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; Colour Wheel&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + C (&lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;)&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Call RoR Generate Script&lt;/td&gt;
+		&lt;td&gt; cntrl + \&lt;/td&gt;
+		&lt;td&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Switch Focus To Project Drawer&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;ALT&lt;/span&gt; + ` (check)&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Insert Erb&amp;#8217;s &amp;lt;%= or &amp;lt;% &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNTRL&lt;/span&gt; + ^ &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;New Tab&lt;/td&gt;
@@ -78,13 +92,28 @@
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;COMMAND&lt;/span&gt; + [ (left) ] (right) &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Replace donuts with eclairs in file&lt;/td&gt;
+		&lt;td&gt;Go To Tab&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt;[1-9]&lt;br /&gt;
+|Replace donuts with eclairs in file&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Replace donuts with eclairs in project&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Save File&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Save File As&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Create New File&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Select All&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + A &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Increase Selection Left One Word&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Autocomplete method&lt;/td&gt;
@@ -142,9 +171,8 @@
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Spell Checking&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Wrap Selected Text in P tags&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + : ??&lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;&lt;br /&gt;
+|Wrap Selected Text in P tags&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + W &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
@@ -158,6 +186,31 @@
 	&lt;tr&gt;
 		&lt;td&gt;Clipboard History&lt;/td&gt;
 		&lt;td&gt;⌘ + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + V &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Add Bookmark&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + F2 &lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;&lt;br /&gt;
+|Next Bookmark&lt;/td&gt;
+		&lt;td&gt; F2 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Previous Bookmark&lt;/td&gt;
+		&lt;td&gt; shift + F2 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;indent&lt;/td&gt;
+		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + [&lt;br /&gt;
+|unindent&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + ]&lt;br /&gt;
+|sort lines&lt;/td&gt;
+		&lt;td&gt; F5&lt;br /&gt;
+|undo&lt;/td&gt;
+		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Z&lt;br /&gt;
+|Bigger/Smaller Font&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + /-&lt;br /&gt;
+|redo&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + Z&lt;br /&gt;
+|&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;</content>
  </entry>

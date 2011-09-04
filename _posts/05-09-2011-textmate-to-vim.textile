@@ -20,12 +20,20 @@ subtitle: A guide to using your favourite Textmate features in Vim
 |Snippets|
 |Add opposing bracket or quotation mark|
 |Close current html tag|cmd + alt + .|
-|View CSS Colour Wheel|
+|View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
+|Call RoR Generate Script| cntrl + \| |
+|Switch Focus To Project Drawer| CMD + ALT + ` (check)|
+|Insert Erb's <%= or <% | CNTRL + ^ |
 |New Tab|
 |Switch Tabs| SHIFT + COMMAND + [ (left) ] (right) |
+|Go To Tab| CMD[1-9]
 |Replace donuts with eclairs in file|
 |Replace donuts with eclairs in project|
 |Save File|
+|Save File As|
+|Create New File|
+|Select All| CMD + A |
+|Increase Selection Left One Word|
 |Autocomplete method|
 |Autocomplete filename|
 |Merge Current Line With Next Line|ctrl+shift+J
@@ -41,9 +49,18 @@ subtitle: A guide to using your favourite Textmate features in Vim
 |Run Migrations|cntl + shift + |:Rmigrate
 |Edit ends of selected lines|cmd+opt+a||
 |Select A Word|ctrl+w|
-|Spell Checking|
+|Spell Checking| CMD + : ??TEST
 |Wrap Selected Text in P tags| SHIFT + CONTROL + W |
 |Upcase Selected Text|CONTROL + SHIFT + U|
 |Titelcase Current Text| CONTROL + OPTION + U |
 |Clipboard History|⌘ + SHIFT + V |
-
+|Add Bookmark| CMD + F2 TEST
+|Next Bookmark| F2 |
+|Previous Bookmark| shift + F2 |
+|indent|CMD + [
+|unindent| CMD + ]
+|sort lines| F5
+|undo|CMD + Z
+|Bigger/Smaller Font| CMD + /-
+|redo| CMD + SHIFT + Z
+||
