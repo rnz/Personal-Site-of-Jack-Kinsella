@@ -16,21 +16,6 @@
     width: 51em;
     max-width: none;
   }
-  #content p,
-  #content ul,
-  #content ol,
-  #content h3,
-  #content pre,
-  .byline,
-  .links,
-  #copyright {
-    margin-left: 10.5em;
-    margin-right: 10.5em;
-  }
-  #content h2 {
-    margin-left: 6.461538461538462em;
-    margin-right: 6.461538461538462em;
-  }
   #logo {
     top: 3em;
   }
@@ -92,10 +77,10 @@
     width: 100%;
     padding: 1.125em 0;
     position: relative;
-    -webkit-transform-origin: 10.5em center;
-    -moz-transform-origin: 10.5em center;
-    -ms-transform-origin: 10.5em center;
-    transform-origin: 10.5em center;
+    -webkit-transform-origin: 1.125em center;
+    -moz-transform-origin: 1.125em center;
+    -ms-transform-origin: 1.125em center;
+    transform-origin: 1.125em center;
   }
   #articles h1, #articles p {
     float: left;

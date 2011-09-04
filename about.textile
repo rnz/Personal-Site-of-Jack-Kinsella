@@ -52,7 +52,6 @@ bq. "Jack is an innovative and dedicated professional with strong drive and ener
 bq. "Ever since hiring Jack to do our internet marketing we've never been busier -- despite the recession."
 ??Frank Kinsella (Related), "Western Laser Clinic":http://www.westernlaserclinic.ie??
 
-
 h2(#education). Education
 
 I've been working with computers ever since my father brought home a green-text-on-black-background terminal when I was four years old. Over the years I taught myself to program through tinkering, studying "classic texts in computer science":http://www.cc2e.com/, and watching "MIT open courseware":http://ocw.mit.edu/index.htm lectures in math and computer science. 

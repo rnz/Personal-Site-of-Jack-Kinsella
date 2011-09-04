@@ -386,6 +386,9 @@ blockquote {
   float:left;
   margin-bottom: 0.5625em;
 }
+#education {
+ clear:both;
+}
 #masthead, #content, #colophon {
   margin: 0 5.6%;
 }
@@ -488,6 +491,7 @@ nav .icon {
 #content img {
   max-width: 100%;
   margin: 0 auto;
+  margin-left: 40px;
 }
 #content .full {
   width: 100%;
@@ -627,7 +631,7 @@ p#first_about {
     width: 30em;
   }
   #content li {
-    list-style-position: outside;
+    list-style-position: inside;
   }
   .byline div {
     width: 9em;
@@ -649,9 +653,10 @@ p#first_about {
     width: auto;
     position: relative;
   }
-  .contact {
+  .contact, .about_and_follow {
     margin-bottom: 2.25em;
   }
+
   .links li {
     float: left;
     width: 9em;
