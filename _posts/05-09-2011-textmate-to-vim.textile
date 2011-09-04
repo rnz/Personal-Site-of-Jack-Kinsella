@@ -22,7 +22,10 @@ Some preliminary assumptions:
 
 h2. Format
 
-|Action To Be Completed| Shortcut In Textmate | Shortcut in Vim|
+|Action To Be Completed| Shortcut in Textmate | Shortcut in Vim|
+[1..9] 1,2,3,4,5,6,7,8 or 9
+[Narration]
+FILENAME a variable representing your filename
 
 h2. Opening Up The Editor
 
@@ -36,31 +39,37 @@ h2. Undo / Redo.
 h2. Opening, closing and creating files
 
 |Open a file| ⌘ + 0 | :e FILENAME (use Tab completion after first few letters) [Save File first]|
-|Create new file| File > new | ⌘ + T (new tab); type; :w newfilename |
+|Create new file| File > new | ⌘ + T (new tab) [You will be in a new file. Type and then] :w newfilename |
 
 h2. Saving Files
 
 |Save file| ⌘ + S | :w |
-|Save file as| ⌘ + ⇧ + S | :saveas NEWNAME |
+|Save file as| ⌘ + ⇧ + S | :saveas NEWFILENAME |
 
 
 h2. File renaming
 
-|Rename a file|space (whilst focus is on project drawer)| Focus On Project Drawer. Select File (search). m (menu appears) m type name of file [enter]. You may need to press r to refresh project drawer (usually happens automatically after a few minutes)|
+|Rename a file|[focus on project drawer and select a file] space [type new name]| "Focus on NerdTree":#nerd_tree. Select File (however you want: e.g. search or jklh). m (brings up a menu ) m (chose to modify file) type new name of file and press enter.
 
-h2. Project Drawer
+h2(#nerd_tree). Project Drawer/NerdTree
 
 |Focus on project drawer| ⌃ + <Tab> | <Tab> (assuming you've set it up. otherwise CNRL + W/ ⌃ + W)|
 |Close/Open project drawer| ⌃ + ⌥ + ⌘ + D |\n|
 |Change size of project drawer| Use mouse to adjust size | let NERDTreeWinSize=16 [vimrc] |
+|Opening a subfolder| |Enter to open/close a directory|
+|Refresh project tree to reflect newly added files|Automatic|Nearly always automatic. Otherwise press c|
+
+h2. Help
+
+|Search help for 'grep'|Click help menu and search for help|:help grep|
 
 h2. Tabs
 
-|New tab| Click On File In Project Drawer | ⌘ + Shit + T |
+|New tab| Click on file in project drawer | ⌘ + Shit + T |
 |Drop tab| ⌃ + w | ⌃ + w |
-|Switch tabs left | ⇧ + COMMAND + [ (left) ] | :tabp |
-|Switch tabs right | ⇧ + COMMAND + right | :tabn |
-|Go to tab| ⌘[1-9] | ⌘;[1-9]|
+|Switch tabs left | ⇧ + ⌘ + [ (left) ] | :tabp |
+|Switch tabs right | ⇧ + ⌘ + right | :tabn |
+|Go to tab| ⌘[1-9] | ⌘[1-9]|
 
 h2. Running Tests and Files
 
@@ -73,9 +82,9 @@ h2. Moving Around A File
 |Go to end of line | ⌃ + E | $ |
 |Go to top of file | ⌘ + Up | g |
 |Go to bottom of file | ⌘ + Down | GG |
-|Move up one line (with Carret at same position)| ⌃ + P | k |
-|Move down one line (with Carret at same position)| CNRL + N| j|
-|Go to line| ⌘ + L 20 | :20 |
+|Move up one line (with caret at same position)| ⌃ + P | k |
+|Move down one line (with caret at same position)| CNRL + N| j|
+|Go to line 20 | ⌘ + L 20 | :20 |
 
 h2. Indentation
 
@@ -85,38 +94,42 @@ h2. Indentation
 
 h2. Font Size, Line Numberings
 
-|Bigger/Smaller Font| ⌘ +/- | (⌘ +/- doesn't work well) set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size) |
-|Line numbering| Menu Command | :set number (on) :set nonumber (off). Note the symmetry. This is the same for all VIM commands|
+|Bigger/Smaller Font| ⌘ +/- | (⌘ +/- makes the screen disproportionate) [~/gvimrc.local] set guifont=Monaco:h18 (replace 18 with desired font-size) [Note that you can try this command out by typing it into a live VIM session just by preceding it with a :, e.g. :set.....]|
+|Line numbering| ⌘ + ⇧ + L| :set number (on) :set nonumber (off). Note the symmetry between turning the number on and off, the only different being the preceded "no". This is the same for all VIM set commands. As with other preferences this may be placed in vimrc.local|
 
 h2. Spell Checking
 
 |Highlight incorrect spellings| ⌥ + ⌘ + ; | :set spell |
-|Next incorrect spelling | ⌘ + : | ] s (opposite directino with [s) - assumes spell checking is enabled |
+|Next incorrect spelling | ⌘ + : | [Assuming you've enabled spell checking and can see highlighter errors] ] s (Go to previous spelling error with [s) |
 
 h2. Ruby On Rails
 
-|Call RoR generate script | "⌃ + Pipe [1..8]== |:Rgenerate [⌃ler model scaffold] Blog |
+|Call Ruby On Rails generate script | "⌃ + Pipe [1..8]== |:Rgenerate [⌃ler model scaffold] Blog |
 |Go To Last Migration| None | :Rmig  |
-|Run migrations| ⌃ + ⇧ + Pipe |:Rmigrate |
-|Switch focus to project drawer| ⌘ + ⌥ + ` (check)| <⌃> + w <⌃> + w OR VIMRC noremap <tab> <C-w><C-w> |
-|Insert erb's <%= | ⌃ + ⇧ + . | yss= (after text on screen type this to surround line with tags) |
+|Run migrations| ⌃ + ⇧ + Pipe |:Rake when in a migration|
+|Switch focus to project drawer| ⌘ + ⌥ + ` (check)| ⌃+ w ⌃ + w [Make this into a simple tab by adding this to your vimrc: noremap <tab> <C-w><C-w> ]|
+|Insert erb's <%= | ⌃ + ⇧ + . | [type text you want to surround first and place caret some inside] yss= |
 |Insert erb's <% | ⌃ + SHIT + . (cycle through )| yss- |
-|Run unit test caret inside of | ⇧ + ⌘ + R | :.Rake (. here represent current line. Substitute for other lines) TEST |
+|Run unit test caret inside of | ⇧ + ⌘ + R | :.Rake (. here represents the current line. You can subsitute this for other lines e.g. :40Rake) TEST|
 |Go to test file (e.g. from user.rb to user_spec.rb)| ⌥ + SHIT + ⌘ + DOWN | :A (:AV in a new split, :AT new tab)|
-|Find related file| ⌥-⌘-down | R (If typed in ⌃ler -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))|
+|Find related file| ⌥-⌘-down | R (If typed within the Controller you'll be brought to the View corresponding to the method selected; If typed in view -> Controller; Migrations -> Next Migration; Typed in Model -> Schema. For something more precise see the following VIM only commands
+|Go to related controller| ⌥ + ⇧ + ⌘ + down | :Rco |
+|Go to related helper| '' | :Rhe |
+|Create a posts controller | none |:Rco posts! [note the exclamation mark]|
+|Extract to partial| [Select text] ⌃ + H | [Select text] :Rextract PARTIAL_NAME |
 
 h2. Bookmarks
 
-|Add bookmark| ⌘ + F2 (Never worked on my mac) | m[a-z] (this letter refers to this bookmark) |
-|Jump to bookmark| F2 (next) + F2 (previosu) | 'a (:marks to sell all marks)|
+|Add bookmark| ⌘ + F2 (Never worked on my mac) | m[a-z] (The letter in the range refers to this bookmark) |
+|Jump to bookmark| F2 (next) + F2 (previous) | 'a (Where 'a' is a bookmark previous set. Type :marks to see all marks)|
 
 h2. Searching Files
 
-|Search file downwards|@<⌃> + S then type method name@|@/def donught@|
-|Search file upwards | ⇧ + ⌃ + S THING_SEARCHING_FOR | ?THING_SEARCHING_FOR |
+|Search file upwards for TOM | ⇧ + ⌃ + S TOM | ?TOM [Then press enter once then repeatedly press n or N to continue searching up or down]|
+|Search file downwards for TOM |<⌃> + S TOM [Same as above for repeated search]|
 |Full screen |"(Lion Only)":https://github.com/enormego/EGOTextMateFullScreen | ⌘ + Enter |
 |Search entire project | ⌘ + ⇧ + F (grep) | ,a THING_SEARCHING_FOR (ack) |
-|Find a specific Method|⌘ + ⇧ + t| /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)|
+|Find a specific Method|⌘ + ⇧ + t| /def first_letters_of_method_name OR * [Cycles through instances of the method name under the caret... not necessarily the definition] #does the same but in the opposie direction|
 
 h2. Replacing Text in Files and Project
 

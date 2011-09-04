@@ -107,11 +107,13 @@ jQuery(document).ready(function() {
 <table>
 	<tr>
 		<td>Action To Be Completed</td>
-		<td> Shortcut In Textmate </td>
+		<td> Shortcut in Textmate </td>
 		<td> Shortcut in Vim</td>
 	</tr>
 </table>
-<h2>Opening Up The Editor</h2>
+[1..9] 1,2,3,4,5,6,7,8 or 9
+[Narration]
+FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 <table>
 	<tr>
 		<td>Open project from command line</td>
@@ -142,7 +144,7 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Create new file</td>
 		<td> File &gt; new </td>
-		<td> ⌘ + T (new tab); type; :w newfilename </td>
+		<td> ⌘ + T (new tab) [You will be in a new file. Type and then] :w newfilename </td>
 	</tr>
 </table>
 <h2>Saving Files</h2>
@@ -155,18 +157,16 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Save file as</td>
 		<td> ⌘ + ⇧ + S </td>
-		<td> :saveas <span class="caps">NEWNAME</span> </td>
+		<td> :saveas <span class="caps">NEWFILENAME</span> </td>
 	</tr>
 </table>
 <h2>File renaming</h2>
 <table>
 	<tr>
 		<td>Rename a file</td>
-		<td>space (whilst focus is on project drawer)</td>
-		<td> Focus On Project Drawer. Select File (search). m (menu appears) m type name of file [enter]. You may need to press r to refresh project drawer (usually happens automatically after a few minutes)</td>
-	</tr>
+		<td>[focus on project drawer and select a file] space [type new name]</td>
 </table>
-<h2>Project Drawer</h2>
+"Focus on NerdTree":#nerd_tree. Select File (however you want: e.g. search or jklh). m (brings up a menu ) m (chose to modify file) type new name of file and press enter.<h2 id="nerd_tree">Project Drawer/NerdTree</h2>
 <table>
 	<tr>
 		<td>Focus on project drawer</td>
@@ -183,12 +183,30 @@ jQuery(document).ready(function() {
 		<td> Use mouse to adjust size </td>
 		<td> let NERDTreeWinSize=16 [vimrc] </td>
 	</tr>
+	<tr>
+		<td>Opening a subfolder</td>
+		<td> </td>
+		<td>Enter to open/close a directory</td>
+	</tr>
+	<tr>
+		<td>Refresh project tree to reflect newly added files</td>
+		<td>Automatic</td>
+		<td>Nearly always automatic. Otherwise press c</td>
+	</tr>
+</table>
+<h2>Help</h2>
+<table>
+	<tr>
+		<td>Search help for &#8216;grep&#8217;</td>
+		<td>Click help menu and search for help</td>
+		<td>:help grep</td>
+	</tr>
 </table>
 <h2>Tabs</h2>
 <table>
 	<tr>
 		<td>New tab</td>
-		<td> Click On File In Project Drawer </td>
+		<td> Click on file in project drawer </td>
 		<td> ⌘ + Shit + T </td>
 	</tr>
 	<tr>
@@ -198,18 +216,18 @@ jQuery(document).ready(function() {
 	</tr>
 	<tr>
 		<td>Switch tabs left </td>
-		<td> ⇧ + <span class="caps">COMMAND</span> + [ (left) ] </td>
+		<td> ⇧ + ⌘ + [ (left) ] </td>
 		<td> :tabp </td>
 	</tr>
 	<tr>
 		<td>Switch tabs right </td>
-		<td> ⇧ + <span class="caps">COMMAND</span> + right </td>
+		<td> ⇧ + ⌘ + right </td>
 		<td> :tabn </td>
 	</tr>
 	<tr>
 		<td>Go to tab</td>
 		<td> ⌘[1-9] </td>
-		<td> ⌘;[1-9]</td>
+		<td> ⌘[1-9]</td>
 	</tr>
 </table>
 <h2>Running Tests and Files</h2>
@@ -248,17 +266,17 @@ jQuery(document).ready(function() {
 		<td> GG </td>
 	</tr>
 	<tr>
-		<td>Move up one line (with Carret at same position)</td>
+		<td>Move up one line (with caret at same position)</td>
 		<td> ⌃ + P </td>
 		<td> k </td>
 	</tr>
 	<tr>
-		<td>Move down one line (with Carret at same position)</td>
+		<td>Move down one line (with caret at same position)</td>
 		<td> <span class="caps">CNRL</span> + N</td>
 		<td> j</td>
 	</tr>
 	<tr>
-		<td>Go to line</td>
+		<td>Go to line 20 </td>
 		<td> ⌘ + L 20 </td>
 		<td> :20 </td>
 	</tr>
@@ -286,12 +304,12 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Bigger/Smaller Font</td>
 		<td> ⌘ +/- </td>
-		<td> (⌘ +/- doesn&#8217;t work well) set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size) </td>
+		<td> (⌘ +/- makes the screen disproportionate) [~/gvimrc.local] set guifont=Monaco:h18 (replace 18 with desired font-size) [Note that you can try this command out by typing it into a live <span class="caps">VIM</span> session just by preceding it with a :, e.g. :set&#8230;..]</td>
 	</tr>
 	<tr>
 		<td>Line numbering</td>
-		<td> Menu Command </td>
-		<td> :set number (on) :set nonumber (off). Note the symmetry. This is the same for all <span class="caps">VIM</span> commands</td>
+		<td> ⌘ + ⇧ + L</td>
+		<td> :set number (on) :set nonumber (off). Note the symmetry between turning the number on and off, the only different being the preceded &#8220;no&#8221;. This is the same for all <span class="caps">VIM</span> set commands. As with other preferences this may be placed in vimrc.local</td>
 	</tr>
 </table>
 <h2>Spell Checking</h2>
@@ -304,13 +322,13 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Next incorrect spelling </td>
 		<td> ⌘ + : </td>
-		<td> ] s (opposite directino with [s) &#8211; assumes spell checking is enabled </td>
+		<td> [Assuming you&#8217;ve enabled spell checking and can see highlighter errors] ] s (Go to previous spelling error with [s) </td>
 	</tr>
 </table>
 <h2>Ruby On Rails</h2>
 <table>
 	<tr>
-		<td>Call RoR generate script </td>
+		<td>Call Ruby On Rails generate script </td>
 		<td> &quot;⌃ + Pipe [1..8]== </td>
 		<td>:Rgenerate [⌃ler model scaffold] Blog </td>
 	</tr>
@@ -322,17 +340,17 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Run migrations</td>
 		<td> ⌃ + ⇧ + Pipe </td>
-		<td>:Rmigrate </td>
+		<td>:Rake when in a migration</td>
 	</tr>
 	<tr>
 		<td>Switch focus to project drawer</td>
 		<td> ⌘ + ⌥ + ` (check)</td>
-		<td> &lt;⌃&gt; + w &lt;⌃&gt; + w OR <span class="caps">VIMRC</span> noremap <tab> <C-w><C-w> </td>
+		<td> ⌃+ w ⌃ + w [Make this into a simple tab by adding this to your vimrc: noremap <tab> <C-w><C-w> ]</td>
 	</tr>
 	<tr>
 		<td>Insert erb&#8217;s &lt;%= </td>
 		<td> ⌃ + ⇧ + . </td>
-		<td> yss= (after text on screen type this to surround line with tags) </td>
+		<td> [type text you want to surround first and place caret some inside] yss= </td>
 	</tr>
 	<tr>
 		<td>Insert erb&#8217;s &lt;% </td>
@@ -342,7 +360,7 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Run unit test caret inside of </td>
 		<td> ⇧ + ⌘ + R </td>
-		<td> :.Rake (. here represent current line. Substitute for other lines) <span class="caps">TEST</span> </td>
+		<td> :.Rake (. here represents the current line. You can subsitute this for other lines e.g. :40Rake) <span class="caps">TEST</span></td>
 	</tr>
 	<tr>
 		<td>Go to test file (e.g. from user.rb to user_spec.rb)</td>
@@ -352,7 +370,25 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Find related file</td>
 		<td> ⌥-⌘-down </td>
-		<td> R (If typed in ⌃ler &#8594; View(of method selected); If typed in view &#8594; Controller; Migrations &#8594; Next Migration (:A previous migration))</td>
+		<td> R (If typed within the Controller you&#8217;ll be brought to the View corresponding to the method selected; If typed in view &#8594; Controller; Migrations &#8594; Next Migration; Typed in Model &#8594; Schema. For something more precise see the following <span class="caps">VIM</span> only commands<br />
+|Go to related controller</td>
+		<td> ⌥ + ⇧ + ⌘ + down </td>
+		<td> :Rco </td>
+	</tr>
+	<tr>
+		<td>Go to related helper</td>
+		<td> &#8217;&#8217; </td>
+		<td> :Rhe </td>
+	</tr>
+	<tr>
+		<td>Create a posts controller </td>
+		<td> none </td>
+		<td>:Rco posts! [note the exclamation mark]</td>
+	</tr>
+	<tr>
+		<td>Extract to partial</td>
+		<td> [Select text] ⌃ + H </td>
+		<td> [Select text] :Rextract PARTIAL_NAME </td>
 	</tr>
 </table>
 <h2>Bookmarks</h2>
@@ -360,25 +396,24 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Add bookmark</td>
 		<td> ⌘ + F2 (Never worked on my mac) </td>
-		<td> m[a-z] (this letter refers to this bookmark) </td>
+		<td> m[a-z] (The letter in the range refers to this bookmark) </td>
 	</tr>
 	<tr>
 		<td>Jump to bookmark</td>
-		<td> F2 (next) + F2 (previosu) </td>
-		<td> &#8217;a (:marks to sell all marks)</td>
+		<td> F2 (next) + F2 (previous) </td>
+		<td> &#8216;a (Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks)</td>
 	</tr>
 </table>
 <h2>Searching Files</h2>
 <table>
 	<tr>
-		<td>Search file downwards</td>
-		<td><code>&lt;⌃&gt; + S then type method name</code></td>
-		<td><code>/def donught</code></td>
+		<td>Search file upwards for <span class="caps">TOM</span> </td>
+		<td> ⇧ + ⌃ + S <span class="caps">TOM</span> </td>
+		<td> ?<span class="caps">TOM</span> [Then press enter once then repeatedly press n or N to continue searching up or down]</td>
 	</tr>
 	<tr>
-		<td>Search file upwards </td>
-		<td> ⇧ + ⌃ + S THING_SEARCHING_FOR </td>
-		<td> ?THING_SEARCHING_FOR </td>
+		<td>Search file downwards for <span class="caps">TOM</span> </td>
+		<td>&lt;⌃&gt; + S <span class="caps">TOM</span> [Same as above for repeated search]</td>
 	</tr>
 	<tr>
 		<td>Full screen </td>
@@ -393,7 +428,7 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Find a specific Method</td>
 		<td>⌘ + ⇧ + t</td>
-		<td> /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)</td>
+		<td> /def first_letters_of_method_name OR * [Cycles through instances of the method name under the caret&#8230; not necessarily the definition] #does the same but in the opposie direction</td>
 	</tr>
 </table>
 <h2>Replacing Text in Files and Project</h2>
