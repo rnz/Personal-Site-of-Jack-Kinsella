@@ -6,16 +6,13 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Textmate to Vim | Jack Kinsella </title>
+    <title>Textmate to VIM | Jack Kinsella </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Typekit script -->
     <script type="text/javascript" src="http://use.typekit.com/xnr7evu.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
  <script src="https://www.google.com/jsapi?key=ABQIAAAAzwp5edGWqlvIykO2q23PjRRNsl9Rf-MdYUjjCB-KZyY6gQXaIxTVJvVL1QqN_pX7ntidDPBczHGVnQ" type="text/javascript"></script>
       <script>google.load("jquery", "1.6.2"); </script>
-    
-    </script>
-
     <meta name="author" content="Jack Kinsella" />
     <!-- Can never be removed if we want continued webmaster tools-->
     <meta name="google-site-verification" content="937-6YOj2Gnp0ZDEH9UNd3MhKNUwA2JzyVsnhqKG-nU" />
@@ -68,8 +65,8 @@
 
       <header>
       <div>
-        <h1 class="entry-title">Textmate to Vim</h1>
-        <p>A guide to using your favourite Textmate features in Vim</p>
+        <h1 class="entry-title">Textmate to VIM</h1>
+        <p>Where I explain how to reproduce 80+ commands from Textmate in VIM</p>
       </div>
       </header>
 
@@ -81,26 +78,6 @@
 <div id="custom-social-bookmarks-facebook" class="bookmark_icon"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=224287964265938&amp;xfbml=1"></script></div>
 <div id="custom-social-bookmarks-plusone" class="bookmark_icon"></div>
 </div>
-<script>(function() {
-var hn_link = "http://news.ycombinator.com/submitlink?u=";
-if (window.hn_url) { 
-	hn_link += encodeURIComponent(hn_url); 
-}
-else { 
-	hn_link += encodeURIComponent(document.location);
-}
-if (window.hn_title) { 
-	hn_link += "&t=" + encodeURIComponent(hn_title); 
-}
-else { 
-	hn_link += "&t=" + encodeURIComponent(document.title);
-}
-
-var write_string = "<a href="+hn_link+"><img src='http://ycombinator.com/images/y18.gif' alt='Hacker News' width=18 height=18 style='border:1px #ffffff solid;'/></a><a href="+hn_link+" alink='#000000'; vlink='#828282' style='text-decoration:none' target='_blank'><span style='font-family:Verdana; font-size: 10pt; color:#828282;'><b>Submit</b></span></a>";
-document.write(write_string);
-})()
-
-</script>
 <script type="text/javascript">
 jQuery(document).ready(function() {
     
@@ -114,19 +91,26 @@ jQuery(document).ready(function() {
 
 });
 </script>
-<p>When I switched from Textmate to Vim I could get nothing done. I didn&#8217;t know how to replicate my favourite features, such as <span class="caps">CMD</span> T to find a file, or <span class="caps">ESC</span> to autocomplete a method name. I a few weeks searching the internet for solutions and now can do anything I did in Textmate in Vim.</p>
-<p>This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate. It&#8217;s merely a guide to doing what you used to do in Textmate in <span class="caps">VIM</span>. This is appropriate; when someone first swtiches to <span class="caps">VIM</span> they are not fully ready for the <span class="caps">VIM</span> way of mind. A milder learning curve is gained by using <span class="caps">VIM</span> like Textmate at first, and then going hardcore.</p>
+<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanse subway without a guide, translator or hope. My mind hurt and my calm faded as the week wore on, and I was never able to find in <span class="caps">VIM</span> the features of Textmate I&#8217;d learned to love and relied on during the previous two years. I longer after <span class="caps">CMD</span> + T to summon my models and a project drawer to rename my files, and I prayed to Allah for a search and replace dialogue box. Instead of answering my please, <span class="caps">VIM</span> sat firm and unresponsive and spat errors in my face. Even though I was supposedly going cold turkey on Textmate, I lustily met her night in the smoking area for a guilty nightime edit.</p>
+<p>With time I learned to reproduce nearly every Textmate feature in <span class="caps">VIM</span>, and then some. This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate; you&#8217;ll figure them out on your own. No, this guide is to help you achieve in <span class="caps">VIM</span> what you already can using Textmate, only with considerably less pain than I suffered.</p>
 <p>Some preliminary assumptions:</p>
 <ol>
 	<li>You&#8217;ve installed <span class="caps">MAC</span> <span class="caps">VIM</span>: <br />
 <code>brew install macvim</code></li>
 	<li>You know the basics of <span class="caps">VIM</span>. Type vimtutor in your terminal for a tutorial. Further training can be found be referring to the <a href="#vim_training_resources">vim training resources below</a> .</li>
-	<li>You were a poweruser of Textmate keyboard shorcuts</li>
+	<li>You were a poweruser of Textmate keyboard shorcuts.</li>
 	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained distro of plugins and useful configurations for web programmers</li>
+	<li>You have created a ~/.vimrc.local file (for core <span class="caps">VIM</span> configurations), ~/.gvimrc.local (for configuring the graphics in <span class="caps">VIM</span>) and ~/.janus.rake (for adding or removing plugins <span class="caps">VIM</span>). See my <a href="https://github.com/jackkinsella/dotfiles/tree/">dotfiles</a> for some commented examples.</li>
+	<li>(Bonus) You are a Rails programmer, as about 30% of this guide is Rails specific.</li>
 </ol>
-<p><em>Parts of this guide are intended for the web app developer using Ruby On Rails. If you a Rails programmer you will still find 70% of this guide useful so don&#8217;t look away yet.</em></p>
-<p>Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.</p>
-<p>Somtimes you will need to install extra plugins. These go in your janus.rake file</p>
+<h2>Format</h2>
+<table>
+	<tr>
+		<td>Action To Be Completed</td>
+		<td> Shortcut In Textmate </td>
+		<td> Shortcut in Vim</td>
+	</tr>
+</table>
 <h2>Opening Up The Editor</h2>
 <table>
 	<tr>
@@ -190,9 +174,14 @@ jQuery(document).ready(function() {
 		<td> <Tab> (assuming you&#8217;ve set it up. otherwise <span class="caps">CNRL</span> + W/ ⌃ + W)</td>
 	</tr>
 	<tr>
-		<td>Close/Open Project Drawer</td>
+		<td>Close/Open project drawer</td>
 		<td> ⌃ + ⌥ + ⌘ + D </td>
 		<td>\n</td>
+	</tr>
+	<tr>
+		<td>Change size of project drawer</td>
+		<td> Use mouse to adjust size </td>
+		<td> let NERDTreeWinSize=16 [vimrc] </td>
 	</tr>
 </table>
 <h2>Tabs</h2>
@@ -440,10 +429,17 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Upcase selected text</td>
 		<td>⌃ + ⇧ + U</td>
+		<td> ~ </td>
 	</tr>
 	<tr>
-		<td>Titelcase current text</td>
+		<td>Downcase selected text</td>
+		<td>⌃ + ⇧ + U</td>
+		<td> ~ </td>
+	</tr>
+	<tr>
+		<td>Titlecase urrent text</td>
 		<td> ⌃ + <span class="caps">OPTION</span> + U </td>
+		<td> No equivalent. For current line you can use :s :s/\&lt;\(\w\)\(\w*\)\&gt;/\u\1\L\2/g </td>
 	</tr>
 </table>
 <h2>Autocomplete</h2>
@@ -607,14 +603,39 @@ jQuery(document).ready(function() {
 </table>
 <h2 id="vim_training_resources">Recommended Resources For Learning Basic Vim</h2>
 <p><em>Remember the key is to train your fingers. Don&#8217;t read the commands. Open up a blank file and try out different commands.</em></p>
-<p>*&quot;Derek Wyatt&#8217;s Video Series (Highly recommended, if you can tolerate his excitement)&#8220;:http://www.derekwyatt.org/vim/vim-tutorial-videos/<br />
-*&#8221;Spaced Reptition Systems For Drilling (My Personal Favourite)&#8220;:http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html<br />
-*&#8221;Visual Cheat Sheets&quot;:http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html<br />
-*&quot;PeepCode&#8217;s Video Series (Commercial)&quot;:http://peepcode.com/products/smash-into-vim-i</p>
-<h3>It took me a week to write this guide. If you found it useful please thank me by Tweeting the article, upvoting it on Hacker News on linking to this page.</h3>
+<ul>
+	<li><a href="http://www.derekwyatt.org/vim/vim-tutorial-videos/" title="Highly recommended, if you can tolerate his excitement">Derek Wyatt&#8217;s Video Series</a></li>
+	<li><a href="http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html" title="My Personal Favourite">Spaced Reptition Systems For Drilling</a></li>
+	<li><a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">Visual Cheat Sheets</a></li>
+	<li><a href="http://peepcode.com/products/smash-into-vim-i" title="Commercial">PeepCode&#8217;s Video Series</a></li>
+</ul>
+<h2> One Last Thing </h2>
+<p>
+  It spend an enormous amount of time researching and writing these posts. If you'd like to say thanks please <b>tweet this page</b> or, better again, mention it on your blog.
+</p> 
+<p>
+  <small>Written by Jack Kinsella, 05 Sep 2011</small>
+<script>(function() {
+var hn_link = "http://news.ycombinator.com/submitlink?u=";
+if (window.hn_url) { 
+	hn_link += encodeURIComponent(hn_url); 
+}
+else { 
+	hn_link += encodeURIComponent(document.location);
+}
+if (window.hn_title) { 
+	hn_link += "&t=" + encodeURIComponent(hn_title); 
+}
+else { 
+	hn_link += "&t=" + encodeURIComponent(document.title);
+}
 
-<small>Written by Jack Kinsella, 05 Sep 2011</small>
+var write_string = "<img src='http://ycombinator.com/images/y18.gif' alt='Hacker News' width=18 height=18 style='border:1px #ffffff solid; margin:none;'/><a href="+hn_link+" alink='#000000'; vlink='#828282' style='text-decoration:none' target='_blank'><span style='font-family:Verdana; font-size: 10pt; color:#828282;'><b>Submit To Hacker News</b></span></a>";
+document.write(write_string);
+})()
 
+</script>
+</p>
 
       </div>
       </div>
@@ -623,10 +644,11 @@ jQuery(document).ready(function() {
 
       <footer id="colophon">
       <div class="wrapper">
+        <h3>
+        Jack Kinsella is a freelance <a href="http://www.jackkinsella.ie">Ruby on Rails programmer</a> in central London, the founder of <a href="http://www.oxbridgenotes.co.uk">Oxbridge Notes</a> and the co-founder of <a href="http://www.bolivianexpress.org">Bolivian Express.</a></h3>
+          <p>Follow me if you code Ruby/Rails, want to learn about online marketing or software entrepreneurship.</p>
+
         <section class="links about_and_follow">
-        <h2>About Me</h2>
-        <p id="first_about">Jack Kinsella is a freelance <a href="http://www.jackkinsella.ie">Ruby on Rails programmer</a> in central London, the founder of <a href="http://www.oxbridgenotes.co.uk">Oxbridge Notes</a> and the co-founder of <a href="http://www.bolivianexpress.org">Bolivian Express.</a></p>
-          <p>If you're interested in Ruby/Rails, online marketing and software entrepreneurship then you should follow him.</p>
           <ul>
             <li>
             <a href="http://twitter.com/jackkinsella">

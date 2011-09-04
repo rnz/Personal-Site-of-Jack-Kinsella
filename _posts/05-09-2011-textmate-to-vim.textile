@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Textmate to Vim
-subtitle: A guide to using your favourite Textmate features in Vim
+title: Textmate to VIM
+subtitle: Where I explain how to reproduce 80+ commands from Textmate in VIM
 /* published: false*/
 author: Jack Kinsella
 
 ---
 
-When I switched from Textmate to Vim I could get nothing done. I didn't know how to replicate my favourite features, such as CMD T to find a file, or ESC to autocomplete a method name. I a few weeks searching the internet for solutions and now can do anything I did in Textmate in Vim.
+When I switched from Textmate to VIM I felt like a tourist lost on a Japanse subway without a guide, translator or hope. My mind hurt and my calm faded as the week wore on, and I was never able to find in VIM the features of Textmate I'd learned to love and relied on during the previous two years. I longer after CMD + T to summon my models and a project drawer to rename my files, and I prayed to Allah for a search and replace dialogue box. Instead of answering my please, VIM sat firm and unresponsive and spat errors in my face. Even though I was supposedly going cold turkey on Textmate, I lustily met her night in the smoking area for a guilty nightime edit.
 
-This guide isn't about the powerful features VIM has over-and-above Textmate. It's merely a guide to doing what you used to do in Textmate in VIM. This is appropriate; when someone first swtiches to VIM they are not fully ready for the VIM way of mind. A milder learning curve is gained by using VIM like Textmate at first, and then going hardcore.
+With time I learned to reproduce nearly every Textmate feature in VIM, and then some. This guide isn't about the powerful features VIM has over-and-above Textmate; you'll figure them out on your own. No, this guide is to help you achieve in VIM what you already can using Textmate, only with considerably less pain than I suffered.
 
 Some preliminary assumptions:
 # You've installed MAC VIM: 
 @brew install macvim@
 # You know the basics of VIM. Type vimtutor in your terminal for a tutorial. Further training can be found be referring to the "vim training resources below":#vim_training_resources .
-# You were a poweruser of Textmate keyboard shorcuts
+# You were a poweruser of Textmate keyboard shorcuts.
 # You've installed "Janus":https://github.com/carlhuda/janus, the community maintained distro of plugins and useful configurations for web programmers
+# You have created a ~/.vimrc.local file (for core VIM configurations), ~/.gvimrc.local (for configuring the graphics in VIM) and ~/.janus.rake (for adding or removing plugins VIM). See my "dotfiles":https://github.com/jackkinsella/dotfiles/tree/ for some commented examples. 
+# (Bonus) You are a Rails programmer, as about 30% of this guide is Rails specific.
 
-_Parts of this guide are intended for the web app developer using Ruby On Rails. If you a Rails programmer you will still find 70% of this guide useful so don't look away yet._
+h2. Format
 
-Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.
-
-Somtimes you will need to install extra plugins. These go in your janus.rake file
+|Action To Be Completed| Shortcut In Textmate | Shortcut in Vim|
 
 h2. Opening Up The Editor
 
@@ -51,7 +51,8 @@ h2. File renaming
 h2. Project Drawer
 
 |Focus on project drawer| ⌃ + <Tab> | <Tab> (assuming you've set it up. otherwise CNRL + W/ ⌃ + W)|
-|Close/Open Project Drawer| ⌃ + ⌥ + ⌘ + D |\n|
+|Close/Open project drawer| ⌃ + ⌥ + ⌘ + D |\n|
+|Change size of project drawer| Use mouse to adjust size | let NERDTreeWinSize=16 [vimrc] |
 
 h2. Tabs
 
@@ -127,8 +128,9 @@ h2. Replacing Text in Files and Project
 
 h2. Uppercase/Lowercase (UNFIN)
 
-|Upcase selected text|⌃ + ⇧ + U|
-|Titelcase current text| ⌃ + OPTION + U |
+|Upcase selected text|⌃ + ⇧ + U| ~ |
+|Downcase selected text|⌃ + ⇧ + U| ~ |
+|Titlecase urrent text| ⌃ + OPTION + U | No equivalent. For current line you can use :s :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g |
 
 h2. Autocomplete
 
@@ -190,9 +192,8 @@ h2(#vim_training_resources). Recommended Resources For Learning Basic Vim
 
 _Remember the key is to train your fingers. Don't read the commands. Open up a blank file and try out different commands._
 
-*"Derek Wyatt's Video Series (Highly recommended, if you can tolerate his excitement)":http://www.derekwyatt.org/vim/vim-tutorial-videos/
-*"Spaced Reptition Systems For Drilling (My Personal Favourite)":http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html
-*"Visual Cheat Sheets":http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
-*"PeepCode's Video Series (Commercial)":http://peepcode.com/products/smash-into-vim-i
+* "Derek Wyatt's Video Series (Highly recommended, if you can tolerate his excitement)":http://www.derekwyatt.org/vim/vim-tutorial-videos/
+* "Spaced Reptition Systems For Drilling (My Personal Favourite)":http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html
+* "Visual Cheat Sheets":http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
+* "PeepCode's Video Series (Commercial)":http://peepcode.com/products/smash-into-vim-i
 
-h3. It took me a week to write this guide. If you found it useful please thank me by Tweeting the article, upvoting it on Hacker News on linking to this page.

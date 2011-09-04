@@ -40,14 +40,15 @@ Drawing from my experience seeing projects grow from napkin scribbles to unmanne
 
 h2(#testimonials). What Other People Say 
 
-bq. "There are absolutely no management issues when working with Jack"
-??Chee Yeo, Founder, "29 Steps":http://29steps.co.uk/??
 
 bq. "Insanely committed to learning and developing his skills; helped to architect a social networking site driven by his passion for understanding people and the way they think. Not to mention his dizzying energy and work ethic. Work for him, work with him, get him to work for you -really can't go wrong, one in 6 billion."
 ??Amaru Villanueva Rance, Innovation Analyst, "giffgaff":http://giffgaff.com/??
 
 bq. "Jack is an innovative and dedicated professional with strong drive and energy. He has a keen eye for commercial opportunities and is honing his skills by developing new business models that exploit emerging technologies and services. Jack is worth meeting, and he will add value to a business idea."
 ??Sheila Doyle, Chief Information Officer, "British Petroleum":http://www.bp.com??
+
+bq. "Jack is extremely professional and extremely familiar with the latest internet technologies to date...There are absolutely no management issues when working with Jack"
+??Chee Yeo, Founder, "29 Steps":http://29steps.co.uk/??
 
 bq. "Ever since hiring Jack to do our internet marketing we've never been busier -- despite the recession."
 ??Frank Kinsella (Related), "Western Laser Clinic":http://www.westernlaserclinic.ie??
@@ -56,8 +57,8 @@ h2(#education). Education
 
 I've been working with computers ever since my father brought home a green-text-on-black-background terminal when I was four years old. Over the years I taught myself to program through tinkering, studying "classic texts in computer science":http://www.cc2e.com/, and watching "MIT open courseware":http://ocw.mit.edu/index.htm lectures in math and computer science. 
 
-From 2006 to 2009 I studied law at the "University of Oxford":http://www.ox.ac.uk/, intending to add business understanding and communication skills to my technical abilities.
+Given my lifelong interest I didn't see the need to pursue computer science at third level, and so I studied law at the "University of Oxford":http://www.ox.ac.uk/. During this time I earnedwritten and verbal clarity through writing over 120 essays, spending a year in office in the college government, editting a satirical student publication, and wining a legal debating championship.
 
-I scored one of the highest results in Ireland in the Leaving Certificate, earning A1s in math, physics, chemistry, biology and English. 
+I scored one of the highest results in Ireland in the Leaving Certificate, earning A1s in math, physics, chemistry, biology and English and an A2 in French. 
 
 I speak fluent Spanish, having lived in Spain and worked in Bolivia.

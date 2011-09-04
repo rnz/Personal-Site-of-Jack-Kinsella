@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T20:13:06+01:00</updated>
+ <updated>2011-09-04T22:46:41+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -12,23 +12,30 @@
 
  
  <entry>
-   <title>Textmate to Vim</title>
+   <title>Textmate to VIM</title>
    <link href="http://www.jackkinsella.ie/2011/09/05/textmate-to-vim.html"/>
    <updated>2011-09-05T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2011/09/05/textmate-to-vim</id>
-   <content type="html">&lt;p&gt;When I switched from Textmate to Vim I could get nothing done. I didn&amp;#8217;t know how to replicate my favourite features, such as &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; T to find a file, or &lt;span class=&quot;caps&quot;&gt;ESC&lt;/span&gt; to autocomplete a method name. I a few weeks searching the internet for solutions and now can do anything I did in Textmate in Vim.&lt;/p&gt;
-&lt;p&gt;This guide isn&amp;#8217;t about the powerful features &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; has over-and-above Textmate. It&amp;#8217;s merely a guide to doing what you used to do in Textmate in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;. This is appropriate; when someone first swtiches to &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; they are not fully ready for the &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; way of mind. A milder learning curve is gained by using &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; like Textmate at first, and then going hardcore.&lt;/p&gt;
+   <content type="html">&lt;p&gt;When I switched from Textmate to &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; I felt like a tourist lost on a Japanse subway without a guide, translator or hope. My mind hurt and my calm faded as the week wore on, and I was never able to find in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; the features of Textmate I&amp;#8217;d learned to love and relied on during the previous two years. I longer after &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + T to summon my models and a project drawer to rename my files, and I prayed to Allah for a search and replace dialogue box. Instead of answering my please, &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; sat firm and unresponsive and spat errors in my face. Even though I was supposedly going cold turkey on Textmate, I lustily met her night in the smoking area for a guilty nightime edit.&lt;/p&gt;
+&lt;p&gt;With time I learned to reproduce nearly every Textmate feature in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;, and then some. This guide isn&amp;#8217;t about the powerful features &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; has over-and-above Textmate; you&amp;#8217;ll figure them out on your own. No, this guide is to help you achieve in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; what you already can using Textmate, only with considerably less pain than I suffered.&lt;/p&gt;
 &lt;p&gt;Some preliminary assumptions:&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;You&amp;#8217;ve installed &lt;span class=&quot;caps&quot;&gt;MAC&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;: &lt;br /&gt;
 &lt;code&gt;brew install macvim&lt;/code&gt;&lt;/li&gt;
 	&lt;li&gt;You know the basics of &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;. Type vimtutor in your terminal for a tutorial. Further training can be found be referring to the &lt;a href=&quot;#vim_training_resources&quot;&gt;vim training resources below&lt;/a&gt; .&lt;/li&gt;
-	&lt;li&gt;You were a poweruser of Textmate keyboard shorcuts&lt;/li&gt;
+	&lt;li&gt;You were a poweruser of Textmate keyboard shorcuts.&lt;/li&gt;
 	&lt;li&gt;You&amp;#8217;ve installed &lt;a href=&quot;https://github.com/carlhuda/janus&quot;&gt;Janus&lt;/a&gt;, the community maintained distro of plugins and useful configurations for web programmers&lt;/li&gt;
+	&lt;li&gt;You have created a ~/.vimrc.local file (for core &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; configurations), ~/.gvimrc.local (for configuring the graphics in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;) and ~/.janus.rake (for adding or removing plugins &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;). See my &lt;a href=&quot;https://github.com/jackkinsella/dotfiles/tree/&quot;&gt;dotfiles&lt;/a&gt; for some commented examples.&lt;/li&gt;
+	&lt;li&gt;(Bonus) You are a Rails programmer, as about 30% of this guide is Rails specific.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;Parts of this guide are intended for the web app developer using Ruby On Rails. If you a Rails programmer you will still find 70% of this guide useful so don&amp;#8217;t look away yet.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.&lt;/p&gt;
-&lt;p&gt;Somtimes you will need to install extra plugins. These go in your janus.rake file&lt;/p&gt;
+&lt;h2&gt;Format&lt;/h2&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Action To Be Completed&lt;/td&gt;
+		&lt;td&gt; Shortcut In Textmate &lt;/td&gt;
+		&lt;td&gt; Shortcut in Vim&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
 &lt;h2&gt;Opening Up The Editor&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
@@ -92,9 +99,14 @@
 		&lt;td&gt; &lt;Tab&gt; (assuming you&amp;#8217;ve set it up. otherwise &lt;span class=&quot;caps&quot;&gt;CNRL&lt;/span&gt; + W/ ⌃ + W)&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Close/Open Project Drawer&lt;/td&gt;
+		&lt;td&gt;Close/Open project drawer&lt;/td&gt;
 		&lt;td&gt; ⌃ + ⌥ + ⌘ + D &lt;/td&gt;
 		&lt;td&gt;\n&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Change size of project drawer&lt;/td&gt;
+		&lt;td&gt; Use mouse to adjust size &lt;/td&gt;
+		&lt;td&gt; let NERDTreeWinSize=16 [vimrc] &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Tabs&lt;/h2&gt;
@@ -342,10 +354,17 @@
 	&lt;tr&gt;
 		&lt;td&gt;Upcase selected text&lt;/td&gt;
 		&lt;td&gt;⌃ + ⇧ + U&lt;/td&gt;
+		&lt;td&gt; ~ &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Titelcase current text&lt;/td&gt;
+		&lt;td&gt;Downcase selected text&lt;/td&gt;
+		&lt;td&gt;⌃ + ⇧ + U&lt;/td&gt;
+		&lt;td&gt; ~ &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Titlecase urrent text&lt;/td&gt;
 		&lt;td&gt; ⌃ + &lt;span class=&quot;caps&quot;&gt;OPTION&lt;/span&gt; + U &lt;/td&gt;
+		&lt;td&gt; No equivalent. For current line you can use :s :s/\&amp;lt;\(\w\)\(\w*\)\&amp;gt;/\u\1\L\2/g &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Autocomplete&lt;/h2&gt;
@@ -509,11 +528,12 @@
 &lt;/table&gt;
 &lt;h2 id=&quot;vim_training_resources&quot;&gt;Recommended Resources For Learning Basic Vim&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Remember the key is to train your fingers. Don&amp;#8217;t read the commands. Open up a blank file and try out different commands.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;*&amp;quot;Derek Wyatt&amp;#8217;s Video Series (Highly recommended, if you can tolerate his excitement)&amp;#8220;:http://www.derekwyatt.org/vim/vim-tutorial-videos/&lt;br /&gt;
-*&amp;#8221;Spaced Reptition Systems For Drilling (My Personal Favourite)&amp;#8220;:http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html&lt;br /&gt;
-*&amp;#8221;Visual Cheat Sheets&amp;quot;:http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html&lt;br /&gt;
-*&amp;quot;PeepCode&amp;#8217;s Video Series (Commercial)&amp;quot;:http://peepcode.com/products/smash-into-vim-i&lt;/p&gt;
-&lt;h3&gt;It took me a week to write this guide. If you found it useful please thank me by Tweeting the article, upvoting it on Hacker News on linking to this page.&lt;/h3&gt;</content>
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;http://www.derekwyatt.org/vim/vim-tutorial-videos/&quot; title=&quot;Highly recommended, if you can tolerate his excitement&quot;&gt;Derek Wyatt&amp;#8217;s Video Series&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html&quot; title=&quot;My Personal Favourite&quot;&gt;Spaced Reptition Systems For Drilling&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html&quot;&gt;Visual Cheat Sheets&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://peepcode.com/products/smash-into-vim-i&quot; title=&quot;Commercial&quot;&gt;PeepCode&amp;#8217;s Video Series&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
  </entry>
  
  
