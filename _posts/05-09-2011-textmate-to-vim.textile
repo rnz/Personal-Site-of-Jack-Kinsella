@@ -89,7 +89,5 @@ Add opposing bracket or quotation mark| Typing a " will automatically add in clo
 |Sort lines| ALT + CMD + R > sort in dialogue box | [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) |
 |Undo|CMD + Z | u |
 |Redo| SHIFT + CMD + Z | CTRL + R |
-|Bigger/Smaller Font| CMD + /- ||
-
-|Snippets|
-||
+|Bigger/Smaller Font| CMD +/- | (CMD +/- doesn't work well) | set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size)
+|Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. If anyone can fix this let me know|
