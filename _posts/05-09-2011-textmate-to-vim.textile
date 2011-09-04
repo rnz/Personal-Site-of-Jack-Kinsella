@@ -39,11 +39,11 @@ Add opposing bracket or quotation mark| Typing a " will automatically add in clo
 |View CSS Colour Wheel| CMD + SHIFT + C | No exact equivalent.  vim_plugin_task "vim-css-color", 'git://github.com/skammer/vim-css-color.git' turns #acbdef into its correct colour|
 |Call RoR Generate Script| cntrl + \| [1..8]| :Rgenerate [controller model scaffold] Blog |
 |Switch Focus To Project Drawer| CMD + ALT + ` (check)| <CTRL> + w <CTRL> + w OR VIMRC noremap <tab> <C-w><C-w> |
-|Insert Erb's <%= | CNTRL + SHIFT + . | ys= |
-|Insert Erb's <% | CNTRL + SHIT + . (cycle through )| ys- |
+|Insert Erb's <%= | CNTRL + SHIFT + . | yss= (after text on screen type this to surround line with tags) |
+|Insert Erb's <% | CNTRL + SHIT + . (cycle through )| yss- |
 |Run unit test caret inside of | SHIFT + CMD + R | :.Rake (. here represent current line. Substitute for other lines) TEST |
-|Jump Between Words Left| Alt + Left
-|Jump Between Words Right| Alt + Right 
+|Jump Between Words Left| Alt + Left | w |
+|Jump Between Words Right| Alt + Right | b |
 |New Tab| Click On File In Project Drawer | CMD + Shit + T |
 |Drop Tab| CTRL + w | CTRL + w |
 |Switch Tabs Left | SHIFT + COMMAND + [ (left) ] | :tabp |
@@ -58,15 +58,15 @@ Add opposing bracket or quotation mark| Typing a " will automatically add in clo
 |Create New File| File > new | CMD + T (new tab); type; :w newfilename |
 |Select All| CMD + A | vgg=G |
 |Increase Selection Left One Word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word  |
-|Autocomplete method|
-|Autocomplete filename|
-|Merge Current Line With Next Line|ctrl+shift+J
-|Find a specific Method|cmd + shift + t|
-|Vertical Blocks| Alt dragging |
-|Duplicate Line/Selection| ctrl-shift-D|
-|Find Related File| alt-cmd-down |
-|Select A Word |cntrl + w
-|Add Placeholder text|lorem + tab|
+|Autocomplete method| <ESC> after typing first few letters| <TAB> after first few letters|
+|Autocomplete filename| Not possible | CTRL + X CTRL + F (repeat for each directory)|
+|Merge Current Line With Next Line|ctrl+shift+J | J |
+|Find a specific Method|cmd + shift + t| /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)|
+|Vertical Blocks| Alt dragging | CTRL + V |
+|Duplicate Line/Selection| ctrl-shift-D| Yp (y copies line then p pastes in below) |
+|Go To Test File (e.g. from user.rb to user_spec.rb)| ALT + SHIT + CMD + DOWN | :A (:AV in a new split, :AT new tab)|
+|Find Related File| alt-cmd-down | :R (If typed in controller -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))
+|Add Placeholder text|lorem + tab| No Equivalent |
 |Move Selected Text Up|cntrl + cmd + up (or down)||
 |Rename A File|space (whilst focus is on project drawer)|
 |Open A File|

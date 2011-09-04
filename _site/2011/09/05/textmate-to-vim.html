@@ -206,12 +206,12 @@ Add opposing bracket or quotation mark</td>
 	<tr>
 		<td>Insert Erb&#8217;s &lt;%= </td>
 		<td> <span class="caps">CNTRL</span> + <span class="caps">SHIFT</span> + . </td>
-		<td> ys= </td>
+		<td> yss= (after text on screen type this to surround line with tags) </td>
 	</tr>
 	<tr>
 		<td>Insert Erb&#8217;s &lt;% </td>
 		<td> <span class="caps">CNTRL</span> + <span class="caps">SHIT</span> + . (cycle through )</td>
-		<td> ys- </td>
+		<td> yss- </td>
 	</tr>
 	<tr>
 		<td>Run unit test caret inside of </td>
@@ -220,10 +220,16 @@ Add opposing bracket or quotation mark</td>
 	</tr>
 	<tr>
 		<td>Jump Between Words Left</td>
-		<td> Alt + Left<br />
-|Jump Between Words Right</td>
-		<td> Alt + Right <br />
-|New Tab</td>
+		<td> Alt + Left </td>
+		<td> w </td>
+	</tr>
+	<tr>
+		<td>Jump Between Words Right</td>
+		<td> Alt + Right </td>
+		<td> b </td>
+	</tr>
+	<tr>
+		<td>New Tab</td>
 		<td> Click On File In Project Drawer </td>
 		<td> <span class="caps">CMD</span> + Shit + T </td>
 	</tr>
@@ -297,33 +303,46 @@ Add opposing bracket or quotation mark</td>
 	</tr>
 	<tr>
 		<td>Autocomplete method</td>
+		<td> <ESC> after typing first few letters</td>
+		<td> <TAB> after first few letters</td>
 	</tr>
 	<tr>
 		<td>Autocomplete filename</td>
+		<td> Not possible </td>
+		<td> <span class="caps">CTRL</span> + X <span class="caps">CTRL</span> + F (repeat for each directory)</td>
 	</tr>
 	<tr>
 		<td>Merge Current Line With Next Line</td>
-		<td>ctrl+shift+J<br />
-|Find a specific Method</td>
+		<td>ctrl+shift+J </td>
+		<td> J </td>
+	</tr>
+	<tr>
+		<td>Find a specific Method</td>
 		<td>cmd + shift + t</td>
+		<td> /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)</td>
 	</tr>
 	<tr>
 		<td>Vertical Blocks</td>
 		<td> Alt dragging </td>
+		<td> <span class="caps">CTRL</span> + V </td>
 	</tr>
 	<tr>
 		<td>Duplicate Line/Selection</td>
 		<td> ctrl-shift-D</td>
+		<td> Yp (y copies line then p pastes in below) </td>
+	</tr>
+	<tr>
+		<td>Go To Test File (e.g. from user.rb to user_spec.rb)</td>
+		<td> <span class="caps">ALT</span> + <span class="caps">SHIT</span> + <span class="caps">CMD</span> + <span class="caps">DOWN</span> </td>
+		<td> :A (:AV in a new split, :AT new tab)</td>
 	</tr>
 	<tr>
 		<td>Find Related File</td>
 		<td> alt-cmd-down </td>
-	</tr>
-	<tr>
-		<td>Select A Word </td>
-		<td>cntrl + w<br />
+		<td> :R (If typed in controller &#8594; View(of method selected); If typed in view &#8594; Controller; Migrations &#8594; Next Migration (:A previous migration))<br />
 |Add Placeholder text</td>
 		<td>lorem + tab</td>
+		<td> No Equivalent </td>
 	</tr>
 	<tr>
 		<td>Move Selected Text Up</td>

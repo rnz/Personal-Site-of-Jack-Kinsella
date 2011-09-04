@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T13:48:01+01:00</updated>
+ <updated>2011-09-04T14:23:54+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -149,12 +149,12 @@ Add opposing bracket or quotation mark&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Insert Erb&amp;#8217;s &amp;lt;%= &lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNTRL&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + . &lt;/td&gt;
-		&lt;td&gt; ys= &lt;/td&gt;
+		&lt;td&gt; yss= (after text on screen type this to surround line with tags) &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Insert Erb&amp;#8217;s &amp;lt;% &lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNTRL&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIT&lt;/span&gt; + . (cycle through )&lt;/td&gt;
-		&lt;td&gt; ys- &lt;/td&gt;
+		&lt;td&gt; yss- &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Run unit test caret inside of &lt;/td&gt;
@@ -163,10 +163,16 @@ Add opposing bracket or quotation mark&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Jump Between Words Left&lt;/td&gt;
-		&lt;td&gt; Alt + Left&lt;br /&gt;
-|Jump Between Words Right&lt;/td&gt;
-		&lt;td&gt; Alt + Right &lt;br /&gt;
-|New Tab&lt;/td&gt;
+		&lt;td&gt; Alt + Left &lt;/td&gt;
+		&lt;td&gt; w &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Jump Between Words Right&lt;/td&gt;
+		&lt;td&gt; Alt + Right &lt;/td&gt;
+		&lt;td&gt; b &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;New Tab&lt;/td&gt;
 		&lt;td&gt; Click On File In Project Drawer &lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Shit + T &lt;/td&gt;
 	&lt;/tr&gt;
@@ -240,33 +246,46 @@ Add opposing bracket or quotation mark&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Autocomplete method&lt;/td&gt;
+		&lt;td&gt; &lt;ESC&gt; after typing first few letters&lt;/td&gt;
+		&lt;td&gt; &lt;TAB&gt; after first few letters&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Autocomplete filename&lt;/td&gt;
+		&lt;td&gt; Not possible &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + X &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + F (repeat for each directory)&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Merge Current Line With Next Line&lt;/td&gt;
-		&lt;td&gt;ctrl+shift+J&lt;br /&gt;
-|Find a specific Method&lt;/td&gt;
+		&lt;td&gt;ctrl+shift+J &lt;/td&gt;
+		&lt;td&gt; J &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Find a specific Method&lt;/td&gt;
 		&lt;td&gt;cmd + shift + t&lt;/td&gt;
+		&lt;td&gt; /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Vertical Blocks&lt;/td&gt;
 		&lt;td&gt; Alt dragging &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + V &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Duplicate Line/Selection&lt;/td&gt;
 		&lt;td&gt; ctrl-shift-D&lt;/td&gt;
+		&lt;td&gt; Yp (y copies line then p pastes in below) &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go To Test File (e.g. from user.rb to user_spec.rb)&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;ALT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;DOWN&lt;/span&gt; &lt;/td&gt;
+		&lt;td&gt; :A (:AV in a new split, :AT new tab)&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Find Related File&lt;/td&gt;
 		&lt;td&gt; alt-cmd-down &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Select A Word &lt;/td&gt;
-		&lt;td&gt;cntrl + w&lt;br /&gt;
+		&lt;td&gt; :R (If typed in controller &amp;#8594; View(of method selected); If typed in view &amp;#8594; Controller; Migrations &amp;#8594; Next Migration (:A previous migration))&lt;br /&gt;
 |Add Placeholder text&lt;/td&gt;
 		&lt;td&gt;lorem + tab&lt;/td&gt;
+		&lt;td&gt; No Equivalent &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Move Selected Text Up&lt;/td&gt;
