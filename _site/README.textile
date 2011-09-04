@@ -1,0 +1,7 @@
+h1. Personal Blog of Jack Kinsella based on Jekyll
+
+h3. Copyright
+
+You are free to use all the code within, with the exception of the
+contents of the _site/ _posts/ and images/ folders, the rights of which
+remain wholly my own.
