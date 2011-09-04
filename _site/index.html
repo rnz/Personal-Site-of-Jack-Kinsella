@@ -77,7 +77,8 @@
     <p>Assumptions:<br />
 1) You&#8217;re using a Mac<br />
 2) You&#8217;ve installed Janus<br />
-3) You are in Normal Mode for all commands unless specified</p>
+3) You are in Normal Mode for all commands unless specified<br />
+4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|</p>
 <table>
 	<tr>
 		<td>Command</td>
@@ -153,12 +154,12 @@ grey bar appears right of the number column with an > beside the error)
 |Replace all "donut" with "eclair" in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g
 |Replace all "donut" with "eclair" in file, ignoring case | CMD F (Find and Replace Dialogue) Select 'Ignroe Case'. Replace All | :%s/donut/eclair/gi
 |Replace all "donut" with "eclair" in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc
-|Replace "donut" with "eclair" in entire project| CMD + Shift + F | ,a donut[Enter]
-|Save File|
-|Save File As|
-|Create New File|
-|Select All| CMD + A |
-|Increase Selection Left One Word|
+||Replace "donut" with "eclair" in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.
+|Save File| CMD + S | :wReplace "donut" with "eclair" in entire project| CMD + Shift + F | ,a donut[Enter]
+|Save File As| CMD + Shift + S | :saveas NEWNAME |
+|Create New File| File > new | CMD + T (new tab); type; :w newfilename |
+|Select All| CMD + A | vgg=G
+|Increase Selection Left One Word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word 
 |Autocomplete method|
 |Autocomplete filename|
 |Merge Current Line With Next Line|ctrl+shift+J

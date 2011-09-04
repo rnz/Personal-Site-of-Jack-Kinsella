@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T09:51:32+01:00</updated>
+ <updated>2011-09-04T10:04:33+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -19,7 +19,8 @@
    <content type="html">&lt;p&gt;Assumptions:&lt;br /&gt;
 1) You&amp;#8217;re using a Mac&lt;br /&gt;
 2) You&amp;#8217;ve installed Janus&lt;br /&gt;
-3) You are in Normal Mode for all commands unless specified&lt;/p&gt;
+3) You are in Normal Mode for all commands unless specified&lt;br /&gt;
+4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|&lt;/p&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Command&lt;/td&gt;
@@ -95,12 +96,12 @@ grey bar appears right of the number column with an &gt; beside the error)
 |Replace all &quot;donut&quot; with &quot;eclair&quot; in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g
 |Replace all &quot;donut&quot; with &quot;eclair&quot; in file, ignoring case | CMD F (Find and Replace Dialogue) Select 'Ignroe Case'. Replace All | :%s/donut/eclair/gi
 |Replace all &quot;donut&quot; with &quot;eclair&quot; in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc
-|Replace &quot;donut&quot; with &quot;eclair&quot; in entire project| CMD + Shift + F | ,a donut[Enter]
-|Save File|
-|Save File As|
-|Create New File|
-|Select All| CMD + A |
-|Increase Selection Left One Word|
+||Replace &quot;donut&quot; with &quot;eclair&quot; in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. &lt;Tab&gt; into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.
+|Save File| CMD + S | :wReplace &quot;donut&quot; with &quot;eclair&quot; in entire project| CMD + Shift + F | ,a donut[Enter]
+|Save File As| CMD + Shift + S | :saveas NEWNAME |
+|Create New File| File &gt; new | CMD + T (new tab); type; :w newfilename |
+|Select All| CMD + A | vgg=G
+|Increase Selection Left One Word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word 
 |Autocomplete method|
 |Autocomplete filename|
 |Merge Current Line With Next Line|ctrl+shift+J
