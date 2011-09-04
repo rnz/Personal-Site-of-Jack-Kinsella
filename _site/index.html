@@ -74,203 +74,115 @@
         
   <div class="post">
     <h2>05 Sep 2011</span> &raquo; <a href="/2011/09/05/textmate-to-vim.html">Textmate to Vim</a></h2>
-    <table>
+    <p>Assumptions:<br />
+1) You&#8217;re using a Mac<br />
+2) You&#8217;ve installed Janus<br />
+3) You are in Normal Mode for all commands unless specified</p>
+<table>
 	<tr>
 		<td>Command</td>
 		<td> Textmate</td>
 		<td> Vim</td>
 	</tr>
 	<tr>
-		<td>Search File </td>
+		<td>Open Project From Command Line</td>
+		<td> [in folder] mate. </td>
+		<td> [in folder] mvim .</td>
+	</tr>
+	<tr>
+		<td>Go To Beginning Of Line</td>
+		<td> <span class="caps">CTRL</span> + A </td>
+		<td> ^ </td>
+		<td> <br />
+|Go To End Of Line </td>
+		<td> <span class="caps">CTRL</span> + E </td>
+		<td> $ </td>
+	</tr>
+	<tr>
+		<td>Go To Top Of File </td>
+		<td> <span class="caps">CMD</span> + Up </td>
+		<td> g<br />
+|Go To Bottom Of File </td>
+		<td> <span class="caps">CMD</span> + Down </td>
+		<td> GG<br />
+|Move Up One Line (with Carret at same position)</td>
+		<td> <span class="caps">CTRL</span> + P </td>
+		<td> k<br />
+<span class="caps">IMPREFECT</span><br />
+|Move Down One Line (with Carret at same position)</td>
+		<td> <span class="caps">CNRL</span> + N</td>
+		<td> j</td>
+	</tr>
+	<tr>
+		<td>Search File Downwards</td>
 		<td><code>&lt;Ctrl&gt; + S then type method name</code></td>
 		<td><code>/def donught</code></td>
 	</tr>
 	<tr>
-		<td>Search Project Down</td>
-	</tr>
-	<tr>
-		<td>Search Project Up</td>
-	</tr>
-	<tr>
-		<td>Go To Line</td>
-	</tr>
-	<tr>
-		<td>Delete Line</td>
-		<td>cmd + shift + k </td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Automatically Idenent Code</td>
-	</tr>
-	<tr>
-		<td>Check for Syntax Errors</td>
-	</tr>
-	<tr>
-		<td>Run Current File</td>
-	</tr>
-	<tr>
-		<td>Last Migration</td>
-	</tr>
-	<tr>
-		<td>Run Tests For Given File</td>
-		<td>cmd + r </td>
-	</tr>
-	<tr>
-		<td>Snippets</td>
-	</tr>
-	<tr>
-		<td>Add opposing bracket or quotation mark</td>
-	</tr>
-	<tr>
-		<td>Close current html tag</td>
-		<td>cmd + alt + .</td>
-	</tr>
-	<tr>
-		<td>View <span class="caps">CSS</span> Colour Wheel</td>
-		<td> <span class="caps">CMD</span> + <span class="caps">SHIFT</span> + C (<span class="caps">TEST</span>)</td>
-	</tr>
-	<tr>
-		<td>Call RoR Generate Script</td>
-		<td> cntrl + \</td>
-		<td> </td>
-	</tr>
-	<tr>
-		<td>Switch Focus To Project Drawer</td>
-		<td> <span class="caps">CMD</span> + <span class="caps">ALT</span> + ` (check)</td>
-	</tr>
-	<tr>
-		<td>Insert Erb&#8217;s &lt;%= or &lt;% </td>
-		<td> <span class="caps">CNTRL</span> + ^ </td>
-	</tr>
-	<tr>
-		<td>New Tab</td>
-	</tr>
-	<tr>
-		<td>Switch Tabs</td>
-		<td> <span class="caps">SHIFT</span> + <span class="caps">COMMAND</span> + [ (left) ] (right) </td>
-	</tr>
-	<tr>
-		<td>Go To Tab</td>
-		<td> <span class="caps">CMD</span>[1-9]<br />
-|Replace donuts with eclairs in file</td>
-	</tr>
-	<tr>
-		<td>Replace donuts with eclairs in project</td>
-	</tr>
-	<tr>
-		<td>Save File</td>
-	</tr>
-	<tr>
-		<td>Save File As</td>
-	</tr>
-	<tr>
-		<td>Create New File</td>
-	</tr>
-	<tr>
-		<td>Select All</td>
-		<td> <span class="caps">CMD</span> + A </td>
-	</tr>
-	<tr>
-		<td>Increase Selection Left One Word</td>
-	</tr>
-	<tr>
-		<td>Autocomplete method</td>
-	</tr>
-	<tr>
-		<td>Autocomplete filename</td>
-	</tr>
-	<tr>
-		<td>Merge Current Line With Next Line</td>
-		<td>ctrl+shift+J<br />
-|Find a specific Method</td>
-		<td>cmd + shift + t</td>
-	</tr>
-	<tr>
-		<td>Vertical Blocks</td>
-		<td> Alt dragging </td>
-	</tr>
-	<tr>
-		<td>Duplicate Line/Selection</td>
-		<td> ctrl-shift-D</td>
-	</tr>
-	<tr>
-		<td>Find Related File</td>
-		<td> alt-cmd-down </td>
-	</tr>
-	<tr>
-		<td>Select A Word </td>
-		<td>cntrl + w<br />
-|Add Placeholder text</td>
-		<td>lorem + tab</td>
-	</tr>
-	<tr>
-		<td>Move Selected Text Up</td>
-		<td>cntrl + cmd + up (or down)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Rename A File</td>
-		<td>space (whilst focus is on project drawer)</td>
-	</tr>
-	<tr>
-		<td>Open A File</td>
-	</tr>
-	<tr>
-		<td>Run Migrations</td>
-		<td>cntl + shift + </td>
-		<td>:Rmigrate<br />
-|Edit ends of selected lines</td>
-		<td>cmd+opt+a</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Select A Word</td>
-		<td>ctrl+w</td>
-	</tr>
-	<tr>
-		<td>Spell Checking</td>
-		<td> <span class="caps">CMD</span> + : ??<span class="caps">TEST</span><br />
-|Wrap Selected Text in P tags</td>
-		<td> <span class="caps">SHIFT</span> + <span class="caps">CONTROL</span> + W </td>
-	</tr>
-	<tr>
-		<td>Upcase Selected Text</td>
-		<td><span class="caps">CONTROL</span> + <span class="caps">SHIFT</span> + U</td>
-	</tr>
-	<tr>
-		<td>Titelcase Current Text</td>
-		<td> <span class="caps">CONTROL</span> + <span class="caps">OPTION</span> + U </td>
-	</tr>
-	<tr>
-		<td>Clipboard History</td>
-		<td>⌘ + <span class="caps">SHIFT</span> + V </td>
-	</tr>
-	<tr>
-		<td>Add Bookmark</td>
-		<td> <span class="caps">CMD</span> + F2 <span class="caps">TEST</span><br />
-|Next Bookmark</td>
-		<td> F2 </td>
-	</tr>
-	<tr>
-		<td>Previous Bookmark</td>
-		<td> shift + F2 </td>
-	</tr>
-	<tr>
-		<td>indent</td>
-		<td><span class="caps">CMD</span> + [<br />
-|unindent</td>
-		<td> <span class="caps">CMD</span> + ]<br />
-|sort lines</td>
-		<td> F5<br />
-|undo</td>
-		<td><span class="caps">CMD</span> + Z<br />
-|Bigger/Smaller Font</td>
-		<td> <span class="caps">CMD</span> + /-<br />
-|redo</td>
-		<td> <span class="caps">CMD</span> + <span class="caps">SHIFT</span> + Z<br />
-|</td>
+		<td>Search File Upwards </td>
+		<td> Shift + <span class="caps">CTRL</span> + S THING_SEARCHING_FOR </td>
 	</tr>
 </table>
+?THING_SEARCHING_FOR |
+|Full Screen | (Lion Only) https://github.com/enormego/EGOTextMateFullScreen | CMD + Enter |
+|Search Entire Project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR
+(ack)
+|Go To Line| CMD + L 20 | :20
+|Delete Line|cmd + shift + k | dd |
+|Automatically Idenent Code|
+|Check for Syntax Errors|
+|Run Current File|
+|Last Migration|
+|Run Tests For Given File|cmd + r |
+|Snippets|
+|Add opposing bracket or quotation mark|
+|Close current html tag|cmd + alt + .|
+|View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
+|Call RoR Generate Script| cntrl + \| |
+|Switch Focus To Project Drawer| CMD + ALT + ` (check)|
+|Insert Erb's <%= or <% | CNTRL + ^ |
+|Jump Between Words Left| Alt + Left
+|Jump Between Words Right| Alt + Right 
+|New Tab|
+|Switch Tabs| SHIFT + COMMAND + [ (left) ] (right) |
+|Go To Tab| CMD[1-9]
+|Replace donuts with eclairs in file|
+|Replace donuts with eclairs in project|
+|Save File|
+|Save File As|
+|Create New File|
+|Select All| CMD + A |
+|Increase Selection Left One Word|
+|Autocomplete method|
+|Autocomplete filename|
+|Merge Current Line With Next Line|ctrl+shift+J
+|Find a specific Method|cmd + shift + t|
+|Vertical Blocks| Alt dragging |
+|Duplicate Line/Selection| ctrl-shift-D|
+|Find Related File| alt-cmd-down |
+|Select A Word |cntrl + w
+|Add Placeholder text|lorem + tab|
+|Move Selected Text Up|cntrl + cmd + up (or down)||
+|Rename A File|space (whilst focus is on project drawer)|
+|Open A File|
+|Run Migrations|cntl + shift + |:Rmigrate
+|Edit ends of selected lines|cmd+opt+a||
+|Select A Word|ctrl+w|
+|Spell Checking| CMD + : ??TEST
+|Wrap Selected Text in P tags| SHIFT + CONTROL + W |
+|Upcase Selected Text|CONTROL + SHIFT + U|
+|Titelcase Current Text| CONTROL + OPTION + U |
+|Clipboard History|⌘ + SHIFT + V |
+|Add Bookmark| CMD + F2 TEST
+|Next Bookmark| F2 |
+|Previous Bookmark| shift + F2 |
+|indent|CMD + [
+|unindent| CMD + ]
+|sort lines| F5
+|undo|CMD + Z
+|Bigger/Smaller Font| CMD + /-
+|redo| CMD + SHIFT + Z
+||
   </div>
 
 

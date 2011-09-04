@@ -5,13 +5,28 @@ subtitle: A guide to using your favourite Textmate features in Vim
 /* published: false*/
 
 ---
+Assumptions:
+1) You're using a Mac
+2) You've installed Janus
+3) You are in Normal Mode for all commands unless specified
 
 |Command| Textmate| Vim|
-|Search File |@<Ctrl> + S then type method name@|@/def donught@|
-|Search Project Down|
-|Search Project Up|
-|Go To Line|
-|Delete Line|cmd + shift + k ||
+|Open Project From Command Line| [in folder] mate. | [in folder] mvim .|
+|Go To Beginning Of Line| CTRL + A | ^ | 
+|Go To End Of Line | CTRL + E | $ |
+|Go To Top Of File | CMD + Up | g
+|Go To Bottom Of File | CMD + Down | GG
+|Move Up One Line (with Carret at same position)| CTRL + P | k
+IMPREFECT
+|Move Down One Line (with Carret at same position)| CNRL + N| j|
+|Search File Downwards|@<Ctrl> + S then type method name@|@/def donught@|
+|Search File Upwards | Shift + CTRL + S THING_SEARCHING_FOR |
+?THING_SEARCHING_FOR |
+|Full Screen | (Lion Only) https://github.com/enormego/EGOTextMateFullScreen | CMD + Enter |
+|Search Entire Project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR
+(ack)
+|Go To Line| CMD + L 20 | :20
+|Delete Line|cmd + shift + k | dd |
 |Automatically Idenent Code|
 |Check for Syntax Errors|
 |Run Current File|
@@ -24,6 +39,8 @@ subtitle: A guide to using your favourite Textmate features in Vim
 |Call RoR Generate Script| cntrl + \| |
 |Switch Focus To Project Drawer| CMD + ALT + ` (check)|
 |Insert Erb's <%= or <% | CNTRL + ^ |
+|Jump Between Words Left| Alt + Left
+|Jump Between Words Right| Alt + Right 
 |New Tab|
 |Switch Tabs| SHIFT + COMMAND + [ (left) ] (right) |
 |Go To Tab| CMD[1-9]

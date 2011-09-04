@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T01:14:38+01:00</updated>
+ <updated>2011-09-04T09:21:22+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -16,203 +16,115 @@
    <link href="http://www.jackkinsella.ie/2011/09/05/textmate-to-vim.html"/>
    <updated>2011-09-05T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2011/09/05/textmate-to-vim</id>
-   <content type="html">&lt;table&gt;
+   <content type="html">&lt;p&gt;Assumptions:&lt;br /&gt;
+1) You&amp;#8217;re using a Mac&lt;br /&gt;
+2) You&amp;#8217;ve installed Janus&lt;br /&gt;
+3) You are in Normal Mode for all commands unless specified&lt;/p&gt;
+&lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Command&lt;/td&gt;
 		&lt;td&gt; Textmate&lt;/td&gt;
 		&lt;td&gt; Vim&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Search File &lt;/td&gt;
+		&lt;td&gt;Open Project From Command Line&lt;/td&gt;
+		&lt;td&gt; [in folder] mate. &lt;/td&gt;
+		&lt;td&gt; [in folder] mvim .&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go To Beginning Of Line&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + A &lt;/td&gt;
+		&lt;td&gt; ^ &lt;/td&gt;
+		&lt;td&gt; &lt;br /&gt;
+|Go To End Of Line &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + E &lt;/td&gt;
+		&lt;td&gt; $ &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go To Top Of File &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Up &lt;/td&gt;
+		&lt;td&gt; g&lt;br /&gt;
+|Go To Bottom Of File &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Down &lt;/td&gt;
+		&lt;td&gt; GG&lt;br /&gt;
+|Move Up One Line (with Carret at same position)&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + P &lt;/td&gt;
+		&lt;td&gt; k&lt;br /&gt;
+&lt;span class=&quot;caps&quot;&gt;IMPREFECT&lt;/span&gt;&lt;br /&gt;
+|Move Down One Line (with Carret at same position)&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNRL&lt;/span&gt; + N&lt;/td&gt;
+		&lt;td&gt; j&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Search File Downwards&lt;/td&gt;
 		&lt;td&gt;&lt;code&gt;&amp;lt;Ctrl&amp;gt; + S then type method name&lt;/code&gt;&lt;/td&gt;
 		&lt;td&gt;&lt;code&gt;/def donught&lt;/code&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Search Project Down&lt;/td&gt;
+		&lt;td&gt;Search File Upwards &lt;/td&gt;
+		&lt;td&gt; Shift + &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + S THING_SEARCHING_FOR &lt;/td&gt;
 	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Search Project Up&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Go To Line&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Delete Line&lt;/td&gt;
-		&lt;td&gt;cmd + shift + k &lt;/td&gt;
-		&lt;td&gt;&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Automatically Idenent Code&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Check for Syntax Errors&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Run Current File&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Last Migration&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Run Tests For Given File&lt;/td&gt;
-		&lt;td&gt;cmd + r &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Snippets&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Add opposing bracket or quotation mark&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Close current html tag&lt;/td&gt;
-		&lt;td&gt;cmd + alt + .&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;View &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; Colour Wheel&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + C (&lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;)&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Call RoR Generate Script&lt;/td&gt;
-		&lt;td&gt; cntrl + \&lt;/td&gt;
-		&lt;td&gt; &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Switch Focus To Project Drawer&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;ALT&lt;/span&gt; + ` (check)&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Insert Erb&amp;#8217;s &amp;lt;%= or &amp;lt;% &lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNTRL&lt;/span&gt; + ^ &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;New Tab&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Switch Tabs&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;COMMAND&lt;/span&gt; + [ (left) ] (right) &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Go To Tab&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt;[1-9]&lt;br /&gt;
-|Replace donuts with eclairs in file&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Replace donuts with eclairs in project&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Save File&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Save File As&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Create New File&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Select All&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + A &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Increase Selection Left One Word&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Autocomplete method&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Autocomplete filename&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Merge Current Line With Next Line&lt;/td&gt;
-		&lt;td&gt;ctrl+shift+J&lt;br /&gt;
-|Find a specific Method&lt;/td&gt;
-		&lt;td&gt;cmd + shift + t&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Vertical Blocks&lt;/td&gt;
-		&lt;td&gt; Alt dragging &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Duplicate Line/Selection&lt;/td&gt;
-		&lt;td&gt; ctrl-shift-D&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Find Related File&lt;/td&gt;
-		&lt;td&gt; alt-cmd-down &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Select A Word &lt;/td&gt;
-		&lt;td&gt;cntrl + w&lt;br /&gt;
-|Add Placeholder text&lt;/td&gt;
-		&lt;td&gt;lorem + tab&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Move Selected Text Up&lt;/td&gt;
-		&lt;td&gt;cntrl + cmd + up (or down)&lt;/td&gt;
-		&lt;td&gt;&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Rename A File&lt;/td&gt;
-		&lt;td&gt;space (whilst focus is on project drawer)&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Open A File&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Run Migrations&lt;/td&gt;
-		&lt;td&gt;cntl + shift + &lt;/td&gt;
-		&lt;td&gt;:Rmigrate&lt;br /&gt;
-|Edit ends of selected lines&lt;/td&gt;
-		&lt;td&gt;cmd+opt+a&lt;/td&gt;
-		&lt;td&gt;&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Select A Word&lt;/td&gt;
-		&lt;td&gt;ctrl+w&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Spell Checking&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + : ??&lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;&lt;br /&gt;
-|Wrap Selected Text in P tags&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + W &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Upcase Selected Text&lt;/td&gt;
-		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + U&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Titelcase Current Text&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;OPTION&lt;/span&gt; + U &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Clipboard History&lt;/td&gt;
-		&lt;td&gt;⌘ + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + V &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Add Bookmark&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + F2 &lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;&lt;br /&gt;
-|Next Bookmark&lt;/td&gt;
-		&lt;td&gt; F2 &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Previous Bookmark&lt;/td&gt;
-		&lt;td&gt; shift + F2 &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;indent&lt;/td&gt;
-		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + [&lt;br /&gt;
-|unindent&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + ]&lt;br /&gt;
-|sort lines&lt;/td&gt;
-		&lt;td&gt; F5&lt;br /&gt;
-|undo&lt;/td&gt;
-		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Z&lt;br /&gt;
-|Bigger/Smaller Font&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + /-&lt;br /&gt;
-|redo&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + Z&lt;br /&gt;
-|&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;</content>
+&lt;/table&gt;
+?THING_SEARCHING_FOR |
+|Full Screen | (Lion Only) https://github.com/enormego/EGOTextMateFullScreen | CMD + Enter |
+|Search Entire Project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR
+(ack)
+|Go To Line| CMD + L 20 | :20
+|Delete Line|cmd + shift + k | dd |
+|Automatically Idenent Code|
+|Check for Syntax Errors|
+|Run Current File|
+|Last Migration|
+|Run Tests For Given File|cmd + r |
+|Snippets|
+|Add opposing bracket or quotation mark|
+|Close current html tag|cmd + alt + .|
+|View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
+|Call RoR Generate Script| cntrl + \| |
+|Switch Focus To Project Drawer| CMD + ALT + ` (check)|
+|Insert Erb's &lt;%= or &lt;% | CNTRL + ^ |
+|Jump Between Words Left| Alt + Left
+|Jump Between Words Right| Alt + Right 
+|New Tab|
+|Switch Tabs| SHIFT + COMMAND + [ (left) ] (right) |
+|Go To Tab| CMD[1-9]
+|Replace donuts with eclairs in file|
+|Replace donuts with eclairs in project|
+|Save File|
+|Save File As|
+|Create New File|
+|Select All| CMD + A |
+|Increase Selection Left One Word|
+|Autocomplete method|
+|Autocomplete filename|
+|Merge Current Line With Next Line|ctrl+shift+J
+|Find a specific Method|cmd + shift + t|
+|Vertical Blocks| Alt dragging |
+|Duplicate Line/Selection| ctrl-shift-D|
+|Find Related File| alt-cmd-down |
+|Select A Word |cntrl + w
+|Add Placeholder text|lorem + tab|
+|Move Selected Text Up|cntrl + cmd + up (or down)||
+|Rename A File|space (whilst focus is on project drawer)|
+|Open A File|
+|Run Migrations|cntl + shift + |:Rmigrate
+|Edit ends of selected lines|cmd+opt+a||
+|Select A Word|ctrl+w|
+|Spell Checking| CMD + : ??TEST
+|Wrap Selected Text in P tags| SHIFT + CONTROL + W |
+|Upcase Selected Text|CONTROL + SHIFT + U|
+|Titelcase Current Text| CONTROL + OPTION + U |
+|Clipboard History|⌘ + SHIFT + V |
+|Add Bookmark| CMD + F2 TEST
+|Next Bookmark| F2 |
+|Previous Bookmark| shift + F2 |
+|indent|CMD + [
+|unindent| CMD + ]
+|sort lines| F5
+|undo|CMD + Z
+|Bigger/Smaller Font| CMD + /-
+|redo| CMD + SHIFT + Z
+||</content>
  </entry>
  
  
