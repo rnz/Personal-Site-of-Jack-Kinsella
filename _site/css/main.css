@@ -229,7 +229,7 @@ pre {
 }
 table {
 color: white;
-background: #C00;
+background: #C00 url(http://24ways.org/examples/tables-with-style/full.png) repeat-x bottom left;
 border-collapse: collapse;
 width: 100%;
 border: 5px solid #900;
@@ -240,15 +240,15 @@ td {
 padding: .5em 1em;
 }
 
-tbody tr:nth-child(even)
-{
-	background:transparent url(http://24ways.org/examples/tables-with-style/tr_bg.png) repeat top left;
+td:nth-child(even) {
+
+  background:transparent url(/images/table_background.png) repeat top left;
 }
-tbody td:nth-child(even)
-{
-background:#C00;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://24ways.org/examples/tables-with-style/tr_bg.png', sizingMethod='scale');
-}
+/* td:nth-child(even)*/
+/* {*/
+/*   [> background:#c80;<]*/
+/*   filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(scr='/images/table_background.png', sizingMethod='scale');*/
+/* }*/
 
 img::selection {
   background: transparent;

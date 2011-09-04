@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T18:15:58+01:00</updated>
+ <updated>2011-09-04T18:58:38+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -380,7 +380,6 @@
 		&lt;td&gt; Type let g:AutoClosePairs = {&amp;#8217;(&amp;#8216;: &amp;#8217;)&amp;#8217;, &amp;#8216;{&amp;#8217;: &amp;#8216;}&amp;#8217;, &amp;#8216;[&amp;#8217;: &amp;#8216;]&amp;#8217;, &amp;#8216;&amp;quot;&amp;#8217;: &amp;#8216;&amp;quot;&amp;#8217;, &amp;#8220;&amp;#8217;&amp;#8221;: &amp;#8220;&amp;#8217;&amp;#8221;, &amp;#8216;#{&amp;#8217;: &amp;#8216;}&amp;#8217;, &amp;#8217;&lt;/td&gt;
 		&lt;td&gt;&amp;#8216;:&amp;#8217;&lt;/td&gt;
 		&lt;td&gt;&amp;#8217; } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = [&amp;#8220;Character&amp;#8221;] Add vim_plugin_task &amp;#8220;autoclose&amp;#8221;, &amp;#8220;git://github.com/Townk/vim-autoclose.git&amp;#8221;&lt;/td&gt;
-		&lt;td&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Close current html tag&lt;/td&gt;
@@ -455,16 +454,40 @@
 	&lt;tr&gt;
 		&lt;td&gt;Paste&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + V &lt;/td&gt;
-		&lt;td&gt; p(paste below current line)&lt;br /&gt;
-|Clipboard history&lt;/td&gt;
+		&lt;td&gt; p(paste below current line) &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Clipboard history&lt;/td&gt;
 		&lt;td&gt;⌘ + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + V &lt;/td&gt;
+		&lt;td&gt; :reg (see a list of registers each of which can be pasted e.g. &amp;quot;8p) &lt;/td&gt;
+	&lt;/tr&gt;
 &lt;/table&gt;
-:reg (see a list of registers each of which can be pasted e.g. &quot;8p)&lt;h2&gt;Duplicating Lines&lt;br /&gt;
-|Duplicate line/selection| ctrl-shift-D| Yp (y copies line then p pastes in below) |&lt;br /&gt;
-|Add placeholder text|lorem + tab| No Equivalent |&lt;br /&gt;
-|Edit ends of selected lines|cmd+opt+a||&lt;br /&gt;
-|Wrap selected text in P tags| &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + W | ystp&lt;br /&gt;
-|Snippets (e.g. validates present of)| vp&lt;Tab&gt; | Currently clashes with Command-T since both use T. If anyone can fix this let me know|&lt;/h2&gt;</content>
+&lt;h2&gt;Duplicating Lines&lt;/h2&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Duplicate line/selection&lt;/td&gt;
+		&lt;td&gt; ctrl-shift-D&lt;/td&gt;
+		&lt;td&gt; Yp (y copies line then p pastes in below) &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Add placeholder text&lt;/td&gt;
+		&lt;td&gt;lorem + tab&lt;/td&gt;
+		&lt;td&gt; No Equivalent &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Edit ends of selected lines&lt;/td&gt;
+		&lt;td&gt;cmd+opt+a&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Wrap selected text in P tags&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + W &lt;/td&gt;
+		&lt;td&gt; ystp&lt;br /&gt;
+|Snippets (e.g. validates present of)&lt;/td&gt;
+		&lt;td&gt; vp&lt;Tab&gt; &lt;/td&gt;
+		&lt;td&gt; Currently clashes with Command-T since both use T. If anyone can fix this let me know&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</content>
  </entry>
  
  

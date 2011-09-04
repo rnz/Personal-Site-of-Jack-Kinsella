@@ -478,7 +478,6 @@ jQuery(document).ready(function() {
 		<td> Type let g:AutoClosePairs = {&#8217;(&#8216;: &#8217;)&#8217;, &#8216;{&#8217;: &#8216;}&#8217;, &#8216;[&#8217;: &#8216;]&#8217;, &#8216;&quot;&#8217;: &#8216;&quot;&#8217;, &#8220;&#8217;&#8221;: &#8220;&#8217;&#8221;, &#8216;#{&#8217;: &#8216;}&#8217;, &#8217;</td>
 		<td>&#8216;:&#8217;</td>
 		<td>&#8217; } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = [&#8220;Character&#8221;] Add vim_plugin_task &#8220;autoclose&#8221;, &#8220;git://github.com/Townk/vim-autoclose.git&#8221;</td>
-		<td></td>
 	</tr>
 	<tr>
 		<td>Close current html tag</td>
@@ -553,18 +552,42 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Paste</td>
 		<td> <span class="caps">CMD</span> + V </td>
-		<td> p(paste below current line)<br />
-|Clipboard history</td>
+		<td> p(paste below current line) </td>
+	</tr>
+	<tr>
+		<td>Clipboard history</td>
 		<td>⌘ + <span class="caps">SHIFT</span> + V </td>
+		<td> :reg (see a list of registers each of which can be pasted e.g. &quot;8p) </td>
+	</tr>
 </table>
-:reg (see a list of registers each of which can be pasted e.g. "8p)<h2>Duplicating Lines<br />
-|Duplicate line/selection| ctrl-shift-D| Yp (y copies line then p pastes in below) |<br />
-|Add placeholder text|lorem + tab| No Equivalent |<br />
-|Edit ends of selected lines|cmd+opt+a||<br />
-|Wrap selected text in P tags| <span class="caps">SHIFT</span> + <span class="caps">CONTROL</span> + W | ystp<br />
-|Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. If anyone can fix this let me know|</h2>
+<h2>Duplicating Lines</h2>
+<table>
+	<tr>
+		<td>Duplicate line/selection</td>
+		<td> ctrl-shift-D</td>
+		<td> Yp (y copies line then p pastes in below) </td>
+	</tr>
+	<tr>
+		<td>Add placeholder text</td>
+		<td>lorem + tab</td>
+		<td> No Equivalent </td>
+	</tr>
+	<tr>
+		<td>Edit ends of selected lines</td>
+		<td>cmd+opt+a</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Wrap selected text in P tags</td>
+		<td> <span class="caps">SHIFT</span> + <span class="caps">CONTROL</span> + W </td>
+		<td> ystp<br />
+|Snippets (e.g. validates present of)</td>
+		<td> vp<Tab> </td>
+		<td> Currently clashes with Command-T since both use T. If anyone can fix this let me know</td>
+	</tr>
+</table>
 
-<small>Written by , 05 Sep 2011</small>
+<small>Written by Jack Kinsella, 05 Sep 2011</small>
 
 
       </div>

@@ -3,6 +3,7 @@ layout: post
 title: Textmate to Vim
 subtitle: A guide to using your favourite Textmate features in Vim
 /* published: false*/
+author: Jack Kinsella
 
 ---
 
@@ -138,7 +139,7 @@ h2. Syntax Errors
 
 h2. Autoclosing "" () or HTML tags 
 
-|Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Type let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}', '|':'|' } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = ["Character"] Add vim_plugin_task "autoclose", "git://github.com/Townk/vim-autoclose.git"||
+|Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Type let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}', '|':'|' } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = ["Character"] Add vim_plugin_task "autoclose", "git://github.com/Townk/vim-autoclose.git"|
 |Close current html tag|cmd + alt + .| vim_plugin_task "ragtag", "git://github.com/tpope/vim-ragtag.git" p CNRL + X Space |
 
 h2. CSS Colours
@@ -163,10 +164,11 @@ h2. Clipboard
 
 |Copy| CMD + C| Y(copy current selection, or line if nothing selected)
 |Cut| CMD + X | d(deleted selection, but deleting in VIM sends it to a register where it can be pasted with p)|
-|Paste| CMD + V | p(paste below current line)
-|Clipboard history|⌘ + SHIFT + V | :reg (see a list of registers each of which can be pasted e.g. "8p)
+|Paste| CMD + V | p(paste below current line) |
+|Clipboard history|⌘ + SHIFT + V | :reg (see a list of registers each of which can be pasted e.g. "8p) |
 
 h2. Duplicating Lines
+
 |Duplicate line/selection| ctrl-shift-D| Yp (y copies line then p pastes in below) |
 |Add placeholder text|lorem + tab| No Equivalent |
 |Edit ends of selected lines|cmd+opt+a||
