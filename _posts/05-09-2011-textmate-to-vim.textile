@@ -35,7 +35,7 @@ Somtimes you will need to install extra plugins. These go in your janus.rake fil
 |Run Current File| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name') |
 |Go To Last Migration| None | :Rmig  | 
 Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Type let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}', '|':'|' } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = ["Character"] Add vim_plugin_task "autoclose", "git://github.com/Townk/vim-autoclose.git"||
-|Close current html tag|cmd + alt + .|
+|Close current html tag|cmd + alt + .| vim_plugin_task "ragtag", "git://github.com/tpope/vim-ragtag.git" p CNRL + X Space |
 |View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
 |Call RoR Generate Script| cntrl + \| |
 |Switch Focus To Project Drawer| CMD + ALT + ` (check)|
