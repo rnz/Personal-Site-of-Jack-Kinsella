@@ -287,6 +287,8 @@ Add opposing bracket or quotation mark</td>
 		<td> <span class="caps">CMD</span> + Shift + S </td>
 		<td> :saveas <span class="caps">NEWNAME</span> </td>
 	</tr>
+</table>
+<table>
 	<tr>
 		<td>Create New File</td>
 		<td> File &gt; new </td>
@@ -302,6 +304,8 @@ Add opposing bracket or quotation mark</td>
 		<td> Shift + Alt + Left then alt + left for each additional word</td>
 		<td> v(select)w then w for each additional word  </td>
 	</tr>
+</table>
+<table>
 	<tr>
 		<td>Autocomplete method</td>
 		<td> <ESC> after typing first few letters</td>
@@ -348,35 +352,54 @@ Add opposing bracket or quotation mark</td>
 	<tr>
 		<td>Move Selected Text Up</td>
 		<td>cntrl + cmd + up (or down)</td>
-		<td></td>
+		<td> :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). Alternativly :m+ or :m+N or :m-N for moving 1 or N lines up or down</td>
+	</tr>
+	<tr>
+		<td>Line Numbering</td>
+		<td> Menu Command </td>
+		<td> :set number (on) :set nonumber (off). Note the symmetry. This is the same for all <span class="caps">VIM</span> commands</td>
+	</tr>
+	<tr>
+		<td>Focus On Project Drawer</td>
+		<td> <span class="caps">CTRL</span> + <Tab> </td>
+		<td> <Tab> (assuming you&#8217;ve set it up. otherwise <span class="caps">CNRL</span> + W/ <span class="caps">CTRL</span> + W)</td>
 	</tr>
 	<tr>
 		<td>Rename A File</td>
 		<td>space (whilst focus is on project drawer)</td>
+		<td> Focus On Project Drawer. Select File (search). m (menu appears) m type name of file [enter]. You may need to press r to refresh project drawer (usually happens automatically after a few minutes)</td>
 	</tr>
 	<tr>
 		<td>Open A File</td>
+		<td> <span class="caps">CMD</span> + 0 </td>
+		<td> :e <span class="caps">FILENAME</span> (use Tab completion after first few letters) [Save File first]</td>
 	</tr>
 	<tr>
 		<td>Run Migrations</td>
-		<td>cntl + shift + </td>
-		<td>:Rmigrate<br />
-|Edit ends of selected lines</td>
+		<td>cntl + shift + \</td>
+		<td> </td>
+		<td>:Rmigrate </td>
+	</tr>
+	<tr>
+		<td>Edit ends of selected lines</td>
 		<td>cmd+opt+a</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>Select A Word</td>
-		<td>ctrl+w</td>
+		<td>Highlight Incorrect Spellings</td>
+		<td> <span class="caps">ALT</span> + <span class="caps">CMD</span> + ; </td>
+		<td> :set spell </td>
 	</tr>
 	<tr>
-		<td>Spell Checking</td>
-		<td> <span class="caps">CMD</span> + : ??<span class="caps">TEST</span><br />
-|Wrap Selected Text in P tags</td>
+		<td>Next Incorrect Spelling </td>
+		<td> <span class="caps">CMD</span> + : </td>
+		<td> ] s (opposite directino with [s) &#8211; assumes spell checking is enabled </td>
+	</tr>
+	<tr>
+		<td>Wrap Selected Text in P tags</td>
 		<td> <span class="caps">SHIFT</span> + <span class="caps">CONTROL</span> + W </td>
-	</tr>
-	<tr>
-		<td>Upcase Selected Text</td>
+		<td> ystp<br />
+|Upcase Selected Text</td>
 		<td><span class="caps">CONTROL</span> + <span class="caps">SHIFT</span> + U</td>
 	</tr>
 	<tr>
@@ -389,22 +412,29 @@ Add opposing bracket or quotation mark</td>
 	</tr>
 	<tr>
 		<td>Add Bookmark</td>
-		<td> <span class="caps">CMD</span> + F2 <span class="caps">TEST</span><br />
-|Next Bookmark</td>
-		<td> F2 </td>
+		<td> <span class="caps">CMD</span> + F2 (Never worked on my mac) </td>
+		<td> m[a-z] (this letter refers to this bookmark) </td>
 	</tr>
 	<tr>
-		<td>Previous Bookmark</td>
-		<td> shift + F2 </td>
+		<td>Jump TO Bookmark</td>
+		<td> F2 (next) + F2 (previosu) </td>
+		<td> &#8217;a (:marks to sell all marks)<br />
+|indent</td>
+		<td><span class="caps">CMD</span> + [ </td>
+		<td> &gt; </td>
 	</tr>
 	<tr>
-		<td>indent</td>
-		<td><span class="caps">CMD</span> + [<br />
-|unindent</td>
-		<td> <span class="caps">CMD</span> + ]<br />
-|sort lines</td>
-		<td> F5<br />
-|undo</td>
+		<td>unindent</td>
+		<td> <span class="caps">CMD</span> + ] </td>
+		<td> &lt; </td>
+	</tr>
+	<tr>
+		<td>sort lines</td>
+		<td> <span class="caps">ALT</span> + <span class="caps">CMD</span> + R &gt; sort in dialogue box </td>
+		<td> [Text selected] !:sort </td>
+	</tr>
+	<tr>
+		<td>undo</td>
 		<td><span class="caps">CMD</span> + Z<br />
 |Bigger/Smaller Font</td>
 		<td> <span class="caps">CMD</span> + /-<br />

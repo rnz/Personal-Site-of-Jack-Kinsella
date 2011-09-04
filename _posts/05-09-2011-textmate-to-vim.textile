@@ -55,9 +55,11 @@ Add opposing bracket or quotation mark| Typing a " will automatically add in clo
 ||Replace "donut" with "eclair" in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. |
 |Save File| CMD + S | :wReplace "donut" with "eclair" in entire project| CMD + Shift + F | ,a donut[Enter] |
 |Save File As| CMD + Shift + S | :saveas NEWNAME |
+
 |Create New File| File > new | CMD + T (new tab); type; :w newfilename |
 |Select All| CMD + A | vgg=G |
 |Increase Selection Left One Word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word  |
+
 |Autocomplete method| <ESC> after typing first few letters| <TAB> after first few letters|
 |Autocomplete filename| Not possible | CTRL + X CTRL + F (repeat for each directory)|
 |Merge Current Line With Next Line|ctrl+shift+J | J |
@@ -67,23 +69,24 @@ Add opposing bracket or quotation mark| Typing a " will automatically add in clo
 |Go To Test File (e.g. from user.rb to user_spec.rb)| ALT + SHIT + CMD + DOWN | :A (:AV in a new split, :AT new tab)|
 |Find Related File| alt-cmd-down | :R (If typed in controller -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))
 |Add Placeholder text|lorem + tab| No Equivalent |
-|Move Selected Text Up|cntrl + cmd + up (or down)||
-|Rename A File|space (whilst focus is on project drawer)|
-|Open A File|
-|Run Migrations|cntl + shift + |:Rmigrate
+|Move Selected Text Up|cntrl + cmd + up (or down)| :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). Alternativly :m+ or :m+N or :m-N for moving 1 or N lines up or down|
+|Line Numbering| Menu Command | :set number (on) :set nonumber (off). Note the symmetry. This is the same for all VIM commands|
+|Focus On Project Drawer| CTRL + <Tab> | <Tab> (assuming you've set it up. otherwise CNRL + W/ CTRL + W)|
+|Rename A File|space (whilst focus is on project drawer)| Focus On Project Drawer. Select File (search). m (menu appears) m type name of file [enter]. You may need to press r to refresh project drawer (usually happens automatically after a few minutes)|
+|Open A File| CMD + 0 | :e FILENAME (use Tab completion after first few letters) [Save File first]|
+|Run Migrations|cntl + shift + \| |:Rmigrate |
 |Edit ends of selected lines|cmd+opt+a||
-|Select A Word|ctrl+w|
-|Spell Checking| CMD + : ??TEST
-|Wrap Selected Text in P tags| SHIFT + CONTROL + W |
+|Highlight Incorrect Spellings| ALT + CMD + ; | :set spell |
+|Next Incorrect Spelling | CMD + : | ] s (opposite directino with [s) - assumes spell checking is enabled |
+|Wrap Selected Text in P tags| SHIFT + CONTROL + W | ystp
 |Upcase Selected Text|CONTROL + SHIFT + U|
 |Titelcase Current Text| CONTROL + OPTION + U |
 |Clipboard History|⌘ + SHIFT + V |
-|Add Bookmark| CMD + F2 TEST
-|Next Bookmark| F2 |
-|Previous Bookmark| shift + F2 |
-|indent|CMD + [
-|unindent| CMD + ]
-|sort lines| F5
+|Add Bookmark| CMD + F2 (Never worked on my mac) | m[a-z] (this letter refers to this bookmark) |
+|Jump TO Bookmark| F2 (next) + F2 (previosu) | 'a (:marks to sell all marks)
+|indent|CMD + [ | > |
+|unindent| CMD + ] | < |
+|sort lines| ALT + CMD + R > sort in dialogue box | [Text selected] !:sort |
 |undo|CMD + Z
 |Bigger/Smaller Font| CMD + /-
 |redo| CMD + SHIFT + Z
