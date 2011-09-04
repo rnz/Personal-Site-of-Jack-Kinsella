@@ -190,20 +190,32 @@ Add opposing bracket or quotation mark</td>
 	</tr>
 	<tr>
 		<td>View <span class="caps">CSS</span> Colour Wheel</td>
-		<td> <span class="caps">CMD</span> + <span class="caps">SHIFT</span> + C (<span class="caps">TEST</span>)</td>
+		<td> <span class="caps">CMD</span> + <span class="caps">SHIFT</span> + C </td>
+		<td> No exact equivalent.  vim_plugin_task &#8220;vim-css-color&#8221;, &#8216;git://github.com/skammer/vim-css-color.git&#8217; turns #acbdef into its correct colour</td>
 	</tr>
 	<tr>
 		<td>Call RoR Generate Script</td>
 		<td> cntrl + \</td>
-		<td> </td>
+		<td> [1..8]</td>
+		<td> :Rgenerate [controller model scaffold] Blog </td>
 	</tr>
 	<tr>
 		<td>Switch Focus To Project Drawer</td>
 		<td> <span class="caps">CMD</span> + <span class="caps">ALT</span> + ` (check)</td>
+		<td> <CTRL> + w <CTRL> + w OR <span class="caps">VIMRC</span> noremap <tab> <C-w><C-w> </td>
 	</tr>
 	<tr>
-		<td>Insert Erb&#8217;s &lt;%= or &lt;% </td>
-		<td> <span class="caps">CNTRL</span> + ^ </td>
+		<td>Insert Erb&#8217;s &lt;%= </td>
+		<td> <span class="caps">CNTRL</span> + <span class="caps">SHIFT</span> + . </td>
+		<td> ys= </td>
+	</tr>
+	<tr>
+		<td>Insert Erb&#8217;s &lt;% </td>
+		<td> <span class="caps">CNTRL</span> + <span class="caps">SHIT</span> + . (cycle through )</td>
+		<td> ys-<br />
+|Run unit test caret inside of </td>
+		<td> <span class="caps">SHIFT</span> + <span class="caps">CMD</span> + R </td>
+		<td> :.Rake (. here represent current line. Substitute for other lines) <span class="caps">TEST</span> </td>
 	</tr>
 	<tr>
 		<td>Jump Between Words Left</td>

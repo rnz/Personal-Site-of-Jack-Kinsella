@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T13:24:53+01:00</updated>
+ <updated>2011-09-04T13:42:31+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -132,20 +132,32 @@ Add opposing bracket or quotation mark&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;View &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; Colour Wheel&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + C (&lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;)&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + C &lt;/td&gt;
+		&lt;td&gt; No exact equivalent.  vim_plugin_task &amp;#8220;vim-css-color&amp;#8221;, &amp;#8216;git://github.com/skammer/vim-css-color.git&amp;#8217; turns #acbdef into its correct colour&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Call RoR Generate Script&lt;/td&gt;
 		&lt;td&gt; cntrl + \&lt;/td&gt;
-		&lt;td&gt; &lt;/td&gt;
+		&lt;td&gt; [1..8]&lt;/td&gt;
+		&lt;td&gt; :Rgenerate [controller model scaffold] Blog &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Switch Focus To Project Drawer&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;ALT&lt;/span&gt; + ` (check)&lt;/td&gt;
+		&lt;td&gt; &lt;CTRL&gt; + w &lt;CTRL&gt; + w OR &lt;span class=&quot;caps&quot;&gt;VIMRC&lt;/span&gt; noremap &lt;tab&gt; &lt;C-w&gt;&lt;C-w&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Insert Erb&amp;#8217;s &amp;lt;%= or &amp;lt;% &lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNTRL&lt;/span&gt; + ^ &lt;/td&gt;
+		&lt;td&gt;Insert Erb&amp;#8217;s &amp;lt;%= &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNTRL&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + . &lt;/td&gt;
+		&lt;td&gt; ys= &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Insert Erb&amp;#8217;s &amp;lt;% &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNTRL&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIT&lt;/span&gt; + . (cycle through )&lt;/td&gt;
+		&lt;td&gt; ys-&lt;br /&gt;
+|Run unit test caret inside of &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + R &lt;/td&gt;
+		&lt;td&gt; :.Rake (. here represent current line. Substitute for other lines) &lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Jump Between Words Left&lt;/td&gt;
