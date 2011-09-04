@@ -25,7 +25,7 @@ I practice TDD, which means I write code that automatically verifies our applica
 
 h3. Open Source Technology
 
-I'm familiar with the key open-source libraries in Ruby/Rails, and I try to use these instead of writing custom code. Less custom code means I spend less time building your application and you receive a smaller bill for my services.
+I'm familiar with the key open-source libraries in Ruby/Rails, and I try to use these instead of writing custom code. Less custom code means I spend less time building your application and you receive a smaller bill for my services.?
 
 h3. Advice on Key Technical Considerations
 

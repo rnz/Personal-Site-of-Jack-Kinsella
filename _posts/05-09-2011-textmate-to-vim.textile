@@ -27,12 +27,14 @@ IMPREFECT
 (ack)
 |Go To Line| CMD + L 20 | :20
 |Delete Line|cmd + shift + k | dd |
-|Automatically Idenent Code|
-|Check for Syntax Errors|
-|Run Current File|
-|Last Migration|
-|Run Tests For Given File|cmd + r |
-|Snippets|
+|Automatically Indent Code Beautifully| Alt + CMD + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle)
+| gg=G
+|Check for Syntax Errors On Saving (*life saver)| Validate On Save Plugin
+https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In (A
+grey bar appears right of the number column with an > beside the error)
+|Run Tests For Given File|cmd + r | :Rake
+|Run Current File| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name')
+|Last Migration| |:Rmig 
 |Add opposing bracket or quotation mark|
 |Close current html tag|cmd + alt + .|
 |View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
@@ -41,10 +43,13 @@ IMPREFECT
 |Insert Erb's <%= or <% | CNTRL + ^ |
 |Jump Between Words Left| Alt + Left
 |Jump Between Words Right| Alt + Right 
-|New Tab|
-|Switch Tabs| SHIFT + COMMAND + [ (left) ] (right) |
-|Go To Tab| CMD[1-9]
-|Replace donuts with eclairs in file|
+|New Tab| Click On File In Project Drawer | CMD + Shit + T |
+|Drop Tab| CTRL + w | CTRL + w |
+|Switch Tabs Left | SHIFT + COMMAND + [ (left) ] | :tabp
+|Switch Tabs Right | SHIFT + COMMAND + right | :tabn
+|Go To Tab| CMD[1-9] | CMD[1-9]|
+|Replace all "donut" with "eclair" in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g
+|Replace all "donut" with "eclair" in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc
 |Replace donuts with eclairs in project|
 |Save File|
 |Save File As|
@@ -80,4 +85,6 @@ IMPREFECT
 |undo|CMD + Z
 |Bigger/Smaller Font| CMD + /-
 |redo| CMD + SHIFT + Z
+
+|Snippets|
 ||

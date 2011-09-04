@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T09:21:22+01:00</updated>
+ <updated>2011-09-04T09:46:28+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -71,12 +71,14 @@
 (ack)
 |Go To Line| CMD + L 20 | :20
 |Delete Line|cmd + shift + k | dd |
-|Automatically Idenent Code|
-|Check for Syntax Errors|
-|Run Current File|
-|Last Migration|
-|Run Tests For Given File|cmd + r |
-|Snippets|
+|Automatically Indent Code Beautifully| Alt + CMD + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle)
+| gg=G
+|Check for Syntax Errors On Saving (*life saver)| Validate On Save Plugin
+https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In (A
+grey bar appears right of the number column with an &gt; beside the error)
+|Run Tests For Given File|cmd + r | :Rake
+|Run Current File| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name')
+|Last Migration| |:Rmig 
 |Add opposing bracket or quotation mark|
 |Close current html tag|cmd + alt + .|
 |View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
@@ -85,10 +87,13 @@
 |Insert Erb's &lt;%= or &lt;% | CNTRL + ^ |
 |Jump Between Words Left| Alt + Left
 |Jump Between Words Right| Alt + Right 
-|New Tab|
-|Switch Tabs| SHIFT + COMMAND + [ (left) ] (right) |
-|Go To Tab| CMD[1-9]
-|Replace donuts with eclairs in file|
+|New Tab| Click On File In Project Drawer | CMD + Shit + T |
+|Drop Tab| CTRL + w | CTRL + w |
+|Switch Tabs Left | SHIFT + COMMAND + [ (left) ] | :tabp
+|Switch Tabs Right | SHIFT + COMMAND + right | :tabn
+|Go To Tab| CMD[1-9] | CMD[1-9]|
+|Replace all &quot;donut&quot; with &quot;eclair&quot; in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g
+|Replace all &quot;donut&quot; with &quot;eclair&quot; in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc
 |Replace donuts with eclairs in project|
 |Save File|
 |Save File As|
@@ -123,8 +128,14 @@
 |sort lines| F5
 |undo|CMD + Z
 |Bigger/Smaller Font| CMD + /-
-|redo| CMD + SHIFT + Z
-||</content>
+|redo| CMD + SHIFT + Z&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Snippets&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</content>
  </entry>
  
  
