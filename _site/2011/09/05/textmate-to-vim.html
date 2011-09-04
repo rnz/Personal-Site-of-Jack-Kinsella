@@ -78,6 +78,8 @@
 2) You&#8217;ve installed Janus<br />
 3) You are in Normal Mode for all commands unless specified<br />
 4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|</p>
+<p>Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.</p>
+<p>Somtimes you will need to install extra plugins. These go in your janus.rake file</p>
 <table>
 	<tr>
 		<td>Command</td>
@@ -101,15 +103,20 @@
 	<tr>
 		<td>Go To Top Of File </td>
 		<td> <span class="caps">CMD</span> + Up </td>
-		<td> g<br />
-|Go To Bottom Of File </td>
+		<td> g </td>
+	</tr>
+	<tr>
+		<td>Go To Bottom Of File </td>
 		<td> <span class="caps">CMD</span> + Down </td>
-		<td> GG<br />
-|Move Up One Line (with Carret at same position)</td>
+		<td> GG </td>
+	</tr>
+	<tr>
+		<td>Move Up One Line (with Carret at same position)</td>
 		<td> <span class="caps">CTRL</span> + P </td>
-		<td> k<br />
-<span class="caps">IMPREFECT</span><br />
-|Move Down One Line (with Carret at same position)</td>
+		<td> k </td>
+	</tr>
+	<tr>
+		<td>Move Down One Line (with Carret at same position)</td>
 		<td> <span class="caps">CNRL</span> + N</td>
 		<td> j</td>
 	</tr>
@@ -121,74 +128,255 @@
 	<tr>
 		<td>Search File Upwards </td>
 		<td> Shift + <span class="caps">CTRL</span> + S THING_SEARCHING_FOR </td>
+		<td> ?THING_SEARCHING_FOR </td>
 	</tr>
-</table>
-?THING_SEARCHING_FOR |
-|Full Screen | (Lion Only) https://github.com/enormego/EGOTextMateFullScreen | CMD + Enter |
-|Search Entire Project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR
-(ack)
-|Go To Line| CMD + L 20 | :20
-|Delete Line|cmd + shift + k | dd |
-|Automatically Indent Code Beautifully| Alt + CMD + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle)
-| gg=G
-|Check for Syntax Errors On Saving (*life saver)| Validate On Save Plugin
-https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In (A
-grey bar appears right of the number column with an > beside the error)
-|Run Tests For Given File|cmd + r | :Rake
-|Run Current File| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name')
-|Last Migration| |:Rmig 
-|Add opposing bracket or quotation mark|
-|Close current html tag|cmd + alt + .|
-|View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
-|Call RoR Generate Script| cntrl + \| |
-|Switch Focus To Project Drawer| CMD + ALT + ` (check)|
-|Insert Erb's <%= or <% | CNTRL + ^ |
-|Jump Between Words Left| Alt + Left
-|Jump Between Words Right| Alt + Right 
-|New Tab| Click On File In Project Drawer | CMD + Shit + T |
-|Drop Tab| CTRL + w | CTRL + w |
-|Switch Tabs Left | SHIFT + COMMAND + [ (left) ] | :tabp
-|Switch Tabs Right | SHIFT + COMMAND + right | :tabn
-|Go To Tab| CMD[1-9] | CMD[1-9]|
-|Replace all "donut" with "eclair" in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g
-|Replace all "donut" with "eclair" in file, ignoring case | CMD F (Find and Replace Dialogue) Select 'Ignroe Case'. Replace All | :%s/donut/eclair/gi
-|Replace all "donut" with "eclair" in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc
-||Replace "donut" with "eclair" in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.
-|Save File| CMD + S | :wReplace "donut" with "eclair" in entire project| CMD + Shift + F | ,a donut[Enter]
-|Save File As| CMD + Shift + S | :saveas NEWNAME |
-|Create New File| File > new | CMD + T (new tab); type; :w newfilename |
-|Select All| CMD + A | vgg=G
-|Increase Selection Left One Word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word 
-|Autocomplete method|
-|Autocomplete filename|
-|Merge Current Line With Next Line|ctrl+shift+J
-|Find a specific Method|cmd + shift + t|
-|Vertical Blocks| Alt dragging |
-|Duplicate Line/Selection| ctrl-shift-D|
-|Find Related File| alt-cmd-down |
-|Select A Word |cntrl + w
-|Add Placeholder text|lorem + tab|
-|Move Selected Text Up|cntrl + cmd + up (or down)||
-|Rename A File|space (whilst focus is on project drawer)|
-|Open A File|
-|Run Migrations|cntl + shift + |:Rmigrate
-|Edit ends of selected lines|cmd+opt+a||
-|Select A Word|ctrl+w|
-|Spell Checking| CMD + : ??TEST
-|Wrap Selected Text in P tags| SHIFT + CONTROL + W |
-|Upcase Selected Text|CONTROL + SHIFT + U|
-|Titelcase Current Text| CONTROL + OPTION + U |
-|Clipboard History|⌘ + SHIFT + V |
-|Add Bookmark| CMD + F2 TEST
-|Next Bookmark| F2 |
-|Previous Bookmark| shift + F2 |
-|indent|CMD + [
-|unindent| CMD + ]
-|sort lines| F5
-|undo|CMD + Z
-|Bigger/Smaller Font| CMD + /-
-|redo| CMD + SHIFT + Z<table>
 	<tr>
+		<td>Full Screen </td>
+		<td> (Lion Only) https://github.com/enormego/EGOTextMateFullScreen </td>
+		<td> <span class="caps">CMD</span> + Enter </td>
+	</tr>
+	<tr>
+		<td>Search Entire Project </td>
+		<td> <span class="caps">CMD</span> + Shift + F (grep) </td>
+		<td> ,a THING_SEARCHING_FOR (ack) </td>
+	</tr>
+	<tr>
+		<td>Go To Line</td>
+		<td> <span class="caps">CMD</span> + L 20 </td>
+		<td> :20 </td>
+	</tr>
+	<tr>
+		<td>Delete Line</td>
+		<td>cmd + shift + k </td>
+		<td> dd </td>
+	</tr>
+	<tr>
+		<td>Automatically Indent Code Beautifully</td>
+		<td> Alt + <span class="caps">CMD</span> + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle) </td>
+		<td> gg=G </td>
+	</tr>
+	<tr>
+		<td>Check for Syntax Errors On Saving (*life saver)</td>
+		<td> Validate On Save Plugin https://github.com/sxtxixtxcxh/validate-on-save.tmbundle </td>
+		<td> Built In (A grey bar appears right of the number column with an &gt; beside the error) </td>
+	</tr>
+	<tr>
+		<td>Run Tests For Given File</td>
+		<td>cmd + r </td>
+		<td> :Rake </td>
+	</tr>
+	<tr>
+		<td>Run Current File</td>
+		<td> <span class="caps">CMD</span> + R </td>
+		<td> No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to &#8216;ruby current_file_name&#8217;) </td>
+	</tr>
+	<tr>
+		<td>Go To Last Migration</td>
+		<td> None </td>
+		<td> :Rmig  </td>
+		<td> <br />
+Add opposing bracket or quotation mark</td>
+		<td> Typing a &quot; will automatically add in closing. </td>
+		<td> Type let g:AutoClosePairs = {&#8217;(&#8216;: &#8217;)&#8217;, &#8216;{&#8217;: &#8216;}&#8217;, &#8216;[&#8217;: &#8216;]&#8217;, &#8216;&quot;&#8217;: &#8216;&quot;&#8217;, &#8220;&#8217;&#8221;: &#8220;&#8217;&#8221;, &#8216;#{&#8217;: &#8216;}&#8217;, &#8217;</td>
+		<td>&#8216;:&#8217;</td>
+		<td>&#8217; } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = [&#8220;Character&#8221;] Add vim_plugin_task &#8220;autoclose&#8221;, &#8220;git://github.com/Townk/vim-autoclose.git&#8221;</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Close current html tag</td>
+		<td>cmd + alt + .</td>
+	</tr>
+	<tr>
+		<td>View <span class="caps">CSS</span> Colour Wheel</td>
+		<td> <span class="caps">CMD</span> + <span class="caps">SHIFT</span> + C (<span class="caps">TEST</span>)</td>
+	</tr>
+	<tr>
+		<td>Call RoR Generate Script</td>
+		<td> cntrl + \</td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td>Switch Focus To Project Drawer</td>
+		<td> <span class="caps">CMD</span> + <span class="caps">ALT</span> + ` (check)</td>
+	</tr>
+	<tr>
+		<td>Insert Erb&#8217;s &lt;%= or &lt;% </td>
+		<td> <span class="caps">CNTRL</span> + ^ </td>
+	</tr>
+	<tr>
+		<td>Jump Between Words Left</td>
+		<td> Alt + Left<br />
+|Jump Between Words Right</td>
+		<td> Alt + Right <br />
+|New Tab</td>
+		<td> Click On File In Project Drawer </td>
+		<td> <span class="caps">CMD</span> + Shit + T </td>
+	</tr>
+	<tr>
+		<td>Drop Tab</td>
+		<td> <span class="caps">CTRL</span> + w </td>
+		<td> <span class="caps">CTRL</span> + w </td>
+	</tr>
+	<tr>
+		<td>Switch Tabs Left </td>
+		<td> <span class="caps">SHIFT</span> + <span class="caps">COMMAND</span> + [ (left) ] </td>
+		<td> :tabp </td>
+	</tr>
+	<tr>
+		<td>Switch Tabs Right </td>
+		<td> <span class="caps">SHIFT</span> + <span class="caps">COMMAND</span> + right </td>
+		<td> :tabn </td>
+	</tr>
+	<tr>
+		<td>Go To Tab</td>
+		<td> <span class="caps">CMD</span>[1-9] </td>
+		<td> <span class="caps">CMD</span>[1-9]</td>
+	</tr>
+	<tr>
+		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file</td>
+		<td> <span class="caps">CMD</span> F (Find and Replace Dialogue) Replace All </td>
+		<td> :%s/donut/eclair/g </td>
+	</tr>
+	<tr>
+		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file, ignoring case </td>
+		<td> <span class="caps">CMD</span> F (Find and Replace Dialogue) Select &#8216;Ignroe Case&#8217;. Replace All </td>
+		<td> :%s/donut/eclair/gi </td>
+	</tr>
+	<tr>
+		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file, confirming each time </td>
+		<td> <span class="caps">CMD</span> F (Find and Replace Dialogue) Replace Next </td>
+		<td> :%s/donut/eclair/gc </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
+		<td> <span class="caps">CMD</span> + Shift + F </td>
+		<td> (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. </td>
+	</tr>
+	<tr>
+		<td>Save File</td>
+		<td> <span class="caps">CMD</span> + S </td>
+		<td> :wReplace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
+		<td> <span class="caps">CMD</span> + Shift + F </td>
+		<td> ,a donut[Enter] </td>
+	</tr>
+	<tr>
+		<td>Save File As</td>
+		<td> <span class="caps">CMD</span> + Shift + S </td>
+		<td> :saveas <span class="caps">NEWNAME</span> </td>
+	</tr>
+	<tr>
+		<td>Create New File</td>
+		<td> File &gt; new </td>
+		<td> <span class="caps">CMD</span> + T (new tab); type; :w newfilename </td>
+	</tr>
+	<tr>
+		<td>Select All</td>
+		<td> <span class="caps">CMD</span> + A </td>
+		<td> vgg=G </td>
+	</tr>
+	<tr>
+		<td>Increase Selection Left One Word</td>
+		<td> Shift + Alt + Left then alt + left for each additional word</td>
+		<td> v(select)w then w for each additional word  </td>
+	</tr>
+	<tr>
+		<td>Autocomplete method</td>
+	</tr>
+	<tr>
+		<td>Autocomplete filename</td>
+	</tr>
+	<tr>
+		<td>Merge Current Line With Next Line</td>
+		<td>ctrl+shift+J<br />
+|Find a specific Method</td>
+		<td>cmd + shift + t</td>
+	</tr>
+	<tr>
+		<td>Vertical Blocks</td>
+		<td> Alt dragging </td>
+	</tr>
+	<tr>
+		<td>Duplicate Line/Selection</td>
+		<td> ctrl-shift-D</td>
+	</tr>
+	<tr>
+		<td>Find Related File</td>
+		<td> alt-cmd-down </td>
+	</tr>
+	<tr>
+		<td>Select A Word </td>
+		<td>cntrl + w<br />
+|Add Placeholder text</td>
+		<td>lorem + tab</td>
+	</tr>
+	<tr>
+		<td>Move Selected Text Up</td>
+		<td>cntrl + cmd + up (or down)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Rename A File</td>
+		<td>space (whilst focus is on project drawer)</td>
+	</tr>
+	<tr>
+		<td>Open A File</td>
+	</tr>
+	<tr>
+		<td>Run Migrations</td>
+		<td>cntl + shift + </td>
+		<td>:Rmigrate<br />
+|Edit ends of selected lines</td>
+		<td>cmd+opt+a</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Select A Word</td>
+		<td>ctrl+w</td>
+	</tr>
+	<tr>
+		<td>Spell Checking</td>
+		<td> <span class="caps">CMD</span> + : ??<span class="caps">TEST</span><br />
+|Wrap Selected Text in P tags</td>
+		<td> <span class="caps">SHIFT</span> + <span class="caps">CONTROL</span> + W </td>
+	</tr>
+	<tr>
+		<td>Upcase Selected Text</td>
+		<td><span class="caps">CONTROL</span> + <span class="caps">SHIFT</span> + U</td>
+	</tr>
+	<tr>
+		<td>Titelcase Current Text</td>
+		<td> <span class="caps">CONTROL</span> + <span class="caps">OPTION</span> + U </td>
+	</tr>
+	<tr>
+		<td>Clipboard History</td>
+		<td>⌘ + <span class="caps">SHIFT</span> + V </td>
+	</tr>
+	<tr>
+		<td>Add Bookmark</td>
+		<td> <span class="caps">CMD</span> + F2 <span class="caps">TEST</span><br />
+|Next Bookmark</td>
+		<td> F2 </td>
+	</tr>
+	<tr>
+		<td>Previous Bookmark</td>
+		<td> shift + F2 </td>
+	</tr>
+	<tr>
+		<td>indent</td>
+		<td><span class="caps">CMD</span> + [<br />
+|unindent</td>
+		<td> <span class="caps">CMD</span> + ]<br />
+|sort lines</td>
+		<td> F5<br />
+|undo</td>
+		<td><span class="caps">CMD</span> + Z<br />
+|Bigger/Smaller Font</td>
+		<td> <span class="caps">CMD</span> + /-<br />
+|redo</td>
+		<td> <span class="caps">CMD</span> + <span class="caps">SHIFT</span> + Z<br />
+<br />
+</td>
 		<td>Snippets</td>
 	</tr>
 	<tr>

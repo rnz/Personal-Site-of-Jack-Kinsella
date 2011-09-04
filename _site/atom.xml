@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T10:04:33+01:00</updated>
+ <updated>2011-09-04T13:02:32+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -21,6 +21,8 @@
 2) You&amp;#8217;ve installed Janus&lt;br /&gt;
 3) You are in Normal Mode for all commands unless specified&lt;br /&gt;
 4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|&lt;/p&gt;
+&lt;p&gt;Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.&lt;/p&gt;
+&lt;p&gt;Somtimes you will need to install extra plugins. These go in your janus.rake file&lt;/p&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Command&lt;/td&gt;
@@ -44,15 +46,20 @@
 	&lt;tr&gt;
 		&lt;td&gt;Go To Top Of File &lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Up &lt;/td&gt;
-		&lt;td&gt; g&lt;br /&gt;
-|Go To Bottom Of File &lt;/td&gt;
+		&lt;td&gt; g &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go To Bottom Of File &lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Down &lt;/td&gt;
-		&lt;td&gt; GG&lt;br /&gt;
-|Move Up One Line (with Carret at same position)&lt;/td&gt;
+		&lt;td&gt; GG &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Move Up One Line (with Carret at same position)&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + P &lt;/td&gt;
-		&lt;td&gt; k&lt;br /&gt;
-&lt;span class=&quot;caps&quot;&gt;IMPREFECT&lt;/span&gt;&lt;br /&gt;
-|Move Down One Line (with Carret at same position)&lt;/td&gt;
+		&lt;td&gt; k &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Move Down One Line (with Carret at same position)&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNRL&lt;/span&gt; + N&lt;/td&gt;
 		&lt;td&gt; j&lt;/td&gt;
 	&lt;/tr&gt;
@@ -64,74 +71,255 @@
 	&lt;tr&gt;
 		&lt;td&gt;Search File Upwards &lt;/td&gt;
 		&lt;td&gt; Shift + &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + S THING_SEARCHING_FOR &lt;/td&gt;
+		&lt;td&gt; ?THING_SEARCHING_FOR &lt;/td&gt;
 	&lt;/tr&gt;
-&lt;/table&gt;
-?THING_SEARCHING_FOR |
-|Full Screen | (Lion Only) https://github.com/enormego/EGOTextMateFullScreen | CMD + Enter |
-|Search Entire Project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR
-(ack)
-|Go To Line| CMD + L 20 | :20
-|Delete Line|cmd + shift + k | dd |
-|Automatically Indent Code Beautifully| Alt + CMD + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle)
-| gg=G
-|Check for Syntax Errors On Saving (*life saver)| Validate On Save Plugin
-https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In (A
-grey bar appears right of the number column with an &gt; beside the error)
-|Run Tests For Given File|cmd + r | :Rake
-|Run Current File| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name')
-|Last Migration| |:Rmig 
-|Add opposing bracket or quotation mark|
-|Close current html tag|cmd + alt + .|
-|View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
-|Call RoR Generate Script| cntrl + \| |
-|Switch Focus To Project Drawer| CMD + ALT + ` (check)|
-|Insert Erb's &lt;%= or &lt;% | CNTRL + ^ |
-|Jump Between Words Left| Alt + Left
-|Jump Between Words Right| Alt + Right 
-|New Tab| Click On File In Project Drawer | CMD + Shit + T |
-|Drop Tab| CTRL + w | CTRL + w |
-|Switch Tabs Left | SHIFT + COMMAND + [ (left) ] | :tabp
-|Switch Tabs Right | SHIFT + COMMAND + right | :tabn
-|Go To Tab| CMD[1-9] | CMD[1-9]|
-|Replace all &quot;donut&quot; with &quot;eclair&quot; in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g
-|Replace all &quot;donut&quot; with &quot;eclair&quot; in file, ignoring case | CMD F (Find and Replace Dialogue) Select 'Ignroe Case'. Replace All | :%s/donut/eclair/gi
-|Replace all &quot;donut&quot; with &quot;eclair&quot; in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc
-||Replace &quot;donut&quot; with &quot;eclair&quot; in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. &lt;Tab&gt; into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.
-|Save File| CMD + S | :wReplace &quot;donut&quot; with &quot;eclair&quot; in entire project| CMD + Shift + F | ,a donut[Enter]
-|Save File As| CMD + Shift + S | :saveas NEWNAME |
-|Create New File| File &gt; new | CMD + T (new tab); type; :w newfilename |
-|Select All| CMD + A | vgg=G
-|Increase Selection Left One Word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word 
-|Autocomplete method|
-|Autocomplete filename|
-|Merge Current Line With Next Line|ctrl+shift+J
-|Find a specific Method|cmd + shift + t|
-|Vertical Blocks| Alt dragging |
-|Duplicate Line/Selection| ctrl-shift-D|
-|Find Related File| alt-cmd-down |
-|Select A Word |cntrl + w
-|Add Placeholder text|lorem + tab|
-|Move Selected Text Up|cntrl + cmd + up (or down)||
-|Rename A File|space (whilst focus is on project drawer)|
-|Open A File|
-|Run Migrations|cntl + shift + |:Rmigrate
-|Edit ends of selected lines|cmd+opt+a||
-|Select A Word|ctrl+w|
-|Spell Checking| CMD + : ??TEST
-|Wrap Selected Text in P tags| SHIFT + CONTROL + W |
-|Upcase Selected Text|CONTROL + SHIFT + U|
-|Titelcase Current Text| CONTROL + OPTION + U |
-|Clipboard History|⌘ + SHIFT + V |
-|Add Bookmark| CMD + F2 TEST
-|Next Bookmark| F2 |
-|Previous Bookmark| shift + F2 |
-|indent|CMD + [
-|unindent| CMD + ]
-|sort lines| F5
-|undo|CMD + Z
-|Bigger/Smaller Font| CMD + /-
-|redo| CMD + SHIFT + Z&lt;table&gt;
 	&lt;tr&gt;
+		&lt;td&gt;Full Screen &lt;/td&gt;
+		&lt;td&gt; (Lion Only) https://github.com/enormego/EGOTextMateFullScreen &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Enter &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Search Entire Project &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Shift + F (grep) &lt;/td&gt;
+		&lt;td&gt; ,a THING_SEARCHING_FOR (ack) &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go To Line&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + L 20 &lt;/td&gt;
+		&lt;td&gt; :20 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Delete Line&lt;/td&gt;
+		&lt;td&gt;cmd + shift + k &lt;/td&gt;
+		&lt;td&gt; dd &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Automatically Indent Code Beautifully&lt;/td&gt;
+		&lt;td&gt; Alt + &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle) &lt;/td&gt;
+		&lt;td&gt; gg=G &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Check for Syntax Errors On Saving (*life saver)&lt;/td&gt;
+		&lt;td&gt; Validate On Save Plugin https://github.com/sxtxixtxcxh/validate-on-save.tmbundle &lt;/td&gt;
+		&lt;td&gt; Built In (A grey bar appears right of the number column with an &amp;gt; beside the error) &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Run Tests For Given File&lt;/td&gt;
+		&lt;td&gt;cmd + r &lt;/td&gt;
+		&lt;td&gt; :Rake &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Run Current File&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + R &lt;/td&gt;
+		&lt;td&gt; No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to &amp;#8216;ruby current_file_name&amp;#8217;) &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go To Last Migration&lt;/td&gt;
+		&lt;td&gt; None &lt;/td&gt;
+		&lt;td&gt; :Rmig  &lt;/td&gt;
+		&lt;td&gt; &lt;br /&gt;
+Add opposing bracket or quotation mark&lt;/td&gt;
+		&lt;td&gt; Typing a &amp;quot; will automatically add in closing. &lt;/td&gt;
+		&lt;td&gt; Type let g:AutoClosePairs = {&amp;#8217;(&amp;#8216;: &amp;#8217;)&amp;#8217;, &amp;#8216;{&amp;#8217;: &amp;#8216;}&amp;#8217;, &amp;#8216;[&amp;#8217;: &amp;#8216;]&amp;#8217;, &amp;#8216;&amp;quot;&amp;#8217;: &amp;#8216;&amp;quot;&amp;#8217;, &amp;#8220;&amp;#8217;&amp;#8221;: &amp;#8220;&amp;#8217;&amp;#8221;, &amp;#8216;#{&amp;#8217;: &amp;#8216;}&amp;#8217;, &amp;#8217;&lt;/td&gt;
+		&lt;td&gt;&amp;#8216;:&amp;#8217;&lt;/td&gt;
+		&lt;td&gt;&amp;#8217; } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = [&amp;#8220;Character&amp;#8221;] Add vim_plugin_task &amp;#8220;autoclose&amp;#8221;, &amp;#8220;git://github.com/Townk/vim-autoclose.git&amp;#8221;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Close current html tag&lt;/td&gt;
+		&lt;td&gt;cmd + alt + .&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;View &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; Colour Wheel&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + C (&lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;)&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Call RoR Generate Script&lt;/td&gt;
+		&lt;td&gt; cntrl + \&lt;/td&gt;
+		&lt;td&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Switch Focus To Project Drawer&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;ALT&lt;/span&gt; + ` (check)&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Insert Erb&amp;#8217;s &amp;lt;%= or &amp;lt;% &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CNTRL&lt;/span&gt; + ^ &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Jump Between Words Left&lt;/td&gt;
+		&lt;td&gt; Alt + Left&lt;br /&gt;
+|Jump Between Words Right&lt;/td&gt;
+		&lt;td&gt; Alt + Right &lt;br /&gt;
+|New Tab&lt;/td&gt;
+		&lt;td&gt; Click On File In Project Drawer &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Shit + T &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Drop Tab&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + w &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + w &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Switch Tabs Left &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;COMMAND&lt;/span&gt; + [ (left) ] &lt;/td&gt;
+		&lt;td&gt; :tabp &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Switch Tabs Right &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;COMMAND&lt;/span&gt; + right &lt;/td&gt;
+		&lt;td&gt; :tabn &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go To Tab&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt;[1-9] &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt;[1-9]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Replace all &amp;#8220;donut&amp;#8221; with &amp;#8220;eclair&amp;#8221; in file&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; F (Find and Replace Dialogue) Replace All &lt;/td&gt;
+		&lt;td&gt; :%s/donut/eclair/g &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Replace all &amp;#8220;donut&amp;#8221; with &amp;#8220;eclair&amp;#8221; in file, ignoring case &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; F (Find and Replace Dialogue) Select &amp;#8216;Ignroe Case&amp;#8217;. Replace All &lt;/td&gt;
+		&lt;td&gt; :%s/donut/eclair/gi &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Replace all &amp;#8220;donut&amp;#8221; with &amp;#8220;eclair&amp;#8221; in file, confirming each time &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; F (Find and Replace Dialogue) Replace Next &lt;/td&gt;
+		&lt;td&gt; :%s/donut/eclair/gc &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;Replace &amp;#8220;donut&amp;#8221; with &amp;#8220;eclair&amp;#8221; in entire project&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Shift + F &lt;/td&gt;
+		&lt;td&gt; (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. &lt;Tab&gt; into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Save File&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + S &lt;/td&gt;
+		&lt;td&gt; :wReplace &amp;#8220;donut&amp;#8221; with &amp;#8220;eclair&amp;#8221; in entire project&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Shift + F &lt;/td&gt;
+		&lt;td&gt; ,a donut[Enter] &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Save File As&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Shift + S &lt;/td&gt;
+		&lt;td&gt; :saveas &lt;span class=&quot;caps&quot;&gt;NEWNAME&lt;/span&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Create New File&lt;/td&gt;
+		&lt;td&gt; File &amp;gt; new &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + T (new tab); type; :w newfilename &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Select All&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + A &lt;/td&gt;
+		&lt;td&gt; vgg=G &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Increase Selection Left One Word&lt;/td&gt;
+		&lt;td&gt; Shift + Alt + Left then alt + left for each additional word&lt;/td&gt;
+		&lt;td&gt; v(select)w then w for each additional word  &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Autocomplete method&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Autocomplete filename&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Merge Current Line With Next Line&lt;/td&gt;
+		&lt;td&gt;ctrl+shift+J&lt;br /&gt;
+|Find a specific Method&lt;/td&gt;
+		&lt;td&gt;cmd + shift + t&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Vertical Blocks&lt;/td&gt;
+		&lt;td&gt; Alt dragging &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Duplicate Line/Selection&lt;/td&gt;
+		&lt;td&gt; ctrl-shift-D&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Find Related File&lt;/td&gt;
+		&lt;td&gt; alt-cmd-down &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Select A Word &lt;/td&gt;
+		&lt;td&gt;cntrl + w&lt;br /&gt;
+|Add Placeholder text&lt;/td&gt;
+		&lt;td&gt;lorem + tab&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Move Selected Text Up&lt;/td&gt;
+		&lt;td&gt;cntrl + cmd + up (or down)&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Rename A File&lt;/td&gt;
+		&lt;td&gt;space (whilst focus is on project drawer)&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Open A File&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Run Migrations&lt;/td&gt;
+		&lt;td&gt;cntl + shift + &lt;/td&gt;
+		&lt;td&gt;:Rmigrate&lt;br /&gt;
+|Edit ends of selected lines&lt;/td&gt;
+		&lt;td&gt;cmd+opt+a&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Select A Word&lt;/td&gt;
+		&lt;td&gt;ctrl+w&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Spell Checking&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + : ??&lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;&lt;br /&gt;
+|Wrap Selected Text in P tags&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + W &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Upcase Selected Text&lt;/td&gt;
+		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + U&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Titelcase Current Text&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CONTROL&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;OPTION&lt;/span&gt; + U &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Clipboard History&lt;/td&gt;
+		&lt;td&gt;⌘ + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + V &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Add Bookmark&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + F2 &lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;&lt;br /&gt;
+|Next Bookmark&lt;/td&gt;
+		&lt;td&gt; F2 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Previous Bookmark&lt;/td&gt;
+		&lt;td&gt; shift + F2 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;indent&lt;/td&gt;
+		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + [&lt;br /&gt;
+|unindent&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + ]&lt;br /&gt;
+|sort lines&lt;/td&gt;
+		&lt;td&gt; F5&lt;br /&gt;
+|undo&lt;/td&gt;
+		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Z&lt;br /&gt;
+|Bigger/Smaller Font&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + /-&lt;br /&gt;
+|redo&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + Z&lt;br /&gt;
+&lt;br /&gt;
+&lt;/td&gt;
 		&lt;td&gt;Snippets&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;

@@ -11,32 +11,30 @@ Assumptions:
 3) You are in Normal Mode for all commands unless specified
 4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|
 
+Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.
+
+Somtimes you will need to install extra plugins. These go in your janus.rake file
+
 |Command| Textmate| Vim|
 |Open Project From Command Line| [in folder] mate. | [in folder] mvim .|
 |Go To Beginning Of Line| CTRL + A | ^ | 
 |Go To End Of Line | CTRL + E | $ |
-|Go To Top Of File | CMD + Up | g
-|Go To Bottom Of File | CMD + Down | GG
-|Move Up One Line (with Carret at same position)| CTRL + P | k
-IMPREFECT
+|Go To Top Of File | CMD + Up | g |
+|Go To Bottom Of File | CMD + Down | GG |
+|Move Up One Line (with Carret at same position)| CTRL + P | k |
 |Move Down One Line (with Carret at same position)| CNRL + N| j|
 |Search File Downwards|@<Ctrl> + S then type method name@|@/def donught@|
-|Search File Upwards | Shift + CTRL + S THING_SEARCHING_FOR |
-?THING_SEARCHING_FOR |
+|Search File Upwards | Shift + CTRL + S THING_SEARCHING_FOR | ?THING_SEARCHING_FOR |
 |Full Screen | (Lion Only) https://github.com/enormego/EGOTextMateFullScreen | CMD + Enter |
-|Search Entire Project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR
-(ack)
-|Go To Line| CMD + L 20 | :20
+|Search Entire Project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR (ack) |
+|Go To Line| CMD + L 20 | :20 |
 |Delete Line|cmd + shift + k | dd |
-|Automatically Indent Code Beautifully| Alt + CMD + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle)
-| gg=G
-|Check for Syntax Errors On Saving (*life saver)| Validate On Save Plugin
-https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In (A
-grey bar appears right of the number column with an > beside the error)
-|Run Tests For Given File|cmd + r | :Rake
-|Run Current File| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name')
-|Last Migration| |:Rmig 
-|Add opposing bracket or quotation mark|
+|Automatically Indent Code Beautifully| Alt + CMD + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle) | gg=G |
+|Check for Syntax Errors On Saving (*life saver)| Validate On Save Plugin https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In (A grey bar appears right of the number column with an > beside the error) |
+|Run Tests For Given File|cmd + r | :Rake |
+|Run Current File| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name') |
+|Go To Last Migration| None | :Rmig  | 
+Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Type let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}', '|':'|' } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = ["Character"] Add vim_plugin_task "autoclose", "git://github.com/Townk/vim-autoclose.git"||
 |Close current html tag|cmd + alt + .|
 |View CSS Colour Wheel| CMD + SHIFT + C (TEST)|
 |Call RoR Generate Script| cntrl + \| |
@@ -46,18 +44,18 @@ grey bar appears right of the number column with an > beside the error)
 |Jump Between Words Right| Alt + Right 
 |New Tab| Click On File In Project Drawer | CMD + Shit + T |
 |Drop Tab| CTRL + w | CTRL + w |
-|Switch Tabs Left | SHIFT + COMMAND + [ (left) ] | :tabp
-|Switch Tabs Right | SHIFT + COMMAND + right | :tabn
+|Switch Tabs Left | SHIFT + COMMAND + [ (left) ] | :tabp |
+|Switch Tabs Right | SHIFT + COMMAND + right | :tabn |
 |Go To Tab| CMD[1-9] | CMD[1-9]|
-|Replace all "donut" with "eclair" in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g
-|Replace all "donut" with "eclair" in file, ignoring case | CMD F (Find and Replace Dialogue) Select 'Ignroe Case'. Replace All | :%s/donut/eclair/gi
-|Replace all "donut" with "eclair" in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc
-||Replace "donut" with "eclair" in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.
-|Save File| CMD + S | :wReplace "donut" with "eclair" in entire project| CMD + Shift + F | ,a donut[Enter]
+|Replace all "donut" with "eclair" in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g |
+|Replace all "donut" with "eclair" in file, ignoring case | CMD F (Find and Replace Dialogue) Select 'Ignroe Case'. Replace All | :%s/donut/eclair/gi |
+|Replace all "donut" with "eclair" in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc |
+||Replace "donut" with "eclair" in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. |
+|Save File| CMD + S | :wReplace "donut" with "eclair" in entire project| CMD + Shift + F | ,a donut[Enter] |
 |Save File As| CMD + Shift + S | :saveas NEWNAME |
 |Create New File| File > new | CMD + T (new tab); type; :w newfilename |
-|Select All| CMD + A | vgg=G
-|Increase Selection Left One Word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word 
+|Select All| CMD + A | vgg=G |
+|Increase Selection Left One Word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word  |
 |Autocomplete method|
 |Autocomplete filename|
 |Merge Current Line With Next Line|ctrl+shift+J
