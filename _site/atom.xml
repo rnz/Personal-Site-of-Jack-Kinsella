@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T19:20:28+01:00</updated>
+ <updated>2011-09-04T20:13:06+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -16,11 +16,17 @@
    <link href="http://www.jackkinsella.ie/2011/09/05/textmate-to-vim.html"/>
    <updated>2011-09-05T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2011/09/05/textmate-to-vim</id>
-   <content type="html">&lt;p&gt;Assumptions:&lt;br /&gt;
-1) You&amp;#8217;re using a Mac&lt;br /&gt;
-2) You&amp;#8217;ve installed Janus&lt;br /&gt;
-3) You are in Normal Mode for all commands unless specified&lt;br /&gt;
-4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|&lt;/p&gt;
+   <content type="html">&lt;p&gt;When I switched from Textmate to Vim I could get nothing done. I didn&amp;#8217;t know how to replicate my favourite features, such as &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; T to find a file, or &lt;span class=&quot;caps&quot;&gt;ESC&lt;/span&gt; to autocomplete a method name. I a few weeks searching the internet for solutions and now can do anything I did in Textmate in Vim.&lt;/p&gt;
+&lt;p&gt;This guide isn&amp;#8217;t about the powerful features &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; has over-and-above Textmate. It&amp;#8217;s merely a guide to doing what you used to do in Textmate in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;. This is appropriate; when someone first swtiches to &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; they are not fully ready for the &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; way of mind. A milder learning curve is gained by using &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; like Textmate at first, and then going hardcore.&lt;/p&gt;
+&lt;p&gt;Some preliminary assumptions:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;You&amp;#8217;ve installed &lt;span class=&quot;caps&quot;&gt;MAC&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;: &lt;br /&gt;
+&lt;code&gt;brew install macvim&lt;/code&gt;&lt;/li&gt;
+	&lt;li&gt;You know the basics of &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;. Type vimtutor in your terminal for a tutorial. Further training can be found be referring to the &lt;a href=&quot;#vim_training_resources&quot;&gt;vim training resources below&lt;/a&gt; .&lt;/li&gt;
+	&lt;li&gt;You were a poweruser of Textmate keyboard shorcuts&lt;/li&gt;
+	&lt;li&gt;You&amp;#8217;ve installed &lt;a href=&quot;https://github.com/carlhuda/janus&quot;&gt;Janus&lt;/a&gt;, the community maintained distro of plugins and useful configurations for web programmers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;Parts of this guide are intended for the web app developer using Ruby On Rails. If you a Rails programmer you will still find 70% of this guide useful so don&amp;#8217;t look away yet.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.&lt;/p&gt;
 &lt;p&gt;Somtimes you will need to install extra plugins. These go in your janus.rake file&lt;/p&gt;
 &lt;h2&gt;Opening Up The Editor&lt;/h2&gt;
@@ -188,19 +194,20 @@
 		&lt;td&gt; &amp;lt; &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2&gt;Visual&lt;/h2&gt;
+&lt;h2&gt;Font Size, Line Numberings&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Bigger/Smaller Font&lt;/td&gt;
 		&lt;td&gt; ⌘ +/- &lt;/td&gt;
-		&lt;td&gt; (⌘; +/- doesn&amp;#8217;t work well) &lt;/td&gt;
-		&lt;td&gt; set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size)&lt;br /&gt;
-|Line numbering&lt;/td&gt;
+		&lt;td&gt; (⌘ +/- doesn&amp;#8217;t work well) set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size) &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Line numbering&lt;/td&gt;
 		&lt;td&gt; Menu Command &lt;/td&gt;
 		&lt;td&gt; :set number (on) :set nonumber (off). Note the symmetry. This is the same for all &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; commands&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
-&lt;h2&gt;Spelling&lt;/h2&gt;
+&lt;h2&gt;Spell Checking&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Highlight incorrect spellings&lt;/td&gt;
@@ -216,10 +223,9 @@
 &lt;h2&gt;Ruby On Rails&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Call RoR generate script&lt;/td&gt;
-		&lt;td&gt; ⌃ + &lt;/td&gt;
-		&lt;td&gt; [1..8]&lt;/td&gt;
-		&lt;td&gt; :Rgenerate [⌃ler model scaffold] Blog &lt;/td&gt;
+		&lt;td&gt;Call RoR generate script &lt;/td&gt;
+		&lt;td&gt; &amp;quot;⌃ + Pipe [1..8]== &lt;/td&gt;
+		&lt;td&gt;:Rgenerate [⌃ler model scaffold] Blog &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Go To Last Migration&lt;/td&gt;
@@ -228,8 +234,7 @@
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Run migrations&lt;/td&gt;
-		&lt;td&gt;⌃ + ⇧ + \&lt;/td&gt;
-		&lt;td&gt; &lt;/td&gt;
+		&lt;td&gt; ⌃ + ⇧ + Pipe &lt;/td&gt;
 		&lt;td&gt;:Rmigrate &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
@@ -389,9 +394,7 @@
 	&lt;tr&gt;
 		&lt;td&gt;Add opposing bracket or quotation mark&lt;/td&gt;
 		&lt;td&gt; Typing a &amp;quot; will automatically add in closing. &lt;/td&gt;
-		&lt;td&gt; Type let g:AutoClosePairs = {&amp;#8217;(&amp;#8216;: &amp;#8217;)&amp;#8217;, &amp;#8216;{&amp;#8217;: &amp;#8216;}&amp;#8217;, &amp;#8216;[&amp;#8217;: &amp;#8216;]&amp;#8217;, &amp;#8216;&amp;quot;&amp;#8217;: &amp;#8216;&amp;quot;&amp;#8217;, &amp;#8220;&amp;#8217;&amp;#8221;: &amp;#8220;&amp;#8217;&amp;#8221;, &amp;#8216;#{&amp;#8217;: &amp;#8216;}&amp;#8217;, &amp;#8217;&lt;/td&gt;
-		&lt;td&gt;&amp;#8216;:&amp;#8217;&lt;/td&gt;
-		&lt;td&gt;&amp;#8217; } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = [&amp;#8220;Character&amp;#8221;] Add vim_plugin_task &amp;#8220;autoclose&amp;#8221;, &amp;#8220;git://github.com/Townk/vim-autoclose.git&amp;#8221;&lt;/td&gt;
+		&lt;td&gt; Add &lt;a href=&quot;https://gist.github.com/1193298&quot;&gt;this gist&lt;/a&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Close current html tag&lt;/td&gt;
@@ -458,8 +461,10 @@
 	&lt;tr&gt;
 		&lt;td&gt;Copy&lt;/td&gt;
 		&lt;td&gt; ⌘ + C&lt;/td&gt;
-		&lt;td&gt; Y(copy current selection, or line if nothing selected)&lt;br /&gt;
-|Cut&lt;/td&gt;
+		&lt;td&gt; Y(copy current selection, or line if nothing selected) &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Cut&lt;/td&gt;
 		&lt;td&gt; ⌘ + X &lt;/td&gt;
 		&lt;td&gt; d(deleted selection, but deleting in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; sends it to a register where it can be pasted with p)&lt;/td&gt;
 	&lt;/tr&gt;
@@ -470,7 +475,7 @@
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Clipboard history&lt;/td&gt;
-		&lt;td&gt;⌘ + ⇧ + V &lt;/td&gt;
+		&lt;td&gt; ⌘ + ⇧ + V &lt;/td&gt;
 		&lt;td&gt; :reg (see a list of registers each of which can be pasted e.g. &amp;quot;8p) &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
@@ -494,12 +499,21 @@
 	&lt;tr&gt;
 		&lt;td&gt;Wrap selected text in P tags&lt;/td&gt;
 		&lt;td&gt; ⇧ + ⌃ + W &lt;/td&gt;
-		&lt;td&gt; ystp&lt;br /&gt;
-|Snippets (e.g. validates present of)&lt;/td&gt;
-		&lt;td&gt; vp&lt;Tab&gt; &lt;/td&gt;
-		&lt;td&gt; Currently clashes with Command-T since both use T. If anyone can fix this let me know&lt;/td&gt;
+		&lt;td&gt; ystp &lt;/td&gt;
 	&lt;/tr&gt;
-&lt;/table&gt;</content>
+	&lt;tr&gt;
+		&lt;td&gt;Snippets (e.g. validates present of)&lt;/td&gt;
+		&lt;td&gt; vp&lt;Tab&gt; &lt;/td&gt;
+		&lt;td&gt; Currently clashes with Command-T since both use T. I&amp;#8217;ve filed numerous but reports. If anyone has fixed this let me know. &lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;vim_training_resources&quot;&gt;Recommended Resources For Learning Basic Vim&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Remember the key is to train your fingers. Don&amp;#8217;t read the commands. Open up a blank file and try out different commands.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;*&amp;quot;Derek Wyatt&amp;#8217;s Video Series (Highly recommended, if you can tolerate his excitement)&amp;#8220;:http://www.derekwyatt.org/vim/vim-tutorial-videos/&lt;br /&gt;
+*&amp;#8221;Spaced Reptition Systems For Drilling (My Personal Favourite)&amp;#8220;:http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html&lt;br /&gt;
+*&amp;#8221;Visual Cheat Sheets&amp;quot;:http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html&lt;br /&gt;
+*&amp;quot;PeepCode&amp;#8217;s Video Series (Commercial)&amp;quot;:http://peepcode.com/products/smash-into-vim-i&lt;/p&gt;
+&lt;h3&gt;It took me a week to write this guide. If you found it useful please thank me by Tweeting the article, upvoting it on Hacker News on linking to this page.&lt;/h3&gt;</content>
  </entry>
  
  

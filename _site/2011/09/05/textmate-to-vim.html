@@ -114,11 +114,17 @@ jQuery(document).ready(function() {
 
 });
 </script>
-<p>Assumptions:<br />
-1) You&#8217;re using a Mac<br />
-2) You&#8217;ve installed Janus<br />
-3) You are in Normal Mode for all commands unless specified<br />
-4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|</p>
+<p>When I switched from Textmate to Vim I could get nothing done. I didn&#8217;t know how to replicate my favourite features, such as <span class="caps">CMD</span> T to find a file, or <span class="caps">ESC</span> to autocomplete a method name. I a few weeks searching the internet for solutions and now can do anything I did in Textmate in Vim.</p>
+<p>This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate. It&#8217;s merely a guide to doing what you used to do in Textmate in <span class="caps">VIM</span>. This is appropriate; when someone first swtiches to <span class="caps">VIM</span> they are not fully ready for the <span class="caps">VIM</span> way of mind. A milder learning curve is gained by using <span class="caps">VIM</span> like Textmate at first, and then going hardcore.</p>
+<p>Some preliminary assumptions:</p>
+<ol>
+	<li>You&#8217;ve installed <span class="caps">MAC</span> <span class="caps">VIM</span>: <br />
+<code>brew install macvim</code></li>
+	<li>You know the basics of <span class="caps">VIM</span>. Type vimtutor in your terminal for a tutorial. Further training can be found be referring to the <a href="#vim_training_resources">vim training resources below</a> .</li>
+	<li>You were a poweruser of Textmate keyboard shorcuts</li>
+	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained distro of plugins and useful configurations for web programmers</li>
+</ol>
+<p><em>Parts of this guide are intended for the web app developer using Ruby On Rails. If you a Rails programmer you will still find 70% of this guide useful so don&#8217;t look away yet.</em></p>
 <p>Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.</p>
 <p>Somtimes you will need to install extra plugins. These go in your janus.rake file</p>
 <h2>Opening Up The Editor</h2>
@@ -286,19 +292,20 @@ jQuery(document).ready(function() {
 		<td> &lt; </td>
 	</tr>
 </table>
-<h2>Visual</h2>
+<h2>Font Size, Line Numberings</h2>
 <table>
 	<tr>
 		<td>Bigger/Smaller Font</td>
 		<td> ⌘ +/- </td>
-		<td> (⌘; +/- doesn&#8217;t work well) </td>
-		<td> set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size)<br />
-|Line numbering</td>
+		<td> (⌘ +/- doesn&#8217;t work well) set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size) </td>
+	</tr>
+	<tr>
+		<td>Line numbering</td>
 		<td> Menu Command </td>
 		<td> :set number (on) :set nonumber (off). Note the symmetry. This is the same for all <span class="caps">VIM</span> commands</td>
 	</tr>
 </table>
-<h2>Spelling</h2>
+<h2>Spell Checking</h2>
 <table>
 	<tr>
 		<td>Highlight incorrect spellings</td>
@@ -314,10 +321,9 @@ jQuery(document).ready(function() {
 <h2>Ruby On Rails</h2>
 <table>
 	<tr>
-		<td>Call RoR generate script</td>
-		<td> ⌃ + </td>
-		<td> [1..8]</td>
-		<td> :Rgenerate [⌃ler model scaffold] Blog </td>
+		<td>Call RoR generate script </td>
+		<td> &quot;⌃ + Pipe [1..8]== </td>
+		<td>:Rgenerate [⌃ler model scaffold] Blog </td>
 	</tr>
 	<tr>
 		<td>Go To Last Migration</td>
@@ -326,8 +332,7 @@ jQuery(document).ready(function() {
 	</tr>
 	<tr>
 		<td>Run migrations</td>
-		<td>⌃ + ⇧ + \</td>
-		<td> </td>
+		<td> ⌃ + ⇧ + Pipe </td>
 		<td>:Rmigrate </td>
 	</tr>
 	<tr>
@@ -487,9 +492,7 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Add opposing bracket or quotation mark</td>
 		<td> Typing a &quot; will automatically add in closing. </td>
-		<td> Type let g:AutoClosePairs = {&#8217;(&#8216;: &#8217;)&#8217;, &#8216;{&#8217;: &#8216;}&#8217;, &#8216;[&#8217;: &#8216;]&#8217;, &#8216;&quot;&#8217;: &#8216;&quot;&#8217;, &#8220;&#8217;&#8221;: &#8220;&#8217;&#8221;, &#8216;#{&#8217;: &#8216;}&#8217;, &#8217;</td>
-		<td>&#8216;:&#8217;</td>
-		<td>&#8217; } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = [&#8220;Character&#8221;] Add vim_plugin_task &#8220;autoclose&#8221;, &#8220;git://github.com/Townk/vim-autoclose.git&#8221;</td>
+		<td> Add <a href="https://gist.github.com/1193298">this gist</a> </td>
 	</tr>
 	<tr>
 		<td>Close current html tag</td>
@@ -556,8 +559,10 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Copy</td>
 		<td> ⌘ + C</td>
-		<td> Y(copy current selection, or line if nothing selected)<br />
-|Cut</td>
+		<td> Y(copy current selection, or line if nothing selected) </td>
+	</tr>
+	<tr>
+		<td>Cut</td>
 		<td> ⌘ + X </td>
 		<td> d(deleted selection, but deleting in <span class="caps">VIM</span> sends it to a register where it can be pasted with p)</td>
 	</tr>
@@ -568,7 +573,7 @@ jQuery(document).ready(function() {
 	</tr>
 	<tr>
 		<td>Clipboard history</td>
-		<td>⌘ + ⇧ + V </td>
+		<td> ⌘ + ⇧ + V </td>
 		<td> :reg (see a list of registers each of which can be pasted e.g. &quot;8p) </td>
 	</tr>
 </table>
@@ -592,12 +597,21 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Wrap selected text in P tags</td>
 		<td> ⇧ + ⌃ + W </td>
-		<td> ystp<br />
-|Snippets (e.g. validates present of)</td>
+		<td> ystp </td>
+	</tr>
+	<tr>
+		<td>Snippets (e.g. validates present of)</td>
 		<td> vp<Tab> </td>
-		<td> Currently clashes with Command-T since both use T. If anyone can fix this let me know</td>
+		<td> Currently clashes with Command-T since both use T. I&#8217;ve filed numerous but reports. If anyone has fixed this let me know. </td>
 	</tr>
 </table>
+<h2 id="vim_training_resources">Recommended Resources For Learning Basic Vim</h2>
+<p><em>Remember the key is to train your fingers. Don&#8217;t read the commands. Open up a blank file and try out different commands.</em></p>
+<p>*&quot;Derek Wyatt&#8217;s Video Series (Highly recommended, if you can tolerate his excitement)&#8220;:http://www.derekwyatt.org/vim/vim-tutorial-videos/<br />
+*&#8221;Spaced Reptition Systems For Drilling (My Personal Favourite)&#8220;:http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html<br />
+*&#8221;Visual Cheat Sheets&quot;:http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html<br />
+*&quot;PeepCode&#8217;s Video Series (Commercial)&quot;:http://peepcode.com/products/smash-into-vim-i</p>
+<h3>It took me a week to write this guide. If you found it useful please thank me by Tweeting the article, upvoting it on Hacker News on linking to this page.</h3>
 
 <small>Written by Jack Kinsella, 05 Sep 2011</small>
 

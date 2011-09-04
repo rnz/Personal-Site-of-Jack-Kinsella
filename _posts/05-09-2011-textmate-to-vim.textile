@@ -7,12 +7,18 @@ author: Jack Kinsella
 
 ---
 
+When I switched from Textmate to Vim I could get nothing done. I didn't know how to replicate my favourite features, such as CMD T to find a file, or ESC to autocomplete a method name. I a few weeks searching the internet for solutions and now can do anything I did in Textmate in Vim.
 
-Assumptions:
-1) You're using a Mac
-2) You've installed Janus
-3) You are in Normal Mode for all commands unless specified
-4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|
+This guide isn't about the powerful features VIM has over-and-above Textmate. It's merely a guide to doing what you used to do in Textmate in VIM. This is appropriate; when someone first swtiches to VIM they are not fully ready for the VIM way of mind. A milder learning curve is gained by using VIM like Textmate at first, and then going hardcore.
+
+Some preliminary assumptions:
+# You've installed MAC VIM: 
+@brew install macvim@
+# You know the basics of VIM. Type vimtutor in your terminal for a tutorial. Further training can be found be referring to the "vim training resources below":#vim_training_resources .
+# You were a poweruser of Textmate keyboard shorcuts
+# You've installed "Janus":https://github.com/carlhuda/janus, the community maintained distro of plugins and useful configurations for web programmers
+
+_Parts of this guide are intended for the web app developer using Ruby On Rails. If you a Rails programmer you will still find 70% of this guide useful so don't look away yet._
 
 Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.
 
@@ -76,21 +82,21 @@ h2. Indentation
 |Indent|⌘ + [ | > |
 |Unindent| ⌘ + ] | < |
 
-h2. Visual
+h2. Font Size, Line Numberings
 
-|Bigger/Smaller Font| ⌘ +/- | (⌘; +/- doesn't work well) | set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size)
+|Bigger/Smaller Font| ⌘ +/- | (⌘ +/- doesn't work well) set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size) |
 |Line numbering| Menu Command | :set number (on) :set nonumber (off). Note the symmetry. This is the same for all VIM commands|
 
-h2. Spelling
+h2. Spell Checking
 
 |Highlight incorrect spellings| ⌥ + ⌘ + ; | :set spell |
 |Next incorrect spelling | ⌘ + : | ] s (opposite directino with [s) - assumes spell checking is enabled |
 
 h2. Ruby On Rails
 
-|Call RoR generate script| ⌃ + | [1..8]| :Rgenerate [⌃ler model scaffold] Blog |
+|Call RoR generate script | "⌃ + Pipe [1..8]== |:Rgenerate [⌃ler model scaffold] Blog |
 |Go To Last Migration| None | :Rmig  |
-|Run migrations|⌃ + ⇧ + \| |:Rmigrate |
+|Run migrations| ⌃ + ⇧ + Pipe |:Rmigrate |
 |Switch focus to project drawer| ⌘ + ⌥ + ` (check)| <⌃> + w <⌃> + w OR VIMRC noremap <tab> <C-w><C-w> |
 |Insert erb's <%= | ⌃ + ⇧ + . | yss= (after text on screen type this to surround line with tags) |
 |Insert erb's <% | ⌃ + SHIT + . (cycle through )| yss- |
@@ -144,7 +150,7 @@ h2. Syntax Errors
 
 h2. Autoclosing "" () or HTML tags 
 
-|Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Type let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}', '|':'|' } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = ["Character"] Add vim_plugin_task "autoclose", "git://github.com/Townk/vim-autoclose.git"|
+|Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Add "this gist":https://gist.github.com/1193298 |
 |Close current html tag|⌘ + ⌥ + .| vim_plugin_task "ragtag", "git://github.com/tpope/vim-ragtag.git" p CNRL + X Space |
 
 h2. CSS Colours
@@ -167,15 +173,26 @@ h2. Moving Text Around
 
 h2. Clipboard
 
-|Copy| ⌘ + C| Y(copy current selection, or line if nothing selected)
+|Copy| ⌘ + C| Y(copy current selection, or line if nothing selected) |
 |Cut| ⌘ + X | d(deleted selection, but deleting in VIM sends it to a register where it can be pasted with p)|
 |Paste| ⌘ + V | p(paste below current line) |
-|Clipboard history|⌘ + ⇧ + V | :reg (see a list of registers each of which can be pasted e.g. "8p) |
+|Clipboard history| ⌘ + ⇧ + V | :reg (see a list of registers each of which can be pasted e.g. "8p) |
 
 h2. Duplicating Lines
 
 |Duplicate line/selection| ⌃-⇧-D| Yp (y copies line then p pastes in below) |
 |Add placeholder text|lorem + tab| No Equivalent |
 |Edit ends of selected lines|⌘+opt+a||
-|Wrap selected text in P tags| ⇧ + ⌃ + W | ystp
-|Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. If anyone can fix this let me know|
+|Wrap selected text in P tags| ⇧ + ⌃ + W | ystp |
+|Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. I've filed numerous but reports. If anyone has fixed this let me know. |
+
+h2(#vim_training_resources). Recommended Resources For Learning Basic Vim
+
+_Remember the key is to train your fingers. Don't read the commands. Open up a blank file and try out different commands._
+
+*"Derek Wyatt's Video Series (Highly recommended, if you can tolerate his excitement)":http://www.derekwyatt.org/vim/vim-tutorial-videos/
+*"Spaced Reptition Systems For Drilling (My Personal Favourite)":http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html
+*"Visual Cheat Sheets":http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
+*"PeepCode's Video Series (Commercial)":http://peepcode.com/products/smash-into-vim-i
+
+h3. It took me a week to write this guide. If you found it useful please thank me by Tweeting the article, upvoting it on Hacker News on linking to this page.
