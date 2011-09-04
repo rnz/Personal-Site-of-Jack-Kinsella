@@ -75,8 +75,7 @@
 
       <div class="wrapper">
         <div class="entry-content">
-        <h2>Textmate to Vim</h2>
-<!-- Social Bookmarking Widget.Asynchonous. -->
+        <!-- Social Bookmarking Widget.Asynchonous. -->
 <div id="social_bookmarks">
 <div id="custom-social-bookmarks-twitter" class="bookmark_icon"></div>
 <div id="custom-social-bookmarks-facebook" class="bookmark_icon"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=224287964265938&amp;xfbml=1"></script></div>
@@ -122,17 +121,115 @@ jQuery(document).ready(function() {
 4) Key 1 + Key 2 means both at same time | kw means k followed quickly by w|</p>
 <p>Sometimes you will need to create customer commands in ~/.vimrc.local anything you place. To save yourself this just download my own version.</p>
 <p>Somtimes you will need to install extra plugins. These go in your janus.rake file</p>
+<h2>Opening Up The Editor</h2>
 <table>
-	<tr>
-		<td>Command</td>
-		<td> Textmate</td>
-		<td> Vim</td>
-	</tr>
 	<tr>
 		<td>Open project from command line</td>
 		<td> [in folder] mate. </td>
 		<td> [in folder] mvim .</td>
 	</tr>
+</table>
+<h2>Undo / Redo.</h2>
+<table>
+	<tr>
+		<td>Undo</td>
+		<td><span class="caps">CMD</span> + Z </td>
+		<td> u </td>
+	</tr>
+	<tr>
+		<td>Redo</td>
+		<td> <span class="caps">SHIFT</span> + <span class="caps">CMD</span> + Z </td>
+		<td> <span class="caps">CTRL</span> + R </td>
+	</tr>
+</table>
+<h2>Opening, closing and creating files</h2>
+<table>
+	<tr>
+		<td>Open a file</td>
+		<td> <span class="caps">CMD</span> + 0 </td>
+		<td> :e <span class="caps">FILENAME</span> (use Tab completion after first few letters) [Save File first]</td>
+	</tr>
+	<tr>
+		<td>Create new file</td>
+		<td> File &gt; new </td>
+		<td> <span class="caps">CMD</span> + T (new tab); type; :w newfilename </td>
+	</tr>
+</table>
+<h2>Saving Files</h2>
+<table>
+	<tr>
+		<td>Save file</td>
+		<td> <span class="caps">CMD</span> + S </td>
+		<td> :w<br />
+|Save file as</td>
+		<td> <span class="caps">CMD</span> + Shift + S </td>
+		<td> :saveas <span class="caps">NEWNAME</span> </td>
+	</tr>
+</table>
+<h2>File renaming</h2>
+<table>
+	<tr>
+		<td>Rename a file</td>
+		<td>space (whilst focus is on project drawer)</td>
+		<td> Focus On Project Drawer. Select File (search). m (menu appears) m type name of file [enter]. You may need to press r to refresh project drawer (usually happens automatically after a few minutes)</td>
+	</tr>
+</table>
+<h2>Project Drawer</h2>
+<table>
+	<tr>
+		<td>Focus on project drawer</td>
+		<td> <span class="caps">CTRL</span> + <Tab> </td>
+		<td> <Tab> (assuming you&#8217;ve set it up. otherwise <span class="caps">CNRL</span> + W/ <span class="caps">CTRL</span> + W)</td>
+	</tr>
+	<tr>
+		<td>Close/Open Project Drawer</td>
+		<td> <span class="caps">CTRL</span> + <span class="caps">ALT</span> + <span class="caps">CMD</span> + D </td>
+		<td>\n</td>
+	</tr>
+</table>
+<h2>Tabs</h2>
+<table>
+	<tr>
+		<td>New tab</td>
+		<td> Click On File In Project Drawer </td>
+		<td> <span class="caps">CMD</span> + Shit + T </td>
+	</tr>
+	<tr>
+		<td>Drop tab</td>
+		<td> <span class="caps">CTRL</span> + w </td>
+		<td> <span class="caps">CTRL</span> + w </td>
+	</tr>
+	<tr>
+		<td>Switch tabs left </td>
+		<td> <span class="caps">SHIFT</span> + <span class="caps">COMMAND</span> + [ (left) ] </td>
+		<td> :tabp </td>
+	</tr>
+	<tr>
+		<td>Switch tabs right </td>
+		<td> <span class="caps">SHIFT</span> + <span class="caps">COMMAND</span> + right </td>
+		<td> :tabn </td>
+	</tr>
+	<tr>
+		<td>Go to tab</td>
+		<td> <span class="caps">CMD</span>[1-9] </td>
+		<td> <span class="caps">CMD</span>[1-9]</td>
+	</tr>
+</table>
+<h2>Running Tests and Files</h2>
+<table>
+	<tr>
+		<td>Run tests for given file</td>
+		<td>cmd + r </td>
+		<td> :Rake </td>
+	</tr>
+	<tr>
+		<td>Run current file</td>
+		<td> <span class="caps">CMD</span> + R </td>
+		<td> No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to &#8216;ruby current_file_name&#8217;) </td>
+	</tr>
+</table>
+<h2>Moving Around A File</h2>
+<table>
 	<tr>
 		<td>Go to beginning of line</td>
 		<td> <span class="caps">CTRL</span> + A </td>
@@ -163,82 +260,71 @@ jQuery(document).ready(function() {
 		<td> j</td>
 	</tr>
 	<tr>
-		<td>Search file downwards</td>
-		<td><code>&lt;Ctrl&gt; + S then type method name</code></td>
-		<td><code>/def donught</code></td>
-	</tr>
-	<tr>
-		<td>Search file upwards </td>
-		<td> Shift + <span class="caps">CTRL</span> + S THING_SEARCHING_FOR </td>
-		<td> ?THING_SEARCHING_FOR </td>
-	</tr>
-	<tr>
-		<td>Full screen </td>
-		<td> (Lion Only) https://github.com/enormego/EGOTextMateFullScreen </td>
-		<td> <span class="caps">CMD</span> + Enter </td>
-	</tr>
-	<tr>
-		<td>Search entire project </td>
-		<td> <span class="caps">CMD</span> + Shift + F (grep) </td>
-		<td> ,a THING_SEARCHING_FOR (ack) </td>
-	</tr>
-	<tr>
 		<td>Go to line</td>
 		<td> <span class="caps">CMD</span> + L 20 </td>
 		<td> :20 </td>
 	</tr>
-	<tr>
-		<td>Delete line</td>
-		<td>cmd + shift + k </td>
-		<td> dd </td>
-	</tr>
+</table>
+<h2>Indentation</h2>
+<table>
 	<tr>
 		<td>Automatically indent code beautifully</td>
 		<td> Alt + <span class="caps">CMD</span> + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle) </td>
 		<td> gg=G </td>
 	</tr>
 	<tr>
-		<td>Check for syntax errors on saving (*life saver)</td>
-		<td> Validate On Save Plugin https://github.com/sxtxixtxcxh/validate-on-save.tmbundle </td>
-		<td> Built In (A grey bar appears right of the number column with an &gt; beside the error) </td>
+		<td>Indent</td>
+		<td><span class="caps">CMD</span> + [ </td>
+		<td> &gt; </td>
 	</tr>
 	<tr>
-		<td>Run tests for given file</td>
-		<td>cmd + r </td>
-		<td> :Rake </td>
+		<td>Unindent</td>
+		<td> <span class="caps">CMD</span> + ] </td>
+		<td> &lt; </td>
+	</tr>
+</table>
+<h2>Visual</h2>
+<table>
+	<tr>
+		<td>Bigger/Smaller Font</td>
+		<td> <span class="caps">CMD</span> +/- </td>
+		<td> (<span class="caps">CMD</span> +/- doesn&#8217;t work well) </td>
+		<td> set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size)<br />
+|Line numbering</td>
+		<td> Menu Command </td>
+		<td> :set number (on) :set nonumber (off). Note the symmetry. This is the same for all <span class="caps">VIM</span> commands</td>
+	</tr>
+</table>
+<h2>Spelling</h2>
+<table>
+	<tr>
+		<td>Highlight incorrect spellings</td>
+		<td> <span class="caps">ALT</span> + <span class="caps">CMD</span> + ; </td>
+		<td> :set spell </td>
 	</tr>
 	<tr>
-		<td>Run current file</td>
-		<td> <span class="caps">CMD</span> + R </td>
-		<td> No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to &#8216;ruby current_file_name&#8217;) </td>
+		<td>Next incorrect spelling </td>
+		<td> <span class="caps">CMD</span> + : </td>
+		<td> ] s (opposite directino with [s) &#8211; assumes spell checking is enabled </td>
+	</tr>
+</table>
+<h2>Rails</h2>
+<table>
+	<tr>
+		<td>Call RoR generate script</td>
+		<td> cntrl + \</td>
+		<td> [1..8]</td>
+		<td> :Rgenerate [controller model scaffold] Blog </td>
 	</tr>
 	<tr>
 		<td>Go To Last Migration</td>
 		<td> None </td>
 		<td> :Rmig  </td>
 		<td> <br />
-Add opposing bracket or quotation mark</td>
-		<td> Typing a &quot; will automatically add in closing. </td>
-		<td> Type let g:AutoClosePairs = {&#8217;(&#8216;: &#8217;)&#8217;, &#8216;{&#8217;: &#8216;}&#8217;, &#8216;[&#8217;: &#8216;]&#8217;, &#8216;&quot;&#8217;: &#8216;&quot;&#8217;, &#8220;&#8217;&#8221;: &#8220;&#8217;&#8221;, &#8216;#{&#8217;: &#8216;}&#8217;, &#8217;</td>
-		<td>&#8216;:&#8217;</td>
-		<td>&#8217; } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = [&#8220;Character&#8221;] Add vim_plugin_task &#8220;autoclose&#8221;, &#8220;git://github.com/Townk/vim-autoclose.git&#8221;</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Close current html tag</td>
-		<td>cmd + alt + .</td>
-		<td> vim_plugin_task &#8220;ragtag&#8221;, &#8220;git://github.com/tpope/vim-ragtag.git&#8221; p <span class="caps">CNRL</span> + X Space </td>
-	</tr>
-	<tr>
-		<td>View <span class="caps">CSS</span> colour wheel</td>
-		<td> <span class="caps">CMD</span> + <span class="caps">SHIFT</span> + C </td>
-		<td> No exact equivalent.  vim_plugin_task &#8220;vim-css-color&#8221;, &#8216;git://github.com/skammer/vim-css-color.git&#8217; turns #acbdef into its correct colour</td>
-	</tr>
-	<tr>
-		<td>Call RoR generate script</td>
-		<td> cntrl + \</td>
-		<td> [1..8]</td>
-		<td> :Rgenerate [controller model scaffold] Blog </td>
+|Run migrations</td>
+		<td>cntl + shift + \</td>
+		<td> </td>
+		<td>:Rmigrate </td>
 	</tr>
 	<tr>
 		<td>Switch focus to project drawer</td>
@@ -261,40 +347,55 @@ Add opposing bracket or quotation mark</td>
 		<td> :.Rake (. here represent current line. Substitute for other lines) <span class="caps">TEST</span> </td>
 	</tr>
 	<tr>
-		<td>Jump between words left</td>
-		<td> Alt + Left </td>
-		<td> w </td>
+		<td>Go to test file (e.g. from user.rb to user_spec.rb)</td>
+		<td> <span class="caps">ALT</span> + <span class="caps">SHIT</span> + <span class="caps">CMD</span> + <span class="caps">DOWN</span> </td>
+		<td> :A (:AV in a new split, :AT new tab)</td>
 	</tr>
 	<tr>
-		<td>Jump between words right</td>
-		<td> Alt + Right </td>
-		<td> b </td>
+		<td>Find related file</td>
+		<td> alt-cmd-down </td>
+</table>
+:R (If typed in controller -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))<h2>Bookmarks</h2>
+<table>
+	<tr>
+		<td>Add bookmark</td>
+		<td> <span class="caps">CMD</span> + F2 (Never worked on my mac) </td>
+		<td> m[a-z] (this letter refers to this bookmark) </td>
 	</tr>
 	<tr>
-		<td>New tab</td>
-		<td> Click On File In Project Drawer </td>
-		<td> <span class="caps">CMD</span> + Shit + T </td>
+		<td>Jump to bookmark</td>
+		<td> F2 (next) + F2 (previosu) </td>
+</table>
+'a (:marks to sell all marks)<h2>Searching Files</h2>
+<table>
+	<tr>
+		<td>Search file downwards</td>
+		<td><code>&lt;Ctrl&gt; + S then type method name</code></td>
+		<td><code>/def donught</code></td>
 	</tr>
 	<tr>
-		<td>Drop tab</td>
-		<td> <span class="caps">CTRL</span> + w </td>
-		<td> <span class="caps">CTRL</span> + w </td>
+		<td>Search file upwards </td>
+		<td> Shift + <span class="caps">CTRL</span> + S THING_SEARCHING_FOR </td>
+		<td> ?THING_SEARCHING_FOR </td>
 	</tr>
 	<tr>
-		<td>Switch tabs left </td>
-		<td> <span class="caps">SHIFT</span> + <span class="caps">COMMAND</span> + [ (left) ] </td>
-		<td> :tabp </td>
+		<td>Full screen </td>
+		<td> (Lion Only) https://github.com/enormego/EGOTextMateFullScreen </td>
+		<td> <span class="caps">CMD</span> + Enter </td>
 	</tr>
 	<tr>
-		<td>Switch tabs right </td>
-		<td> <span class="caps">SHIFT</span> + <span class="caps">COMMAND</span> + right </td>
-		<td> :tabn </td>
+		<td>Search entire project </td>
+		<td> <span class="caps">CMD</span> + Shift + F (grep) </td>
+		<td> ,a THING_SEARCHING_FOR (ack) </td>
 	</tr>
 	<tr>
-		<td>Go to tab</td>
-		<td> <span class="caps">CMD</span>[1-9] </td>
-		<td> <span class="caps">CMD</span>[1-9]</td>
+		<td>Find a specific Method</td>
+		<td>cmd + shift + t</td>
+		<td> /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)</td>
 	</tr>
+</table>
+<h2>Replacing Text in Files and Project</h2>
+<table>
 	<tr>
 		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file</td>
 		<td> <span class="caps">CMD</span> F (Find and Replace Dialogue) Replace All </td>
@@ -311,41 +412,28 @@ Add opposing bracket or quotation mark</td>
 		<td> :%s/donut/eclair/gc </td>
 	</tr>
 	<tr>
-		<td></td>
 		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
 		<td> <span class="caps">CMD</span> + Shift + F </td>
 		<td> (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. </td>
 	</tr>
 	<tr>
-		<td>Save file</td>
-		<td> <span class="caps">CMD</span> + S </td>
-		<td> :wReplace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
+		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
 		<td> <span class="caps">CMD</span> + Shift + F </td>
 		<td> ,a donut[Enter] </td>
 	</tr>
-	<tr>
-		<td>Save file as</td>
-		<td> <span class="caps">CMD</span> + Shift + S </td>
-		<td> :saveas <span class="caps">NEWNAME</span> </td>
-	</tr>
 </table>
+<h2>Uppercase/Lowercase (<span class="caps">UNFIN</span>)</h2>
 <table>
 	<tr>
-		<td>Create new file</td>
-		<td> File &gt; new </td>
-		<td> <span class="caps">CMD</span> + T (new tab); type; :w newfilename </td>
+		<td>Upcase selected text</td>
+		<td><span class="caps">CONTROL</span> + <span class="caps">SHIFT</span> + U</td>
 	</tr>
 	<tr>
-		<td>Select all</td>
-		<td> <span class="caps">CMD</span> + A </td>
-		<td> vgg=G </td>
-	</tr>
-	<tr>
-		<td>Increase selection left one word</td>
-		<td> Shift + Alt + Left then alt + left for each additional word</td>
-		<td> v(select)w then w for each additional word  </td>
+		<td>Titelcase current text</td>
+		<td> <span class="caps">CONTROL</span> + <span class="caps">OPTION</span> + U </td>
 	</tr>
 </table>
+<h2>Autocomplete</h2>
 <table>
 	<tr>
 		<td>Autocomplete method</td>
@@ -357,143 +445,116 @@ Add opposing bracket or quotation mark</td>
 		<td> Not possible </td>
 		<td> <span class="caps">CTRL</span> + X <span class="caps">CTRL</span> + F (repeat for each directory)</td>
 	</tr>
+</table>
+<h2>Deletion</h2>
+<table>
 	<tr>
-		<td>Merge current line With Next Line</td>
-		<td>ctrl+shift+J </td>
-		<td> J </td>
+		<td>Delete line</td>
+		<td>cmd + shift + k </td>
+		<td> dd </td>
+	</tr>
+</table>
+<h2>Syntax Errors</h2>
+<table>
+	<tr>
+		<td>Check for syntax errors on saving (*life saver)</td>
+		<td> Validate On Save Plugin https://github.com/sxtxixtxcxh/validate-on-save.tmbundle </td>
+		<td> Built In (A grey bar appears right of the number column with an &gt; beside the error) </td>
+	</tr>
+</table>
+<h2>Autoclosing &quot;&quot; () or <span class="caps">HTML</span> tags</h2>
+<table>
+	<tr>
+		<td>Add opposing bracket or quotation mark</td>
+		<td> Typing a &quot; will automatically add in closing. </td>
+		<td> Type let g:AutoClosePairs = {&#8217;(&#8216;: &#8217;)&#8217;, &#8216;{&#8217;: &#8216;}&#8217;, &#8216;[&#8217;: &#8216;]&#8217;, &#8216;&quot;&#8217;: &#8216;&quot;&#8217;, &#8220;&#8217;&#8221;: &#8220;&#8217;&#8221;, &#8216;#{&#8217;: &#8216;}&#8217;, &#8217;</td>
+		<td>&#8216;:&#8217;</td>
+		<td>&#8217; } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = [&#8220;Character&#8221;] Add vim_plugin_task &#8220;autoclose&#8221;, &#8220;git://github.com/Townk/vim-autoclose.git&#8221;</td>
+		<td></td>
 	</tr>
 	<tr>
-		<td>Find a specific Method</td>
-		<td>cmd + shift + t</td>
-		<td> /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)</td>
+		<td>Close current html tag</td>
+		<td>cmd + alt + .</td>
+		<td> vim_plugin_task &#8220;ragtag&#8221;, &#8220;git://github.com/tpope/vim-ragtag.git&#8221; p <span class="caps">CNRL</span> + X Space </td>
+	</tr>
+</table>
+<h2><span class="caps">CSS</span> Colours</h2>
+<table>
+	<tr>
+		<td>View <span class="caps">CSS</span> colour wheel</td>
+		<td> <span class="caps">CMD</span> + <span class="caps">SHIFT</span> + C </td>
+		<td> No exact equivalent.  vim_plugin_task &#8220;vim-css-color&#8221;, &#8216;git://github.com/skammer/vim-css-color.git&#8217; turns #acbdef into its correct colour</td>
 	</tr>
 	<tr>
-		<td>Vertical blocks</td>
-		<td> Alt dragging </td>
+		<td>Jump between words left</td>
+		<td> Alt + Left </td>
+		<td> w </td>
+	</tr>
+	<tr>
+		<td>Jump between words right</td>
+		<td> Alt + Right </td>
+		<td> b </td>
+	</tr>
+</table>
+<h2>Selecting Text</h2>
+<table>
+	<tr>
+		<td>Select all</td>
+		<td> <span class="caps">CMD</span> + A </td>
+		<td> vgg=G </td>
+	</tr>
+	<tr>
+		<td>Increase selection left one word</td>
+		<td> Shift + Alt + Left then alt + left for each additional word</td>
+		<td> v(select)w then w for each additional word  </td>
+	</tr>
+	<tr>
+		<td>Select a vertical block</td>
+		<td> Alt + drag mouse </td>
 		<td> <span class="caps">CTRL</span> + V </td>
 	</tr>
-	<tr>
-		<td>Duplicate line/selection</td>
-		<td> ctrl-shift-D</td>
-		<td> Yp (y copies line then p pastes in below) </td>
-	</tr>
-	<tr>
-		<td>Go to test file (e.g. from user.rb to user_spec.rb)</td>
-		<td> <span class="caps">ALT</span> + <span class="caps">SHIT</span> + <span class="caps">CMD</span> + <span class="caps">DOWN</span> </td>
-		<td> :A (:AV in a new split, :AT new tab)</td>
-	</tr>
-	<tr>
-		<td>Find related file</td>
-		<td> alt-cmd-down </td>
-		<td> :R (If typed in controller &#8594; View(of method selected); If typed in view &#8594; Controller; Migrations &#8594; Next Migration (:A previous migration))<br />
-|Add placeholder text</td>
-		<td>lorem + tab</td>
-		<td> No Equivalent </td>
-	</tr>
+</table>
+<h2>Moving Text Around</h2>
+<table>
 	<tr>
 		<td>Move selected text up</td>
 		<td>cntrl + cmd + up (or down)</td>
 		<td> :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). Alternativly :m+ or :m+N or :m-N for moving 1 or N lines up or down</td>
 	</tr>
 	<tr>
-		<td>Line numbering</td>
-		<td> Menu Command </td>
-		<td> :set number (on) :set nonumber (off). Note the symmetry. This is the same for all <span class="caps">VIM</span> commands</td>
-	</tr>
-	<tr>
-		<td>Focus on project drawer</td>
-		<td> <span class="caps">CTRL</span> + <Tab> </td>
-		<td> <Tab> (assuming you&#8217;ve set it up. otherwise <span class="caps">CNRL</span> + W/ <span class="caps">CTRL</span> + W)</td>
-	</tr>
-	<tr>
-		<td>Rename a file</td>
-		<td>space (whilst focus is on project drawer)</td>
-		<td> Focus On Project Drawer. Select File (search). m (menu appears) m type name of file [enter]. You may need to press r to refresh project drawer (usually happens automatically after a few minutes)</td>
-	</tr>
-	<tr>
-		<td>Open a file</td>
-		<td> <span class="caps">CMD</span> + 0 </td>
-		<td> :e <span class="caps">FILENAME</span> (use Tab completion after first few letters) [Save File first]</td>
-	</tr>
-	<tr>
-		<td>Run migrations</td>
-		<td>cntl + shift + \</td>
-		<td> </td>
-		<td>:Rmigrate </td>
-	</tr>
-	<tr>
-		<td>Edit ends of selected lines</td>
-		<td>cmd+opt+a</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Highlight incorrect spellings</td>
-		<td> <span class="caps">ALT</span> + <span class="caps">CMD</span> + ; </td>
-		<td> :set spell </td>
-	</tr>
-	<tr>
-		<td>Next incorrect spelling </td>
-		<td> <span class="caps">CMD</span> + : </td>
-		<td> ] s (opposite directino with [s) &#8211; assumes spell checking is enabled </td>
-	</tr>
-	<tr>
-		<td>Wrap selected text in P tags</td>
-		<td> <span class="caps">SHIFT</span> + <span class="caps">CONTROL</span> + W </td>
-		<td> ystp<br />
-|Upcase selected text</td>
-		<td><span class="caps">CONTROL</span> + <span class="caps">SHIFT</span> + U</td>
-	</tr>
-	<tr>
-		<td>Titelcase current text</td>
-		<td> <span class="caps">CONTROL</span> + <span class="caps">OPTION</span> + U </td>
-	</tr>
-	<tr>
-		<td>Clipboard history</td>
-		<td>⌘ + <span class="caps">SHIFT</span> + V </td>
-	</tr>
-	<tr>
-		<td>Add bookmark</td>
-		<td> <span class="caps">CMD</span> + F2 (Never worked on my mac) </td>
-		<td> m[a-z] (this letter refers to this bookmark) </td>
-	</tr>
-	<tr>
-		<td>Jump to bookmark</td>
-		<td> F2 (next) + F2 (previosu) </td>
-		<td> &#8217;a (:marks to sell all marks)<br />
-|Indent</td>
-		<td><span class="caps">CMD</span> + [ </td>
-		<td> &gt; </td>
-	</tr>
-	<tr>
-		<td>Unindent</td>
-		<td> <span class="caps">CMD</span> + ] </td>
-		<td> &lt; </td>
+		<td>Merge current line With Next Line</td>
+		<td>ctrl+shift+J </td>
+		<td> J </td>
 	</tr>
 	<tr>
 		<td>Sort lines</td>
 		<td> <span class="caps">ALT</span> + <span class="caps">CMD</span> + R &gt; sort in dialogue box </td>
 		<td> [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) </td>
 	</tr>
-	<tr>
-		<td>Undo</td>
-		<td><span class="caps">CMD</span> + Z </td>
-		<td> u </td>
-	</tr>
-	<tr>
-		<td>Redo</td>
-		<td> <span class="caps">SHIFT</span> + <span class="caps">CMD</span> + Z </td>
-		<td> <span class="caps">CTRL</span> + R </td>
-	</tr>
-	<tr>
-		<td>Bigger/Smaller Font</td>
-		<td> <span class="caps">CMD</span> +/- </td>
-		<td> (<span class="caps">CMD</span> +/- doesn&#8217;t work well) </td>
-		<td> set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size)<br />
-|Snippets (e.g. validates present of)</td>
-		<td> vp<Tab> </td>
-		<td> Currently clashes with Command-T since both use T. If anyone can fix this let me know</td>
-	</tr>
 </table>
+<h2>Clipboard</h2>
+<table>
+	<tr>
+		<td>Copy</td>
+		<td> <span class="caps">CMD</span> + C</td>
+		<td> Y(copy current selection, or line if nothing selected)<br />
+|Cut</td>
+		<td> <span class="caps">CMD</span> + X </td>
+		<td> d(deleted selection, but deleting in <span class="caps">VIM</span> sends it to a register where it can be pasted with p)</td>
+	</tr>
+	<tr>
+		<td>Paste</td>
+		<td> <span class="caps">CMD</span> + V </td>
+		<td> p(paste below current line)<br />
+|Clipboard history</td>
+		<td>⌘ + <span class="caps">SHIFT</span> + V </td>
+</table>
+:reg (see a list of registers each of which can be pasted e.g. "8p)<h2>Duplicating Lines<br />
+|Duplicate line/selection| ctrl-shift-D| Yp (y copies line then p pastes in below) |<br />
+|Add placeholder text|lorem + tab| No Equivalent |<br />
+|Edit ends of selected lines|cmd+opt+a||<br />
+|Wrap selected text in P tags| <span class="caps">SHIFT</span> + <span class="caps">CONTROL</span> + W | ystp<br />
+|Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. If anyone can fix this let me know|</h2>
 
 <small>Written by , 05 Sep 2011</small>
 

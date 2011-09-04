@@ -5,6 +5,8 @@ subtitle: A guide to using your favourite Textmate features in Vim
 /* published: false*/
 
 ---
+
+
 Assumptions:
 1) You're using a Mac
 2) You've installed Janus
@@ -15,79 +17,158 @@ Sometimes you will need to create customer commands in ~/.vimrc.local anything y
 
 Somtimes you will need to install extra plugins. These go in your janus.rake file
 
-|Command| Textmate| Vim|
+h2. Opening Up The Editor
+
 |Open project from command line| [in folder] mate. | [in folder] mvim .|
+
+h2. Undo / Redo. 
+
+|Undo|CMD + Z | u |
+|Redo| SHIFT + CMD + Z | CTRL + R |
+
+h2. Opening, closing and creating files
+
+|Open a file| CMD + 0 | :e FILENAME (use Tab completion after first few letters) [Save File first]|
+|Create new file| File > new | CMD + T (new tab); type; :w newfilename |
+
+h2. Saving Files
+
+|Save file| CMD + S | :w
+|Save file as| CMD + Shift + S | :saveas NEWNAME |
+
+
+h2. File renaming
+
+|Rename a file|space (whilst focus is on project drawer)| Focus On Project Drawer. Select File (search). m (menu appears) m type name of file [enter]. You may need to press r to refresh project drawer (usually happens automatically after a few minutes)|
+
+h2. Project Drawer
+
+|Focus on project drawer| CTRL + <Tab> | <Tab> (assuming you've set it up. otherwise CNRL + W/ CTRL + W)|
+|Close/Open Project Drawer| CTRL + ALT + CMD + D |\n|
+
+h2. Tabs
+
+|New tab| Click On File In Project Drawer | CMD + Shit + T |
+|Drop tab| CTRL + w | CTRL + w |
+|Switch tabs left | SHIFT + COMMAND + [ (left) ] | :tabp |
+|Switch tabs right | SHIFT + COMMAND + right | :tabn |
+|Go to tab| CMD[1-9] | CMD[1-9]|
+
+h2. Running Tests and Files
+
+|Run tests for given file|cmd + r | :Rake |
+|Run current file| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name') |
+
+h2. Moving Around A File
+
 |Go to beginning of line| CTRL + A | ^ | 
 |Go to end of line | CTRL + E | $ |
 |Go to top of file | CMD + Up | g |
 |Go to bottom of file | CMD + Down | GG |
 |Move up one line (with Carret at same position)| CTRL + P | k |
 |Move down one line (with Carret at same position)| CNRL + N| j|
-|Search file downwards|@<Ctrl> + S then type method name@|@/def donught@|
-|Search file upwards | Shift + CTRL + S THING_SEARCHING_FOR | ?THING_SEARCHING_FOR |
-|Full screen | (Lion Only) https://github.com/enormego/EGOTextMateFullScreen | CMD + Enter |
-|Search entire project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR (ack) |
 |Go to line| CMD + L 20 | :20 |
-|Delete line|cmd + shift + k | dd |
+
+h2. Indentation
+
 |Automatically indent code beautifully| Alt + CMD + B (Code Beautifier https://github.com/mocoso/code-beautifier.tmbundle) | gg=G |
-|Check for syntax errors on saving (*life saver)| Validate On Save Plugin https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In (A grey bar appears right of the number column with an > beside the error) |
-|Run tests for given file|cmd + r | :Rake |
-|Run current file| CMD + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name') |
-|Go To Last Migration| None | :Rmig  | 
-Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Type let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}', '|':'|' } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = ["Character"] Add vim_plugin_task "autoclose", "git://github.com/Townk/vim-autoclose.git"||
-|Close current html tag|cmd + alt + .| vim_plugin_task "ragtag", "git://github.com/tpope/vim-ragtag.git" p CNRL + X Space |
-|View CSS colour wheel| CMD + SHIFT + C | No exact equivalent.  vim_plugin_task "vim-css-color", 'git://github.com/skammer/vim-css-color.git' turns #acbdef into its correct colour|
+|Indent|CMD + [ | > |
+|Unindent| CMD + ] | < |
+
+h2. Visual
+
+|Bigger/Smaller Font| CMD +/- | (CMD +/- doesn't work well) | set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size)
+|Line numbering| Menu Command | :set number (on) :set nonumber (off). Note the symmetry. This is the same for all VIM commands|
+
+h2. Spelling
+
+|Highlight incorrect spellings| ALT + CMD + ; | :set spell |
+|Next incorrect spelling | CMD + : | ] s (opposite directino with [s) - assumes spell checking is enabled |
+
+h2. Rails
+
 |Call RoR generate script| cntrl + \| [1..8]| :Rgenerate [controller model scaffold] Blog |
+|Go To Last Migration| None | :Rmig  | 
+|Run migrations|cntl + shift + \| |:Rmigrate |
 |Switch focus to project drawer| CMD + ALT + ` (check)| <CTRL> + w <CTRL> + w OR VIMRC noremap <tab> <C-w><C-w> |
 |Insert erb's <%= | CNTRL + SHIFT + . | yss= (after text on screen type this to surround line with tags) |
 |Insert erb's <% | CNTRL + SHIT + . (cycle through )| yss- |
 |Run unit test caret inside of | SHIFT + CMD + R | :.Rake (. here represent current line. Substitute for other lines) TEST |
-|Jump between words left| Alt + Left | w |
-|Jump between words right| Alt + Right | b |
-|New tab| Click On File In Project Drawer | CMD + Shit + T |
-|Drop tab| CTRL + w | CTRL + w |
-|Switch tabs left | SHIFT + COMMAND + [ (left) ] | :tabp |
-|Switch tabs right | SHIFT + COMMAND + right | :tabn |
-|Go to tab| CMD[1-9] | CMD[1-9]|
+|Go to test file (e.g. from user.rb to user_spec.rb)| ALT + SHIT + CMD + DOWN | :A (:AV in a new split, :AT new tab)|
+|Find related file| alt-cmd-down | :R (If typed in controller -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))
+
+h2. Bookmarks
+
+|Add bookmark| CMD + F2 (Never worked on my mac) | m[a-z] (this letter refers to this bookmark) |
+|Jump to bookmark| F2 (next) + F2 (previosu) | 'a (:marks to sell all marks)
+
+h2. Searching Files
+
+|Search file downwards|@<Ctrl> + S then type method name@|@/def donught@|
+|Search file upwards | Shift + CTRL + S THING_SEARCHING_FOR | ?THING_SEARCHING_FOR |
+|Full screen | (Lion Only) https://github.com/enormego/EGOTextMateFullScreen | CMD + Enter |
+|Search entire project | CMD + Shift + F (grep) | ,a THING_SEARCHING_FOR (ack) |
+|Find a specific Method|cmd + shift + t| /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)|
+
+h2. Replacing Text in Files and Project
+
 |Replace all "donut" with "eclair" in file| CMD F (Find and Replace Dialogue) Replace All | :%s/donut/eclair/g |
 |Replace all "donut" with "eclair" in file, ignoring case | CMD F (Find and Replace Dialogue) Select 'Ignroe Case'. Replace All | :%s/donut/eclair/gi |
 |Replace all "donut" with "eclair" in file, confirming each time | CMD F (Find and Replace Dialogue) Replace Next | :%s/donut/eclair/gc |
-||Replace "donut" with "eclair" in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. |
-|Save file| CMD + S | :wReplace "donut" with "eclair" in entire project| CMD + Shift + F | ,a donut[Enter] |
-|Save file as| CMD + Shift + S | :saveas NEWNAME |
+|Replace "donut" with "eclair" in entire project| CMD + Shift + F | (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. |
+|Replace "donut" with "eclair" in entire project| CMD + Shift + F | ,a donut[Enter] |
 
-|Create new file| File > new | CMD + T (new tab); type; :w newfilename |
-|Select all| CMD + A | vgg=G |
-|Increase selection left one word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word  |
+h2. Uppercase/Lowercase (UNFIN)
+
+|Upcase selected text|CONTROL + SHIFT + U|
+|Titelcase current text| CONTROL + OPTION + U |
+
+h2. Autocomplete
 
 |Autocomplete method| <ESC> after typing first few letters| <TAB> after first few letters|
 |Autocomplete filename| Not possible | CTRL + X CTRL + F (repeat for each directory)|
-|Merge current line With Next Line|ctrl+shift+J | J |
-|Find a specific Method|cmd + shift + t| /def first_letters_of_method_name OR *(while carret of method name to cycle instances of that method in file)|
-|Vertical blocks| Alt dragging | CTRL + V |
-|Duplicate line/selection| ctrl-shift-D| Yp (y copies line then p pastes in below) |
-|Go to test file (e.g. from user.rb to user_spec.rb)| ALT + SHIT + CMD + DOWN | :A (:AV in a new split, :AT new tab)|
-|Find related file| alt-cmd-down | :R (If typed in controller -> View(of method selected); If typed in view -> Controller; Migrations -> Next Migration (:A previous migration))
-|Add placeholder text|lorem + tab| No Equivalent |
+
+h2. Deletion
+
+|Delete line|cmd + shift + k | dd |
+
+h2. Syntax Errors
+
+|Check for syntax errors on saving (*life saver)| Validate On Save Plugin https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In (A grey bar appears right of the number column with an > beside the error) |
+
+h2. Autoclosing "" () or HTML tags 
+
+|Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Type let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}', '|':'|' } or place these lines in your vimrc.local file let g:AutoCloseProtectedRegions = ["Character"] Add vim_plugin_task "autoclose", "git://github.com/Townk/vim-autoclose.git"||
+|Close current html tag|cmd + alt + .| vim_plugin_task "ragtag", "git://github.com/tpope/vim-ragtag.git" p CNRL + X Space |
+
+h2. CSS Colours
+
+|View CSS colour wheel| CMD + SHIFT + C | No exact equivalent.  vim_plugin_task "vim-css-color", 'git://github.com/skammer/vim-css-color.git' turns #acbdef into its correct colour|
+|Jump between words left| Alt + Left | w |
+|Jump between words right| Alt + Right | b |
+
+h2. Selecting Text
+
+|Select all| CMD + A | vgg=G |
+|Increase selection left one word| Shift + Alt + Left then alt + left for each additional word| v(select)w then w for each additional word  |
+|Select a vertical block| Alt + drag mouse | CTRL + V |
+
+h2. Moving Text Around
+
 |Move selected text up|cntrl + cmd + up (or down)| :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). Alternativly :m+ or :m+N or :m-N for moving 1 or N lines up or down|
-|Line numbering| Menu Command | :set number (on) :set nonumber (off). Note the symmetry. This is the same for all VIM commands|
-|Focus on project drawer| CTRL + <Tab> | <Tab> (assuming you've set it up. otherwise CNRL + W/ CTRL + W)|
-|Rename a file|space (whilst focus is on project drawer)| Focus On Project Drawer. Select File (search). m (menu appears) m type name of file [enter]. You may need to press r to refresh project drawer (usually happens automatically after a few minutes)|
-|Open a file| CMD + 0 | :e FILENAME (use Tab completion after first few letters) [Save File first]|
-|Run migrations|cntl + shift + \| |:Rmigrate |
-|Edit ends of selected lines|cmd+opt+a||
-|Highlight incorrect spellings| ALT + CMD + ; | :set spell |
-|Next incorrect spelling | CMD + : | ] s (opposite directino with [s) - assumes spell checking is enabled |
-|Wrap selected text in P tags| SHIFT + CONTROL + W | ystp
-|Upcase selected text|CONTROL + SHIFT + U|
-|Titelcase current text| CONTROL + OPTION + U |
-|Clipboard history|⌘ + SHIFT + V |
-|Add bookmark| CMD + F2 (Never worked on my mac) | m[a-z] (this letter refers to this bookmark) |
-|Jump to bookmark| F2 (next) + F2 (previosu) | 'a (:marks to sell all marks)
-|Indent|CMD + [ | > |
-|Unindent| CMD + ] | < |
+|Merge current line With Next Line|ctrl+shift+J | J |
 |Sort lines| ALT + CMD + R > sort in dialogue box | [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) |
-|Undo|CMD + Z | u |
-|Redo| SHIFT + CMD + Z | CTRL + R |
-|Bigger/Smaller Font| CMD +/- | (CMD +/- doesn't work well) | set guifont=Monaco:h18 [place in ~/gvimrc.local] (replace 18 with desired font-size)
+
+h2. Clipboard
+
+|Copy| CMD + C| Y(copy current selection, or line if nothing selected)
+|Cut| CMD + X | d(deleted selection, but deleting in VIM sends it to a register where it can be pasted with p)|
+|Paste| CMD + V | p(paste below current line)
+|Clipboard history|⌘ + SHIFT + V | :reg (see a list of registers each of which can be pasted e.g. "8p)
+
+h2. Duplicating Lines
+|Duplicate line/selection| ctrl-shift-D| Yp (y copies line then p pastes in below) |
+|Add placeholder text|lorem + tab| No Equivalent |
+|Edit ends of selected lines|cmd+opt+a||
+|Wrap selected text in P tags| SHIFT + CONTROL + W | ystp
 |Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. If anyone can fix this let me know|
