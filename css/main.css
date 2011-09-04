@@ -236,12 +236,13 @@ border: 5px solid #900;
 border-spacing:2px;
 
 }
+
 td {
 padding: .5em 1em;
+width: 33%;
 }
 
 td:nth-child(even) {
-
   background:transparent url(/images/table_background.png) repeat top left;
 }
 /* td:nth-child(even)*/
