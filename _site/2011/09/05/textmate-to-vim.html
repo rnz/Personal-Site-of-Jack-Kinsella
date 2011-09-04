@@ -364,21 +364,58 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Go to test file (e.g. from user.rb to user_spec.rb)</td>
-		<td> ⌥ + <span class="caps">SHIT</span> + ⌘ + <span class="caps">DOWN</span> </td>
+		<td> ⌥ + ⇧  + ⌘ + <span class="caps">DOWN</span> </td>
 		<td> :A (:AV in a new split, :AT new tab)</td>
 	</tr>
 	<tr>
 		<td>Find related file</td>
 		<td> ⌥-⌘-down </td>
-		<td> R (If typed within the Controller you&#8217;ll be brought to the View corresponding to the method selected; If typed in view &#8594; Controller; Migrations &#8594; Next Migration; Typed in Model &#8594; Schema. For something more precise see the following <span class="caps">VIM</span> only commands<br />
-|Go to related controller</td>
+		<td> R (If typed within the Controller you&#8217;ll be brought to the View corresponding to the method selected; If typed in view &#8594; Controller; Migrations &#8594; Next Migration; Typed in Model &#8594; Schema. For something more precise see the following <span class="caps">VIM</span> only commands</td>
+	</tr>
+	<tr>
+		<td>Go to related controller</td>
 		<td> ⌥ + ⇧ + ⌘ + down </td>
 		<td> :Rco </td>
 	</tr>
 	<tr>
 		<td>Go to related helper</td>
-		<td> &#8217;&#8217; </td>
+		<td> As above </td>
 		<td> :Rhe </td>
+	</tr>
+	<tr>
+		<td>Go to model under cursor</td>
+		<td> No equivalent </td>
+		<td> gf [e.g. you see Pos*t.first &#8594; brought to #post.rb </td>
+	</tr>
+	<tr>
+		<td>Go to stylesheet under cursor</td>
+		<td> No equivalent </td>
+		<td> gf [e.g. you see&lt;%= stylesheet_link_tag &#8216;scaf*fold&#8217; %&gt;&#8594; brought to scaffold.css </td>
+	</tr>
+	<tr>
+		<td>View Rails logs</td>
+		<td> No equivalent </td>
+		<td> :Rlogs [:Rake logs:clear if takes too long to load]</td>
+	</tr>
+	<tr>
+		<td>Go to layout under cursor</td>
+		<td> No equivalent </td>
+		<td> gf [e.g. you see layout :print &#8594; brought to #print.html.erb </td>
+	</tr>
+	<tr>
+		<td>Go to application.rb</td>
+		<td> No equivalent </td>
+		<td> :Renv</td>
+	</tr>
+	<tr>
+		<td>Go to test.rb </td>
+		<td> No equivalent </td>
+		<td> :Renv t[tab to autofill out to test]</td>
+	</tr>
+	<tr>
+		<td>Go to controller from link under cursor</td>
+		<td> No equivalent </td>
+		<td> gf [e.g. you see &lt;%= link_to &#8220;New&#8221;, new_comme*nt_path %&gt; &#8594; brought to #comments_controller.rb </td>
 	</tr>
 	<tr>
 		<td>Create a posts controller </td>
@@ -633,7 +670,12 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Snippets (e.g. validates present of)</td>
 		<td> vp<Tab> </td>
-		<td> Currently clashes with Command-T since both use T. I&#8217;ve filed numerous but reports. If anyone has fixed this let me know. </td>
+		<td> Currently clashes with Command-T since both use T. I&#8217;ve filed numerous but reports. If anyone has fixed this let me know. In many cases, however, typing the TM abbreviation follwed by ]⌃ works fine</td>
+	</tr>
+	<tr>
+		<td>See All Available Snippers</td>
+		<td> Use Menu </td>
+		<td>:Rabbrev</td>
 	</tr>
 </table>
 <h2 id="vim_training_resources">Recommended Resources For Learning Basic Vim</h2>

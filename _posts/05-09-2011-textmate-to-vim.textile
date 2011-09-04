@@ -111,10 +111,17 @@ h2. Ruby On Rails
 |Insert erb's <%= | ⌃ + ⇧ + . | [type text you want to surround first and place caret some inside] yss= |
 |Insert erb's <% | ⌃ + SHIT + . (cycle through )| yss- |
 |Run unit test caret inside of | ⇧ + ⌘ + R | :.Rake (. here represents the current line. You can subsitute this for other lines e.g. :40Rake) TEST|
-|Go to test file (e.g. from user.rb to user_spec.rb)| ⌥ + SHIT + ⌘ + DOWN | :A (:AV in a new split, :AT new tab)|
-|Find related file| ⌥-⌘-down | R (If typed within the Controller you'll be brought to the View corresponding to the method selected; If typed in view -> Controller; Migrations -> Next Migration; Typed in Model -> Schema. For something more precise see the following VIM only commands
+|Go to test file (e.g. from user.rb to user_spec.rb)| ⌥ + ⇧  + ⌘ + DOWN | :A (:AV in a new split, :AT new tab)|
+|Find related file| ⌥-⌘-down | R (If typed within the Controller you'll be brought to the View corresponding to the method selected; If typed in view -> Controller; Migrations -> Next Migration; Typed in Model -> Schema. For something more precise see the following VIM only commands|
 |Go to related controller| ⌥ + ⇧ + ⌘ + down | :Rco |
-|Go to related helper| '' | :Rhe |
+|Go to related helper| As above | :Rhe |
+|Go to model under cursor| No equivalent | gf [e.g. you see Pos*t.first -> brought to #post.rb |
+|Go to stylesheet under cursor| No equivalent | gf [e.g. you see<%= stylesheet_link_tag 'scaf*fold' %>-> brought to scaffold.css |
+|View Rails logs| No equivalent | :Rlogs [:Rake logs:clear if takes too long to load]|
+|Go to layout under cursor| No equivalent | gf [e.g. you see layout :print -> brought to #print.html.erb |
+|Go to application.rb| No equivalent | :Renv|
+|Go to test.rb | No equivalent | :Renv t[tab to autofill out to test]|
+|Go to controller from link under cursor| No equivalent | gf [e.g. you see <%= link_to "New", new_comme*nt_path %> -> brought to #comments_controller.rb |
 |Create a posts controller | none |:Rco posts! [note the exclamation mark]|
 |Extract to partial| [Select text] ⌃ + H | [Select text] :Rextract PARTIAL_NAME |
 
@@ -199,7 +206,8 @@ h2. Duplicating Lines
 |Add placeholder text|lorem + tab| No Equivalent |
 |Edit ends of selected lines|⌘+opt+a||
 |Wrap selected text in P tags| ⇧ + ⌃ + W | ystp |
-|Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. I've filed numerous but reports. If anyone has fixed this let me know. |
+|Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. I've filed numerous but reports. If anyone has fixed this let me know. In many cases, however, typing the TM abbreviation follwed by ]⌃ works fine|
+|See All Available Snippers| Use Menu |:Rabbrev|
 
 h2(#vim_training_resources). Recommended Resources For Learning Basic Vim
 

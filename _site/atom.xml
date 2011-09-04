@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T23:21:01+01:00</updated>
+ <updated>2011-09-04T23:45:12+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -289,21 +289,58 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Go to test file (e.g. from user.rb to user_spec.rb)&lt;/td&gt;
-		&lt;td&gt; ⌥ + &lt;span class=&quot;caps&quot;&gt;SHIT&lt;/span&gt; + ⌘ + &lt;span class=&quot;caps&quot;&gt;DOWN&lt;/span&gt; &lt;/td&gt;
+		&lt;td&gt; ⌥ + ⇧  + ⌘ + &lt;span class=&quot;caps&quot;&gt;DOWN&lt;/span&gt; &lt;/td&gt;
 		&lt;td&gt; :A (:AV in a new split, :AT new tab)&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Find related file&lt;/td&gt;
 		&lt;td&gt; ⌥-⌘-down &lt;/td&gt;
-		&lt;td&gt; R (If typed within the Controller you&amp;#8217;ll be brought to the View corresponding to the method selected; If typed in view &amp;#8594; Controller; Migrations &amp;#8594; Next Migration; Typed in Model &amp;#8594; Schema. For something more precise see the following &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; only commands&lt;br /&gt;
-|Go to related controller&lt;/td&gt;
+		&lt;td&gt; R (If typed within the Controller you&amp;#8217;ll be brought to the View corresponding to the method selected; If typed in view &amp;#8594; Controller; Migrations &amp;#8594; Next Migration; Typed in Model &amp;#8594; Schema. For something more precise see the following &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; only commands&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go to related controller&lt;/td&gt;
 		&lt;td&gt; ⌥ + ⇧ + ⌘ + down &lt;/td&gt;
 		&lt;td&gt; :Rco &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Go to related helper&lt;/td&gt;
-		&lt;td&gt; &amp;#8217;&amp;#8217; &lt;/td&gt;
+		&lt;td&gt; As above &lt;/td&gt;
 		&lt;td&gt; :Rhe &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go to model under cursor&lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; gf [e.g. you see Pos*t.first &amp;#8594; brought to #post.rb &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go to stylesheet under cursor&lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; gf [e.g. you see&amp;lt;%= stylesheet_link_tag &amp;#8216;scaf*fold&amp;#8217; %&amp;gt;&amp;#8594; brought to scaffold.css &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;View Rails logs&lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; :Rlogs [:Rake logs:clear if takes too long to load]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go to layout under cursor&lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; gf [e.g. you see layout :print &amp;#8594; brought to #print.html.erb &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go to application.rb&lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; :Renv&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go to test.rb &lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; :Renv t[tab to autofill out to test]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Go to controller from link under cursor&lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; gf [e.g. you see &amp;lt;%= link_to &amp;#8220;New&amp;#8221;, new_comme*nt_path %&amp;gt; &amp;#8594; brought to #comments_controller.rb &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Create a posts controller &lt;/td&gt;
@@ -558,7 +595,12 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Snippets (e.g. validates present of)&lt;/td&gt;
 		&lt;td&gt; vp&lt;Tab&gt; &lt;/td&gt;
-		&lt;td&gt; Currently clashes with Command-T since both use T. I&amp;#8217;ve filed numerous but reports. If anyone has fixed this let me know. &lt;/td&gt;
+		&lt;td&gt; Currently clashes with Command-T since both use T. I&amp;#8217;ve filed numerous but reports. If anyone has fixed this let me know. In many cases, however, typing the TM abbreviation follwed by ]⌃ works fine&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;See All Available Snippers&lt;/td&gt;
+		&lt;td&gt; Use Menu &lt;/td&gt;
+		&lt;td&gt;:Rabbrev&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2 id=&quot;vim_training_resources&quot;&gt;Recommended Resources For Learning Basic Vim&lt;/h2&gt;
