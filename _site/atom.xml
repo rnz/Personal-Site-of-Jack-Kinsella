@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-04T14:43:12+01:00</updated>
+ <updated>2011-09-04T14:46:53+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -373,17 +373,26 @@ Add opposing bracket or quotation mark&lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;sort lines&lt;/td&gt;
 		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;ALT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + R &amp;gt; sort in dialogue box &lt;/td&gt;
-		&lt;td&gt; [Text selected] !:sort &lt;/td&gt;
+		&lt;td&gt; [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;undo&lt;/td&gt;
-		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Z&lt;br /&gt;
-|Bigger/Smaller Font&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + /-&lt;br /&gt;
-|redo&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + Z&lt;br /&gt;
-&lt;br /&gt;
-&lt;/td&gt;
+		&lt;td&gt;&lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Z &lt;/td&gt;
+		&lt;td&gt; u &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;redo&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;SHIFT&lt;/span&gt; + &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + Z &lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CTRL&lt;/span&gt; + R &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Bigger/Smaller Font&lt;/td&gt;
+		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;CMD&lt;/span&gt; + /- &lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;table&gt;
+	&lt;tr&gt;
 		&lt;td&gt;Snippets&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;

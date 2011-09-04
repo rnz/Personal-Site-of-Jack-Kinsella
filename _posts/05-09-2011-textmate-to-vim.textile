@@ -86,10 +86,10 @@ Add opposing bracket or quotation mark| Typing a " will automatically add in clo
 |Jump TO Bookmark| F2 (next) + F2 (previosu) | 'a (:marks to sell all marks)
 |indent|CMD + [ | > |
 |unindent| CMD + ] | < |
-|sort lines| ALT + CMD + R > sort in dialogue box | [Text selected] !:sort |
-|undo|CMD + Z
-|Bigger/Smaller Font| CMD + /-
-|redo| CMD + SHIFT + Z
+|sort lines| ALT + CMD + R > sort in dialogue box | [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) |
+|undo|CMD + Z | u |
+|redo| SHIFT + CMD + Z | CTRL + R |
+|Bigger/Smaller Font| CMD + /- ||
 
 |Snippets|
 ||
