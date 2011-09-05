@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Textmate to VIM
-subtitle: Where I explain how to reproduce 80+ commands from Textmate in VIM
+subtitle: Where I explain how to reproduce over 100 commands from Textmate in VIM.
 /* published: false*/
 author: Jack Kinsella
 
 ---
 
-When I switched from Textmate to VIM I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in VIM the features I'd come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models and for the Project Drawer to easily overview my app. Instead of accommodating my needs, VIM sat firm and unresponsive spitting error after error in my face. Even though I was supposedly going cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.
+When I switched from Textmate to VIM I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in VIM the features I'd come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longer for a project drawer to manage my app's files. Instead of accommodating my needs, VIM sat firm and unresponsive and spat error after error at my clumsy fingers. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.
 
-With time I learned to mimic nearly every Textmate feature in VIM, and then some. This guide isn't about the powerful features VIM has over-and-above Textmate; you'll figure these out on your own soon enough. No, this guide is to help you achieve in VIM what you already can using Textmate, only with considerably less pain than I underwent.
+With time I learned to mimic nearly every Textmate feature in VIM, and then some. This guide isn't about the powerful features VIM has over-and-above Textmate; you'll figure these out with time. This guide is to help you do in VIM what you already can using Textmate, only with considerably less pain than I underwent.
 
 This guide makes a few preliminary assumptions:
 # You've installed Mac VIM: 
 @brew install macvim@
-# You've installed "Janus":https://github.com/carlhuda/janus, the community maintained VIM distro with plugins and configurations useful to web programmers.
-# You have created a ~/.vimrc.local file (for core VIM configurations), ~/.gvimrc.local (for configuring the graphics in VIM) and ~/.janus.rake (for adding or removing plugins VIM). See my "dotfiles":https://github.com/jackkinsella/dotfiles/tree/ for some commented examples. 
+# You've installed "Janus":https://github.com/carlhuda/janus, the community maintained VIM distro with plugins and configurations useful to Rails programmers used to Textmate.
+# You've created a ~/.vimrc.local file (for core VIM configurations), ~/.gvimrc.local (for configuring the graphics in VIM) and ~/.janus.rake (for adding or removing plugins VIM). See my "dotfiles":https://github.com/jackkinsella/dotfiles/tree/ for some commented examples. 
 # You know the basics of VIM. Type vimtutor in your terminal for a 20 minute tutorial. Advanced training can be found be referring to the "vim training resources below":#vim_training_resources .
 # You were a power user of the Textmate features.
 # (Not strictly necessary) You are a Rails programmer switching from Textmate to VIM. About 30% of this guide is Rails specific.
@@ -24,9 +24,14 @@ h2. Some Preliminary Notes (Do Not Skip)
 
 h4. Format
 
-|Action To Be Completed| Shortcut in Textmate | Shortcut in Vim|
+|Command | Shortcut in Textmate | Shortcut in Vim|
 
-In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM's shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time. Whilst commands in Textmate are case insensitive or rather, the shift key is specified in the commands below, the commands in VIM are case sensitive. If you are told to type Y then typing y will not suffice. If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart VIM for these changes to take effect. If you are instructed to add code to your .janus.rake file you must cd into your .vim directory and run rake for these changes will be installed. Finally regular expressions in VIM differ from those in Textmate. Consult the "resources below":#vim_training_resources for an appropriate guide.
+* In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM's shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time. 
+* Whilst commands in Textmate are _case insensitive_, or rather the shift key is specified in the commands below, the commands in VIM are _case sensitive_. If you are told to type Y then typing y will not suffice. 
+* Unless otherwise specified, all the VIM commands assume you are in normal mode, the mode where you cannot type text into the file.
+* If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart VIM for these changes to take effect. 
+* If you are instructed to add code to your .janus.rake file you must cd into your .vim directory and run rake for these changes will be installed. 
+* Regular expressions in VIM differ from those in Textmate and this is outside the scope of this guide. Consult the "resources below":#vim_training_resources for an excellent tutorial.
 
 
 h2. Opening, closing and creating files
@@ -113,14 +118,18 @@ h2. Deleting Text
 
 |Delete line|⌘ + ⇧ + k | dd |
 |Delete character| Backspace _Erases character to the left of the caret_ |x 
-_Erases character under caret |
+_Erases character under caret_ |
 |Delete selected text| Backspace | d |
 
 h2. Moving Text Around
 
-|Move selected text up|⌃ + ⌘ + ↑ (or ↓)| :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). alternatively :m+ or :m+N or :m-N for moving 1 or N lines up or down|
+|Move selected text up|⌃ + ⌘ + ↑ (or ↓)| :m 22 
+_moves current line to line 22. Easier if line numbers are on with :set number. Alternatively :m+ or :m+N or :m-N for moving 1 or N lines up or down_|
 |Merge current line With Next Line|⌃ + ⇧ +J | J |
-|Sort lines| ⌥ + ⌘ + R > sort in dialogue box | [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) |
+|Sort lines| ⌥ + ⌘ + R > sort in dialogue box | _Where you have previously selected text_
+!:sort 
+_Where you have nothing selecting and want to act on whole file_
+:0,$!sort (0,$ is a range representing whole file) |
 
 h2. Searching Files
 
@@ -215,6 +224,8 @@ _To titlecase the current line you can use :s :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g_ |
 
 h2. Autocomplete
 
+_All of the following commands assume you are in insert mode_
+
 |Autocomplete method| ⎋ after typing first few letters| Tab after typing first few letters|
 |Autocomplete filename| No equivalent | ⌃ + X ⌃ + F 
 _Only fills one directory at a time so you'll need to repeat for each additional one_|
@@ -231,6 +242,8 @@ h2. Syntax Errors
 _A grey bar appears right of the number column with an > beside the error_ |
 
 h2. Autoclosing quotations, html tags, brackets and so forth.
+
+_All of the following commands assume you are in insert mode_
 
 |Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Add "this gist":https://gist.github.com/1193298 |
 |Close current html tag|⌘ + ⌥ + .| No exact equivalent. Instead you have auto tag creation. To create <p></p> type p then  ⌃ + X Spacebar 
@@ -252,7 +265,8 @@ _Explanation: :! means execute what follows as if in shell. % expands to the cur
 
 h2. Snippets
 
-|Snippets (e.g. validates present of)| vp<Tab> | [Type TN abbreviation] 
+|Snippets (e.g. validates present of)| [when in insert mode] vp<Tab> | vp ⌃ + ] 
+_Abbreviations same as in Textmate_ 
 _Non Rails snippets not working since the latest releases of snippets plugin clashes with Command-T search plugin. I've filed bug reports and if anyone has fixed this let me know._ |
 |See All Available Snippers| Use Menu |:Rabbrev|
 

@@ -23,7 +23,8 @@
 
     <link rel="apple-touch-icon" sizes="114x114" href="/images/avatar.jpg"/>
 
-    <meta name="description" content="The blog, CV and portfolio of Jack Kinsella, entrepreneur and Ruby on Rails freelancer."/>
+    <meta name="description" content="The blog, CV and portfolio of Jack
+    Kinsella, Rails Developer in London."/>
     <body lang="en" id="main-layout"   class="vcard ">
       <header id="masthead">
       <div class="wrapper">
@@ -33,7 +34,7 @@
             <img src="/images/avatar.jpg" alt="Avatar"/>
             </figure>
             <h1 class="fn">Jack Kinsella</h1>
-            <p class="title">Rails Freelancer</p>
+            <p class="title">Rails Developer London</p>
           </div>
         </a>
         <nav>
@@ -51,9 +52,9 @@
           </a>
           </li>
           <li class="about">
-          <a href="/about.html">
+          <a href="/rails-developer-lond.html">
             <span class="icon">?</span>			
-            <span>About</span>
+            <span>Rails Developer London</span>
           </a>
           </li>
         </ul>
@@ -66,7 +67,7 @@
       <header>
       <div>
         <h1 class="entry-title">Textmate to VIM</h1>
-        <p>Where I explain how to reproduce 80+ commands from Textmate in VIM</p>
+        <p>Where I explain how to reproduce over 100 commands from Textmate in VIM.</p>
       </div>
       </header>
 
@@ -89,14 +90,14 @@ jQuery(document).ready(function() {
 
 });
 </script>
-<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models and for the Project Drawer to easily overview my app. Instead of accommodating my needs, <span class="caps">VIM</span> sat firm and unresponsive spitting error after error in my face. Even though I was supposedly going cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.</p>
-<p>With time I learned to mimic nearly every Textmate feature in <span class="caps">VIM</span>, and then some. This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate; you&#8217;ll figure these out on your own soon enough. No, this guide is to help you achieve in <span class="caps">VIM</span> what you already can using Textmate, only with considerably less pain than I underwent.</p>
+<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longer for a project drawer to manage my app&#8217;s files. Instead of accommodating my needs, <span class="caps">VIM</span> sat firm and unresponsive and spat error after error at my clumsy fingers. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.</p>
+<p>With time I learned to mimic nearly every Textmate feature in <span class="caps">VIM</span>, and then some. This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate; you&#8217;ll figure these out with time. This guide is to help you do in <span class="caps">VIM</span> what you already can using Textmate, only with considerably less pain than I underwent.</p>
 <p>This guide makes a few preliminary assumptions:</p>
 <ol>
 	<li>You&#8217;ve installed Mac <span class="caps">VIM</span>: <br />
 <code>brew install macvim</code></li>
-	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained <span class="caps">VIM</span> distro with plugins and configurations useful to web programmers.</li>
-	<li>You have created a ~/.vimrc.local file (for core <span class="caps">VIM</span> configurations), ~/.gvimrc.local (for configuring the graphics in <span class="caps">VIM</span>) and ~/.janus.rake (for adding or removing plugins <span class="caps">VIM</span>). See my <a href="https://github.com/jackkinsella/dotfiles/tree/">dotfiles</a> for some commented examples.</li>
+	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained <span class="caps">VIM</span> distro with plugins and configurations useful to Rails programmers used to Textmate.</li>
+	<li>You&#8217;ve created a ~/.vimrc.local file (for core <span class="caps">VIM</span> configurations), ~/.gvimrc.local (for configuring the graphics in <span class="caps">VIM</span>) and ~/.janus.rake (for adding or removing plugins <span class="caps">VIM</span>). See my <a href="https://github.com/jackkinsella/dotfiles/tree/">dotfiles</a> for some commented examples.</li>
 	<li>You know the basics of <span class="caps">VIM</span>. Type vimtutor in your terminal for a 20 minute tutorial. Advanced training can be found be referring to the <a href="#vim_training_resources">vim training resources below</a> .</li>
 	<li>You were a power user of the Textmate features.</li>
 	<li>(Not strictly necessary) You are a Rails programmer switching from Textmate to <span class="caps">VIM</span>. About 30% of this guide is Rails specific.</li>
@@ -105,12 +106,19 @@ jQuery(document).ready(function() {
 <h4>Format</h4>
 <table>
 	<tr>
-		<td>Action To Be Completed</td>
+		<td>Command </td>
 		<td> Shortcut in Textmate </td>
 		<td> Shortcut in Vim</td>
 	</tr>
 </table>
-<p>In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM&#8217;s shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time. Whilst commands in Textmate are case insensitive or rather, the shift key is specified in the commands below, the commands in <span class="caps">VIM</span> are case sensitive. If you are told to type Y then typing y will not suffice. If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart <span class="caps">VIM</span> for these changes to take effect. If you are instructed to add code to your .janus.rake file you must cd into your .vim directory and run rake for these changes will be installed. Finally regular expressions in <span class="caps">VIM</span> differ from those in Textmate. Consult the <a href="#vim_training_resources">resources below</a> for an appropriate guide.</p>
+<ul>
+	<li>In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM&#8217;s shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time.</li>
+	<li>Whilst commands in Textmate are <em>case insensitive</em>, or rather the shift key is specified in the commands below, the commands in <span class="caps">VIM</span> are <em>case sensitive</em>. If you are told to type Y then typing y will not suffice.</li>
+	<li>Unless otherwise specified, all the <span class="caps">VIM</span> commands assume you are in normal mode, the mode where you cannot type text into the file.</li>
+	<li>If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart <span class="caps">VIM</span> for these changes to take effect.</li>
+	<li>If you are instructed to add code to your .janus.rake file you must cd into your .vim directory and run rake for these changes will be installed.</li>
+	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate and this is outside the scope of this guide. Consult the <a href="#vim_training_resources">resources below</a> for an excellent tutorial.</li>
+</ul>
 <h2>Opening, closing and creating files</h2>
 <table>
 	<tr>
@@ -348,7 +356,7 @@ P<br />
 		<td>Delete character</td>
 		<td> Backspace <em>Erases character to the left of the caret</em> </td>
 		<td>x <br />
-_Erases character under caret </td>
+<em>Erases character under caret</em> </td>
 	</tr>
 	<tr>
 		<td>Delete selected text</td>
@@ -361,7 +369,8 @@ _Erases character under caret </td>
 	<tr>
 		<td>Move selected text up</td>
 		<td>⌃ + ⌘ + ↑ (or ↓)</td>
-		<td> :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). alternatively :m+ or :m+N or :m-N for moving 1 or N lines up or down</td>
+		<td> :m 22 <br />
+<em>moves current line to line 22. Easier if line numbers are on with :set number. Alternatively :m+ or :m+N or :m-N for moving 1 or N lines up or down</em></td>
 	</tr>
 	<tr>
 		<td>Merge current line With Next Line</td>
@@ -371,7 +380,10 @@ _Erases character under caret </td>
 	<tr>
 		<td>Sort lines</td>
 		<td> ⌥ + ⌘ + R &gt; sort in dialogue box </td>
-		<td> [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) </td>
+		<td> <em>Where you have previously selected text</em><br />
+!:sort <br />
+<em>Where you have nothing selecting and want to act on whole file</em><br />
+:0,$!sort (0,$ is a range representing whole file) </td>
 	</tr>
 </table>
 <h2>Searching Files</h2>
@@ -637,6 +649,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 	</tr>
 </table>
 <h2>Autocomplete</h2>
+<p><em>All of the following commands assume you are in insert mode</em></p>
 <table>
 	<tr>
 		<td>Autocomplete method</td>
@@ -672,6 +685,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 	</tr>
 </table>
 <h2>Autoclosing quotations, html tags, brackets and so forth.</h2>
+<p><em>All of the following commands assume you are in insert mode</em></p>
 <table>
 	<tr>
 		<td>Add opposing bracket or quotation mark</td>
@@ -722,8 +736,9 @@ _ </td>
 <table>
 	<tr>
 		<td>Snippets (e.g. validates present of)</td>
-		<td> vp<Tab> </td>
-		<td> [Type TN abbreviation] <br />
+		<td> [when in insert mode] vp<Tab> </td>
+		<td> vp ⌃ + ] <br />
+<em>Abbreviations same as in Textmate</em> <br />
 <em>Non Rails snippets not working since the latest releases of snippets plugin clashes with Command-T search plugin. I&#8217;ve filed bug reports and if anyone has fixed this let me know.</em> </td>
 	</tr>
 	<tr>
@@ -811,7 +826,9 @@ document.write(write_string);
       <footer id="colophon">
       <div class="wrapper">
         <h3 class="byline">
-        Jack Kinsella is a freelance <a href="http://www.jackkinsella.ie">Ruby on Rails programmer</a> in central London, the founder of <a href="http://www.oxbridgenotes.co.uk">Oxbridge Notes</a> and the co-founder of <a href="http://www.bolivianexpress.org">Bolivian Express.</a></h3>
+        Jack Kinsella is a <a
+          href="/rails-developer-london.html">Rails
+          developer in London</a>, the founder of <a href="http://www.oxbridgenotes.co.uk">Oxbridge Notes</a> and the co-founder of <a href="http://www.bolivianexpress.org">Bolivian Express.</a></h3>
           <p>Follow me if you code Ruby/Rails, want to learn about online marketing or software entrepreneurship.</p>
 
         <section class="links about_and_follow">

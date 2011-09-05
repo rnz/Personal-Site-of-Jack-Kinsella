@@ -29,8 +29,6 @@ In order to maximize sales I integrated an internal AB testing system.  The exam
 
 h3. Custom Activity Feed
 
-!images/oxbridge_notes_activity.png!
-
 Administrators of the website can see all key user activities, giving them awareness of how the business is doing and what their users are up to. Prior to this the administrators would have to visit many different pages to find the same information.
 
 h3. Seller Area with File Management

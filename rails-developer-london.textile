@@ -1,7 +1,7 @@
 ---
 layout: default
-title: About Jack Kinsella
-subtitle: Ruby On Rails Freelancer. Specialising in E-Commerce and conversion optimisation.
+title: Rails developer London
+subtitle: Experienced and professional. Specialising in E-Commerce, conversion optimisation, and automated SEO.
 ---
 * "Professional Services Offered":#services
 * "Why Hire Me?":#why_hire
@@ -21,11 +21,11 @@ I have a track record of building, deploying, and maintaining web applications s
 
 h3. Reliable, Bug Free Code
 
-I practice TDD, which means I write code that automatically verifies our application works according to specification following every release. This is huge competitive advantage since your competitors will likely need to hire a tester to manually run every page in a web browser. Although TDD takes more time than conventional coding, the guarantees against bugs make it the coding practice of choice for highly successful web companies such as LinkedIn, Facebook and Google.
+I practice TDD, which means, amongst others things, that I design my software in a way that it can automatically verify itself following every release. This means you won't have to hire a tester to manually run through every page in a browser. Although TDD takes more time than conventional coding, the safeguards against bugs make it the coding practice of choice for those who demand high quality stable software, and is the development tool of choice in companies such as LinkedIn, Facebook, Google,and 37Signals.
 
 h3. Open Source Technology
 
-I'm familiar with the key open-source libraries in Ruby/Rails, and I try to use these instead of writing custom code. Less custom code means I spend less time building your application and you receive a smaller bill for my services.?
+I'm familiar with the key open-source libraries in Ruby/Rails, and I use these in place of writing custom code. Less custom code means I spend less time building your application and you receive a smaller bill for my services.
 
 h3. Advice on Key Technical Considerations
 
@@ -57,8 +57,8 @@ h2(#education). Education
 
 I've been working with computers ever since my father brought home a green-text-on-black-background terminal when I was four years old. Over the years I taught myself to program through tinkering, studying "classic texts in computer science":http://www.cc2e.com/, and watching "MIT open courseware":http://ocw.mit.edu/index.htm lectures in math and computer science. 
 
-Given my lifelong interest I didn't see the need to pursue computer science at third level, and so I studied law at the "University of Oxford":http://www.ox.ac.uk/. During this time I earnedwritten and verbal clarity through writing over 120 essays, spending a year in office in the college government, editting a satirical student publication, and wining a legal debating championship.
+Given my lifelong interest I didn't see the need to pursue computer science at third level, and so I chose to study law at "Oxford":http://www.ox.ac.uk/. I took my studies seriously and learned a great deal about economics, politics and legal issues, and I gained written and verbal clarity through my efforts to improve my communication skills. 
 
-I scored one of the highest results in Ireland in the Leaving Certificate, earning A1s in math, physics, chemistry, biology and English and an A2 in French. 
+I scored one of the highest results in Ireland in the Leaving Certificate, earning As in math, physics, chemistry, biology and English and French. 
 
 I speak fluent Spanish, having lived in Spain and worked in Bolivia.
