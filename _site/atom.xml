@@ -4,12 +4,11 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T14:31:03+01:00</updated>
+ <updated>2011-09-05T14:42:01+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
  </author>
-
  
  <entry>
    <title>Textmate to VIM</title>
@@ -715,6 +714,5 @@ _ &lt;/td&gt;
 	&lt;li&gt;&lt;a href=&quot;http://peepcode.com/products/smash-into-vim-i&quot; title=&quot;Commercial&quot;&gt;PeepCode&amp;#8217;s Video Series&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
  </entry>
- 
  
 </feed>
