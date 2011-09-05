@@ -134,8 +134,10 @@ jQuery(document).ready(function() {
 		<td>Create new file</td>
 		<td> File &gt; new </td>
 		<td> ⌘ + T (new tab) <br />
-<em>You will be in a new file. Type something and then save with</em><br />
- :w newfilename </td>
+<em>You will be in a new file on a separate tab. Type something and then save with:</em><br />
+:w newfilename <br />
+:e new_filename<br />
+<em>Opens a new file in the current window</em> </td>
 	</tr>
 	<tr>
 		<td>Quit</td>
@@ -301,12 +303,12 @@ P<br />
 	<tr>
 		<td>Go to top of file </td>
 		<td> ⌘ + ↑ </td>
-		<td> g </td>
+		<td> gg </td>
 	</tr>
 	<tr>
 		<td>Go to bottom of file </td>
 		<td> ⌘ + ↓ </td>
-		<td> GG </td>
+		<td> G </td>
 	</tr>
 	<tr>
 		<td>Move up one line (with caret at same position)</td>
@@ -385,7 +387,7 @@ P<br />
 		<td> <em>Where you have previously selected text</em><br />
 !:sort <br />
 <em>Where you have nothing selecting and want to act on whole file</em><br />
-:0,$!sort (0,$ is a range representing whole file) </td>
+:%!sort (% is a symbol representing the whole file) </td>
 	</tr>
 </table>
 <h2>Searching Files</h2>

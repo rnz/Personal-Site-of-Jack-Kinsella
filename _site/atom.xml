@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T19:19:31+01:00</updated>
+ <updated>2011-09-05T22:08:23+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -59,8 +59,10 @@
 		&lt;td&gt;Create new file&lt;/td&gt;
 		&lt;td&gt; File &amp;gt; new &lt;/td&gt;
 		&lt;td&gt; ⌘ + T (new tab) &lt;br /&gt;
-&lt;em&gt;You will be in a new file. Type something and then save with&lt;/em&gt;&lt;br /&gt;
- :w newfilename &lt;/td&gt;
+&lt;em&gt;You will be in a new file on a separate tab. Type something and then save with:&lt;/em&gt;&lt;br /&gt;
+:w newfilename &lt;br /&gt;
+:e new_filename&lt;br /&gt;
+&lt;em&gt;Opens a new file in the current window&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Quit&lt;/td&gt;
@@ -226,12 +228,12 @@ P&lt;br /&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Go to top of file &lt;/td&gt;
 		&lt;td&gt; ⌘ + ↑ &lt;/td&gt;
-		&lt;td&gt; g &lt;/td&gt;
+		&lt;td&gt; gg &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Go to bottom of file &lt;/td&gt;
 		&lt;td&gt; ⌘ + ↓ &lt;/td&gt;
-		&lt;td&gt; GG &lt;/td&gt;
+		&lt;td&gt; G &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Move up one line (with caret at same position)&lt;/td&gt;
@@ -310,7 +312,7 @@ P&lt;br /&gt;
 		&lt;td&gt; &lt;em&gt;Where you have previously selected text&lt;/em&gt;&lt;br /&gt;
 !:sort &lt;br /&gt;
 &lt;em&gt;Where you have nothing selecting and want to act on whole file&lt;/em&gt;&lt;br /&gt;
-:0,$!sort (0,$ is a range representing whole file) &lt;/td&gt;
+:%!sort (% is a symbol representing the whole file) &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Searching Files&lt;/h2&gt;

@@ -43,8 +43,10 @@ h2. Opening, Closing and Creating Files
 _Use Tab completion after typing the first few letters_ 
 _You may need to save your current file first_|
 |Create new file| File > new | ⌘ + T (new tab) 
-_You will be in a new file. Type something and then save with_
- :w newfilename |
+_You will be in a new file on a separate tab. Type something and then save with:_
+:w newfilename 
+:e new_filename
+_Opens a new file in the current window_ |
 |Quit| ⌘ + q | :q 
 _This throws an error if you have not saved. use :wq to save and quit or :q! to quit without saving_ |
 |Open project from command line| [cd to folder] mate . | [cd to folder] mvim . |
@@ -104,8 +106,8 @@ h2. Moving Around A File
 
 |Go to beginning of line| ⌃ + A | ^ |
 |Go to end of line | ⌃ + E | $ |
-|Go to top of file | ⌘ + ↑ | g |
-|Go to bottom of file | ⌘ + ↓ | GG |
+|Go to top of file | ⌘ + ↑ | gg |
+|Go to bottom of file | ⌘ + ↓ | G |
 |Move up one line (with caret at same position)| ⌃ + P | k |
 |Move down one line (with caret at same position)| ⌃ + N| j|
 |Go to line 20 | ⌘ + L [type a line - e.g. 20] | :20 |
@@ -132,7 +134,7 @@ _moves current line to line 22. Easier if line numbers are on with :set number. 
 |Sort lines| ⌥ + ⌘ + R > sort in dialogue box | _Where you have previously selected text_
 !:sort 
 _Where you have nothing selecting and want to act on whole file_
-:0,$!sort (0,$ is a range representing whole file) |
+:%!sort (% is a symbol representing the whole file) |
 
 h2. Searching Files
 
