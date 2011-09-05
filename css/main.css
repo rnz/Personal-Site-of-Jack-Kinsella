@@ -223,6 +223,7 @@ pre {
   text-shadow: none;
   color: #d9d4bf;
 }
+
 ::-moz-selection {
   background: #9e9b90;
   text-shadow: none;
@@ -231,23 +232,34 @@ pre {
 table {
 color: black;
 background: #81778b;
-border-collapse: collapse;
 width: 100%;
-border: 5px solid #ccc;
+border: 5px solid #7d708b;
 border-spacing:2px;
 margin-bottom:20px;
 
 }
 
-table a {
-  color:#5ccccc;
-}
 td {
 padding: .5em 1em;
 width: 33%;
 }
+table {
+  -moz-border-radius:20px;
+  -webkit-border-radius:20px;
+  border-radius:20px}
 
-tbody tr:nth-of-type(odd){
+
+table tr:last-child td:first-child {
+-moz-border-radius-bottomleft:10px;
+-webkit-border-bottom-left-radius:10px;
+border-bottom-left-radius:10px}
+
+table tr:last-child td:last-child {
+-moz-border-radius-bottomright:10px;
+-webkit-border-bottom-right-radius:10px;
+border-bottom-right-radius:10px}
+
+tbody tr:nth-of-type(even){
   background: #7d708b;
 }
 

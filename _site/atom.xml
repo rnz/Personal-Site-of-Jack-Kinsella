@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T17:52:15+01:00</updated>
+ <updated>2011-09-05T18:04:08+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -551,8 +551,8 @@ _Using ⌘ +/- in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; makes the 
 	&lt;tr&gt;
 		&lt;td&gt;Jump to bookmark&lt;/td&gt;
 		&lt;td&gt; F2 (next) + F2 (previous) &lt;/td&gt;
-		&lt;td&gt; &amp;#8216;a &lt;br /&gt;
-_Where &amp;#8217;a&amp;#8217; is a bookmark previous set. Type :marks to see all marks._ &lt;/td&gt;
+		&lt;td&gt; &amp;#8217;a &lt;br /&gt;
+&lt;em&gt;Where a is a bookmark previously set. Type :marks to see all bookmarks&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Uppercase/Lowercase&lt;/h2&gt;
