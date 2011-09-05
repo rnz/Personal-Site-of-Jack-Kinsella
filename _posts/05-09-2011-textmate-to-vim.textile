@@ -111,6 +111,10 @@ h2. Moving Around A File
 |Move up one line (with caret at same position)| ⌃ + P | k |
 |Move down one line (with caret at same position)| ⌃ + N| j|
 |Go to line 20 | ⌘ + L [type a line - e.g. 20] | :20 |
+|Jump between words left| ⌥ + ← w | b or B 
+_Lowercase b goes back one word, where puntuation marks count as word separators. B is back one word where only spaces count as word separators._ |
+|Jump between words right| ⌥ + →| w or W 
+_same distinction as above_ |
 
 h2. Selecting Text
 
@@ -260,8 +264,6 @@ _ |
 h2. CSS Colours
 
 |View CSS colour wheel| ⌘ + ⇧ + C | No exact equivalent.  vim_plugin_task "vim-css-color", 'git://github.com/skammer/vim-css-color.git' turns #acbdef into its correct colour|
-|Jump between words left| ⌥ + ← w |
-|Jump between words right| ⌥ + →| b |
 
 h2. Running Tests and Files
 

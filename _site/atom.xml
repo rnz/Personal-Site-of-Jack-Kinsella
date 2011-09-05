@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T22:17:27+01:00</updated>
+ <updated>2011-09-05T22:20:32+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -249,6 +249,18 @@ P&lt;br /&gt;
 		&lt;td&gt;Go to line 20 &lt;/td&gt;
 		&lt;td&gt; ⌘ + L [type a line &amp;#8211; e.g. 20] &lt;/td&gt;
 		&lt;td&gt; :20 &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Jump between words left&lt;/td&gt;
+		&lt;td&gt; ⌥ + ← w &lt;/td&gt;
+		&lt;td&gt; b or B &lt;br /&gt;
+&lt;em&gt;Lowercase b goes back one word, where puntuation marks count as word separators. B is back one word where only spaces count as word separators.&lt;/em&gt; &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Jump between words right&lt;/td&gt;
+		&lt;td&gt; ⌥ + →&lt;/td&gt;
+		&lt;td&gt; w or W &lt;br /&gt;
+&lt;em&gt;same distinction as above&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Selecting Text&lt;/h2&gt;
@@ -638,15 +650,6 @@ _ &lt;/td&gt;
 		&lt;td&gt;View &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; colour wheel&lt;/td&gt;
 		&lt;td&gt; ⌘ + ⇧ + C &lt;/td&gt;
 		&lt;td&gt; No exact equivalent.  vim_plugin_task &amp;#8220;vim-css-color&amp;#8221;, &amp;#8216;git://github.com/skammer/vim-css-color.git&amp;#8217; turns #acbdef into its correct colour&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Jump between words left&lt;/td&gt;
-		&lt;td&gt; ⌥ + ← w &lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Jump between words right&lt;/td&gt;
-		&lt;td&gt; ⌥ + →&lt;/td&gt;
-		&lt;td&gt; b &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Running Tests and Files&lt;/h2&gt;
