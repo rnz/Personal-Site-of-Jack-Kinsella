@@ -89,17 +89,17 @@ jQuery(document).ready(function() {
 
 });
 </script>
-<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models and for the Project Drawer to easily overview my app. Instead of accommodating my needs, <span class="caps">VIM</span> sat firm and unresponsive spitting error after error in my face. Even though I was supposedly going cold turkey on Textmate, I lustily met her by night in the smoking section for a guilty after hours edit.</p>
+<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models and for the Project Drawer to easily overview my app. Instead of accommodating my needs, <span class="caps">VIM</span> sat firm and unresponsive spitting error after error in my face. Even though I was supposedly going cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.</p>
 <p>With time I learned to mimic nearly every Textmate feature in <span class="caps">VIM</span>, and then some. This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate; you&#8217;ll figure these out on your own soon enough. No, this guide is to help you achieve in <span class="caps">VIM</span> what you already can using Textmate, only with considerably less pain than I underwent.</p>
-<p>Some preliminary assumptions:</p>
+<p>This guide makes a few preliminary assumptions:</p>
 <ol>
-	<li>You&#8217;ve installed <span class="caps">MAC</span> <span class="caps">VIM</span>: <br />
+	<li>You&#8217;ve installed Mac <span class="caps">VIM</span>: <br />
 <code>brew install macvim</code></li>
-	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained distro of plugins and useful configurations for web programmers</li>
+	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained <span class="caps">VIM</span> distro with plugins and configurations useful to web programmers.</li>
 	<li>You have created a ~/.vimrc.local file (for core <span class="caps">VIM</span> configurations), ~/.gvimrc.local (for configuring the graphics in <span class="caps">VIM</span>) and ~/.janus.rake (for adding or removing plugins <span class="caps">VIM</span>). See my <a href="https://github.com/jackkinsella/dotfiles/tree/">dotfiles</a> for some commented examples.</li>
 	<li>You know the basics of <span class="caps">VIM</span>. Type vimtutor in your terminal for a 20 minute tutorial. Advanced training can be found be referring to the <a href="#vim_training_resources">vim training resources below</a> .</li>
 	<li>You were a power user of the Textmate features.</li>
-	<li>(Not strictly necessary) You are a Rails programmer, as about 30% of this guide is Rails specific.</li>
+	<li>(Not strictly necessary) You are a Rails programmer switching from Textmate to <span class="caps">VIM</span>. About 30% of this guide is Rails specific.</li>
 </ol>
 <h2>Some Preliminary Notes (Do Not Skip)</h2>
 <h4>Format</h4>
@@ -110,24 +110,28 @@ jQuery(document).ready(function() {
 		<td> Shortcut in Vim</td>
 	</tr>
 </table>
-<p>In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM&#8217;s shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time. Whilst commands in Textmate are case insensitive or rather, the shift key is specified in the commands below, the commands in <span class="caps">VIM</span> are case sensitive. If you are told to type Y then typing y will not suffice. If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart <span class="caps">VIM</span> for these changes to take effect. If you are instructed to add code to your .janus.rake file you must cd into you .vim directory and run rake for these changes will be installed.</p>
+<p>In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM&#8217;s shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time. Whilst commands in Textmate are case insensitive or rather, the shift key is specified in the commands below, the commands in <span class="caps">VIM</span> are case sensitive. If you are told to type Y then typing y will not suffice. If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart <span class="caps">VIM</span> for these changes to take effect. If you are instructed to add code to your .janus.rake file you must cd into your .vim directory and run rake for these changes will be installed. Finally regular expressions in <span class="caps">VIM</span> differ from those in Textmate. Consult the <a href="#vim_training_resources">resources below</a> for an appropriate guide.</p>
 <h2>Opening, closing and creating files</h2>
 <table>
 	<tr>
 		<td>Open a file</td>
 		<td> ⌘ + 0 </td>
-		<td> :e <span class="caps">FILENAME</span> (use Tab completion after first few letters) <br />
+		<td> :e <span class="caps">FILENAME</span> <br />
+<em>Use Tab completion after typing the first few letters</em> <br />
 <em>You may need to save your current file first</em></td>
 	</tr>
 	<tr>
 		<td>Create new file</td>
 		<td> File &gt; new </td>
-		<td> ⌘ + T (new tab) [You will be in a new file. Type and then] :w newfilename </td>
+		<td> ⌘ + T (new tab) <br />
+<em>You will be in a new file. Type something and then save with</em><br />
+ :w newfilename </td>
 	</tr>
 	<tr>
 		<td>Quit</td>
 		<td> ⌘ + q </td>
-		<td> :q [throws an error if you have not saved. use :wq to save and quit or :q! to quit without saving] </td>
+		<td> :q <br />
+<em>This throws an error if you have not saved. use :wq to save and quit or :q! to quit without saving</em> </td>
 	</tr>
 	<tr>
 		<td>Open project from command line</td>
@@ -207,12 +211,41 @@ jQuery(document).ready(function() {
 		<td>Nearly always automatic. Otherwise press r</td>
 	</tr>
 </table>
-<h2>Help</h2>
+<h2>Clipboard</h2>
 <table>
 	<tr>
-		<td>Search help for &#8216;grep&#8217;</td>
-		<td>Click help menu and search for help</td>
-		<td>:help grep</td>
+		<td>Copy</td>
+		<td> ⌘ + C</td>
+		<td> Y<br />
+<em>Copies the current selection, or, if there is no selection, the current line</em> </td>
+	</tr>
+	<tr>
+		<td>Cut</td>
+		<td> ⌘ + X </td>
+		<td> d<br />
+<em>Technically this deletes the selection, but deleting in <span class="caps">VIM</span> saves the deleted text to a register where it can be now be pasted with p</em></td>
+	</tr>
+	<tr>
+		<td>Paste</td>
+		<td> ⌘ + V </td>
+		<td> p<br />
+<em>Pastes below the current line</em> <br />
+P<br />
+<em>pastes above the current line</em><br />
+&#8220;0p<br />
+<em>this pastes the last <strong>explicitly copied</strong> text. this is important since many commands, such as deleting text, override the paste buffer</em> </td>
+	</tr>
+	<tr>
+		<td>Paste from system clipboard</td>
+		<td> As above. </td>
+		<td> &quot;*p<br />
+<em><span class="caps">VIM</span> distinguishes between its internal clipboards (buffers) and the system&#8217;s clipboard.</em> </td>
+	</tr>
+	<tr>
+		<td>Clipboard history</td>
+		<td> ⌘ + ⇧ + V </td>
+		<td> :reg <br />
+<em>Show a list of registers each of which can be pasted e.g. &quot;8p pastes the contents of the register 8</em> </td>
 	</tr>
 </table>
 <h2 id="switch_tabs">Tabs</h2>
@@ -243,20 +276,6 @@ jQuery(document).ready(function() {
 		<td> ⌘[1-9]</td>
 	</tr>
 </table>
-<h2>Running Tests and Files</h2>
-<table>
-	<tr>
-		<td>Run tests for given file</td>
-		<td>⌘ + r </td>
-		<td> :Rake </td>
-	</tr>
-	<tr>
-		<td>Run current file</td>
-		<td> ⌘ + R </td>
-		<td> :!ruby % <br />
-<em>Explanation: :! means execute what follows as if in shell. % expands to the current_file_name so you are executing `ruby current_file_name. This runs in a buffer in <span class="caps">VIM</span> making you unable to continue editing.</em> </td>
-	</tr>
-</table>
 <h2>Moving Around A File</h2>
 <table>
 	<tr>
@@ -271,12 +290,12 @@ jQuery(document).ready(function() {
 	</tr>
 	<tr>
 		<td>Go to top of file </td>
-		<td> ⌘ + Up </td>
+		<td> ⌘ + ↑ </td>
 		<td> g </td>
 	</tr>
 	<tr>
 		<td>Go to bottom of file </td>
-		<td> ⌘ + Down </td>
+		<td> ⌘ + ↓ </td>
 		<td> GG </td>
 	</tr>
 	<tr>
@@ -293,6 +312,236 @@ jQuery(document).ready(function() {
 		<td>Go to line 20 </td>
 		<td> ⌘ + L [type a line &#8211; e.g. 20] </td>
 		<td> :20 </td>
+	</tr>
+</table>
+<h2>Selecting Text</h2>
+<table>
+	<tr>
+		<td> Begin selection </td>
+		<td> ⇧ [then use arrows to drag over desired text] </td>
+		<td> v[enters visual mode. use w to move forward one word. ) to move forward one sentence and % to move to next bracket close. also /apple to move forward to next occurrence of apple]</td>
+	</tr>
+	<tr>
+		<td>Select all</td>
+		<td> ⌘ + A </td>
+		<td> vgg=G </td>
+	</tr>
+	<tr>
+		<td>Increase selection left one word</td>
+		<td> ⇧ + ⌥ + ← then alt + ← for each additional word</td>
+		<td> v(select)w then w for each additional word  </td>
+	</tr>
+	<tr>
+		<td>Select a vertical block</td>
+		<td> ⌥ + drag mouse </td>
+		<td> ⌃ + V </td>
+	</tr>
+</table>
+<h2>Deleting Text</h2>
+<table>
+	<tr>
+		<td>Delete line</td>
+		<td>⌘ + ⇧ + k </td>
+		<td> dd </td>
+	</tr>
+	<tr>
+		<td>Delete character</td>
+		<td> Backspace <em>Erases character to the left of the caret</em> </td>
+		<td>x <br />
+_Erases character under caret </td>
+	</tr>
+	<tr>
+		<td>Delete selected text</td>
+		<td> Backspace </td>
+		<td> d </td>
+	</tr>
+</table>
+<h2>Moving Text Around</h2>
+<table>
+	<tr>
+		<td>Move selected text up</td>
+		<td>⌃ + ⌘ + ↑ (or ↓)</td>
+		<td> :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). alternatively :m+ or :m+N or :m-N for moving 1 or N lines up or down</td>
+	</tr>
+	<tr>
+		<td>Merge current line With Next Line</td>
+		<td>⌃ + ⇧ +J </td>
+		<td> J </td>
+	</tr>
+	<tr>
+		<td>Sort lines</td>
+		<td> ⌥ + ⌘ + R &gt; sort in dialogue box </td>
+		<td> [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) </td>
+	</tr>
+</table>
+<h2>Searching Files</h2>
+<table>
+	<tr>
+		<td>Search file upwards for <span class="caps">TOM</span> </td>
+		<td> ⇧ + ⌃ + S <span class="caps">TOM</span> </td>
+		<td> ?<span class="caps">TOM</span> <br />
+<em>Then press enter once then repeatedly press n or N to continue searching up or down</em></td>
+	</tr>
+	<tr>
+		<td>Search file downwards for <span class="caps">TOM</span> </td>
+		<td>⌃ + S <span class="caps">TOM</span> [Same as above for repeated search]</td>
+	</tr>
+	<tr>
+		<td>Full screen </td>
+		<td><a href="https://github.com/enormego/EGOTextMateFullScreen">(Lion Only)</a> </td>
+		<td> ⌘ + Enter </td>
+	</tr>
+	<tr>
+		<td>Search entire project </td>
+		<td> ⌘ + ⇧ + F </td>
+		<td> ,a THING_SEARCHING_FOR (ack) </td>
+	</tr>
+	<tr>
+		<td>Find a specific Method</td>
+		<td>⌘ + ⇧ + t</td>
+		<td> /def foo <br />
+<em>then use * to cycle through instances of the method name under the caret. This will not necessarily by definition # does the same but in the oppose direction</em></td>
+	</tr>
+</table>
+<h2>Replacing Text in Files and Project</h2>
+<table>
+	<tr>
+		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file</td>
+		<td> ⌘ F <br />
+<em>Find and replace box where you select &#8216;Replace All&#8217;.</em> </td>
+		<td> :%s/donut/eclair/g </td>
+	</tr>
+	<tr>
+		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file, ignoring case </td>
+		<td> ⌘ F<br />
+ <em>Find and replace dialogue where you then select &#8216;Ignore Case&#8217;and then &#8216;Replace All&#8217;.</em> </td>
+		<td> :%s/donut/eclair/gi </td>
+	</tr>
+	<tr>
+		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file, confirming each time </td>
+		<td> ⌘ F <br />
+<em>Find and replace box where you select &#8216;Replace Next&#8217;.</em> </td>
+		<td> :%s/donut/eclair/gc </td>
+	</tr>
+	<tr>
+		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
+		<td> ⌘ + ⇧ + F </td>
+		<td> :Ack donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.<br />
+<em>Save current file first if <span class="caps">VIM</span> throws an error</em></td>
+	</tr>
+	<tr>
+		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
+		<td> ⌘ + ⇧ + F </td>
+		<td> ,a donut[Enter] </td>
+	</tr>
+</table>
+<h2>Ruby On Rails</h2>
+<table>
+	<tr>
+		<td>Call Ruby On Rails generate script </td>
+		<td> &quot;⌃ + Pipe [1..8]== </td>
+		<td>:Rgenerate [controller model scaffold] Blog </td>
+	</tr>
+	<tr>
+		<td>Go To Last Migration</td>
+		<td> None </td>
+		<td> :Rmig  </td>
+	</tr>
+	<tr>
+		<td>Run migrations</td>
+		<td> ⌃ + ⇧ + Pipe </td>
+		<td>[when in a migration] :Rake </td>
+	</tr>
+	<tr>
+		<td>Switch focus to project drawer</td>
+		<td> ⌘ + ⌥ + ` (check)</td>
+		<td> ⌃ + w ⌃ + w <br />
+<em>A good key remapping is to map this onto tab by adding this to your vimrc: noremap <tab> <C-w><C-w></em> </td>
+	</tr>
+	<tr>
+		<td>Insert erb&#8217;s &lt;%= </td>
+		<td> ⌃ + ⇧ + . </td>
+		<td> Type text you want to surround first and place caret some inside. yss= </td>
+	</tr>
+	<tr>
+		<td>Insert erb&#8217;s &lt;% </td>
+		<td> ⌃ + ⇧ + . </td>
+		<td> yss- </td>
+	</tr>
+	<tr>
+		<td>Run unit test caret inside of </td>
+		<td> ⇧ + ⌘ + R </td>
+		<td> :.Rake <br />
+<em>. here represents the current line. You can substitute this for other lines e.g. :40Rake</em> <span class="caps">TEST</span></td>
+	</tr>
+	<tr>
+		<td>Go to test file (e.g. from user.rb to user_spec.rb)</td>
+		<td> ⌥ + ⇧  + ⌘ + ↓ </td>
+		<td> :A (:AV in a new split, :AT new tab)</td>
+	</tr>
+	<tr>
+		<td>Find related file</td>
+		<td> ⌥ + ⌘ + ↓ </td>
+		<td> :R<br />
+<em>If typed within the Controller you&#8217;ll be brought to the View corresponding to the method selected; If typed in view &#8594; Controller; Migrations &#8594; Next Migration; Typed in Model &#8594; Schema. For something more precise see the following <span class="caps">VIM</span> only commands</em> </td>
+	</tr>
+	<tr>
+		<td>Go to related controller</td>
+		<td> ⌥ + ⇧ + ⌘ + ↓ </td>
+		<td> :Rco </td>
+	</tr>
+	<tr>
+		<td>Go to related helper</td>
+		<td> As above </td>
+		<td> :Rhe </td>
+	</tr>
+	<tr>
+		<td>Go to model under cursor</td>
+		<td> No equivalent</td>
+		<td> gf [e.g. you see Pos*t.first &#8594; brought to #post.rb </td>
+	</tr>
+	<tr>
+		<td>Go to stylesheet under cursor</td>
+		<td> No equivalent</td>
+		<td> gf [e.g. you see&lt;%= stylesheet_link_tag &#8216;scaf*fold&#8217; %&gt;&#8594; brought to scaffold.css </td>
+	</tr>
+	<tr>
+		<td>View Rails logs</td>
+		<td> No equivalent</td>
+		<td> :Rlogs <br />
+<em>:Rake logs:clear if takes too long to load</em></td>
+	</tr>
+	<tr>
+		<td>Go to layout under cursor</td>
+		<td> No equivalent</td>
+		<td> gf <br />
+<em>e.g. you see layout :print &#8594; brought to #print.html.erb</em> </td>
+	</tr>
+	<tr>
+		<td>Go to application.rb</td>
+		<td> No equivalent</td>
+		<td> :Renv</td>
+	</tr>
+	<tr>
+		<td>Go to test.rb </td>
+		<td> No equivalent</td>
+		<td> :Renv t[tab to autofill out to test]</td>
+	</tr>
+	<tr>
+		<td>Go to controller from link under cursor</td>
+		<td> No equivalent</td>
+		<td> gf [e.g. you see &lt;%= link_to &#8220;New&#8221;, new_comme*nt_path %&gt; &#8594; brought to #comments_controller.rb </td>
+	</tr>
+	<tr>
+		<td>Create a posts controller </td>
+		<td> No equivalent </td>
+		<td>:Rco posts! <br />
+<em>Note the exclamation mark which distinguishes this create command from the find command.</em></td>
+	</tr>
+	<tr>
+		<td>Extract to partial</td>
+		<td> [Select text] ⌃ + H </td>
+		<td> [Select text] :Rextract PARTIAL_NAME </td>
 	</tr>
 </table>
 <h2>Indentation</h2>
@@ -353,115 +602,6 @@ _Using ⌘ +/- in <span class="caps">VIM</span> makes the screen scale dispropor
 <em>Then choose the correct spelling from drop down menu</em></td>
 	</tr>
 </table>
-<h2>Ruby On Rails</h2>
-<table>
-	<tr>
-		<td>Call Ruby On Rails generate script </td>
-		<td> &quot;⌃ + Pipe [1..8]== </td>
-		<td>:Rgenerate [controller model scaffold] Blog </td>
-	</tr>
-	<tr>
-		<td>Go To Last Migration</td>
-		<td> None </td>
-		<td> :Rmig  </td>
-	</tr>
-	<tr>
-		<td>Run migrations</td>
-		<td> ⌃ + ⇧ + Pipe </td>
-		<td>[when in a migration] :Rake </td>
-	</tr>
-	<tr>
-		<td>Switch focus to project drawer</td>
-		<td> ⌘ + ⌥ + ` (check)</td>
-		<td> ⌃ + w ⌃ + w <br />
-<em>A good key remapping is to map this onto tab by adding this to your vimrc: noremap <tab> <C-w><C-w></em> </td>
-	</tr>
-	<tr>
-		<td>Insert erb&#8217;s &lt;%= </td>
-		<td> ⌃ + ⇧ + . </td>
-		<td> Type text you want to surround first and place caret some inside. yss= </td>
-	</tr>
-	<tr>
-		<td>Insert erb&#8217;s &lt;% </td>
-		<td> ⌃ + <span class="caps">SHIT</span> + . (cycle through )</td>
-		<td> yss- </td>
-	</tr>
-	<tr>
-		<td>Run unit test caret inside of </td>
-		<td> ⇧ + ⌘ + R </td>
-		<td> :.Rake <br />
-<em>. here represents the current line. You can substitute this for other lines e.g. :40Rake</em> <span class="caps">TEST</span></td>
-	</tr>
-	<tr>
-		<td>Go to test file (e.g. from user.rb to user_spec.rb)</td>
-		<td> ⌥ + ⇧  + ⌘ + <span class="caps">DOWN</span> </td>
-		<td> :A (:AV in a new split, :AT new tab)</td>
-	</tr>
-	<tr>
-		<td>Find related file</td>
-		<td> ⌥ + ⌘ + down </td>
-		<td> :R<br />
-<em>If typed within the Controller you&#8217;ll be brought to the View corresponding to the method selected; If typed in view &#8594; Controller; Migrations &#8594; Next Migration; Typed in Model &#8594; Schema. For something more precise see the following <span class="caps">VIM</span> only commands</em> </td>
-	</tr>
-	<tr>
-		<td>Go to related controller</td>
-		<td> ⌥ + ⇧ + ⌘ + down </td>
-		<td> :Rco </td>
-	</tr>
-	<tr>
-		<td>Go to related helper</td>
-		<td> As above </td>
-		<td> :Rhe </td>
-	</tr>
-	<tr>
-		<td>Go to model under cursor</td>
-		<td> No equivalent</td>
-		<td> gf [e.g. you see Pos*t.first &#8594; brought to #post.rb </td>
-	</tr>
-	<tr>
-		<td>Go to stylesheet under cursor</td>
-		<td> No equivalent</td>
-		<td> gf [e.g. you see&lt;%= stylesheet_link_tag &#8216;scaf*fold&#8217; %&gt;&#8594; brought to scaffold.css </td>
-	</tr>
-	<tr>
-		<td>View Rails logs</td>
-		<td> No equivalent</td>
-		<td> :Rlogs <br />
-<em>:Rake logs:clear if takes too long to load</em></td>
-	</tr>
-	<tr>
-		<td>Go to layout under cursor</td>
-		<td> No equivalent</td>
-		<td> gf <br />
-<em>e.g. you see layout :print &#8594; brought to #print.html.erb</em> </td>
-	</tr>
-	<tr>
-		<td>Go to application.rb</td>
-		<td> No equivalent</td>
-		<td> :Renv</td>
-	</tr>
-	<tr>
-		<td>Go to test.rb </td>
-		<td> No equivalent</td>
-		<td> :Renv t[tab to autofill out to test]</td>
-	</tr>
-	<tr>
-		<td>Go to controller from link under cursor</td>
-		<td> No equivalent</td>
-		<td> gf [e.g. you see &lt;%= link_to &#8220;New&#8221;, new_comme*nt_path %&gt; &#8594; brought to #comments_controller.rb </td>
-	</tr>
-	<tr>
-		<td>Create a posts controller </td>
-		<td> No equivalent </td>
-		<td>:Rco posts! <br />
-<em>Note the exclamation mark which distinguishes this create command from the find command.</em></td>
-	</tr>
-	<tr>
-		<td>Extract to partial</td>
-		<td> [Select text] ⌃ + H </td>
-		<td> [Select text] :Rextract PARTIAL_NAME </td>
-	</tr>
-</table>
 <h2>Bookmarks</h2>
 <table>
 	<tr>
@@ -477,64 +617,7 @@ _Using ⌘ +/- in <span class="caps">VIM</span> makes the screen scale dispropor
 _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks._</td>
 	</tr>
 </table>
-<h2>Searching Files</h2>
-<table>
-	<tr>
-		<td>Search file upwards for <span class="caps">TOM</span> </td>
-		<td> ⇧ + ⌃ + S <span class="caps">TOM</span> </td>
-		<td> ?<span class="caps">TOM</span> <br />
-<em>Then press enter once then repeatedly press n or N to continue searching up or down</em></td>
-	</tr>
-	<tr>
-		<td>Search file downwards for <span class="caps">TOM</span> </td>
-		<td>⌃ + S <span class="caps">TOM</span> [Same as above for repeated search]</td>
-	</tr>
-	<tr>
-		<td>Full screen </td>
-		<td><a href="https://github.com/enormego/EGOTextMateFullScreen">(Lion Only)</a> </td>
-		<td> ⌘ + Enter </td>
-	</tr>
-	<tr>
-		<td>Search entire project </td>
-		<td> ⌘ + ⇧ + F </td>
-		<td> ,a THING_SEARCHING_FOR (ack) </td>
-	</tr>
-	<tr>
-		<td>Find a specific Method</td>
-		<td>⌘ + ⇧ + t</td>
-		<td> /def first_letters_of_method_name OR * [Cycles through instances of the method name under the caret&#8230; not necessarily the definition] #does the same but in the oppose direction</td>
-	</tr>
-</table>
-<h2>Replacing Text in Files and Project</h2>
-<table>
-	<tr>
-		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file</td>
-		<td> ⌘ F (Find and Replace Dialogue) Replace All </td>
-		<td> :%s/donut/eclair/g </td>
-	</tr>
-	<tr>
-		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file, ignoring case </td>
-		<td> ⌘ F (Find and Replace Dialogue) Select &#8216;Ignore Case&#8217;. Replace All </td>
-		<td> :%s/donut/eclair/gi </td>
-	</tr>
-	<tr>
-		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file, confirming each time </td>
-		<td> ⌘ F (Find and Replace Dialogue) Replace Next </td>
-		<td> :%s/donut/eclair/gc </td>
-	</tr>
-	<tr>
-		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
-		<td> ⌘ + ⇧ + F </td>
-		<td> :Ack donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.<br />
-<em>Save current file first if <span class="caps">VIM</span> throws an error</em></td>
-	</tr>
-	<tr>
-		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
-		<td> ⌘ + ⇧ + F </td>
-		<td> ,a donut[Enter] </td>
-	</tr>
-</table>
-<h2>Uppercase/Lowercase (<span class="caps">UNFIN</span>)</h2>
+<h2>Uppercase/Lowercase</h2>
 <table>
 	<tr>
 		<td>Upcase selected text</td>
@@ -571,20 +654,12 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 		<td> No equivalent </td>
 		<td> ⌃ + X + L </td>
 </table>
-<h2>Commeting</h2>
+<h2>Commenting Code</h2>
 <table>
 	<tr>
 		<td>Comment Line or Selection</td>
 		<td> ⌘ + / </td>
 		<td> ⌘ + / </td>
-	</tr>
-</table>
-<h2>Deletion</h2>
-<table>
-	<tr>
-		<td>Delete line</td>
-		<td>⌘ + ⇧ + k </td>
-		<td> dd </td>
 	</tr>
 </table>
 <h2>Syntax Errors</h2>
@@ -596,7 +671,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 <em>A grey bar appears right of the number column with an &gt; beside the error</em> </td>
 	</tr>
 </table>
-<h2>Autoclosing &quot;&quot; () or <span class="caps">HTML</span> tags</h2>
+<h2>Autoclosing quotations, html tags, brackets and so forth.</h2>
 <table>
 	<tr>
 		<td>Add opposing bracket or quotation mark</td>
@@ -629,79 +704,35 @@ _ </td>
 		<td> b </td>
 	</tr>
 </table>
-<h2>Selecting Text</h2>
+<h2>Running Tests and Files</h2>
 <table>
 	<tr>
-		<td> Begin selection </td>
-		<td> ⇧ [then use arrows to drag over desired text] </td>
-		<td> v[enters visual mode. use w to move forward one word. ) to move forward one sentence and % to move to next bracket close. also /apple to move forward to next occurrence of apple]</td>
+		<td>Run tests for given file</td>
+		<td>⌘ + r </td>
+		<td> :Rake </td>
 	</tr>
 	<tr>
-		<td>Select all</td>
-		<td> ⌘ + A </td>
-		<td> vgg=G </td>
-	</tr>
-	<tr>
-		<td>Increase selection left one word</td>
-		<td> ⇧ + ⌥ + ← then alt + ← for each additional word</td>
-		<td> v(select)w then w for each additional word  </td>
-	</tr>
-	<tr>
-		<td>Select a vertical block</td>
-		<td> ⌥ + drag mouse </td>
-		<td> ⌃ + V </td>
+		<td>Run current file</td>
+		<td> ⌘ + R </td>
+		<td> :!ruby % <br />
+<em>Explanation: :! means execute what follows as if in shell. % expands to the current_file_name so you are executing `ruby current_file_name. This runs in a buffer in <span class="caps">VIM</span> making you unable to continue editing.</em> </td>
 	</tr>
 </table>
-<h2>Moving Text Around</h2>
+<h2>Snippets</h2>
 <table>
 	<tr>
-		<td>Move selected text up</td>
-		<td>⌃ + ⌘ + up (or down)</td>
-		<td> :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). alternatively :m+ or :m+N or :m-N for moving 1 or N lines up or down</td>
+		<td>Snippets (e.g. validates present of)</td>
+		<td> vp<Tab> </td>
+		<td> [Type TN abbreviation] <br />
+<em>Non Rails snippets not working since the latest releases of snippets plugin clashes with Command-T search plugin. I&#8217;ve filed bug reports and if anyone has fixed this let me know.</em> </td>
 	</tr>
 	<tr>
-		<td>Merge current line With Next Line</td>
-		<td>⌃ + ⇧ +J </td>
-		<td> J </td>
-	</tr>
-	<tr>
-		<td>Sort lines</td>
-		<td> ⌥ + ⌘ + R &gt; sort in dialogue box </td>
-		<td> [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) </td>
+		<td>See All Available Snippers</td>
+		<td> Use Menu </td>
+		<td>:Rabbrev</td>
 	</tr>
 </table>
-<h2>Clipboard</h2>
-<table>
-	<tr>
-		<td>Copy</td>
-		<td> ⌘ + C</td>
-		<td> Y<br />
-<em>Copies the current selection, or, if there is no selection, the current line</em> </td>
-	</tr>
-	<tr>
-		<td>Cut</td>
-		<td> ⌘ + X </td>
-		<td> d<br />
-<em>Technically this deletes the selection, but deleting in <span class="caps">VIM</span> saves the deleted text to a register where it can be now be pasted with p</em></td>
-	</tr>
-	<tr>
-		<td>Paste</td>
-		<td> ⌘ + V </td>
-		<td> p<br />
-<em>Pastes below the current line</em> <br />
-P<br />
-<em>pastes above the current line</em><br />
-&#8220;*p<br />
-<em>This pastes the last <strong>explicitly copied</strong> text. This is important since many commands, such as deleting text, override the paste buffer</em> </td>
-	</tr>
-	<tr>
-		<td>Clipboard history</td>
-		<td> ⌘ + ⇧ + V </td>
-		<td> :reg <br />
-<em>Show a list of registers each of which can be pasted e.g. &quot;8p pastes the contents of the register 8</em> </td>
-	</tr>
-</table>
-<h2>Duplicating Lines</h2>
+<h2>Other</h2>
 <table>
 	<tr>
 		<td>Duplicate line/selection</td>
@@ -724,29 +755,29 @@ P<br />
 		<td> ⇧ + ⌃ + W </td>
 		<td> ystp </td>
 	</tr>
+</table>
+<h2>Help</h2>
+<table>
 	<tr>
-		<td>Snippets (e.g. validates present of)</td>
-		<td> vp<Tab> </td>
-		<td> [Type TN abbreviation] <br />
-<em>Non Rails snippets not working since the latest releases of snippets plugin clashes with Command-T search plugin. I&#8217;ve filed bug reports and if anyone has fixed this let me know.</em> </td>
-	</tr>
-	<tr>
-		<td>See All Available Snippers</td>
-		<td> Use Menu </td>
-		<td>:Rabbrev</td>
+		<td>Search help for &#8216;grep&#8217;</td>
+		<td>Click help menu and search for help</td>
+		<td>:help grep</td>
 	</tr>
 </table>
 <h2 id="vim_training_resources">Recommended Resources For Learning Basic Vim</h2>
 <p><em>Remember the key is to train your fingers. Don&#8217;t read the commands. Open up a blank file and try out different commands.</em></p>
 <ul>
 	<li><a href="http://www.derekwyatt.org/vim/vim-tutorial-videos/" title="Highly recommended, if you can tolerate his excitement">Derek Wyatt&#8217;s Video Series</a></li>
-	<li><a href="http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html" title="My Personal Favourite">Spaced Reptition Systems For Drilling</a></li>
+	<li><a href="http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html" title="My Personal Favourite">Spaced Repetition Systems For Drilling</a></li>
 	<li><a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">Visual Cheat Sheets</a></li>
+	<li><a href="http://vimregex.com/">Regular expressions in Vim</a></li>
 	<li><a href="http://peepcode.com/products/smash-into-vim-i" title="Commercial">PeepCode&#8217;s Video Series</a></li>
 </ul>
 <h2> One Last Thing </h2>
 <p>
-  I spend many many hours researching and writing these posts. If you'd like to return the good will and say thanks please <b>tweet this page</b> or, better again, mention it on your blog.
+  I spend many many hours researching and writing these posts. If you'd
+  like to return the good will and say thanks please <a
+    href="#masthead">Tweet this page</a> or, better again, mention it on your blog.
 </p> 
 <p>
   <small>Written by Jack Kinsella, 05 Sep 2011</small>
@@ -779,7 +810,7 @@ document.write(write_string);
 
       <footer id="colophon">
       <div class="wrapper">
-        <h3>
+        <h3 class="byline">
         Jack Kinsella is a freelance <a href="http://www.jackkinsella.ie">Ruby on Rails programmer</a> in central London, the founder of <a href="http://www.oxbridgenotes.co.uk">Oxbridge Notes</a> and the co-founder of <a href="http://www.bolivianexpress.org">Bolivian Express.</a></h3>
           <p>Follow me if you code Ruby/Rails, want to learn about online marketing or software entrepreneurship.</p>
 
