@@ -229,7 +229,7 @@ h2. Uppercase/Lowercase
 
 |Upcase selected text|⌃ + ⇧ + U| ~ |
 |Downcase selected text|⌃ + ⇧ + U| ~ |
-|Titlecase current text| ⌃ + OPTION + U | No exact equivalent 
+|Titlecase current text| ⌃ + ⌥ + U | No exact equivalent 
 _To titlecase the current line you can use :s :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g_ |
 
 h2. Auto-complete
