@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T22:25:31+01:00</updated>
+ <updated>2011-09-05T22:30:12+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -608,7 +608,7 @@ _Using ⌘ +/- in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; makes the 
 	&lt;tr&gt;
 		&lt;td&gt;Auto-complete full line of code &lt;/td&gt;
 		&lt;td&gt; No equivalent &lt;/td&gt;
-		&lt;td&gt; ⌃ + X + L &lt;/td&gt;
+		&lt;td&gt; ⌃ + X + l &lt;/td&gt;
 &lt;/table&gt;
 &lt;h2&gt;Commenting Code&lt;/h2&gt;
 &lt;table&gt;

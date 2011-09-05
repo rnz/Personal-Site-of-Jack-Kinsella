@@ -239,7 +239,7 @@ _All of the following commands assume you are in insert mode_
 |Auto-complete method| ⎋ after typing first few letters| Tab after typing first few letters|
 |Auto-complete filename| No equivalent | ⌃ + X ⌃ + F 
 _Only fills one directory at a time so you'll need to repeat for each additional one_|
-|Auto-complete full line of code | No equivalent | ⌃ + X + L | 
+|Auto-complete full line of code | No equivalent | ⌃ + X + l | 
 
 h2. Commenting Code
 
