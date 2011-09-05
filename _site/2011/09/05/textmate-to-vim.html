@@ -227,7 +227,7 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Copy</td>
 		<td> ⌘ + C</td>
-		<td> Y<br />
+		<td> yy<br />
 <em>Copies the current selection, or, if there is no selection, the current line</em> </td>
 	</tr>
 	<tr>
@@ -576,9 +576,20 @@ P<br />
 <h2>Indentation</h2>
 <table>
 	<tr>
-		<td>Automatically indent code beautifully</td>
+		<td>Automatically indent code beautifully on whole file </td>
 		<td> ⌥ + ⌘ + B (<a href="https://github.com/mocoso/code-beautifier.tmbundle">Code Beautifier Plugin</a>) </td>
 		<td> gg=G </td>
+	</tr>
+	<tr>
+		<td>Fix indentation on selected area </td>
+		<td> No equivalent </td>
+		<td> = </td>
+	</tr>
+	<tr>
+		<td>Fix indentation on a single line </td>
+		<td> No equivalent </td>
+		<td> == <br />
+<em>Compare with the above to note a pattern. Type a command once to apply it to visually selected areas. Type it twice to apply to the current line, which need not be selected. See also d and dd, y and yy</em> </td>
 	</tr>
 	<tr>
 		<td>Indent</td>
@@ -760,7 +771,7 @@ _ </td>
 	<tr>
 		<td>Duplicate line/selection</td>
 		<td> ⌃ + ⇧ + D</td>
-		<td> Yp <br />
+		<td> yyp <br />
 <em>y copies line then p pastes in below.</em> </td>
 	</tr>
 	<tr>
@@ -777,6 +788,11 @@ select your lines<br />
 $ to go to the end of the selection<br />
 A to enter <span class="caps">EDIT</span> mode at the end<br />
 ⎋ when you are finished_ </td>
+	</tr>
+	<tr>
+		<td> Edit start of selected lines</td>
+		<td> No equivalent </td>
+		<td> Sane as above, except you press I instead of A</td>
 	</tr>
 	<tr>
 		<td>Wrap selected text in P tags</td>

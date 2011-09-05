@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T22:40:05+01:00</updated>
+ <updated>2011-09-05T23:21:59+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -152,7 +152,7 @@
 	&lt;tr&gt;
 		&lt;td&gt;Copy&lt;/td&gt;
 		&lt;td&gt; ⌘ + C&lt;/td&gt;
-		&lt;td&gt; Y&lt;br /&gt;
+		&lt;td&gt; yy&lt;br /&gt;
 &lt;em&gt;Copies the current selection, or, if there is no selection, the current line&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
@@ -501,9 +501,20 @@ P&lt;br /&gt;
 &lt;h2&gt;Indentation&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Automatically indent code beautifully&lt;/td&gt;
+		&lt;td&gt;Automatically indent code beautifully on whole file &lt;/td&gt;
 		&lt;td&gt; ⌥ + ⌘ + B (&lt;a href=&quot;https://github.com/mocoso/code-beautifier.tmbundle&quot;&gt;Code Beautifier Plugin&lt;/a&gt;) &lt;/td&gt;
 		&lt;td&gt; gg=G &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Fix indentation on selected area &lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; = &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Fix indentation on a single line &lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; == &lt;br /&gt;
+&lt;em&gt;Compare with the above to note a pattern. Type a command once to apply it to visually selected areas. Type it twice to apply to the current line, which need not be selected. See also d and dd, y and yy&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Indent&lt;/td&gt;
@@ -685,7 +696,7 @@ _ &lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Duplicate line/selection&lt;/td&gt;
 		&lt;td&gt; ⌃ + ⇧ + D&lt;/td&gt;
-		&lt;td&gt; Yp &lt;br /&gt;
+		&lt;td&gt; yyp &lt;br /&gt;
 &lt;em&gt;y copies line then p pastes in below.&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
@@ -702,6 +713,11 @@ select your lines&lt;br /&gt;
 $ to go to the end of the selection&lt;br /&gt;
 A to enter &lt;span class=&quot;caps&quot;&gt;EDIT&lt;/span&gt; mode at the end&lt;br /&gt;
 ⎋ when you are finished_ &lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt; Edit start of selected lines&lt;/td&gt;
+		&lt;td&gt; No equivalent &lt;/td&gt;
+		&lt;td&gt; Sane as above, except you press I instead of A&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Wrap selected text in P tags&lt;/td&gt;
