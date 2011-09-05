@@ -51,7 +51,7 @@ _This throws an error if you have not saved. use :wq to save and quit or :q! to 
 h2. Saving Files
 
 |Save file| ⌘ + S | :w |
-|Save file as| ⌘ + ⇧ + S | :saveas NEWFILENAME |
+|Save file as| ⌘ + ⇧ + S | :w NEWFILENAME |
 
 h2. Undo / Redo 
 
@@ -286,7 +286,7 @@ h2. Help
 
 h2(#vim_training_resources). Recommended Resources For Learning Basic VIM 
 
-_Remember the key is to train your fingers. Don't just read the commands; open up a blank file and try out different commands. If you want to get good at VIM you need to have the confidence to tear a file up in your training sessions._
+_Remember the key is to train your fingers. Don't just read the text; open up a blank file and try out different commands. If you want to get good at VIM you need to have the confidence to tear a file to pieces your training sessions._
 
 * "Derek Wyatt's Video Series (Highly recommended, if you can tolerate his excitement)":http://www.derekwyatt.org/vim/vim-tutorial-videos/
 * "Spaced Repetition Systems For Drilling (My Personal Favourite)":http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html
