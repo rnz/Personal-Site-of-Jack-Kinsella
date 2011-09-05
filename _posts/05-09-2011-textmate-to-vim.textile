@@ -283,7 +283,12 @@ h2. Other
 |Duplicate line/selection| ⌃ + ⇧ + D| Yp 
 _y copies line then p pastes in below._ |
 |Add placeholder text|lorem + tab| No equivalent|
-|Edit ends of selected lines|⌘ + ⌥ + a||
+|Edit ends of selected lines|⌘ + ⌥ + a| 
+⌃ + V to enter VISUAL-BLOCK mode
+select your lines
+$ to go to the end of the selection
+A to enter EDIT mode at the end
+⎋ when you are finished_ |
 |Wrap selected text in P tags| ⇧ + ⌃ + W | ystp |
 
 h2. Help
