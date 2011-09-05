@@ -60,9 +60,9 @@ h2. Undo / Redo
 
 h2. File Renaming
 
-|Rename a file|[focus on project drawer and select a file] space [type new name]| Start by "focusing on the NerdTree":#nerd_tree. Select the file you wish to rename (however you want: e.g. with a search or plain old jklh). Type 'm' to bring up a menu. Type 'm' again to chose to modify the file name. Type the new name of file and press enter. |
+|Rename a file|[focus on project drawer and select a file] space [type new name]| Start by "focusing on the NERDTree":#nerd_tree. Select the file you wish to rename (however you want: e.g. with a search or plain old jklh). Type 'm' to bring up a menu. Type 'm' again to chose to modify the file name. Type the new name of file and press enter. |
 
-h2(#nerd_tree). Project Drawer/NerdTree
+h2(#nerd_tree). Project Drawer/ NERDTree
 
 |Focus on project drawer| ⌃ + <Tab> | "Switch tabs until selected":#switch_tabs |
 |Close/Open project drawer| ⌃ + ⌥ + ⌘ + D |\n|
@@ -284,7 +284,7 @@ h2. Help
 
 |Search help for 'grep'|Click help menu and search for help|:help grep|
 
-h2(#vim_training_resources). Recommended Resources For Learning Basic Vim
+h2(#vim_training_resources). Recommended Resources For Learning Basic VIM 
 
 _Remember the key is to train your fingers. Don't just read the commands; open up a blank file and try out different commands. If you want to get good at VIM you need to have the confidence to tear a file up in your training sessions._
 
