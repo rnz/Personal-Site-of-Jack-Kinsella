@@ -7,18 +7,20 @@ author: Jack Kinsella
 
 ---
 
-When I switched from Textmate to VIM I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in VIM the features I'd come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longer for a project drawer to manage my app's files. Instead of accommodating my needs, VIM sat firm and unresponsive and spat error after error at my clumsy fingers. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.
+When I switched from Textmate to VIM I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in VIM the features I'd come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longer for a project drawer to manage my app's files. 
+
+Instead of accommodating my needs, VIM sat firm and unresponsive, save for the odd judgemental beeping sound. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.
 
 With time I learned to mimic nearly every Textmate feature in VIM, and then some. This guide isn't about the powerful features VIM has over-and-above Textmate; you'll figure these out with time. This guide is to help you do in VIM what you already can using Textmate, only with considerably less pain than I underwent.
 
 This guide makes a few preliminary assumptions:
-# You've installed Mac VIM: 
+# You've installed Mac VIM. The easiest way is using Home Brew. 
 @brew install macvim@
-# You've installed "Janus":https://github.com/carlhuda/janus, the community maintained VIM distro with plugins and configurations useful to Rails programmers used to Textmate.
-# You've created a ~/.vimrc.local file (for core VIM configurations), ~/.gvimrc.local (for configuring the graphics in VIM) and ~/.janus.rake (for adding or removing plugins VIM). See my "dotfiles":https://github.com/jackkinsella/dotfiles/tree/ for some commented examples. 
-# You know the basics of VIM. Type vimtutor in your terminal for a 20 minute tutorial. Advanced training can be found be referring to the "vim training resources below":#vim_training_resources .
-# You were a power user of the Textmate features.
-# (Not strictly necessary) You are a Rails programmer switching from Textmate to VIM. About 30% of this guide is Rails specific.
+# You've installed "Janus":https://github.com/carlhuda/janus, the community maintained VIM distro with plugins and configurations useful to Rails programmers accustomed to Textmate.
+# You've created a ~/.vimrc.local file (for core VIM configurations), ~/.gvimrc.local (for configuring the graphics in VIM) and ~/.janus.rake (for adding or removing plugins in VIM). See my "dotfiles":https://github.com/jackkinsella/dotfiles/tree/ for some commented examples. Better yet, use them as sensible defaults. 
+# You've already learned the basics of VIM. If you haven't type vimtutor in your terminal for a 20 minute tutorial. Advanced training can be found be referring to the "vim training resources":#vim_training_resources below.
+# You were a power user of Textmate.
+# You are a Rails programmer switching from Textmate to VIM. About 30% of this guide is Rails specific.
 
 h2. Some Preliminary Notes (Do Not Skip)
 
@@ -26,15 +28,15 @@ h4. Format
 
 |Command | Shortcut in Textmate | Shortcut in Vim|
 
-* In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM's shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time. 
-* Whilst commands in Textmate are _case insensitive_, or rather the shift key is specified in the commands below, the commands in VIM are _case sensitive_. If you are told to type Y then typing y will not suffice. 
+* In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM's shortcuts, by contrast, typically require you to press the keys in quick succession, rather than at the same time. If you see 'dd' this means type d twice.
+* Whilst commands in Textmate are _case insensitive_, or rather the shift key is specified in the commands below, the commands in VIM are _case sensitive_. If I tell you to type Y then typing y will not suffice. 
 * Unless otherwise specified, all the VIM commands assume you are in normal mode, the mode where you cannot type text into the file.
-* If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart VIM for these changes to take effect. 
-* If you are instructed to add code to your .janus.rake file you must cd into your .vim directory and run rake for these changes will be installed. 
-* Regular expressions in VIM differ from those in Textmate and this is outside the scope of this guide. Consult the "resources below":#vim_training_resources for an excellent tutorial.
+* If you instructed to add something to your vimrc.local or gvimrc.local files you will need to restart VIM for these changes to take effect. 
+* If you are instructed to add code to your .janus.rake file you must cd into your ~/.vim directory and run rake for these changes to be installed. 
+* Regular expressions in VIM differ from those in Textmate, and these are outside the scope of this guide. Consult the "resources below":#vim_training_resources for an excellent tutorial.
 
 
-h2. Opening, closing and creating files
+h2. Opening, Closing and Creating Files
 
 |Open a file| ⌘ + 0 | :e FILENAME 
 _Use Tab completion after typing the first few letters_ 
@@ -51,23 +53,23 @@ h2. Saving Files
 |Save file| ⌘ + S | :w |
 |Save file as| ⌘ + ⇧ + S | :saveas NEWFILENAME |
 
-h2. Undo / Redo. 
+h2. Undo / Redo 
 
 |Undo|⌘ + Z | u |
 |Redo| ⇧ + ⌘ + Z | ⌃ + R |
 
-h2. File renaming
+h2. File Renaming
 
-|Rename a file|[focus on project drawer and select a file] space [type new name]| "Focus on NerdTree":#nerd_tree. Select File (however you want: e.g. search or jklh). m (brings up a menu ) m (chose to modify file) type new name of file and press enter. |
+|Rename a file|[focus on project drawer and select a file] space [type new name]| Start by "focusing on the NerdTree":#nerd_tree. Select the file you wish to rename (however you want: e.g. with a search or plain old jklh). Type 'm' to bring up a menu. Type 'm' again to chose to modify the file name. Type the new name of file and press enter. |
 
 h2(#nerd_tree). Project Drawer/NerdTree
 
 |Focus on project drawer| ⌃ + <Tab> | "Switch tabs until selected":#switch_tabs |
 |Close/Open project drawer| ⌃ + ⌥ + ⌘ + D |\n|
-|Change size of project drawer| Use mouse to adjust size | [vimrc] let NERDTreeWinSize=16 |
+|Change size of project drawer| Use mouse to adjust size | [add this to your .vimrc] let NERDTreeWinSize=16 |
 |Create new in Project Drawer | ⌘ + ⇧ + N | Select Project Drawer. Highlight parent folder you'd like file to appear in. Type m the choose a from select menu and type desired filename |
 |Delete a file| Click on file and select "remove file" | Highlight undesired file file in Project Drawer. Type m then choose d from drop down menu.|
-|Opening a subfolder| |Enter to open/close a directory|
+|Opening a sub-folder| |Enter to open/close a directory|
 |Refresh project tree to reflect newly added files|Automatic|Nearly always automatic. Otherwise press r|
 
 h2. Clipboard
@@ -141,7 +143,7 @@ _Then press enter once then repeatedly press n or N to continue searching up or 
 |Find a specific Method|⌘ + ⇧ + t| /def foo 
 _then use * to cycle through instances of the method name under the caret. This will not necessarily by definition # does the same but in the oppose direction_|
 
-h2. Replacing Text in Files and Project
+h2. Replacing Text in Files and in Entire Project
 
 |Replace all "donut" with "eclair" in file| ⌘ F 
 _Find and replace box where you select 'Replace All'._ | :%s/donut/eclair/g |
@@ -222,14 +224,14 @@ h2. Uppercase/Lowercase
 |Titlecase current text| ⌃ + OPTION + U | No exact equivalent 
 _To titlecase the current line you can use :s :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g_ |
 
-h2. Autocomplete
+h2. Auto-complete
 
 _All of the following commands assume you are in insert mode_
 
-|Autocomplete method| ⎋ after typing first few letters| Tab after typing first few letters|
-|Autocomplete filename| No equivalent | ⌃ + X ⌃ + F 
+|Auto-complete method| ⎋ after typing first few letters| Tab after typing first few letters|
+|Auto-complete filename| No equivalent | ⌃ + X ⌃ + F 
 _Only fills one directory at a time so you'll need to repeat for each additional one_|
-|Autocomplete full line of code | No equivalent | ⌃ + X + L | 
+|Auto-complete full line of code | No equivalent | ⌃ + X + L | 
 
 h2. Commenting Code
 
@@ -241,7 +243,7 @@ h2. Syntax Errors
 |Check for syntax errors on saving (*life saver)| "Validate On Save Plugin":https://github.com/sxtxixtxcxh/validate-on-save.tmbundle | Built In 
 _A grey bar appears right of the number column with an > beside the error_ |
 
-h2. Autoclosing quotations, html tags, brackets and so forth.
+h2. Auto-closing Quotes, Html Tags, Brackets.
 
 _All of the following commands assume you are in insert mode_
 
@@ -284,7 +286,7 @@ h2. Help
 
 h2(#vim_training_resources). Recommended Resources For Learning Basic Vim
 
-_Remember the key is to train your fingers. Don't read the commands. Open up a blank file and try out different commands._
+_Remember the key is to train your fingers. Don't just read the commands; open up a blank file and try out different commands. If you want to get good at VIM you need to have the confidence to tear a file up in your training sessions._
 
 * "Derek Wyatt's Video Series (Highly recommended, if you can tolerate his excitement)":http://www.derekwyatt.org/vim/vim-tutorial-videos/
 * "Spaced Repetition Systems For Drilling (My Personal Favourite)":http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html

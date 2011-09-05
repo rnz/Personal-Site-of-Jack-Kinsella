@@ -90,17 +90,18 @@ jQuery(document).ready(function() {
 
 });
 </script>
-<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longer for a project drawer to manage my app&#8217;s files. Instead of accommodating my needs, <span class="caps">VIM</span> sat firm and unresponsive and spat error after error at my clumsy fingers. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.</p>
+<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longer for a project drawer to manage my app&#8217;s files.</p>
+<p>Instead of accommodating my needs, <span class="caps">VIM</span> sat firm and unresponsive, save for the odd judgemental beeping sound. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.</p>
 <p>With time I learned to mimic nearly every Textmate feature in <span class="caps">VIM</span>, and then some. This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate; you&#8217;ll figure these out with time. This guide is to help you do in <span class="caps">VIM</span> what you already can using Textmate, only with considerably less pain than I underwent.</p>
 <p>This guide makes a few preliminary assumptions:</p>
 <ol>
-	<li>You&#8217;ve installed Mac <span class="caps">VIM</span>: <br />
+	<li>You&#8217;ve installed Mac <span class="caps">VIM</span>. The easiest way is using Home Brew. <br />
 <code>brew install macvim</code></li>
-	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained <span class="caps">VIM</span> distro with plugins and configurations useful to Rails programmers used to Textmate.</li>
-	<li>You&#8217;ve created a ~/.vimrc.local file (for core <span class="caps">VIM</span> configurations), ~/.gvimrc.local (for configuring the graphics in <span class="caps">VIM</span>) and ~/.janus.rake (for adding or removing plugins <span class="caps">VIM</span>). See my <a href="https://github.com/jackkinsella/dotfiles/tree/">dotfiles</a> for some commented examples.</li>
-	<li>You know the basics of <span class="caps">VIM</span>. Type vimtutor in your terminal for a 20 minute tutorial. Advanced training can be found be referring to the <a href="#vim_training_resources">vim training resources below</a> .</li>
-	<li>You were a power user of the Textmate features.</li>
-	<li>(Not strictly necessary) You are a Rails programmer switching from Textmate to <span class="caps">VIM</span>. About 30% of this guide is Rails specific.</li>
+	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained <span class="caps">VIM</span> distro with plugins and configurations useful to Rails programmers accustomed to Textmate.</li>
+	<li>You&#8217;ve created a ~/.vimrc.local file (for core <span class="caps">VIM</span> configurations), ~/.gvimrc.local (for configuring the graphics in <span class="caps">VIM</span>) and ~/.janus.rake (for adding or removing plugins in <span class="caps">VIM</span>). See my <a href="https://github.com/jackkinsella/dotfiles/tree/">dotfiles</a> for some commented examples. Better yet, use them as sensible defaults.</li>
+	<li>You&#8217;ve already learned the basics of <span class="caps">VIM</span>. If you haven&#8217;t type vimtutor in your terminal for a 20 minute tutorial. Advanced training can be found be referring to the <a href="#vim_training_resources">vim training resources</a> below.</li>
+	<li>You were a power user of Textmate.</li>
+	<li>You are a Rails programmer switching from Textmate to <span class="caps">VIM</span>. About 30% of this guide is Rails specific.</li>
 </ol>
 <h2>Some Preliminary Notes (Do Not Skip)</h2>
 <h4>Format</h4>
@@ -112,14 +113,14 @@ jQuery(document).ready(function() {
 	</tr>
 </table>
 <ul>
-	<li>In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM&#8217;s shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time.</li>
-	<li>Whilst commands in Textmate are <em>case insensitive</em>, or rather the shift key is specified in the commands below, the commands in <span class="caps">VIM</span> are <em>case sensitive</em>. If you are told to type Y then typing y will not suffice.</li>
+	<li>In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM&#8217;s shortcuts, by contrast, typically require you to press the keys in quick succession, rather than at the same time. If you see &#8216;dd&#8217; this means type d twice.</li>
+	<li>Whilst commands in Textmate are <em>case insensitive</em>, or rather the shift key is specified in the commands below, the commands in <span class="caps">VIM</span> are <em>case sensitive</em>. If I tell you to type Y then typing y will not suffice.</li>
 	<li>Unless otherwise specified, all the <span class="caps">VIM</span> commands assume you are in normal mode, the mode where you cannot type text into the file.</li>
-	<li>If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart <span class="caps">VIM</span> for these changes to take effect.</li>
-	<li>If you are instructed to add code to your .janus.rake file you must cd into your .vim directory and run rake for these changes will be installed.</li>
-	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate and this is outside the scope of this guide. Consult the <a href="#vim_training_resources">resources below</a> for an excellent tutorial.</li>
+	<li>If you instructed to add something to your vimrc.local or gvimrc.local files you will need to restart <span class="caps">VIM</span> for these changes to take effect.</li>
+	<li>If you are instructed to add code to your .janus.rake file you must cd into your ~/.vim directory and run rake for these changes to be installed.</li>
+	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate, and these are outside the scope of this guide. Consult the <a href="#vim_training_resources">resources below</a> for an excellent tutorial.</li>
 </ul>
-<h2>Opening, closing and creating files</h2>
+<h2>Opening, Closing and Creating Files</h2>
 <table>
 	<tr>
 		<td>Open a file</td>
@@ -160,7 +161,7 @@ jQuery(document).ready(function() {
 		<td> :saveas <span class="caps">NEWFILENAME</span> </td>
 	</tr>
 </table>
-<h2>Undo / Redo.</h2>
+<h2>Undo / Redo</h2>
 <table>
 	<tr>
 		<td>Undo</td>
@@ -173,12 +174,12 @@ jQuery(document).ready(function() {
 		<td> ⌃ + R </td>
 	</tr>
 </table>
-<h2>File renaming</h2>
+<h2>File Renaming</h2>
 <table>
 	<tr>
 		<td>Rename a file</td>
 		<td>[focus on project drawer and select a file] space [type new name]</td>
-		<td> <a href="#nerd_tree">Focus on NerdTree</a>. Select File (however you want: e.g. search or jklh). m (brings up a menu ) m (chose to modify file) type new name of file and press enter. </td>
+		<td> Start by <a href="#nerd_tree">focusing on the NerdTree</a>. Select the file you wish to rename (however you want: e.g. with a search or plain old jklh). Type &#8216;m&#8217; to bring up a menu. Type &#8216;m&#8217; again to chose to modify the file name. Type the new name of file and press enter. </td>
 	</tr>
 </table>
 <h2 id="nerd_tree">Project Drawer/NerdTree</h2>
@@ -196,7 +197,7 @@ jQuery(document).ready(function() {
 	<tr>
 		<td>Change size of project drawer</td>
 		<td> Use mouse to adjust size </td>
-		<td> [vimrc] let NERDTreeWinSize=16 </td>
+		<td> [add this to your .vimrc] let NERDTreeWinSize=16 </td>
 	</tr>
 	<tr>
 		<td>Create new in Project Drawer </td>
@@ -209,7 +210,7 @@ jQuery(document).ready(function() {
 		<td> Highlight undesired file file in Project Drawer. Type m then choose d from drop down menu.</td>
 	</tr>
 	<tr>
-		<td>Opening a subfolder</td>
+		<td>Opening a sub-folder</td>
 		<td> </td>
 		<td>Enter to open/close a directory</td>
 	</tr>
@@ -415,7 +416,7 @@ P<br />
 <em>then use * to cycle through instances of the method name under the caret. This will not necessarily by definition # does the same but in the oppose direction</em></td>
 	</tr>
 </table>
-<h2>Replacing Text in Files and Project</h2>
+<h2>Replacing Text in Files and in Entire Project</h2>
 <table>
 	<tr>
 		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file</td>
@@ -648,22 +649,22 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 <em>To titlecase the current line you can use :s :s/\&lt;\(\w\)\(\w*\)\&gt;/\u\1\L\2/g</em> </td>
 	</tr>
 </table>
-<h2>Autocomplete</h2>
+<h2>Auto-complete</h2>
 <p><em>All of the following commands assume you are in insert mode</em></p>
 <table>
 	<tr>
-		<td>Autocomplete method</td>
+		<td>Auto-complete method</td>
 		<td> ⎋ after typing first few letters</td>
 		<td> Tab after typing first few letters</td>
 	</tr>
 	<tr>
-		<td>Autocomplete filename</td>
+		<td>Auto-complete filename</td>
 		<td> No equivalent </td>
 		<td> ⌃ + X ⌃ + F <br />
 <em>Only fills one directory at a time so you&#8217;ll need to repeat for each additional one</em></td>
 	</tr>
 	<tr>
-		<td>Autocomplete full line of code </td>
+		<td>Auto-complete full line of code </td>
 		<td> No equivalent </td>
 		<td> ⌃ + X + L </td>
 </table>
@@ -684,7 +685,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 <em>A grey bar appears right of the number column with an &gt; beside the error</em> </td>
 	</tr>
 </table>
-<h2>Autoclosing quotations, html tags, brackets and so forth.</h2>
+<h2>Auto-closing Quotes, Html Tags, Brackets.</h2>
 <p><em>All of the following commands assume you are in insert mode</em></p>
 <table>
 	<tr>
@@ -780,7 +781,7 @@ _ </td>
 	</tr>
 </table>
 <h2 id="vim_training_resources">Recommended Resources For Learning Basic Vim</h2>
-<p><em>Remember the key is to train your fingers. Don&#8217;t read the commands. Open up a blank file and try out different commands.</em></p>
+<p><em>Remember the key is to train your fingers. Don&#8217;t just read the commands; open up a blank file and try out different commands. If you want to get good at <span class="caps">VIM</span> you need to have the confidence to tear a file up in your training sessions.</em></p>
 <ul>
 	<li><a href="http://www.derekwyatt.org/vim/vim-tutorial-videos/" title="Highly recommended, if you can tolerate his excitement">Derek Wyatt&#8217;s Video Series</a></li>
 	<li><a href="http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html" title="My Personal Favourite">Spaced Repetition Systems For Drilling</a></li>
