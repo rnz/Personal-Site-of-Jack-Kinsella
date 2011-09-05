@@ -75,7 +75,6 @@
         <!-- Social Bookmarking Widget.Asynchonous. -->
 <div id="social_bookmarks">
 <div id="custom-social-bookmarks-twitter" class="bookmark_icon"></div>
-<div id="custom-social-bookmarks-facebook" class="bookmark_icon"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=224287964265938&amp;xfbml=1"></script></div>
 <div id="custom-social-bookmarks-plusone" class="bookmark_icon"></div>
 </div>
 <script type="text/javascript">
@@ -83,7 +82,6 @@ jQuery(document).ready(function() {
     
   jQuery('#custom-social-bookmarks-twitter').append(decodeURIComponent('%3Ca%20href%3D%22http%3A%2F%2Ftwitter.com%2Fshare%22%20class%3D%22twitter-share-button%22%20data-count%3D%22vertical%22%20data-via%3D%22rahuls_log%22%3ETweet%3C%2Fa%3E%3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22http%3A%2F%2Fplatform.twitter.com%2Fwidgets.js%22%3E%3C%2Fscript%3E'));
 
-  jQuery('#custom-social-bookmarks-facebook').append(decodeURIComponent('%3Cfb%3Alike%20href%3D%22%22%20send%3D%22false%22%20layout%3D%22box_count%22%20width%3D%2250%22%20show_faces%3D%22false%22%20font%3D%22%22%3E%3C%2Ffb%3Alike%3E'));
 
   jQuery('#custom-social-bookmarks-plusone').append(decodeURIComponent('%3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22https%3A%2F%2Fapis.google.com%2Fjs%2Fplusone.js%22%3E%3C%2Fscript%3E%3Cg%3Aplusone%20size%3D%22tall%22%3E%3C%2Fg%3Aplusone%3E'));
 
@@ -91,19 +89,20 @@ jQuery(document).ready(function() {
 
 });
 </script>
-<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanse subway without a guide, translator or hope. My mind hurt and my calm faded as the week wore on, and I was never able to find in <span class="caps">VIM</span> the features of Textmate I&#8217;d learned to love and relied on during the previous two years. I longer after <span class="caps">CMD</span> + T to summon my models and a project drawer to rename my files, and I prayed to Allah for a search and replace dialogue box. Instead of answering my please, <span class="caps">VIM</span> sat firm and unresponsive and spat errors in my face. Even though I was supposedly going cold turkey on Textmate, I lustily met her night in the smoking area for a guilty nightime edit.</p>
-<p>With time I learned to reproduce nearly every Textmate feature in <span class="caps">VIM</span>, and then some. This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate; you&#8217;ll figure them out on your own. No, this guide is to help you achieve in <span class="caps">VIM</span> what you already can using Textmate, only with considerably less pain than I suffered.</p>
+<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models and for the Project Drawer to easily overview my app. Instead of accommodating my needs, <span class="caps">VIM</span> sat firm and unresponsive spitting error after error in my face. Even though I was supposedly going cold turkey on Textmate, I lustily met her by night in the smoking section for a guilty after hours edit.</p>
+<p>With time I learned to mimic nearly every Textmate feature in <span class="caps">VIM</span>, and then some. This guide isn&#8217;t about the powerful features <span class="caps">VIM</span> has over-and-above Textmate; you&#8217;ll figure these out on your own soon enough. No, this guide is to help you achieve in <span class="caps">VIM</span> what you already can using Textmate, only with considerably less pain than I underwent.</p>
 <p>Some preliminary assumptions:</p>
 <ol>
 	<li>You&#8217;ve installed <span class="caps">MAC</span> <span class="caps">VIM</span>: <br />
 <code>brew install macvim</code></li>
-	<li>You know the basics of <span class="caps">VIM</span>. Type vimtutor in your terminal for a tutorial. Further training can be found be referring to the <a href="#vim_training_resources">vim training resources below</a> .</li>
-	<li>You were a poweruser of Textmate keyboard shorcuts.</li>
 	<li>You&#8217;ve installed <a href="https://github.com/carlhuda/janus">Janus</a>, the community maintained distro of plugins and useful configurations for web programmers</li>
 	<li>You have created a ~/.vimrc.local file (for core <span class="caps">VIM</span> configurations), ~/.gvimrc.local (for configuring the graphics in <span class="caps">VIM</span>) and ~/.janus.rake (for adding or removing plugins <span class="caps">VIM</span>). See my <a href="https://github.com/jackkinsella/dotfiles/tree/">dotfiles</a> for some commented examples.</li>
-	<li>(Bonus) You are a Rails programmer, as about 30% of this guide is Rails specific.</li>
+	<li>You know the basics of <span class="caps">VIM</span>. Type vimtutor in your terminal for a 20 minute tutorial. Advanced training can be found be referring to the <a href="#vim_training_resources">vim training resources below</a> .</li>
+	<li>You were a power user of the Textmate features.</li>
+	<li>(Not strictly necessary) You are a Rails programmer, as about 30% of this guide is Rails specific.</li>
 </ol>
-<h2>Format</h2>
+<h2>Some Preliminary Notes (Do Not Skip)</h2>
+<h4>Format</h4>
 <table>
 	<tr>
 		<td>Action To Be Completed</td>
@@ -111,29 +110,7 @@ jQuery(document).ready(function() {
 		<td> Shortcut in Vim</td>
 	</tr>
 </table>
-[1..9] 1,2,3,4,5,6,7,8 or 9
-[Narration]
-FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
-<table>
-	<tr>
-		<td>Open project from command line</td>
-		<td> [cd to folder] mate . </td>
-		<td> [cd to folder] mvim . </td>
-	</tr>
-</table>
-<h2>Undo / Redo.</h2>
-<table>
-	<tr>
-		<td>Undo</td>
-		<td>⌘ + Z </td>
-		<td> u </td>
-	</tr>
-	<tr>
-		<td>Redo</td>
-		<td> ⇧ + ⌘ + Z </td>
-		<td> ⌃ + R </td>
-	</tr>
-</table>
+<p>In general the keyboard shortcuts in Textmate require you to press the keys at the same time. Below, this is symbolised by a +. VIM&#8217;s shortcuts, by contrast, require you to press the keys in quick succession, rather than at the same time. Whilst commands in Textmate are case insensitive or rather, the shift key is specified in the commands below, the commands in <span class="caps">VIM</span> are case sensitive. If you are told to type Y then typing y will not suffice. If you instructed to add something to your vimrc.local or gvimrc.local files then you will need to restart <span class="caps">VIM</span> for these changes to take effect. If you are instructed to add code to your .janus.rake file you must cd into you .vim directory and run rake for these changes will be installed.</p>
 <h2>Opening, closing and creating files</h2>
 <table>
 	<tr>
@@ -152,6 +129,11 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 		<td> ⌘ + q </td>
 		<td> :q [throws an error if you have not saved. use :wq to save and quit or :q! to quit without saving] </td>
 	</tr>
+	<tr>
+		<td>Open project from command line</td>
+		<td> [cd to folder] mate . </td>
+		<td> [cd to folder] mvim . </td>
+	</tr>
 </table>
 <h2>Saving Files</h2>
 <table>
@@ -164,6 +146,19 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 		<td>Save file as</td>
 		<td> ⌘ + ⇧ + S </td>
 		<td> :saveas <span class="caps">NEWFILENAME</span> </td>
+	</tr>
+</table>
+<h2>Undo / Redo.</h2>
+<table>
+	<tr>
+		<td>Undo</td>
+		<td>⌘ + Z </td>
+		<td> u </td>
+	</tr>
+	<tr>
+		<td>Redo</td>
+		<td> ⇧ + ⌘ + Z </td>
+		<td> ⌃ + R </td>
 	</tr>
 </table>
 <h2>File renaming</h2>
@@ -193,13 +188,13 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Create new in Project Drawer </td>
-		<td> File &gt; new </td>
-		<td> [Select Project Drawer. Highlight parent folder you&#8217;d like file to appear in. Type m the choose a from select menu and type desired filename]</td>
+		<td> ⌘ + ⇧ + N </td>
+		<td> Select Project Drawer. Highlight parent folder you&#8217;d like file to appear in. Type m the choose a from select menu and type desired filename </td>
 	</tr>
 	<tr>
 		<td>Delete a file</td>
-		<td> </td>
-		<td> [Highlight undesired file file in Project Drawer. Type m then choose d from drop down menu.]</td>
+		<td> Click on file and select &#8220;remove file&#8221; </td>
+		<td> Highlight undesired file file in Project Drawer. Type m then choose d from drop down menu.</td>
 	</tr>
 	<tr>
 		<td>Opening a subfolder</td>
@@ -258,7 +253,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Run current file</td>
 		<td> ⌘ + R </td>
-		<td> :!ruby % [Explanation: :! means execute what follows as if in shell. % expands to the current_file_name so you are executing `ruby current_file_name. This runs in a buffer in <span class="caps">VIM</span> making you unable to continue editting.] </td>
+		<td> :!ruby % <br />
+<em>Explanation: :! means execute what follows as if in shell. % expands to the current_file_name so you are executing `ruby current_file_name. This runs in a buffer in <span class="caps">VIM</span> making you unable to continue editing.</em> </td>
 	</tr>
 </table>
 <h2>Moving Around A File</h2>
@@ -322,7 +318,10 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Bigger/Smaller Font</td>
 		<td> ⌘ +/- </td>
-		<td> (⌘ +/- makes the screen disproportionate) [~/gvimrc.local] set guifont=Monaco:h18 (replace 18 with desired font-size) [Note that you can try this command out by typing it into a live <span class="caps">VIM</span> session just by preceding it with a :, e.g. :set&#8230;..]</td>
+		<td>  [~/gvimrc.local] set guifont=Monaco:h18 <br />
+<em>You can replace 18 here with your desired font-size</em><br />
+<em>[Note that you can try this command out by typing it into a live <span class="caps">VIM</span> session just by preceding it with a :, e.g. :set&#8230;..</em><br />
+_Using ⌘ +/- in <span class="caps">VIM</span> makes the screen scale disproportionately </td>
 	</tr>
 	<tr>
 		<td>Line numbering</td>
@@ -346,6 +345,12 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 		<td> ⌘ + : </td>
 		<td> [Assuming you&#8217;ve enabled spell checking and can see highlighter errors] ] s <br />
 <em>Go to previous spelling error with [s</em> </td>
+	</tr>
+	<tr>
+		<td>Suggest correct spelling</td>
+		<td> Double click and select best spelling </td>
+		<td> z= <br />
+<em>Then choose the correct spelling from drop down menu</em></td>
 	</tr>
 </table>
 <h2>Ruby On Rails</h2>
@@ -374,7 +379,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Insert erb&#8217;s &lt;%= </td>
 		<td> ⌃ + ⇧ + . </td>
-		<td> [type text you want to surround first and place caret some inside] yss= </td>
+		<td> Type text you want to surround first and place caret some inside. yss= </td>
 	</tr>
 	<tr>
 		<td>Insert erb&#8217;s &lt;% </td>
@@ -385,7 +390,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 		<td>Run unit test caret inside of </td>
 		<td> ⇧ + ⌘ + R </td>
 		<td> :.Rake <br />
-<em>. here represents the current line. You can subsitute this for other lines e.g. :40Rake</em> <span class="caps">TEST</span></td>
+<em>. here represents the current line. You can substitute this for other lines e.g. :40Rake</em> <span class="caps">TEST</span></td>
 	</tr>
 	<tr>
 		<td>Go to test file (e.g. from user.rb to user_spec.rb)</td>
@@ -421,12 +426,14 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>View Rails logs</td>
 		<td> No equivalent</td>
-		<td> :Rlogs [:Rake logs:clear if takes too long to load]</td>
+		<td> :Rlogs <br />
+<em>:Rake logs:clear if takes too long to load</em></td>
 	</tr>
 	<tr>
 		<td>Go to layout under cursor</td>
 		<td> No equivalent</td>
-		<td> gf [e.g. you see layout :print &#8594; brought to #print.html.erb </td>
+		<td> gf <br />
+<em>e.g. you see layout :print &#8594; brought to #print.html.erb</em> </td>
 	</tr>
 	<tr>
 		<td>Go to application.rb</td>
@@ -495,7 +502,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 	<tr>
 		<td>Find a specific Method</td>
 		<td>⌘ + ⇧ + t</td>
-		<td> /def first_letters_of_method_name OR * [Cycles through instances of the method name under the caret&#8230; not necessarily the definition] #does the same but in the opposie direction</td>
+		<td> /def first_letters_of_method_name OR * [Cycles through instances of the method name under the caret&#8230; not necessarily the definition] #does the same but in the oppose direction</td>
 	</tr>
 </table>
 <h2>Replacing Text in Files and Project</h2>
@@ -507,7 +514,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 	</tr>
 	<tr>
 		<td>Replace all &#8220;donut&#8221; with &#8220;eclair&#8221; in file, ignoring case </td>
-		<td> ⌘ F (Find and Replace Dialogue) Select &#8216;Ignroe Case&#8217;. Replace All </td>
+		<td> ⌘ F (Find and Replace Dialogue) Select &#8216;Ignore Case&#8217;. Replace All </td>
 		<td> :%s/donut/eclair/gi </td>
 	</tr>
 	<tr>
@@ -540,9 +547,10 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 		<td> ~ </td>
 	</tr>
 	<tr>
-		<td>Titlecase urrent text</td>
+		<td>Titlecase current text</td>
 		<td> ⌃ + <span class="caps">OPTION</span> + U </td>
-		<td> No equivalent For current line you can use :s :s/\&lt;\(\w\)\(\w*\)\&gt;/\u\1\L\2/g </td>
+		<td> No exact equivalent <br />
+<em>To titlecase the current line you can use :s :s/\&lt;\(\w\)\(\w*\)\&gt;/\u\1\L\2/g</em> </td>
 	</tr>
 </table>
 <h2>Autocomplete</h2>
@@ -584,7 +592,8 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 	<tr>
 		<td>Check for syntax errors on saving (*life saver)</td>
 		<td> <a href="https://github.com/sxtxixtxcxh/validate-on-save.tmbundle">Validate On Save Plugin</a> </td>
-		<td> Built In (A grey bar appears right of the number column with an &gt; beside the error) </td>
+		<td> Built In <br />
+<em>A grey bar appears right of the number column with an &gt; beside the error</em> </td>
 	</tr>
 </table>
 <h2>Autoclosing &quot;&quot; () or <span class="caps">HTML</span> tags</h2>
@@ -597,7 +606,10 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 	<tr>
 		<td>Close current html tag</td>
 		<td>⌘ + ⌥ + .</td>
-		<td> vim_plugin_task &#8220;ragtag&#8221;, &#8220;git://github.com/tpope/vim-ragtag.git&#8221; p ⌃ + X Space </td>
+		<td> No exact equivalent. Instead you have auto tag creation. To create <p></p> type p then  ⌃ + X Spacebar <br />
+<em>Assumes you have the following in your ~/.janus.rake file:<br />
+vim_plugin</em>task &#8220;ragtag&#8221;, &#8220;git://github.com/tpope/vim-ragtag.git&#8221;<br />
+_ </td>
 	</tr>
 </table>
 <h2><span class="caps">CSS</span> Colours</h2>
@@ -622,7 +634,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 	<tr>
 		<td> Begin selection </td>
 		<td> ⇧ [then use arrows to drag over desired text] </td>
-		<td> v[enters visual mode. use w to move forward one word. ) to move forward one sentence and % to move to next bracket close. also /apple to move forward to next occurence of apple]</td>
+		<td> v[enters visual mode. use w to move forward one word. ) to move forward one sentence and % to move to next bracket close. also /apple to move forward to next occurrence of apple]</td>
 	</tr>
 	<tr>
 		<td>Select all</td>
@@ -645,7 +657,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 	<tr>
 		<td>Move selected text up</td>
 		<td>⌃ + ⌘ + up (or down)</td>
-		<td> :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). ⌥ernativly :m+ or :m+N or :m-N for moving 1 or N lines up or down</td>
+		<td> :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). alternatively :m+ or :m+N or :m-N for moving 1 or N lines up or down</td>
 	</tr>
 	<tr>
 		<td>Merge current line With Next Line</td>
@@ -680,7 +692,7 @@ _Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks.
 P<br />
 <em>pastes above the current line</em><br />
 &#8220;*p<br />
-<em>This pastes the last <strong>explicity copied</strong> text. This is important since many commands, such as deleting text, override the paste buffer</em> </td>
+<em>This pastes the last <strong>explicitly copied</strong> text. This is important since many commands, such as deleting text, override the paste buffer</em> </td>
 	</tr>
 	<tr>
 		<td>Clipboard history</td>
@@ -734,7 +746,7 @@ P<br />
 </ul>
 <h2> One Last Thing </h2>
 <p>
-  It spend an enormous amount of time researching and writing these posts. If you'd like to say thanks please <b>tweet this page</b> or, better again, mention it on your blog.
+  I spend many many hours researching and writing these posts. If you'd like to return the good will and say thanks please <b>tweet this page</b> or, better again, mention it on your blog.
 </p> 
 <p>
   <small>Written by Jack Kinsella, 05 Sep 2011</small>

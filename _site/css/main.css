@@ -235,9 +235,13 @@ border-collapse: collapse;
 width: 100%;
 border: 5px solid #900;
 border-spacing:2px;
+margin-bottom:20px;
 
 }
 
+table a {
+  color:#5ccccc;
+}
 td {
 padding: .5em 1em;
 width: 33%;
