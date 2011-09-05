@@ -138,9 +138,10 @@ _Where you have nothing selecting and want to act on whole file_
 
 h2. Searching Files
 
+|Search file downwards for TOM |⌃ + S TOM  | /Tom 
+_Then press they enter key and then you can press n or N repeatedly to continue searching up or down_|
 |Search file upwards for TOM | ⇧ + ⌃ + S TOM | ?TOM 
-_Then press enter once then repeatedly press n or N to continue searching up or down_|
-|Search file downwards for TOM |⌃ + S TOM [Same as above for repeated search]|
+_As above, n or N continue searching up or down_ |
 |Full screen |"(Lion Only)":https://github.com/enormego/EGOTextMateFullScreen | ⌘ + Enter |
 |Search entire project | ⌘ + ⇧ + F | ,a THING_SEARCHING_FOR (ack) |
 |Find a specific Method|⌘ + ⇧ + t| /def foo 
