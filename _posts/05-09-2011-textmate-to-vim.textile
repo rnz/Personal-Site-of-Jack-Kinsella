@@ -32,7 +32,7 @@ h4. Format
 * Whilst commands in Textmate are _case insensitive_, or rather the shift key is specified in the commands below, the commands in VIM are _case sensitive_. If I tell you to type Y then typing y will not suffice. 
 * Unless otherwise specified, all the VIM commands assume you are in normal mode, the mode where you cannot type text into the file.
 * If you instructed to add something to your vimrc.local or gvimrc.local files you will need to restart VIM for these changes to take effect. 
-* If you are instructed to add code to your .janus.rake file you must cd into your ~/.vim directory and run rake for these changes to be installed. 
+* If you I instruct you to add code to your .janus.rake file, you must cd into your ~/.vim directory and run rake for these changes to be installed. 
 * Regular expressions in VIM differ from those in Textmate, and these are outside the scope of this guide. Consult the "resources below":#vim_training_resources for an excellent tutorial.
 
 

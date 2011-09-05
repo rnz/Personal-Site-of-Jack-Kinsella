@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T18:09:23+01:00</updated>
+ <updated>2011-09-05T18:10:07+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -42,7 +42,7 @@
 	&lt;li&gt;Whilst commands in Textmate are &lt;em&gt;case insensitive&lt;/em&gt;, or rather the shift key is specified in the commands below, the commands in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; are &lt;em&gt;case sensitive&lt;/em&gt;. If I tell you to type Y then typing y will not suffice.&lt;/li&gt;
 	&lt;li&gt;Unless otherwise specified, all the &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; commands assume you are in normal mode, the mode where you cannot type text into the file.&lt;/li&gt;
 	&lt;li&gt;If you instructed to add something to your vimrc.local or gvimrc.local files you will need to restart &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; for these changes to take effect.&lt;/li&gt;
-	&lt;li&gt;If you are instructed to add code to your .janus.rake file you must cd into your ~/.vim directory and run rake for these changes to be installed.&lt;/li&gt;
+	&lt;li&gt;If you I instruct you to add code to your .janus.rake file, you must cd into your ~/.vim directory and run rake for these changes to be installed.&lt;/li&gt;
 	&lt;li&gt;Regular expressions in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; differ from those in Textmate, and these are outside the scope of this guide. Consult the &lt;a href=&quot;#vim_training_resources&quot;&gt;resources below&lt;/a&gt; for an excellent tutorial.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Opening, Closing and Creating Files&lt;/h2&gt;
