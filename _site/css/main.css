@@ -482,9 +482,9 @@ nav ul {
   padding-left: 30%;
 }
 nav ul {
-  width: 15em;
-  padding-left: 0;
-}
+    width: 15em;
+    padding-left: 0;
+  }
 .ie nav ul {
   width: 15em;
   padding-left: 0;

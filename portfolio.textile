@@ -13,41 +13,58 @@ h2(#oxbridge_notes). Oxbridge Notes
 
 "Visit Oxbridge Notes":http://www.oxbridgenotes.co.uk
 
-On online marketplace where students can upload their college notes and sell them, earning a commission on every sale. I built and designed this app from scratch and have maintained it for nearly two years.  
+On online marketplace where students can upload their college notes and sell them, earning a commission on every sale. I built and designed this app from scratch and have maintained it for nearly two years. I was the only programmer working on the web app.
 
 h3. E-Commerce and Design
 
 !images/oxbridge_notes_home2.png!
 
-I cut down on development time by taking an open source e-commerce store for T-Shirts and modifying it to sell digital downloads. Above, you can see categories of notes in the left sidebar and key products displayed on the homepage.  Buyers add packages of notes to the cart just like in standard e-commerce websites, and upon payment the notes are automatically delivered to them. No staff are needed to make or process sales.
+Above, you can see categories of notes such as "Law" or "Medicine" displayed in the left sidebar. In the centre key products, shown for SEO purposes.  Visitors to the website can add packages of notes to their cart exactly like in any other standard e-commerce website. Upon payment their notes are automatically delivered to them. No staff are needed to make or process sales.  
+
+I cut down on development time by taking an open source e-commerce store for T-Shirts and modifying it to sell digital downloads. I would try to take similar shortcuts with your work, rather than build things from scratch.
  
 h3. ABTesting and Conversion Optimisation
 
 !images/oxbridge_notes_abtests.png!
 
-In order to maximize sales I integrated an internal AB testing system.  The example above shows the results of an ongoing test whereby 50% of visitors see one version of the checkout page (with a plain checkout button), and the other 50% see an alternate version with a pretty green button. The administrator learns not only the result of the test but also whether he can rely on this result as something statistically valid.  
+In order to improve sales I built an internal AB testing system. The example above shows the results of an ongoing test whereby 50% of visitors see a version of the checkout page with a plain checkout button, and the other 50% see a version with a pretty green button. The administrator learns not only the result of the test, but also whether he can rely on the result as statistically valid. Despite the standard button winning here this result is not statistically valid.  When he clicks "End experiment and pick this", his chosen version will be shown to customers from then on.  AB testing is a technique in heavy use in websites such as Google or Amazon, and is of key importance in any
+online commercial venture.
 
 h3. Custom Activity Feed
 
-Administrators of the website can see all key user activities, giving them awareness of how the business is doing and what their users are up to. Prior to this the administrators would have to visit many different pages to find the same information.
+Administrators of the website can see all user activities such as sign ups, seller deletions, customer queries, new files added, notes packs added to the cart, and summaries of changes made by seller's to live products. This gives administrators a bird's eye awareness of how their business is doing and what their users are up to. 
 
 h3. Seller Area with File Management
  
 !images/oxbridge_notes_file_management.png!
 
-Sellers of notes can manage their inventory and changes they make will modify the live notes for sale on the website's front end. Shown above is one of screens in the seller's administrative area where they can delete individual files included in certain products.
+Sellers of notes can add and remove additional notes, and changes they make will modify the notes for sale on the website's front-end. Shown above is a screen in the seller's administrative area where they manage the files included in certain packets of notes they have up on sale.
 
 h3. Financial Reporting
  
 !images/oxbridge_notes_orders_overview.png!
 
-The administrator website has an overview of all the orders made over periods of time, broken down by category and by user. Using this data he learns what products sell best and so he knows where he ought to be most focusing his marketing efforts.
+The administrator has an overview of all the orders made over specified periods of time, broken down by category. Using this data he learns what products sell best, and so he knows where he ought to focus his marketing efforts.
+
+h3. Document Conversions
+
+I built a document conversion server which converts WORD and other documents to PDFs and HTML, and then displays the first few pages of these as samples to potential customers. These samples attract many customers.
+
+h3. SEO
+
+Oxbridge Notes includes a thorough automated SEO function, including synchronised title tags, h1 tags, b tags, URL permalinks, body text and internal links, all of which signal to Google that the page should rank for the keywords our internal tracking indicated led to our our highest sales historically.
+
+The software generates hundreds of advertising keyboards based on the contents of the notes for sale and administrators can feed these keywords into Google Adwords campaigns, driving yet more customers to the website.
 
 h2(#second_conscience). Second Conscience
 
 "Visit Second Consience":http://www.secondconscience.com
 
-At the end of every day Benjamin Franklin graded his own adherence to thirteen virtues and attempted to minimize transgressions. This personal project was my attempt to bring his behavioural modification tool into the electronic age. Users add numerous "habits" and attempt to win awards by completing them continuously for extended periods. The website is called second conscience because reinforces your own conscience by harassing you with guilt emails if you forget to log in or transgress too frequently.  The project is not being maintained so it may have degraded somewhat.  
+At the end of every day Benjamin Franklin graded his own adherence to thirteen virtues, aiming to minimize transgressions. This personal project was my attempt to bring his behavioural modification tool into the electronic age. Users add numerous "habits" and attempt to win awards by completing them continuously for extended periods. The website is called second conscience because it reinforces your own conscience by harassing you with guilt emails if you forget to log in or transgress too frequently. 
+
+In building the application I researched behavioural psychology as applied in prisons and schools and modelled token economies within its badge system.
+
+ The project is not being maintained so it may have degraded somewhat.  
 
 !images/second_conscience_habits.png!
 
@@ -55,7 +72,7 @@ h2(#bolivian_express). Bolivian Express
 
 "Visit Bolivian Express":http://www.bolivianexpress.org
 
-I was the sole developer and designer for Bolivian Express, Bolivia's major English language newspaper. Features include a CMS for articles built using Refinery, and a bespoke system for managing interns hires and payments via Paypal. I did a Rails 2.0 to Rails 3.0 upgrade on the project.
+I was the sole developer and designer for Bolivian Express, Bolivia's major English language newspaper. Features include a CMS for articles and web pages, and a bespoke system for managing intern hires and payments via Paypal. I did a Rails 2.0 to Rails 3.0 upgrade on the project.
 
 !images/bolivian_express_calendar.png!
 
