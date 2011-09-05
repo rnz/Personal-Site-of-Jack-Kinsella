@@ -13,7 +13,7 @@ h2(#oxbridge_notes). Oxbridge Notes
 
 "Visit Oxbridge Notes":http://www.oxbridgenotes.co.uk
 
-On online marketplace where students can upload their college notes and sell them, earning a commission on every sale. I built and designed this app from scratch and have maintained it for nearly two years. I was the only programmer working on this project.
+An online marketplace where students can upload their college notes and sell them, earning a commission on every sale. I built and designed this app from scratch and have maintained it for nearly two years. I was the only programmer working on this project.
 
 h3. E-Commerce and Design
 
