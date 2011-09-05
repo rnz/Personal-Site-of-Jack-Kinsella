@@ -11,7 +11,7 @@ When I switched from Textmate to VIM I felt like a tourist lost on a Japanese su
 
 Instead of accommodating my needs, VIM sat firm and unresponsive, save for the odd judgemental beep. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.
 
-With time I learned to mimic nearly every Textmate feature in VIM, and then some. This guide isn't about the powerful functinality VIM has over-and-above Textmate; you'll figure these out with time. This guide is to help you do in VIM what you already can using Textmate, only with considerably less pain than I underwent.
+With time I learned to mimic nearly every Textmate feature in VIM, and then some. This guide isn't about the powerful functinality VIM has over-and-above Textmate; you'll figure this out with time. This guide is to help you do in VIM what you already can using Textmate, only with considerably less pain than I underwent.
 
 This guide makes a few assumptions:
 # You are using a Mac.
