@@ -215,7 +215,7 @@ h2. Bookmarks
 |Add bookmark| ⌘ + F2 (Never worked on my mac) | m[a-z] 
 _The letter in the range refers to this bookmark_ |
 |Jump to bookmark| F2 (next) + F2 (previous) | 'a 
-_Where 'a' is a bookmark previous set. Type :marks to see all marks._|
+_Where 'a' is a bookmark previous set. Type :marks to see all marks._ |
 
 h2. Uppercase/Lowercase
 
