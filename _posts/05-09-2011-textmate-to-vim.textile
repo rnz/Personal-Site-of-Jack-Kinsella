@@ -40,6 +40,7 @@ h2. Opening, closing and creating files
 
 |Open a file| ⌘ + 0 | :e FILENAME (use Tab completion after first few letters) [Save File first]|
 |Create new file| File > new | ⌘ + T (new tab) [You will be in a new file. Type and then] :w newfilename |
+|Quit| ⌘ + q | :q [throws an error if you have not saved. use :wq to save and quit or :q! to quit without saving] |
 
 h2. Saving Files
 
@@ -49,13 +50,13 @@ h2. Saving Files
 
 h2. File renaming
 
-|Rename a file|[focus on project drawer and select a file] space [type new name]| "Focus on NerdTree":#nerd_tree. Select File (however you want: e.g. search or jklh). m (brings up a menu ) m (chose to modify file) type new name of file and press enter.
+|Rename a file|[focus on project drawer and select a file] space [type new name]| "Focus on NerdTree":#nerd_tree. Select File (however you want: e.g. search or jklh). m (brings up a menu ) m (chose to modify file) type new name of file and press enter. |
 
 h2(#nerd_tree). Project Drawer/NerdTree
 
-|Focus on project drawer| ⌃ + <Tab> | <Tab> (assuming you've set it up. otherwise CNRL + W/ ⌃ + W)|
+|Focus on project drawer| ⌃ + <Tab> | "Switch tabs until selected":#switch_tabs |
 |Close/Open project drawer| ⌃ + ⌥ + ⌘ + D |\n|
-|Change size of project drawer| Use mouse to adjust size | let NERDTreeWinSize=16 [vimrc] |
+|Change size of project drawer| Use mouse to adjust size | [vimrc] let NERDTreeWinSize=16 |
 |Opening a subfolder| |Enter to open/close a directory|
 |Refresh project tree to reflect newly added files|Automatic|Nearly always automatic. Otherwise press c|
 
@@ -63,18 +64,18 @@ h2. Help
 
 |Search help for 'grep'|Click help menu and search for help|:help grep|
 
-h2. Tabs
+h2(#switch_tabs). Tabs
 
 |New tab| Click on file in project drawer | ⌘ + Shit + T |
 |Drop tab| ⌃ + w | ⌃ + w |
-|Switch tabs left | ⇧ + ⌘ + [ (left) ] | :tabp |
-|Switch tabs right | ⇧ + ⌘ + right | :tabn |
+| Switch tabs left | ⇧ + ⌘ + ←| :tabp |
+|Switch tabs right | ⇧ + ⌘ + →| :tabn |
 |Go to tab| ⌘[1-9] | ⌘[1-9]|
 
 h2. Running Tests and Files
 
 |Run tests for given file|⌘ + r | :Rake |
-|Run current file| ⌘ + R | No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to 'ruby current_file_name') |
+|Run current file| ⌘ + R | :!ruby % [Explanation: :! means execute what follows as if in shell. % expands to the current_file_name so you are executing `ruby current_file_name. This runs in a buffer in VIM making you unable to continue editting.] |
 
 h2. Moving Around A File
 
@@ -83,8 +84,8 @@ h2. Moving Around A File
 |Go to top of file | ⌘ + Up | g |
 |Go to bottom of file | ⌘ + Down | GG |
 |Move up one line (with caret at same position)| ⌃ + P | k |
-|Move down one line (with caret at same position)| CNRL + N| j|
-|Go to line 20 | ⌘ + L 20 | :20 |
+|Move down one line (with caret at same position)| ⌃ + N| j|
+|Go to line 20 | ⌘ + L [type a line - e.g. 20] | :20 |
 
 h2. Indentation
 
@@ -112,17 +113,17 @@ h2. Ruby On Rails
 |Insert erb's <% | ⌃ + SHIT + . (cycle through )| yss- |
 |Run unit test caret inside of | ⇧ + ⌘ + R | :.Rake (. here represents the current line. You can subsitute this for other lines e.g. :40Rake) TEST|
 |Go to test file (e.g. from user.rb to user_spec.rb)| ⌥ + ⇧  + ⌘ + DOWN | :A (:AV in a new split, :AT new tab)|
-|Find related file| ⌥-⌘-down | R (If typed within the Controller you'll be brought to the View corresponding to the method selected; If typed in view -> Controller; Migrations -> Next Migration; Typed in Model -> Schema. For something more precise see the following VIM only commands|
+|Find related file| ⌥ + ⌘ + down | R (If typed within the Controller you'll be brought to the View corresponding to the method selected; If typed in view -> Controller; Migrations -> Next Migration; Typed in Model -> Schema. For something more precise see the following VIM only commands|
 |Go to related controller| ⌥ + ⇧ + ⌘ + down | :Rco |
 |Go to related helper| As above | :Rhe |
-|Go to model under cursor| No equivalent | gf [e.g. you see Pos*t.first -> brought to #post.rb |
-|Go to stylesheet under cursor| No equivalent | gf [e.g. you see<%= stylesheet_link_tag 'scaf*fold' %>-> brought to scaffold.css |
-|View Rails logs| No equivalent | :Rlogs [:Rake logs:clear if takes too long to load]|
-|Go to layout under cursor| No equivalent | gf [e.g. you see layout :print -> brought to #print.html.erb |
-|Go to application.rb| No equivalent | :Renv|
-|Go to test.rb | No equivalent | :Renv t[tab to autofill out to test]|
-|Go to controller from link under cursor| No equivalent | gf [e.g. you see <%= link_to "New", new_comme*nt_path %> -> brought to #comments_controller.rb |
-|Create a posts controller | none |:Rco posts! [note the exclamation mark]|
+|Go to model under cursor| No equivalent| gf [e.g. you see Pos*t.first -> brought to #post.rb |
+|Go to stylesheet under cursor| No equivalent| gf [e.g. you see<%= stylesheet_link_tag 'scaf*fold' %>-> brought to scaffold.css |
+|View Rails logs| No equivalent| :Rlogs [:Rake logs:clear if takes too long to load]|
+|Go to layout under cursor| No equivalent| gf [e.g. you see layout :print -> brought to #print.html.erb |
+|Go to application.rb| No equivalent| :Renv|
+|Go to test.rb | No equivalent| :Renv t[tab to autofill out to test]|
+|Go to controller from link under cursor| No equivalent| gf [e.g. you see <%= link_to "New", new_comme*nt_path %> -> brought to #comments_controller.rb |
+|Create a posts controller | No equivalent |:Rco posts! [note the exclamation mark]|
 |Extract to partial| [Select text] ⌃ + H | [Select text] :Rextract PARTIAL_NAME |
 
 h2. Bookmarks
@@ -133,9 +134,9 @@ h2. Bookmarks
 h2. Searching Files
 
 |Search file upwards for TOM | ⇧ + ⌃ + S TOM | ?TOM [Then press enter once then repeatedly press n or N to continue searching up or down]|
-|Search file downwards for TOM |<⌃> + S TOM [Same as above for repeated search]|
+|Search file downwards for TOM |⌃ + S TOM [Same as above for repeated search]|
 |Full screen |"(Lion Only)":https://github.com/enormego/EGOTextMateFullScreen | ⌘ + Enter |
-|Search entire project | ⌘ + ⇧ + F (grep) | ,a THING_SEARCHING_FOR (ack) |
+|Search entire project | ⌘ + ⇧ + F | ,a THING_SEARCHING_FOR (ack) |
 |Find a specific Method|⌘ + ⇧ + t| /def first_letters_of_method_name OR * [Cycles through instances of the method name under the caret... not necessarily the definition] #does the same but in the opposie direction|
 
 h2. Replacing Text in Files and Project
@@ -150,13 +151,13 @@ h2. Uppercase/Lowercase (UNFIN)
 
 |Upcase selected text|⌃ + ⇧ + U| ~ |
 |Downcase selected text|⌃ + ⇧ + U| ~ |
-|Titlecase urrent text| ⌃ + OPTION + U | No equivalent. For current line you can use :s :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g |
+|Titlecase urrent text| ⌃ + OPTION + U | No equivalent For current line you can use :s :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g |
 
 h2. Autocomplete
 
 |Autocomplete method| ⎋ after typing first few letters| TAB after typing first few letters|
-|Autocomplete filename| Not possible | ⌃ + X ⌃ + F (repeat for each directory)|
-|Autocomplete full line of code | Not possible | ⌃ + X ⌃ + L | 
+|Autocomplete filename| No equivalent | ⌃ + X ⌃ + F (repeat for each directory)|
+|Autocomplete full line of code | No equivalent | ⌃ + X + L | 
 
 h2. Commeting
 
@@ -173,40 +174,51 @@ h2. Syntax Errors
 h2. Autoclosing "" () or HTML tags 
 
 |Add opposing bracket or quotation mark| Typing a " will automatically add in closing. | Add "this gist":https://gist.github.com/1193298 |
-|Close current html tag|⌘ + ⌥ + .| vim_plugin_task "ragtag", "git://github.com/tpope/vim-ragtag.git" p CNRL + X Space |
+|Close current html tag|⌘ + ⌥ + .| vim_plugin_task "ragtag", "git://github.com/tpope/vim-ragtag.git" p ⌃ + X Space |
 
 h2. CSS Colours
 
 |View CSS colour wheel| ⌘ + ⇧ + C | No exact equivalent.  vim_plugin_task "vim-css-color", 'git://github.com/skammer/vim-css-color.git' turns #acbdef into its correct colour|
-|Jump between words left| ⌥ + Left | w |
-|Jump between words right| ⌥ + Right | b |
+|Jump between words left| ⌥ + ← w |
+|Jump between words right| ⌥ + →| b |
 
 h2. Selecting Text
 
+| Begin selection | ⇧ [then use arrows to drag over desired text] | v[enters visual mode. use w to move forward one word. ) to move forward one sentence and % to move to next bracket close. also /apple to move forward to next occurence of apple]|
 |Select all| ⌘ + A | vgg=G |
-|Increase selection left one word| ⇧ + ⌥ + Left then alt + left for each additional word| v(select)w then w for each additional word  |
+|Increase selection left one word| ⇧ + ⌥ + ← then alt + ← for each additional word| v(select)w then w for each additional word  |
 |Select a vertical block| ⌥ + drag mouse | ⌃ + V |
 
 h2. Moving Text Around
 
 |Move selected text up|⌃ + ⌘ + up (or down)| :m 22 (moves current line to line 22. Easier if line numbers are on with :set number ). ⌥ernativly :m+ or :m+N or :m-N for moving 1 or N lines up or down|
-|Merge current line With Next Line|⌃+⇧+J | J |
+|Merge current line With Next Line|⌃ + ⇧ +J | J |
 |Sort lines| ⌥ + ⌘ + R > sort in dialogue box | [Text selected] !:sort OR [Text Not Selected] :0,$!sort (0,$ is a range representing whole file) |
 
 h2. Clipboard
 
-|Copy| ⌘ + C| Y(copy current selection, or line if nothing selected) |
-|Cut| ⌘ + X | d(deleted selection, but deleting in VIM sends it to a register where it can be pasted with p)|
-|Paste| ⌘ + V | p(paste below current line) |
-|Clipboard history| ⌘ + ⇧ + V | :reg (see a list of registers each of which can be pasted e.g. "8p) |
+|Copy| ⌘ + C| Y
+_Copies the current selection, or, if there is no selection, the current line_ |
+|Cut| ⌘ + X | d
+_Technically this deletes the selection, but deleting in VIM saves the deleted text to a register where it can be now be pasted with p_|
+|Paste| ⌘ + V | p
+_Pastes below the current line_ 
+P
+_pastes above the current line_
+"*p
+_This pastes the last *explicity copied* text. This is important since many commands, such as deleting text, override the paste buffer_ |
+|Clipboard history| ⌘ + ⇧ + V | :reg 
+_Show a list of registers each of which can be pasted e.g. "8p pastes the contents of the register 8_ |
 
 h2. Duplicating Lines
 
-|Duplicate line/selection| ⌃-⇧-D| Yp (y copies line then p pastes in below) |
-|Add placeholder text|lorem + tab| No Equivalent |
-|Edit ends of selected lines|⌘+opt+a||
+|Duplicate line/selection| ⌃ + ⇧ + D| Yp 
+_y copies line then p pastes in below._ |
+|Add placeholder text|lorem + tab| No equivalent|
+|Edit ends of selected lines|⌘ + ⌥ + a||
 |Wrap selected text in P tags| ⇧ + ⌃ + W | ystp |
-|Snippets (e.g. validates present of)| vp<Tab> | Currently clashes with Command-T since both use T. I've filed numerous but reports. If anyone has fixed this let me know. In many cases, however, typing the TM abbreviation follwed by ]⌃ works fine|
+|Snippets (e.g. validates present of)| vp<Tab> | [Type TN abbreviation] 
+_Non Rails snippets not working since the latest releases of snippets plugin clashes with Command-T search plugin. I've filed bug reports and if anyone has fixed this let me know._ |
 |See All Available Snippers| Use Menu |:Rabbrev|
 
 h2(#vim_training_resources). Recommended Resources For Learning Basic Vim

@@ -230,7 +230,7 @@ pre {
 }
 table {
 color: white;
-background: #C00 url(http://24ways.org/examples/tables-with-style/full.png) repeat-x bottom left;
+background: #C00 ;
 border-collapse: collapse;
 width: 100%;
 border: 5px solid #900;

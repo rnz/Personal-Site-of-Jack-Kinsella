@@ -146,6 +146,11 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 		<td> File &gt; new </td>
 		<td> ⌘ + T (new tab) [You will be in a new file. Type and then] :w newfilename </td>
 	</tr>
+	<tr>
+		<td>Quit</td>
+		<td> ⌘ + q </td>
+		<td> :q [throws an error if you have not saved. use :wq to save and quit or :q! to quit without saving] </td>
+	</tr>
 </table>
 <h2>Saving Files</h2>
 <table>
@@ -165,13 +170,15 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Rename a file</td>
 		<td>[focus on project drawer and select a file] space [type new name]</td>
+		<td> <a href="#nerd_tree">Focus on NerdTree</a>. Select File (however you want: e.g. search or jklh). m (brings up a menu ) m (chose to modify file) type new name of file and press enter. </td>
+	</tr>
 </table>
-"Focus on NerdTree":#nerd_tree. Select File (however you want: e.g. search or jklh). m (brings up a menu ) m (chose to modify file) type new name of file and press enter.<h2 id="nerd_tree">Project Drawer/NerdTree</h2>
+<h2 id="nerd_tree">Project Drawer/NerdTree</h2>
 <table>
 	<tr>
 		<td>Focus on project drawer</td>
 		<td> ⌃ + <Tab> </td>
-		<td> <Tab> (assuming you&#8217;ve set it up. otherwise <span class="caps">CNRL</span> + W/ ⌃ + W)</td>
+		<td> <a href="#switch_tabs">Switch tabs until selected</a> </td>
 	</tr>
 	<tr>
 		<td>Close/Open project drawer</td>
@@ -181,7 +188,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Change size of project drawer</td>
 		<td> Use mouse to adjust size </td>
-		<td> let NERDTreeWinSize=16 [vimrc] </td>
+		<td> [vimrc] let NERDTreeWinSize=16 </td>
 	</tr>
 	<tr>
 		<td>Opening a subfolder</td>
@@ -202,7 +209,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 		<td>:help grep</td>
 	</tr>
 </table>
-<h2>Tabs</h2>
+<h2 id="switch_tabs">Tabs</h2>
 <table>
 	<tr>
 		<td>New tab</td>
@@ -215,13 +222,13 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 		<td> ⌃ + w </td>
 	</tr>
 	<tr>
-		<td>Switch tabs left </td>
-		<td> ⇧ + ⌘ + [ (left) ] </td>
+		<td> Switch tabs left </td>
+		<td> ⇧ + ⌘ + ←</td>
 		<td> :tabp </td>
 	</tr>
 	<tr>
 		<td>Switch tabs right </td>
-		<td> ⇧ + ⌘ + right </td>
+		<td> ⇧ + ⌘ + →</td>
 		<td> :tabn </td>
 	</tr>
 	<tr>
@@ -240,7 +247,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Run current file</td>
 		<td> ⌘ + R </td>
-		<td> No equivalent. Must do it manually. :!ruby % (explanation: :! means execute the following as if on a shell. ruby % expands to &#8216;ruby current_file_name&#8217;) </td>
+		<td> :!ruby % [Explanation: :! means execute what follows as if in shell. % expands to the current_file_name so you are executing `ruby current_file_name. This runs in a buffer in <span class="caps">VIM</span> making you unable to continue editting.] </td>
 	</tr>
 </table>
 <h2>Moving Around A File</h2>
@@ -272,12 +279,12 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Move down one line (with caret at same position)</td>
-		<td> <span class="caps">CNRL</span> + N</td>
+		<td> ⌃ + N</td>
 		<td> j</td>
 	</tr>
 	<tr>
 		<td>Go to line 20 </td>
-		<td> ⌘ + L 20 </td>
+		<td> ⌘ + L [type a line &#8211; e.g. 20] </td>
 		<td> :20 </td>
 	</tr>
 </table>
@@ -369,7 +376,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Find related file</td>
-		<td> ⌥-⌘-down </td>
+		<td> ⌥ + ⌘ + down </td>
 		<td> R (If typed within the Controller you&#8217;ll be brought to the View corresponding to the method selected; If typed in view &#8594; Controller; Migrations &#8594; Next Migration; Typed in Model &#8594; Schema. For something more precise see the following <span class="caps">VIM</span> only commands</td>
 	</tr>
 	<tr>
@@ -384,42 +391,42 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Go to model under cursor</td>
-		<td> No equivalent </td>
+		<td> No equivalent</td>
 		<td> gf [e.g. you see Pos*t.first &#8594; brought to #post.rb </td>
 	</tr>
 	<tr>
 		<td>Go to stylesheet under cursor</td>
-		<td> No equivalent </td>
+		<td> No equivalent</td>
 		<td> gf [e.g. you see&lt;%= stylesheet_link_tag &#8216;scaf*fold&#8217; %&gt;&#8594; brought to scaffold.css </td>
 	</tr>
 	<tr>
 		<td>View Rails logs</td>
-		<td> No equivalent </td>
+		<td> No equivalent</td>
 		<td> :Rlogs [:Rake logs:clear if takes too long to load]</td>
 	</tr>
 	<tr>
 		<td>Go to layout under cursor</td>
-		<td> No equivalent </td>
+		<td> No equivalent</td>
 		<td> gf [e.g. you see layout :print &#8594; brought to #print.html.erb </td>
 	</tr>
 	<tr>
 		<td>Go to application.rb</td>
-		<td> No equivalent </td>
+		<td> No equivalent</td>
 		<td> :Renv</td>
 	</tr>
 	<tr>
 		<td>Go to test.rb </td>
-		<td> No equivalent </td>
+		<td> No equivalent</td>
 		<td> :Renv t[tab to autofill out to test]</td>
 	</tr>
 	<tr>
 		<td>Go to controller from link under cursor</td>
-		<td> No equivalent </td>
+		<td> No equivalent</td>
 		<td> gf [e.g. you see &lt;%= link_to &#8220;New&#8221;, new_comme*nt_path %&gt; &#8594; brought to #comments_controller.rb </td>
 	</tr>
 	<tr>
 		<td>Create a posts controller </td>
-		<td> none </td>
+		<td> No equivalent </td>
 		<td>:Rco posts! [note the exclamation mark]</td>
 	</tr>
 	<tr>
@@ -450,7 +457,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Search file downwards for <span class="caps">TOM</span> </td>
-		<td>&lt;⌃&gt; + S <span class="caps">TOM</span> [Same as above for repeated search]</td>
+		<td>⌃ + S <span class="caps">TOM</span> [Same as above for repeated search]</td>
 	</tr>
 	<tr>
 		<td>Full screen </td>
@@ -459,7 +466,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Search entire project </td>
-		<td> ⌘ + ⇧ + F (grep) </td>
+		<td> ⌘ + ⇧ + F </td>
 		<td> ,a THING_SEARCHING_FOR (ack) </td>
 	</tr>
 	<tr>
@@ -511,7 +518,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Titlecase urrent text</td>
 		<td> ⌃ + <span class="caps">OPTION</span> + U </td>
-		<td> No equivalent. For current line you can use :s :s/\&lt;\(\w\)\(\w*\)\&gt;/\u\1\L\2/g </td>
+		<td> No equivalent For current line you can use :s :s/\&lt;\(\w\)\(\w*\)\&gt;/\u\1\L\2/g </td>
 	</tr>
 </table>
 <h2>Autocomplete</h2>
@@ -523,13 +530,13 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Autocomplete filename</td>
-		<td> Not possible </td>
+		<td> No equivalent </td>
 		<td> ⌃ + X ⌃ + F (repeat for each directory)</td>
 	</tr>
 	<tr>
 		<td>Autocomplete full line of code </td>
-		<td> Not possible </td>
-		<td> ⌃ + X ⌃ + L </td>
+		<td> No equivalent </td>
+		<td> ⌃ + X + L </td>
 </table>
 <h2>Commeting</h2>
 <table>
@@ -565,7 +572,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Close current html tag</td>
 		<td>⌘ + ⌥ + .</td>
-		<td> vim_plugin_task &#8220;ragtag&#8221;, &#8220;git://github.com/tpope/vim-ragtag.git&#8221; p <span class="caps">CNRL</span> + X Space </td>
+		<td> vim_plugin_task &#8220;ragtag&#8221;, &#8220;git://github.com/tpope/vim-ragtag.git&#8221; p ⌃ + X Space </td>
 	</tr>
 </table>
 <h2><span class="caps">CSS</span> Colours</h2>
@@ -577,17 +584,21 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Jump between words left</td>
-		<td> ⌥ + Left </td>
-		<td> w </td>
+		<td> ⌥ + ← w </td>
 	</tr>
 	<tr>
 		<td>Jump between words right</td>
-		<td> ⌥ + Right </td>
+		<td> ⌥ + →</td>
 		<td> b </td>
 	</tr>
 </table>
 <h2>Selecting Text</h2>
 <table>
+	<tr>
+		<td> Begin selection </td>
+		<td> ⇧ [then use arrows to drag over desired text] </td>
+		<td> v[enters visual mode. use w to move forward one word. ) to move forward one sentence and % to move to next bracket close. also /apple to move forward to next occurence of apple]</td>
+	</tr>
 	<tr>
 		<td>Select all</td>
 		<td> ⌘ + A </td>
@@ -595,7 +606,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Increase selection left one word</td>
-		<td> ⇧ + ⌥ + Left then alt + left for each additional word</td>
+		<td> ⇧ + ⌥ + ← then alt + ← for each additional word</td>
 		<td> v(select)w then w for each additional word  </td>
 	</tr>
 	<tr>
@@ -613,7 +624,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	</tr>
 	<tr>
 		<td>Merge current line With Next Line</td>
-		<td>⌃+⇧+J </td>
+		<td>⌃ + ⇧ +J </td>
 		<td> J </td>
 	</tr>
 	<tr>
@@ -627,39 +638,48 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Copy</td>
 		<td> ⌘ + C</td>
-		<td> Y(copy current selection, or line if nothing selected) </td>
+		<td> Y<br />
+<em>Copies the current selection, or, if there is no selection, the current line</em> </td>
 	</tr>
 	<tr>
 		<td>Cut</td>
 		<td> ⌘ + X </td>
-		<td> d(deleted selection, but deleting in <span class="caps">VIM</span> sends it to a register where it can be pasted with p)</td>
+		<td> d<br />
+<em>Technically this deletes the selection, but deleting in <span class="caps">VIM</span> saves the deleted text to a register where it can be now be pasted with p</em></td>
 	</tr>
 	<tr>
 		<td>Paste</td>
 		<td> ⌘ + V </td>
-		<td> p(paste below current line) </td>
+		<td> p<br />
+<em>Pastes below the current line</em> <br />
+P<br />
+<em>pastes above the current line</em><br />
+&#8220;*p<br />
+<em>This pastes the last <strong>explicity copied</strong> text. This is important since many commands, such as deleting text, override the paste buffer</em> </td>
 	</tr>
 	<tr>
 		<td>Clipboard history</td>
 		<td> ⌘ + ⇧ + V </td>
-		<td> :reg (see a list of registers each of which can be pasted e.g. &quot;8p) </td>
+		<td> :reg <br />
+<em>Show a list of registers each of which can be pasted e.g. &quot;8p pastes the contents of the register 8</em> </td>
 	</tr>
 </table>
 <h2>Duplicating Lines</h2>
 <table>
 	<tr>
 		<td>Duplicate line/selection</td>
-		<td> ⌃-⇧-D</td>
-		<td> Yp (y copies line then p pastes in below) </td>
+		<td> ⌃ + ⇧ + D</td>
+		<td> Yp <br />
+<em>y copies line then p pastes in below.</em> </td>
 	</tr>
 	<tr>
 		<td>Add placeholder text</td>
 		<td>lorem + tab</td>
-		<td> No Equivalent </td>
+		<td> No equivalent</td>
 	</tr>
 	<tr>
 		<td>Edit ends of selected lines</td>
-		<td>⌘+opt+a</td>
+		<td>⌘ + ⌥ + a</td>
 		<td></td>
 	</tr>
 	<tr>
@@ -670,7 +690,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Snippets (e.g. validates present of)</td>
 		<td> vp<Tab> </td>
-		<td> Currently clashes with Command-T since both use T. I&#8217;ve filed numerous but reports. If anyone has fixed this let me know. In many cases, however, typing the TM abbreviation follwed by ]⌃ works fine</td>
+		<td> [Type TN abbreviation] <br />
+<em>Non Rails snippets not working since the latest releases of snippets plugin clashes with Command-T search plugin. I&#8217;ve filed bug reports and if anyone has fixed this let me know.</em> </td>
 	</tr>
 	<tr>
 		<td>See All Available Snippers</td>
