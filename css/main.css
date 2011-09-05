@@ -459,7 +459,7 @@ float: right;
   display: none;
 }
 .ie #logo {
-  width: 12em;
+  width: 15em;
 }
 .ie #logo div {
   padding-left: 3.75em;
@@ -481,6 +481,10 @@ nav ul {
   margin-left: auto;
   padding-left: 30%;
 }
+nav ul {
+  width: 15em;
+  padding-left: 0;
+}
 .ie nav ul {
   width: 15em;
   padding-left: 0;
@@ -488,7 +492,7 @@ nav ul {
 nav li {
   list-style: none;
   float: left;
-  width: 33.33333%;
+  width: 33.33%;
 }
 nav a {
   display: block;
@@ -625,7 +629,7 @@ p#first_about {
     max-width: none;
   }
   #logo {
-    width: 12em;
+    width: 15em;
   }
   #logo div {
     padding-left: 3.75em;
@@ -637,10 +641,6 @@ p#first_about {
   }
   #logo .fn, #logo .title {
     display: block;
-  }
-  nav ul {
-    width: 15em;
-    padding-left: 0;
   }
   #articles p, .readingTime {
     display: block;
