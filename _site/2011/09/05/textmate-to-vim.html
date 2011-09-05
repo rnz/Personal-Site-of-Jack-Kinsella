@@ -465,6 +465,7 @@ P<br />
 	</tr>
 </table>
 <h2>Ruby On Rails</h2>
+<p><em>Nearly all of this functionality is thanks to Tpope&#8217;s <a href="https://github.com/tpope/vim-rails">Rails.vim plugin</a></em></p>
 <table>
 	<tr>
 		<td>Call Ruby On Rails generate script </td>
@@ -723,7 +724,7 @@ _Using ⌘ +/- in <span class="caps">VIM</span> makes the screen scale dispropor
 	<tr>
 		<td>Close current html tag</td>
 		<td>⌘ + ⌥ + .</td>
-		<td> No exact equivalent. Instead you have auto tag creation. To create <p></p> type p then  ⌃ + X Spacebar <br />
+		<td> ⌃ + x + / <em>Also you have auto tag creation. To create <p></p> type p then  ⌃ + X Spacebar</em> <br />
 <em>Assumes you have the following in your ~/.janus.rake file:<br />
 vim_plugin</em>task &#8220;ragtag&#8221;, &#8220;git://github.com/tpope/vim-ragtag.git&#8221;<br />
 _ </td>
@@ -766,6 +767,25 @@ _ </td>
 		<td>:Rabbrev</td>
 	</tr>
 </table>
+<h2>Syntax Highlighting</h2>
+<table>
+	<tr>
+		<td>Set syntax highlighting to (e.g.) textile</td>
+		<td> Varies depending on highlighter. Select manually at the bottom of the screen. </td>
+		<td> :set syntax=textile <br />
+<em>You probably won&#8217;t need this since <span class="caps">VIM</span> will automatically figure out the appropriate syntax highlighter.</em></td>
+	</tr>
+	<tr>
+		<td>Turn on syntax highlighting</td>
+		<td> No option to enable/disable </td>
+		<td> :syntax on</td>
+	</tr>
+	<tr>
+		<td>Turn off syntax highlighting</td>
+		<td> No option </td>
+		<td> :syntax off</td>
+	</tr>
+</table>
 <h2>Other</h2>
 <table>
 	<tr>
@@ -778,6 +798,13 @@ _ </td>
 		<td>Add placeholder text</td>
 		<td>lorem + tab</td>
 		<td> No equivalent</td>
+	</tr>
+	<tr>
+		<td>Overwrite Mode</td>
+		<td> ⇧ + ⌥ + O <br />
+<em>Then start typing text</em> </td>
+		<td> R <br />
+<em>Then start typing text</em> </td>
 	</tr>
 	<tr>
 		<td>Edit ends of selected lines</td>
@@ -808,6 +835,8 @@ A to enter <span class="caps">EDIT</span> mode at the end<br />
 		<td>:help grep</td>
 	</tr>
 </table>
+<h2>Email Me If I Left Something Out</h2>
+<p>Or if you can find a more idiomatic way of doing any of the above commands.</p>
 <h2 id="vim_training_resources">Recommended Resources For Learning Basic <span class="caps">VIM</span></h2>
 <p><em>Remember the key is to train your fingers. Don&#8217;t just read the text; open up a blank file and try out different commands. If you want to get good at <span class="caps">VIM</span> you need to have the confidence to tear a file to pieces your training sessions.</em></p>
 <ul>

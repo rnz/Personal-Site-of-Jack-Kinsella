@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T23:21:59+01:00</updated>
+ <updated>2011-09-05T23:38:04+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -390,6 +390,7 @@ P&lt;br /&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Ruby On Rails&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Nearly all of this functionality is thanks to Tpope&amp;#8217;s &lt;a href=&quot;https://github.com/tpope/vim-rails&quot;&gt;Rails.vim plugin&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Call Ruby On Rails generate script &lt;/td&gt;
@@ -648,7 +649,7 @@ _Using ⌘ +/- in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; makes the 
 	&lt;tr&gt;
 		&lt;td&gt;Close current html tag&lt;/td&gt;
 		&lt;td&gt;⌘ + ⌥ + .&lt;/td&gt;
-		&lt;td&gt; No exact equivalent. Instead you have auto tag creation. To create &lt;p&gt;&lt;/p&gt; type p then  ⌃ + X Spacebar &lt;br /&gt;
+		&lt;td&gt; ⌃ + x + / &lt;em&gt;Also you have auto tag creation. To create &lt;p&gt;&lt;/p&gt; type p then  ⌃ + X Spacebar&lt;/em&gt; &lt;br /&gt;
 &lt;em&gt;Assumes you have the following in your ~/.janus.rake file:&lt;br /&gt;
 vim_plugin&lt;/em&gt;task &amp;#8220;ragtag&amp;#8221;, &amp;#8220;git://github.com/tpope/vim-ragtag.git&amp;#8221;&lt;br /&gt;
 _ &lt;/td&gt;
@@ -691,6 +692,25 @@ _ &lt;/td&gt;
 		&lt;td&gt;:Rabbrev&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
+&lt;h2&gt;Syntax Highlighting&lt;/h2&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Set syntax highlighting to (e.g.) textile&lt;/td&gt;
+		&lt;td&gt; Varies depending on highlighter. Select manually at the bottom of the screen. &lt;/td&gt;
+		&lt;td&gt; :set syntax=textile &lt;br /&gt;
+&lt;em&gt;You probably won&amp;#8217;t need this since &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; will automatically figure out the appropriate syntax highlighter.&lt;/em&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Turn on syntax highlighting&lt;/td&gt;
+		&lt;td&gt; No option to enable/disable &lt;/td&gt;
+		&lt;td&gt; :syntax on&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Turn off syntax highlighting&lt;/td&gt;
+		&lt;td&gt; No option &lt;/td&gt;
+		&lt;td&gt; :syntax off&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
 &lt;h2&gt;Other&lt;/h2&gt;
 &lt;table&gt;
 	&lt;tr&gt;
@@ -703,6 +723,13 @@ _ &lt;/td&gt;
 		&lt;td&gt;Add placeholder text&lt;/td&gt;
 		&lt;td&gt;lorem + tab&lt;/td&gt;
 		&lt;td&gt; No equivalent&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Overwrite Mode&lt;/td&gt;
+		&lt;td&gt; ⇧ + ⌥ + O &lt;br /&gt;
+&lt;em&gt;Then start typing text&lt;/em&gt; &lt;/td&gt;
+		&lt;td&gt; R &lt;br /&gt;
+&lt;em&gt;Then start typing text&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Edit ends of selected lines&lt;/td&gt;
@@ -733,6 +760,8 @@ A to enter &lt;span class=&quot;caps&quot;&gt;EDIT&lt;/span&gt; mode at the end&
 		&lt;td&gt;:help grep&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
+&lt;h2&gt;Email Me If I Left Something Out&lt;/h2&gt;
+&lt;p&gt;Or if you can find a more idiomatic way of doing any of the above commands.&lt;/p&gt;
 &lt;h2 id=&quot;vim_training_resources&quot;&gt;Recommended Resources For Learning Basic &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Remember the key is to train your fingers. Don&amp;#8217;t just read the text; open up a blank file and try out different commands. If you want to get good at &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; you need to have the confidence to tear a file to pieces your training sessions.&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
