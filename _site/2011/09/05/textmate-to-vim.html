@@ -139,7 +139,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Open a file</td>
 		<td> ⌘ + 0 </td>
-		<td> :e <span class="caps">FILENAME</span> (use Tab completion after first few letters) [Save File first]</td>
+		<td> :e <span class="caps">FILENAME</span> (use Tab completion after first few letters) <br />
+<em>You may need to save your current file first</em></td>
 	</tr>
 	<tr>
 		<td>Create new file</td>
@@ -191,6 +192,16 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 		<td> [vimrc] let NERDTreeWinSize=16 </td>
 	</tr>
 	<tr>
+		<td>Create new in Project Drawer </td>
+		<td> File &gt; new </td>
+		<td> [Select Project Drawer. Highlight parent folder you&#8217;d like file to appear in. Type m the choose a from select menu and type desired filename]</td>
+	</tr>
+	<tr>
+		<td>Delete a file</td>
+		<td> </td>
+		<td> [Highlight undesired file file in Project Drawer. Type m then choose d from drop down menu.]</td>
+	</tr>
+	<tr>
 		<td>Opening a subfolder</td>
 		<td> </td>
 		<td>Enter to open/close a directory</td>
@@ -198,7 +209,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Refresh project tree to reflect newly added files</td>
 		<td>Automatic</td>
-		<td>Nearly always automatic. Otherwise press c</td>
+		<td>Nearly always automatic. Otherwise press r</td>
 	</tr>
 </table>
 <h2>Help</h2>
@@ -316,7 +327,11 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Line numbering</td>
 		<td> ⌘ + ⇧ + L</td>
-		<td> :set number (on) :set nonumber (off). Note the symmetry between turning the number on and off, the only different being the preceded &#8220;no&#8221;. This is the same for all <span class="caps">VIM</span> set commands. As with other preferences this may be placed in vimrc.local</td>
+		<td> :set number <br />
+<em>Turn on</em><br />
+:set nonumber <br />
+<em>Turn off</em>. <br />
+<em>Note the symmetry between turning the number on and off, the only different being the preceded &#8220;no&#8221;. This is the same for all <span class="caps">VIM</span> set commands. As with other preferences this may be placed in vimrc.local</em> </td>
 	</tr>
 </table>
 <h2>Spell Checking</h2>
@@ -329,7 +344,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Next incorrect spelling </td>
 		<td> ⌘ + : </td>
-		<td> [Assuming you&#8217;ve enabled spell checking and can see highlighter errors] ] s (Go to previous spelling error with [s) </td>
+		<td> [Assuming you&#8217;ve enabled spell checking and can see highlighter errors] ] s <br />
+<em>Go to previous spelling error with [s</em> </td>
 	</tr>
 </table>
 <h2>Ruby On Rails</h2>
@@ -337,7 +353,7 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Call Ruby On Rails generate script </td>
 		<td> &quot;⌃ + Pipe [1..8]== </td>
-		<td>:Rgenerate [⌃ler model scaffold] Blog </td>
+		<td>:Rgenerate [controller model scaffold] Blog </td>
 	</tr>
 	<tr>
 		<td>Go To Last Migration</td>
@@ -347,12 +363,13 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Run migrations</td>
 		<td> ⌃ + ⇧ + Pipe </td>
-		<td>:Rake when in a migration</td>
+		<td>[when in a migration] :Rake </td>
 	</tr>
 	<tr>
 		<td>Switch focus to project drawer</td>
 		<td> ⌘ + ⌥ + ` (check)</td>
-		<td> ⌃+ w ⌃ + w [Make this into a simple tab by adding this to your vimrc: noremap <tab> <C-w><C-w> ]</td>
+		<td> ⌃ + w ⌃ + w <br />
+<em>A good key remapping is to map this onto tab by adding this to your vimrc: noremap <tab> <C-w><C-w></em> </td>
 	</tr>
 	<tr>
 		<td>Insert erb&#8217;s &lt;%= </td>
@@ -367,7 +384,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Run unit test caret inside of </td>
 		<td> ⇧ + ⌘ + R </td>
-		<td> :.Rake (. here represents the current line. You can subsitute this for other lines e.g. :40Rake) <span class="caps">TEST</span></td>
+		<td> :.Rake <br />
+<em>. here represents the current line. You can subsitute this for other lines e.g. :40Rake</em> <span class="caps">TEST</span></td>
 	</tr>
 	<tr>
 		<td>Go to test file (e.g. from user.rb to user_spec.rb)</td>
@@ -377,7 +395,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Find related file</td>
 		<td> ⌥ + ⌘ + down </td>
-		<td> R (If typed within the Controller you&#8217;ll be brought to the View corresponding to the method selected; If typed in view &#8594; Controller; Migrations &#8594; Next Migration; Typed in Model &#8594; Schema. For something more precise see the following <span class="caps">VIM</span> only commands</td>
+		<td> :R<br />
+<em>If typed within the Controller you&#8217;ll be brought to the View corresponding to the method selected; If typed in view &#8594; Controller; Migrations &#8594; Next Migration; Typed in Model &#8594; Schema. For something more precise see the following <span class="caps">VIM</span> only commands</em> </td>
 	</tr>
 	<tr>
 		<td>Go to related controller</td>
@@ -427,7 +446,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Create a posts controller </td>
 		<td> No equivalent </td>
-		<td>:Rco posts! [note the exclamation mark]</td>
+		<td>:Rco posts! <br />
+<em>Note the exclamation mark which distinguishes this create command from the find command.</em></td>
 	</tr>
 	<tr>
 		<td>Extract to partial</td>
@@ -440,12 +460,14 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Add bookmark</td>
 		<td> ⌘ + F2 (Never worked on my mac) </td>
-		<td> m[a-z] (The letter in the range refers to this bookmark) </td>
+		<td> m[a-z] <br />
+<em>The letter in the range refers to this bookmark</em> </td>
 	</tr>
 	<tr>
 		<td>Jump to bookmark</td>
 		<td> F2 (next) + F2 (previous) </td>
-		<td> &#8216;a (Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks)</td>
+		<td> &#8216;a <br />
+_Where &#8217;a&#8217; is a bookmark previous set. Type :marks to see all marks._</td>
 	</tr>
 </table>
 <h2>Searching Files</h2>
@@ -453,7 +475,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Search file upwards for <span class="caps">TOM</span> </td>
 		<td> ⇧ + ⌃ + S <span class="caps">TOM</span> </td>
-		<td> ?<span class="caps">TOM</span> [Then press enter once then repeatedly press n or N to continue searching up or down]</td>
+		<td> ?<span class="caps">TOM</span> <br />
+<em>Then press enter once then repeatedly press n or N to continue searching up or down</em></td>
 	</tr>
 	<tr>
 		<td>Search file downwards for <span class="caps">TOM</span> </td>
@@ -495,7 +518,8 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
 		<td> ⌘ + ⇧ + F </td>
-		<td> (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. </td>
+		<td> :Ack donut[Enter]. A window pops up with all instances of the term. <Tab> into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.<br />
+<em>Save current file first if <span class="caps">VIM</span> throws an error</em></td>
 	</tr>
 	<tr>
 		<td>Replace &#8220;donut&#8221; with &#8220;eclair&#8221; in entire project</td>
@@ -526,12 +550,13 @@ FILENAME a variable representing your filename<h2>Opening Up The Editor</h2>
 	<tr>
 		<td>Autocomplete method</td>
 		<td> ⎋ after typing first few letters</td>
-		<td> <span class="caps">TAB</span> after typing first few letters</td>
+		<td> Tab after typing first few letters</td>
 	</tr>
 	<tr>
 		<td>Autocomplete filename</td>
 		<td> No equivalent </td>
-		<td> ⌃ + X ⌃ + F (repeat for each directory)</td>
+		<td> ⌃ + X ⌃ + F <br />
+<em>Only fills one directory at a time so you&#8217;ll need to repeat for each additional one</em></td>
 	</tr>
 	<tr>
 		<td>Autocomplete full line of code </td>

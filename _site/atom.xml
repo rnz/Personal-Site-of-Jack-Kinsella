@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T10:21:52+01:00</updated>
+ <updated>2011-09-05T10:32:48+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -64,7 +64,8 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Open a file&lt;/td&gt;
 		&lt;td&gt; ⌘ + 0 &lt;/td&gt;
-		&lt;td&gt; :e &lt;span class=&quot;caps&quot;&gt;FILENAME&lt;/span&gt; (use Tab completion after first few letters) [Save File first]&lt;/td&gt;
+		&lt;td&gt; :e &lt;span class=&quot;caps&quot;&gt;FILENAME&lt;/span&gt; (use Tab completion after first few letters) &lt;br /&gt;
+&lt;em&gt;You may need to save your current file first&lt;/em&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Create new file&lt;/td&gt;
@@ -116,6 +117,16 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 		&lt;td&gt; [vimrc] let NERDTreeWinSize=16 &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
+		&lt;td&gt;Create new in Project Drawer &lt;/td&gt;
+		&lt;td&gt; File &amp;gt; new &lt;/td&gt;
+		&lt;td&gt; [Select Project Drawer. Highlight parent folder you&amp;#8217;d like file to appear in. Type m the choose a from select menu and type desired filename]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Delete a file&lt;/td&gt;
+		&lt;td&gt; &lt;/td&gt;
+		&lt;td&gt; [Highlight undesired file file in Project Drawer. Type m then choose d from drop down menu.]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
 		&lt;td&gt;Opening a subfolder&lt;/td&gt;
 		&lt;td&gt; &lt;/td&gt;
 		&lt;td&gt;Enter to open/close a directory&lt;/td&gt;
@@ -123,7 +134,7 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Refresh project tree to reflect newly added files&lt;/td&gt;
 		&lt;td&gt;Automatic&lt;/td&gt;
-		&lt;td&gt;Nearly always automatic. Otherwise press c&lt;/td&gt;
+		&lt;td&gt;Nearly always automatic. Otherwise press r&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Help&lt;/h2&gt;
@@ -241,7 +252,11 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Line numbering&lt;/td&gt;
 		&lt;td&gt; ⌘ + ⇧ + L&lt;/td&gt;
-		&lt;td&gt; :set number (on) :set nonumber (off). Note the symmetry between turning the number on and off, the only different being the preceded &amp;#8220;no&amp;#8221;. This is the same for all &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; set commands. As with other preferences this may be placed in vimrc.local&lt;/td&gt;
+		&lt;td&gt; :set number &lt;br /&gt;
+&lt;em&gt;Turn on&lt;/em&gt;&lt;br /&gt;
+:set nonumber &lt;br /&gt;
+&lt;em&gt;Turn off&lt;/em&gt;. &lt;br /&gt;
+&lt;em&gt;Note the symmetry between turning the number on and off, the only different being the preceded &amp;#8220;no&amp;#8221;. This is the same for all &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; set commands. As with other preferences this may be placed in vimrc.local&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Spell Checking&lt;/h2&gt;
@@ -254,7 +269,8 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Next incorrect spelling &lt;/td&gt;
 		&lt;td&gt; ⌘ + : &lt;/td&gt;
-		&lt;td&gt; [Assuming you&amp;#8217;ve enabled spell checking and can see highlighter errors] ] s (Go to previous spelling error with [s) &lt;/td&gt;
+		&lt;td&gt; [Assuming you&amp;#8217;ve enabled spell checking and can see highlighter errors] ] s &lt;br /&gt;
+&lt;em&gt;Go to previous spelling error with [s&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Ruby On Rails&lt;/h2&gt;
@@ -262,7 +278,7 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Call Ruby On Rails generate script &lt;/td&gt;
 		&lt;td&gt; &amp;quot;⌃ + Pipe [1..8]== &lt;/td&gt;
-		&lt;td&gt;:Rgenerate [⌃ler model scaffold] Blog &lt;/td&gt;
+		&lt;td&gt;:Rgenerate [controller model scaffold] Blog &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Go To Last Migration&lt;/td&gt;
@@ -272,12 +288,13 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Run migrations&lt;/td&gt;
 		&lt;td&gt; ⌃ + ⇧ + Pipe &lt;/td&gt;
-		&lt;td&gt;:Rake when in a migration&lt;/td&gt;
+		&lt;td&gt;[when in a migration] :Rake &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Switch focus to project drawer&lt;/td&gt;
 		&lt;td&gt; ⌘ + ⌥ + ` (check)&lt;/td&gt;
-		&lt;td&gt; ⌃+ w ⌃ + w [Make this into a simple tab by adding this to your vimrc: noremap &lt;tab&gt; &lt;C-w&gt;&lt;C-w&gt; ]&lt;/td&gt;
+		&lt;td&gt; ⌃ + w ⌃ + w &lt;br /&gt;
+&lt;em&gt;A good key remapping is to map this onto tab by adding this to your vimrc: noremap &lt;tab&gt; &lt;C-w&gt;&lt;C-w&gt;&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Insert erb&amp;#8217;s &amp;lt;%= &lt;/td&gt;
@@ -292,7 +309,8 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Run unit test caret inside of &lt;/td&gt;
 		&lt;td&gt; ⇧ + ⌘ + R &lt;/td&gt;
-		&lt;td&gt; :.Rake (. here represents the current line. You can subsitute this for other lines e.g. :40Rake) &lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt; :.Rake &lt;br /&gt;
+&lt;em&gt;. here represents the current line. You can subsitute this for other lines e.g. :40Rake&lt;/em&gt; &lt;span class=&quot;caps&quot;&gt;TEST&lt;/span&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Go to test file (e.g. from user.rb to user_spec.rb)&lt;/td&gt;
@@ -302,7 +320,8 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Find related file&lt;/td&gt;
 		&lt;td&gt; ⌥ + ⌘ + down &lt;/td&gt;
-		&lt;td&gt; R (If typed within the Controller you&amp;#8217;ll be brought to the View corresponding to the method selected; If typed in view &amp;#8594; Controller; Migrations &amp;#8594; Next Migration; Typed in Model &amp;#8594; Schema. For something more precise see the following &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; only commands&lt;/td&gt;
+		&lt;td&gt; :R&lt;br /&gt;
+&lt;em&gt;If typed within the Controller you&amp;#8217;ll be brought to the View corresponding to the method selected; If typed in view &amp;#8594; Controller; Migrations &amp;#8594; Next Migration; Typed in Model &amp;#8594; Schema. For something more precise see the following &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; only commands&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Go to related controller&lt;/td&gt;
@@ -352,7 +371,8 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Create a posts controller &lt;/td&gt;
 		&lt;td&gt; No equivalent &lt;/td&gt;
-		&lt;td&gt;:Rco posts! [note the exclamation mark]&lt;/td&gt;
+		&lt;td&gt;:Rco posts! &lt;br /&gt;
+&lt;em&gt;Note the exclamation mark which distinguishes this create command from the find command.&lt;/em&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Extract to partial&lt;/td&gt;
@@ -365,12 +385,14 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Add bookmark&lt;/td&gt;
 		&lt;td&gt; ⌘ + F2 (Never worked on my mac) &lt;/td&gt;
-		&lt;td&gt; m[a-z] (The letter in the range refers to this bookmark) &lt;/td&gt;
+		&lt;td&gt; m[a-z] &lt;br /&gt;
+&lt;em&gt;The letter in the range refers to this bookmark&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Jump to bookmark&lt;/td&gt;
 		&lt;td&gt; F2 (next) + F2 (previous) &lt;/td&gt;
-		&lt;td&gt; &amp;#8216;a (Where &amp;#8217;a&amp;#8217; is a bookmark previous set. Type :marks to see all marks)&lt;/td&gt;
+		&lt;td&gt; &amp;#8216;a &lt;br /&gt;
+_Where &amp;#8217;a&amp;#8217; is a bookmark previous set. Type :marks to see all marks._&lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;
 &lt;h2&gt;Searching Files&lt;/h2&gt;
@@ -378,7 +400,8 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Search file upwards for &lt;span class=&quot;caps&quot;&gt;TOM&lt;/span&gt; &lt;/td&gt;
 		&lt;td&gt; ⇧ + ⌃ + S &lt;span class=&quot;caps&quot;&gt;TOM&lt;/span&gt; &lt;/td&gt;
-		&lt;td&gt; ?&lt;span class=&quot;caps&quot;&gt;TOM&lt;/span&gt; [Then press enter once then repeatedly press n or N to continue searching up or down]&lt;/td&gt;
+		&lt;td&gt; ?&lt;span class=&quot;caps&quot;&gt;TOM&lt;/span&gt; &lt;br /&gt;
+&lt;em&gt;Then press enter once then repeatedly press n or N to continue searching up or down&lt;/em&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Search file downwards for &lt;span class=&quot;caps&quot;&gt;TOM&lt;/span&gt; &lt;/td&gt;
@@ -420,7 +443,8 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Replace &amp;#8220;donut&amp;#8221; with &amp;#8220;eclair&amp;#8221; in entire project&lt;/td&gt;
 		&lt;td&gt; ⌘ + ⇧ + F &lt;/td&gt;
-		&lt;td&gt; (Save first if issues) ,a donut[Enter]. A window pops up with all instances of the term. &lt;Tab&gt; into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it. &lt;/td&gt;
+		&lt;td&gt; :Ack donut[Enter]. A window pops up with all instances of the term. &lt;Tab&gt; into the ack search window. Type :bufdo %s/donut/eclair/gce. :q the ack search window once down to close it.&lt;br /&gt;
+&lt;em&gt;Save current file first if &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; throws an error&lt;/em&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Replace &amp;#8220;donut&amp;#8221; with &amp;#8220;eclair&amp;#8221; in entire project&lt;/td&gt;
@@ -451,12 +475,13 @@ FILENAME a variable representing your filename&lt;h2&gt;Opening Up The Editor&lt
 	&lt;tr&gt;
 		&lt;td&gt;Autocomplete method&lt;/td&gt;
 		&lt;td&gt; ⎋ after typing first few letters&lt;/td&gt;
-		&lt;td&gt; &lt;span class=&quot;caps&quot;&gt;TAB&lt;/span&gt; after typing first few letters&lt;/td&gt;
+		&lt;td&gt; Tab after typing first few letters&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Autocomplete filename&lt;/td&gt;
 		&lt;td&gt; No equivalent &lt;/td&gt;
-		&lt;td&gt; ⌃ + X ⌃ + F (repeat for each directory)&lt;/td&gt;
+		&lt;td&gt; ⌃ + X ⌃ + F &lt;br /&gt;
+&lt;em&gt;Only fills one directory at a time so you&amp;#8217;ll need to repeat for each additional one&lt;/em&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Autocomplete full line of code &lt;/td&gt;
