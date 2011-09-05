@@ -9,7 +9,7 @@ author: Jack Kinsella
 
 When I switched from Textmate to VIM I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in VIM the features I'd come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longed for a project drawer to manage my app's files. 
 
-Instead of accommodating my needs, VIM sat firm and unresponsive, save for the odd judgemental beeping sound. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.
+Instead of accommodating my needs, VIM sat firm and unresponsive, save for the odd judgemental beep. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.
 
 With time I learned to mimic nearly every Textmate feature in VIM, and then some. This guide isn't about the powerful functinality VIM has over-and-above Textmate; you'll figure these out with time. This guide is to help you do in VIM what you already can using Textmate, only with considerably less pain than I underwent.
 
