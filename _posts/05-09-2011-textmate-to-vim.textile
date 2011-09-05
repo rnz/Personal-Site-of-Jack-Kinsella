@@ -276,7 +276,7 @@ _Explanation: :! means execute what follows as if in shell. % expands to the cur
 
 h2. Snippets
 
-|Snippets (e.g. validates present of)| [when in insert mode] vp<Tab> | vp ⌃ + ] 
+|Snippets (e.g. validates present of)| vp + TAB | vp ⌃ + ] 
 _Abbreviations same as in Textmate_ 
 _Non Rails snippets not working since the latest releases of snippets plugin clashes with Command-T search plugin. I've filed bug reports and if anyone has fixed this let me know._ |
 |See All Available Snippers| Use Menu |:Rabbrev|

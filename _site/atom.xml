@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-05T23:51:41+01:00</updated>
+ <updated>2011-09-05T23:58:04+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -681,7 +681,7 @@ _ &lt;/td&gt;
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Snippets (e.g. validates present of)&lt;/td&gt;
-		&lt;td&gt; [when in insert mode] vp&lt;Tab&gt; &lt;/td&gt;
+		&lt;td&gt; vp + &lt;span class=&quot;caps&quot;&gt;TAB&lt;/span&gt; &lt;/td&gt;
 		&lt;td&gt; vp ⌃ + ] &lt;br /&gt;
 &lt;em&gt;Abbreviations same as in Textmate&lt;/em&gt; &lt;br /&gt;
 &lt;em&gt;Non Rails snippets not working since the latest releases of snippets plugin clashes with Command-T search plugin. I&amp;#8217;ve filed bug reports and if anyone has fixed this let me know.&lt;/em&gt; &lt;/td&gt;
