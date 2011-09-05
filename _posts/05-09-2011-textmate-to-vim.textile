@@ -97,8 +97,8 @@ h2(#switch_tabs). Tabs
 
 |New tab| Click on file in project drawer | ⌘ + Shit + T |
 |Drop tab| ⌃ + w | ⌃ + w |
-| Switch tabs left | ⇧ + ⌘ + ←| :tabp |
-|Switch tabs right | ⇧ + ⌘ + →| :tabn |
+|Switch tabs left | ⇧ + ⌘ + ←| gT |
+|Switch tabs right | ⇧ + ⌘ + →| gt |
 |Go to tab| ⌘[1-9] | ⌘[1-9]|
 
 
