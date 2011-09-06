@@ -239,7 +239,7 @@ h2. Uppercase/Lowercase
 
 |Upcase selected text|⌃ + ⇧ + U| u |
 |Downcase selected text|⌃ + ⇧ + U| U |
-|Switchcase of selected text | No equivalent | ~ |
+|Switchcase of selected text | ⌃ + g | ~ |
 |Titlecase current text| ⌃ + ⌥ + U | No exact equivalent 
 _To titlecase the current line you can use :s :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g_ |
 
