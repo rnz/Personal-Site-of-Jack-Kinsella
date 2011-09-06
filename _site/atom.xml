@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-06T11:58:40+01:00</updated>
+ <updated>2011-09-06T12:02:33+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -110,7 +110,7 @@
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Rename a file&lt;/td&gt;
-		&lt;td&gt;[focus on project drawer and select a file] space [type new name]&lt;/td&gt;
+		&lt;td&gt; Focus on the project drawer and select a file. Press spacebar. Type a new name. &lt;/td&gt;
 		&lt;td&gt; Start by &lt;a href=&quot;#nerd_tree&quot;&gt;focusing on the NERDTree&lt;/a&gt;. Select the file you wish to rename (however you want: e.g. with a search or plain old jklh). Type &amp;#8216;m&amp;#8217; to bring up a menu. Type &amp;#8216;m&amp;#8217; again to chose to modify the file name. Type the new name of file and press enter. &lt;/td&gt;
 	&lt;/tr&gt;
 &lt;/table&gt;

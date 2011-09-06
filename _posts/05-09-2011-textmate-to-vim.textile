@@ -68,7 +68,7 @@ h2. Undo / Redo
 
 h2. File Renaming
 
-|Rename a file|[focus on project drawer and select a file] space [type new name]| Start by "focusing on the NERDTree":#nerd_tree. Select the file you wish to rename (however you want: e.g. with a search or plain old jklh). Type 'm' to bring up a menu. Type 'm' again to chose to modify the file name. Type the new name of file and press enter. |
+|Rename a file| Focus on the project drawer and select a file. Press spacebar. Type a new name. | Start by "focusing on the NERDTree":#nerd_tree. Select the file you wish to rename (however you want: e.g. with a search or plain old jklh). Type 'm' to bring up a menu. Type 'm' again to chose to modify the file name. Type the new name of file and press enter. |
 
 h2(#nerd_tree). Project Drawer/ NERDTree
 
