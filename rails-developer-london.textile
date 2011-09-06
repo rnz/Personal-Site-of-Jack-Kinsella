@@ -11,13 +11,13 @@ subtitle: Experienced and professional. Specialising in E-Commerce, conversion o
 
 h2(#services). Professional Services Offered
 
-I am a full-stack web developer who builds web applications such as "Oxbridge Notes":http://www.oxbridgenotes.co.uk and "Hired Help":http://www.hiredhelp.ie. I have four years experience with Ruby and the Ruby on Rails web framework and it associated technologies, CSS, the HTTP protocol, Linux, the cloud infrastructure, and, to a lesser albeit growing extent, Javascript.
+I am a full-stack *Rails Developer in London* who builds web applications such as "Oxbridge Notes":http://www.oxbridgenotes.co.uk and "Hired Help":http://www.hiredhelp.ie. I have four years experience with Ruby and the Ruby on Rails web framework and it associated technologies, CSS, the HTTP protocol, Linux, the cloud infrastructure, and, to a lesser albeit growing extent, Javascript.
 
 h2(#why_hire). Why Hire Me?
 
 h3. Technical Competence 
 
-I have a track record of building, deploying, and maintaining web applications such as those in my "portfolio":/portfolio.html. I attend "Ruby conferences":http://scottishrubyconference.com/ and "Ruby meetups":http://rubyireland.com/. I've contributed to over fifteen "open source projects":https://github.com/jackkinsella, I "blog about Ruby":/blog.html, I answer programming questions in "forums":http://stackoverflow.com/users/286286/jack-kinsella, and I'm writing a book on Rails best practices. I'm a smart all rounder, as evidenced by scoring the highest possible result in state examinations and by winning a place at Oxford University.
+I have a track record of building, deploying, and maintaining web applications such as those in my "portfolio":/portfolio.html. I attend "Ruby conferences":http://scottishrubyconference.com/ and "Ruby meetups":http://rubyireland.com/. I've contributed to over fifteen "open source projects":https://github.com/jackkinsella, I "blog about Ruby":/blog.html, I answer programming questions in "forums":http://stackoverflow.com/users/286286/jack-kinsella, and I'm writing a book on Rails best practices. 
 
 h3. Reliable, Bug Free Code
 
@@ -27,11 +27,11 @@ h3. Open Source Technology
 
 I'm familiar with the key open-source libraries in Ruby/Rails, and I use these in place of writing custom code. Less custom code means I spend less time building your application and you receive a smaller bill for my services.
 
-h3. Advice on Key Technical Considerations
+h3. Advice on Commerial Considerations
 
 A web programmer's job isn't just to program; his job is also to advise on technical considerations and online business. 
 
-Drawing from my experience seeing projects grow from napkin scribbles to unmanned money-making machines, I try to point out key features that you may be omitting, and, equally, expensive but pointless functionality you might want to include. Here is a small sample of the issues on which I will advise:
+Drawing from my experience seeing projects grow from napkin scribbles to unmanned money-making machines, I try to point out key features that you may be omitting, and, equally, expensive but pointless functionality you might want to include. I'm one of the only Rails developers in London who offers this service. Here is a small sample of the issues on which I will advise:
 
 * *SEO strategy*: By far the cheapest traffic comes through high ranks in organic search. Through years of experimentation I've found a technique to increase organic traffic dramatically, three-fold in the most recent case. I will help you build SEO into the core of your application. Having the greatest web app on the net means nothing if no-one ever finds it.
 

@@ -489,7 +489,7 @@ nav ul {
   padding-left: 30%;
 }
 nav ul {
-    width: 15em;
+    width: 25em;
     padding-left: 0;
   }
 .ie nav ul {
@@ -499,7 +499,10 @@ nav ul {
 nav li {
   list-style: none;
   float: left;
-  width: 33.33%;
+  width: 25%;
+}
+nav li.about {
+  width: 50%;
 }
 nav a {
   display: block;
