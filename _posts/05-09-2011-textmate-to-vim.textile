@@ -153,7 +153,7 @@ _Then press they enter key and then you can press n or N repeatedly to continue 
 _As above, n or N continue searching up or down_ |
 |Full screen |"(Lion Only)":https://github.com/enormego/EGOTextMateFullScreen | ⌘ + Enter |
 |Search entire project | ⌘ + ⇧ + F | ,a THING_SEARCHING_FOR (ack) |
-|Find a specific Method|⌘ + ⇧ + t| /def foo 
+|Find a specific method|⌘ + ⇧ + t| /def foo 
 _then use * to cycle through instances of the method name under the caret. This will not necessarily by definition # does the same but in the oppose direction_|
 
 h2. Replacing Text in Files and in Entire Project

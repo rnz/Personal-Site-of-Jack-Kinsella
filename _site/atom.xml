@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-06T11:57:29+01:00</updated>
+ <updated>2011-09-06T11:58:40+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -356,7 +356,7 @@ P&lt;br /&gt;
 		&lt;td&gt; ,a THING_SEARCHING_FOR (ack) &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
-		&lt;td&gt;Find a specific Method&lt;/td&gt;
+		&lt;td&gt;Find a specific method&lt;/td&gt;
 		&lt;td&gt;⌘ + ⇧ + t&lt;/td&gt;
 		&lt;td&gt; /def foo &lt;br /&gt;
 &lt;em&gt;then use * to cycle through instances of the method name under the caret. This will not necessarily by definition # does the same but in the oppose direction&lt;/em&gt;&lt;/td&gt;
