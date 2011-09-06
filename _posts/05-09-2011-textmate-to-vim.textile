@@ -7,7 +7,7 @@ author: Jack Kinsella
 
 ---
 
-When I switched from Textmate to VIM I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in VIM the features I'd come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longed for a project drawer to manage my app's files. 
+When I switched from Textmate to VIM I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in VIM the features I'd come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, a project drawer to manage my files, and snippets to save my fingers.
 
 Instead of accommodating my needs, VIM sat firm and unresponsive, save for the odd judgemental beep. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.
 
@@ -34,7 +34,7 @@ h2. Some Preliminary Notes (Do Not Skip)
 * Unless otherwise specified, all the VIM commands assume you are in normal mode, the mode where you cannot type text into the file.
 * If I instruct you to add something to your vimrc.local or gvimrc.local files you will need to type :source ~/.vimrc.local or :source .gvimrc.local to reload VIM with your changes.  
 * If I instruct you to add code to your .janus.rake file, you must cd into your ~/.vim directory and run rake for these changes to be installed. 
-* Regular expressions in VIM differ from those in Textmate, and these are outside the scope of this guide. 90% of these difference will be alleviate if you add this to your .vimrc.local:
+* Regular expressions in VIM differ from those in Textmate, and these are outside the scope of this guide. 90% of these differences will be alleviated if you add this to your .vimrc.local:
 @nnoremap / /\v@
 @vnoremap / /\v@
 _This automaticaly prefixes your search commands with \v (Technically, the commands map the key /, symbolising search, to /\v, meaning search with 'very magic' regex syntax. There are two entries since the remapping happens in two modes.). 'Very magic' regex syntax means that all ASCII characters except '0'-'9', 'a'-'z', 'A'-'Z' and '_' have a special meaning.  Without this you would need to escape many characters which are standard regex syntax in, say, Ruby._

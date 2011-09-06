@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-06T15:34:23+01:00</updated>
+ <updated>2011-09-06T17:07:01+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -15,7 +15,7 @@
    <link href="http://www.jackkinsella.ie/2011/09/05/textmate-to-vim.html"/>
    <updated>2011-09-05T00:00:00+01:00</updated>
    <id>http://tom.preston-werner.com/2011/09/05/textmate-to-vim</id>
-   <content type="html">&lt;p&gt;When I switched from Textmate to &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; the features I&amp;#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longed for a project drawer to manage my app&amp;#8217;s files.&lt;/p&gt;
+   <content type="html">&lt;p&gt;When I switched from Textmate to &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; the features I&amp;#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, a project drawer to manage my files, and snippets to save my fingers.&lt;/p&gt;
 &lt;p&gt;Instead of accommodating my needs, &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; sat firm and unresponsive, save for the odd judgemental beep. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.&lt;/p&gt;
 &lt;p&gt;With time I learned to mimic nearly every Textmate feature in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;, and then some. This guide isn&amp;#8217;t about the powerful functinality &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; has over-and-above Textmate; you&amp;#8217;ll figure this out with time. This guide is to help you do in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; what you already can using Textmate, only with considerably less pain than I underwent.&lt;/p&gt;
 &lt;p&gt;This guide makes a few assumptions:&lt;/p&gt;
@@ -44,7 +44,7 @@
 	&lt;li&gt;Unless otherwise specified, all the &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; commands assume you are in normal mode, the mode where you cannot type text into the file.&lt;/li&gt;
 	&lt;li&gt;If I instruct you to add something to your vimrc.local or gvimrc.local files you will need to type :source ~/.vimrc.local or :source .gvimrc.local to reload &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; with your changes.&lt;/li&gt;
 	&lt;li&gt;If I instruct you to add code to your .janus.rake file, you must cd into your ~/.vim directory and run rake for these changes to be installed.&lt;/li&gt;
-	&lt;li&gt;Regular expressions in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; differ from those in Textmate, and these are outside the scope of this guide. 90% of these difference will be alleviate if you add this to your .vimrc.local:&lt;br /&gt;
+	&lt;li&gt;Regular expressions in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; differ from those in Textmate, and these are outside the scope of this guide. 90% of these differences will be alleviated if you add this to your .vimrc.local:&lt;br /&gt;
 &lt;code&gt;nnoremap / /\v&lt;/code&gt;&lt;br /&gt;
 &lt;code&gt;vnoremap / /\v&lt;/code&gt;&lt;br /&gt;
 &lt;em&gt;This automaticaly prefixes your search commands with \v (Technically, the commands map the key /, symbolising search, to /\v, meaning search with &amp;#8216;very magic&amp;#8217; regex syntax. There are two entries since the remapping happens in two modes.). &amp;#8216;Very magic&amp;#8217; regex syntax means that all &lt;span class=&quot;caps&quot;&gt;ASCII&lt;/span&gt; characters except &amp;#8216;0&amp;#8217;-&amp;#8216;9&amp;#8217;, &amp;#8216;a&amp;#8217;-&amp;#8216;z&amp;#8217;, &amp;#8216;A&amp;#8217;-&amp;#8216;Z&amp;#8217; and &amp;#8216;_&amp;#8217; have a special meaning.  Without this you would need to escape many characters which are standard regex syntax in, say, Ruby.&lt;/em&gt;&lt;/li&gt;

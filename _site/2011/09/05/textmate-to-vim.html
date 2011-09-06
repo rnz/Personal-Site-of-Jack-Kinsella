@@ -87,7 +87,7 @@ jQuery(document).ready(function() {
 
 });
 </script>
-<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, and I longed for a project drawer to manage my app&#8217;s files.</p>
+<p>When I switched from Textmate to <span class="caps">VIM</span> I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in <span class="caps">VIM</span> the features I&#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, a project drawer to manage my files, and snippets to save my fingers.</p>
 <p>Instead of accommodating my needs, <span class="caps">VIM</span> sat firm and unresponsive, save for the odd judgemental beep. Even though I was supposed to go cold turkey on Textmate, I met her by night in the yard for a guilty after-hours edit.</p>
 <p>With time I learned to mimic nearly every Textmate feature in <span class="caps">VIM</span>, and then some. This guide isn&#8217;t about the powerful functinality <span class="caps">VIM</span> has over-and-above Textmate; you&#8217;ll figure this out with time. This guide is to help you do in <span class="caps">VIM</span> what you already can using Textmate, only with considerably less pain than I underwent.</p>
 <p>This guide makes a few assumptions:</p>
@@ -116,7 +116,7 @@ jQuery(document).ready(function() {
 	<li>Unless otherwise specified, all the <span class="caps">VIM</span> commands assume you are in normal mode, the mode where you cannot type text into the file.</li>
 	<li>If I instruct you to add something to your vimrc.local or gvimrc.local files you will need to type :source ~/.vimrc.local or :source .gvimrc.local to reload <span class="caps">VIM</span> with your changes.</li>
 	<li>If I instruct you to add code to your .janus.rake file, you must cd into your ~/.vim directory and run rake for these changes to be installed.</li>
-	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate, and these are outside the scope of this guide. 90% of these difference will be alleviate if you add this to your .vimrc.local:<br />
+	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate, and these are outside the scope of this guide. 90% of these differences will be alleviated if you add this to your .vimrc.local:<br />
 <code>nnoremap / /\v</code><br />
 <code>vnoremap / /\v</code><br />
 <em>This automaticaly prefixes your search commands with \v (Technically, the commands map the key /, symbolising search, to /\v, meaning search with &#8216;very magic&#8217; regex syntax. There are two entries since the remapping happens in two modes.). &#8216;Very magic&#8217; regex syntax means that all <span class="caps">ASCII</span> characters except &#8216;0&#8217;-&#8216;9&#8217;, &#8216;a&#8217;-&#8216;z&#8217;, &#8216;A&#8217;-&#8216;Z&#8217; and &#8216;_&#8217; have a special meaning.  Without this you would need to escape many characters which are standard regex syntax in, say, Ruby.</em></li>
