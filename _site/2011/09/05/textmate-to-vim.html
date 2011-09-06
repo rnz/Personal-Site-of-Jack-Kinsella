@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Textmate to VIM | Jack Kinsella </title>
+    <title>Textmate to VIM | Jack Kinsella - Rails Developer London </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Typekit script -->
     <script type="text/javascript" src="http://use.typekit.com/xnr7evu.js"></script>
@@ -116,11 +116,10 @@ jQuery(document).ready(function() {
 	<li>Unless otherwise specified, all the <span class="caps">VIM</span> commands assume you are in normal mode, the mode where you cannot type text into the file.</li>
 	<li>If I instruct you to add something to your vimrc.local or gvimrc.local files you will need to type :source ~/.vimrc.local or :source .gvimrc.local to reload <span class="caps">VIM</span> with your changes.</li>
 	<li>If I instruct you to add code to your .janus.rake file, you must cd into your ~/.vim directory and run rake for these changes to be installed.</li>
-	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate, and these are outside the scope of this guide. I will say this though: you can make them similar by adding this to your .vimrc.local:<br />
+	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate, and these are outside the scope of this guide. 90% of these difference will be alleviate if you add this to your .vimrc.local:<br />
 <code>nnoremap / /\v</code><br />
 <code>vnoremap / /\v</code><br />
-<em>This prefixes you regexes with \v.  Use of &#8220;\v&#8221; means that in the pattern after it all <span class="caps">ASCII</span> characters except<br />
-&#8216;0&#8217;-&#8216;9&#8217;, &#8216;a&#8217;-&#8216;z&#8217;, &#8216;A&#8217;-&#8216;Z&#8217; and &#8216;_&#8217; have a special meaning.  &#8220;very magic&#8221;. Without this you would need to escape many characters which are standard regex syntax in, say, Ruby.</em></li>
+<em>This automaticaly prefixes your search commands with \v (Technically, the commands map the key /, symbolising search, to /\v, meaning search with &#8216;very magic&#8217; regex syntax. There are two entries since the remapping happens in two modes.). &#8216;Very magic&#8217; regex syntax means that all <span class="caps">ASCII</span> characters except &#8216;0&#8217;-&#8216;9&#8217;, &#8216;a&#8217;-&#8216;z&#8217;, &#8216;A&#8217;-&#8216;Z&#8217; and &#8216;_&#8217; have a special meaning.  Without this you would need to escape many characters which are standard regex syntax in, say, Ruby.</em></li>
 </ul>
 <h2>Opening, Closing and Creating Files</h2>
 <table>
@@ -349,7 +348,7 @@ P<br />
 	<tr>
 		<td>Select all</td>
 		<td> ⌘ + A </td>
-		<td> vgg=G </td>
+		<td> ggVG </td>
 	</tr>
 	<tr>
 		<td>Increase selection left one word</td>
@@ -791,6 +790,14 @@ _ </td>
 		<td>Turn off syntax highlighting</td>
 		<td> No option </td>
 		<td> :syntax off</td>
+	</tr>
+</table>
+<h2>Formatting</h2>
+<table>
+	<tr>
+		<td>Reformat selection to according to wrap settings </td>
+		<td>⌃Q </td>
+		<td>gq <em>gqgq, i.e. the command twice, to reformat the current line</em></td>
 	</tr>
 </table>
 <h2>Other</h2>
