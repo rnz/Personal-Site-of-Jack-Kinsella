@@ -1,7 +1,13 @@
-h1. Personal Blog of Jack Kinsella based on Jekyll
+h1. Personal Blog of Jack Kinsella, a "rails developer in London":http://www.jackkinsella.ie/rails-developer-london.html
+
+h3. Why Use This Version
+
+* Heroku Ready
+* Standard portfolio website format with homepage, blog, and search-engine optimised about page.
 
 h3. Copyright
 
 You are free to use all the code within, with the exception of the
 contents of the _site/ _posts/ and images/ folders, the rights of which
 remain wholly my own.
+
