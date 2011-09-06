@@ -101,7 +101,7 @@ jQuery(document).ready(function() {
 	<li>You were a power user of Textmate.</li>
 	<li>You are a Rails programmer switching from Textmate to <span class="caps">VIM</span>. About 30% of this guide is Rails specific.</li>
 </ol>
-<p><em>This guide may not be reproduced without the express permission of Jack Kinsella &#8211; <a href="/rails-developer-london.html">Rails Developer, London</a></em></p>
+<p><em>This guide may only be reproduced with the express permission of Jack Kinsella &#8211; <a href="/rails-developer-london.html">Rails Developer, London</a></em></p>
 <h2>Some Preliminary Notes (Do Not Skip)</h2>
 <table>
 	<tr>
@@ -116,7 +116,11 @@ jQuery(document).ready(function() {
 	<li>Unless otherwise specified, all the <span class="caps">VIM</span> commands assume you are in normal mode, the mode where you cannot type text into the file.</li>
 	<li>If I instruct you to add something to your vimrc.local or gvimrc.local files you will need to type :source ~/.vimrc.local or :source .gvimrc.local to reload <span class="caps">VIM</span> with your changes.</li>
 	<li>If I instruct you to add code to your .janus.rake file, you must cd into your ~/.vim directory and run rake for these changes to be installed.</li>
-	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate, and these are outside the scope of this guide. Consult the <a href="#vim_training_resources">resources below</a> for an excellent tutorial.</li>
+	<li>Regular expressions in <span class="caps">VIM</span> differ from those in Textmate, and these are outside the scope of this guide. I will say this though: you can make them similar by adding this to your .vimrc.local:<br />
+<code>nnoremap / /\v</code><br />
+<code>vnoremap / /\v</code><br />
+<em>This prefixes you regexes with \v.  Use of &#8220;\v&#8221; means that in the pattern after it all <span class="caps">ASCII</span> characters except<br />
+&#8216;0&#8217;-&#8216;9&#8217;, &#8216;a&#8217;-&#8216;z&#8217;, &#8216;A&#8217;-&#8216;Z&#8217; and &#8216;_&#8217; have a special meaning.  &#8220;very magic&#8221;. Without this you would need to escape many characters which are standard regex syntax in, say, Ruby.</em></li>
 </ul>
 <h2>Opening, Closing and Creating Files</h2>
 <table>
@@ -661,11 +665,16 @@ _Using ⌘ +/- in <span class="caps">VIM</span> makes the screen scale dispropor
 	<tr>
 		<td>Upcase selected text</td>
 		<td>⌃ + ⇧ + U</td>
-		<td> ~ </td>
+		<td> u </td>
 	</tr>
 	<tr>
 		<td>Downcase selected text</td>
 		<td>⌃ + ⇧ + U</td>
+		<td> U </td>
+	</tr>
+	<tr>
+		<td>Switchcase of selected text </td>
+		<td> No equivalent </td>
 		<td> ~ </td>
 	</tr>
 	<tr>
@@ -840,6 +849,7 @@ A to enter <span class="caps">EDIT</span> mode at the end<br />
 <ul>
 	<li><a href="http://www.derekwyatt.org/vim/vim-tutorial-videos/" title="Highly recommended, if you can tolerate his excitement">Derek Wyatt&#8217;s Video Series</a></li>
 	<li><a href="http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html" title="My Personal Favourite">Spaced Repetition Systems For Drilling</a></li>
+	<li><a href="http://stevelosh.com/blog/2010/09/coming-home-to-vim/">Coming Home To Vim</a></li>
 	<li><a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">Visual Cheat Sheets</a></li>
 	<li><a href="http://vimregex.com/">Regular expressions in Vim</a></li>
 	<li><a href="http://peepcode.com/products/smash-into-vim-i" title="Commercial">PeepCode&#8217;s Video Series</a></li>

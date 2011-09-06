@@ -23,7 +23,7 @@ This guide makes a few assumptions:
 # You were a power user of Textmate.
 # You are a Rails programmer switching from Textmate to VIM. About 30% of this guide is Rails specific.
 
-_This guide may not be reproduced without the express permission of Jack Kinsella - "Rails Developer, London":/rails-developer-london.html_
+_This guide may only be reproduced with the express permission of Jack Kinsella - "Rails Developer, London":/rails-developer-london.html_
 
 h2. Some Preliminary Notes (Do Not Skip)
 
@@ -34,7 +34,12 @@ h2. Some Preliminary Notes (Do Not Skip)
 * Unless otherwise specified, all the VIM commands assume you are in normal mode, the mode where you cannot type text into the file.
 * If I instruct you to add something to your vimrc.local or gvimrc.local files you will need to type :source ~/.vimrc.local or :source .gvimrc.local to reload VIM with your changes.  
 * If I instruct you to add code to your .janus.rake file, you must cd into your ~/.vim directory and run rake for these changes to be installed. 
-* Regular expressions in VIM differ from those in Textmate, and these are outside the scope of this guide. Consult the "resources below":#vim_training_resources for an excellent tutorial.
+* Regular expressions in VIM differ from those in Textmate, and these are outside the scope of this guide. I will say this though: you can make them similar by adding this to your .vimrc.local:
+@nnoremap / /\v@
+@vnoremap / /\v@
+_This prefixes you regexes with \v.  Use of "\v" means that in the pattern after it all ASCII characters except
+'0'-'9', 'a'-'z', 'A'-'Z' and '_' have a special meaning.  "very magic". Without this you would need to escape many characters which are standard regex syntax in, say, Ruby._
+
 
 
 h2. Opening, Closing and Creating Files
@@ -232,8 +237,9 @@ _Where a is a bookmark previously set. Type :marks to see all bookmarks_ |
 
 h2. Uppercase/Lowercase
 
-|Upcase selected text|⌃ + ⇧ + U| ~ |
-|Downcase selected text|⌃ + ⇧ + U| ~ |
+|Upcase selected text|⌃ + ⇧ + U| u |
+|Downcase selected text|⌃ + ⇧ + U| U |
+|Switchcase of selected text | No equivalent | ~ |
 |Titlecase current text| ⌃ + ⌥ + U | No exact equivalent 
 _To titlecase the current line you can use :s :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g_ |
 
@@ -322,6 +328,7 @@ _Remember the key is to train your fingers. Don't just read the text; open up a 
 
 * "Derek Wyatt's Video Series (Highly recommended, if you can tolerate his excitement)":http://www.derekwyatt.org/vim/vim-tutorial-videos/
 * "Spaced Repetition Systems For Drilling (My Personal Favourite)":http://alfmikula.blogspot.com/2010/11/using-spaced-repetition-software-to.html
+* "Coming Home To Vim":http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 * "Visual Cheat Sheets":http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
 * "Regular expressions in Vim":http://vimregex.com/
 * "PeepCode's Video Series (Commercial)":http://peepcode.com/products/smash-into-vim-i
