@@ -23,6 +23,8 @@ This guide makes a few assumptions:
 # You were a power user of Textmate.
 # You are a Rails programmer switching from Textmate to VIM. About 30% of this guide is Rails specific.
 
+_This guide may not be reproduced without the express permission of Jack Kinsella - "Rails Developer, London":/rails-developer-london.html_
+
 h2. Some Preliminary Notes (Do Not Skip)
 
 |Command | Shortcut in Textmate | Shortcut in Vim|
