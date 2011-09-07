@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-07T17:50:35+01:00</updated>
+ <updated>2011-09-07T17:57:40+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -739,7 +739,10 @@ _ &lt;/td&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Add placeholder text&lt;/td&gt;
 		&lt;td&gt;lorem + tab&lt;/td&gt;
-		&lt;td&gt; No equivalent&lt;/td&gt;
+		&lt;td&gt; lorem + enter&lt;br /&gt;
+&lt;em&gt;Assumes you have add the following to your vimrc.local:&lt;br /&gt;
+&amp;quot; anytime &amp;#8216;lorem&amp;#8217; is typed in, replace it with placeholder text&lt;br /&gt;
+abbr lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a ornare metus. In justo metus, auctor nec semper in, laoreet porttitor augue. Maecenas tortor libero, dignissim vel placerat sit amet, malesuada ut quam. Curabitur vitae velit lacus, sed imperdiet sapien. Sed posuere, odio nec pharetra adipiscing&lt;/em&gt; &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Overwrite Mode&lt;/td&gt;

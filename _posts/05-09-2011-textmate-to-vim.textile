@@ -301,7 +301,10 @@ h2. Other
 
 |Duplicate line/selection| ⌃ + ⇧ + D| yyp 
 _y copies line then p pastes in below._ |
-|Add placeholder text|lorem + tab| No equivalent|
+|Add placeholder text|lorem + tab| lorem + enter
+_Assumes you have add the following to your vimrc.local:
+" anytime 'lorem' is typed in, replace it with placeholder text
+abbr lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a ornare metus. In justo metus, auctor nec semper in, laoreet porttitor augue. Maecenas tortor libero, dignissim vel placerat sit amet, malesuada ut quam. Curabitur vitae velit lacus, sed imperdiet sapien. Sed posuere, odio nec pharetra adipiscing_ |
 |Overwrite Mode| ⇧ + ⌥ + O 
 _Then start typing text_ | R 
 _Then start typing text_ |
