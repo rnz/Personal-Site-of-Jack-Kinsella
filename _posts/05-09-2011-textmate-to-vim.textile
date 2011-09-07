@@ -97,7 +97,7 @@ _Show a list of registers each of which can be pasted e.g. "8p pastes the conten
 
 h2(#switch_tabs). Tabs
 
-|New tab| Click on file in project drawer | ⌘ + Shit + T |
+|New tab| Click on file in project drawer | ⌘ + ⇧ + T |
 |Drop tab| ⌃ + w | ⌃ + w |
 |Switch tabs left | ⇧ + ⌘ + ←| gT |
 |Switch tabs right | ⇧ + ⌘ + →| gt |

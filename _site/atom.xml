@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-07T17:57:40+01:00</updated>
+ <updated>2011-09-08T00:48:16+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -193,7 +193,7 @@ P&lt;br /&gt;
 	&lt;tr&gt;
 		&lt;td&gt;New tab&lt;/td&gt;
 		&lt;td&gt; Click on file in project drawer &lt;/td&gt;
-		&lt;td&gt; ⌘ + Shit + T &lt;/td&gt;
+		&lt;td&gt; ⌘ + ⇧ + T &lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Drop tab&lt;/td&gt;
