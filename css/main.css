@@ -273,10 +273,12 @@ body {
 
 }
 #content h1,
-code,
-#content header p,
 {
   color: #CD0021;
+}
+#content header p{
+  color: #C7C8CA;
+  font-weight: bold;
 }
 time,
 .byline,
@@ -498,9 +500,6 @@ nav li {
 }
 nav li.about {
   width: 50%;
-}
-li.about a {
-  color: #CD0021;
 }
 nav a {
   display: block;
