@@ -219,26 +219,23 @@ pre {
     
 */
 ::selection {
-  background: #9e9b90;
+  background: black;
   text-shadow: none;
-  color: #d9d4bf;
+  color: #CD0021f;
 }
 
 ::-moz-selection {
-  background: #9e9b90;
+  background: black;
   text-shadow: none;
-  color: #d9d4bf;
+  color: #CD0021f;
 }
 table {
 color: black;
-background: #81778b;
+background: white;
 width: 100%;
-border: 5px solid #7d708b;
 border-spacing:2px;
 margin-bottom:20px;
-
 }
-
 td {
 padding: .5em 1em;
 width: 33%;
@@ -247,7 +244,6 @@ table {
   -moz-border-radius:20px;
   -webkit-border-radius:20px;
   border-radius:20px}
-
 
 table tr:last-child td:first-child {
 -moz-border-radius-bottomleft:10px;
@@ -260,7 +256,7 @@ table tr:last-child td:last-child {
 border-bottom-right-radius:10px}
 
 tbody tr:nth-of-type(even){
-  background: #7d708b;
+  background: #E8EDFF;
 }
 
 img::selection {
@@ -273,45 +269,45 @@ body {
   -webkit-tap-highlight-color: #e8cd74;
 }
 #content header h1, #content header p {
-  text-shadow: 0 0 0.0625em #0b0a0d;
+  color: #CD0021;
+
 }
 #content h1,
-h2,
-h3,
 code,
 #content header p,
-strong {
-  color: #d9d4bf;
+{
+  color: #CD0021;
 }
 time,
 .byline,
-#copyright,
+
 figcaption,
 #articles p span,
 .readingTime {
-  color: #7f7d74;
+  color: #CD0021;
 }
 body,
 .links span,
 .byline dt,
 #articles p,
 .readingTime {
-  color: #9e9b90;
+  color: black;
 }
 a {
-  color: #d9d4bf;
+  color: black;
   text-decoration: none;
 }
 .entry-content a, .byline a {
-  border-bottom: 1px solid #7f7d74;
+  color: black;
+  border-bottom: 1px solid black;
 }
 a:hover, #articles a:hover h1 {
-  color: #e8cd74;
-  border-bottom-color: #e8cd74;
+  color: #CD0021;
+  border-bottom-color: #CD0021;
 }
 a:active {
-  color: #9e9b90;
-  border-bottom-color: #9e9b90;
+  color: black;
+  border-bottom-color: black;
 }
 /*  
 
@@ -409,7 +405,6 @@ body {
   margin: 0 auto;
   position: relative;
   -webkit-text-size-adjust: 100%;
-  background: #141117;
 }
 .ie body {
   width: 33.75em;
@@ -503,6 +498,9 @@ nav li {
 }
 nav li.about {
   width: 50%;
+}
+li.about a {
+  color: #CD0021;
 }
 nav a {
   display: block;
