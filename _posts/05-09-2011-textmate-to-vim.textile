@@ -123,7 +123,7 @@ h2. Selecting Text
 | Begin selection | ⇧ [then use arrows to drag over desired text] | v[enters visual mode. use w to move forward one word. ) to move forward one sentence and % to move to next bracket close. also /apple to move forward to next occurrence of apple]|
 |Select all| ⌘ + A | ggVG |
 |Increase selection left one word| ⇧ + ⌥ + ← then alt + ← for each additional word| v(select)w then w for each additional word  |
-|Select a vertical block| ⌥ + drag mouse | ⌃ + V |
+|Select a vertical block| ⌥ + drag mouse | ⌃ + v |
 
 h2. Deleting Text
 
