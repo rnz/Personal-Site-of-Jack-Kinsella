@@ -1,0 +1,55 @@
+For the first six months of its existence, I wrote Cucumber tests for every feature I added to
+my one-man startup, Oxbridge Notes. I followed the formula in the Rspec book: Integration tests 
+first, model specs, then implementation code. I cheated a little by omitting Controller tests, since
+I write anorexic controllers which, on the rare times they do give trouble, are caught by the Cucumber tests.
+
+For a while it was good; but as my applciation grew I started spending more time writing and maintaining my Cukes than
+writing the implementation code; even for code that was trivial to implement. Sometimes I would write a Cuke, be unable
+to get it to pass, and, pushed by deadlines, write the implementation code despite the cuke not testing it accurately,
+and release it, spending the next day trying to figure out how to test the thing.
+
+ I ended up giving up
+on maintaining my Cukes, and with that giving up on integration tests until I recentely rediscovered
+the simple joys or Rspec and Capybara. This is the story of my experience, and I hope that it will
+help other entrepeneurial programmers steer clear of the Cucumer hype and implement a sane testing strategy.
+
+Some background. My application size is medium. It has 70 ActiveRecord backed models, with a total of 623 columns and 107 controllers. There are 16 none Active Record based models. 50 gems.
+
+Part of my trouble with Cucumber was admittedly learning curve. I was new to TDD. But another part was the complexities Cucumber introduce.
+
+My first headache was managing two separate test suites - Cucubmer and Rspec. Sometimes they had different needs in environment files, so I set up and maintained test and cucumber environment file. My autotest and spork needed separate configurations. I had another gem dependency to manage. For every Rspec tag, I had a Cumber hook. Rspec spec_helper was mirroed in env.rb. Test helpers useful in both must be included in both. Granted some of these problems were DRYed into single shared modules, but this took time and effort. There isn't anything wrong with this , but it means Cucumber needed to justify its weight.
+
+The real pain with Cucumber was human introduced error, editor incompatibility, clunky methods of code re-use, wordiness and added abstraction.
+
+h3. Human Introduced error
+Let's face it. We all have an average typo rate, e.g. 1 in 30 letters. The Cucubmer versino is twice as many characters (spaces count), and thus twice as error prone. Mispelling, incorrect white space and more can set off these issues.
+
+visit root_path
+"When I visit the home page"
+
+Another danger is the incorrect assumption that you are using real language and can use synonyms; at one level I knew it was technical, but I was more incline to wing it instead of referencing and . Code completiton doesn't work etierh. my editor would autocmplete visit and roo_path, meaning I'm only typing the minimum.
+
+h3. Increased Cognitive Load
+
+I had to remember not only my rails routes helper names, but I also had to remember what they mapped on to in the paths.rb file. Yes, I can go back and reference, but that takes time. I'm a one man company and time is something I can't spare. 
+
+h3. Code re-use
+
+h3. Harder to read and understand
+
+Two things. That Cucumber is easier to read is bullshit. It's more wordy, and has the penumbra of uncertainty that goes with written words. Code is designed to be certain. And it's less wordy so I can pick it up quicker.
+
+h3. Spread out over many files.
+
+The commonly sprouted knowledge is that if you're writing Cukes correctly (Jonas link), you do some ina  declarateive language, leaving the implemtnation details of the test to another location. Pickle and the like are striclty prohbiited. The language used is stake-holder and your client or whatever can now understand (advantage 1). The price, and there's always a price, is that you have to maintain a separate file where you map the english description to the code. You've got two options:
+1) Keep a file with the same name as the feature but add _steps.rb to the end. This is easy to find, but means your testa ren't dry. For me this was unacceptable. So I chose:
+2) Organize helpers thematically (e.g. log in, buy a product, apply to be a seller), and then share these helpers with other cucumber features.
+ As my project grew, I found it increasinlgy difficulty to find the signatures in the maze of folders. Despite efforts to organise helper methods thematically into files, I didn't know whether I had already written a step for something and sometime ended up rewriting them. This led to issues as I refactored the code and it necessitated rewriting these shared implementatino methods.
+
+= But doesn't this problem exist with Capbyara? Yes, thematic organisation is necessary. But, method sharing is far easier. method names are easier to search for, editors autocomplete and tag them. And they are easier to organise into systems that intelligently call one another. ==
+
+As I type and complain about Cucumber's flaws in my situation I don't mean to say it mightn't work in situatinos I have no experience with, such as in Enterprise or in a consultancy. As someone who hired programmers before I learned to program myself I have a strong feelings that the claim that clients want, need or do collaborate on writing accpetance tests is bullshit, but I could be proven wrong.
+
+I get the argument some make that Cucmber's primary purpose is communication - with stake holders or with future programmers; and I get that lacking documentation is a major issue in large systems (Linux himself said the biggest issues with linux were never technical; they were lack of documentation). But, frankly, as a programmer entrepreneur I know what my website does; and I can explain it to someone within an hour. It's not hard to write a README. And in my consultancy work the conextra formats appear in pivotal tracker. That data can stay there as documentation.
+
+ Likewise I would say that whilst Cucumber would be inferior to Capybara is trivailly Rails projects either in use of odd features or just size (< 15 controllers), 
