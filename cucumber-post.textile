@@ -15,7 +15,7 @@ Cucumber doesn't like to share. It does not have access to our existing test con
 
 h2. Cucumber's routing adds cognitive load 
 
-Cucumber requires to maintain a paths.rb file where English language descriptions of routes were mapped onto their actual URLS, input manually or with URL helpers. Whenever I wrote new steps on a large project I would sometimes describe a given page slightly differently (this project was large and went on for over a year and a half). "the login page", "the sign in page", "the log in page". I'd get an error saying path not defined and have to look back to the paths.rb file to figure out what I'd previously phrased it as (I chose not to add all variations in in the interest of creating a canonical vocabulary and keeping DRY). This added cognitive load ate time and slowed progess.
+Cucumber requires us to maintain a paths.rb file where English language descriptions of routes were mapped onto their actual URLS, input manually or with URL helpers. Whenever I wrote new steps on a large project I would sometimes describe a given page slightly differently (this project was large and went on for over a year and a half). "the login page", "the sign in page", "the log in page". I'd get an error saying path not defined and have to look back to the paths.rb file to figure out what I'd previously phrased it as (I chose not to add all variations in in the interest of creating a canonical vocabulary and keeping DRY). This added cognitive load ate time and slowed progess.
 
 You might argue I'd have the same issue with regular routes file. True they can be difficult to remember; but I use them everyday in implenting the application; and I had to know them anyway so Capybara's named paths added nothing to the difficulty.
 
@@ -23,7 +23,71 @@ You might argue I'd have the same issue with regular routes file. True they can 
 [Capybara has less]
 [Show how cogtnivit load]
 
-h2. C 
+h2. Cucumber robs you of tools of abstraction
+
+h2. Cucumber is a nightmare to organise for code re-use
+
+The commonly sprouted knowledge is that if you're writing Cukes correctly (Jonas link), you're using declarative language, leaving the implemtnation details of the test defined elsewhere. He strictly prohibits pickl (and should have banned web steps too by extension). The language used is stake-holder and your client or whatever can now understand. The price, and there's always a price, is that you have to maintain a separate file where you map the english description to the code. Keeping these organised is trouble. 
+
+The auto-generated convention is to keep them in a file with the same name as the feature with _steps.rb added to the end. This makes the correlated mapped test methods easy to find, but causes problems with code-reuse. Say your feature is adding a taxon to a product. You write a feature which sets everyting up for this scenario in the add_a_taxon_to_product_post_steps.rb. Now, 12 features later when you are writing reports on the taxons and you want to set things up. If you haven' already forgotten that you did it previous (and so repeat it making your code less DRY and causing chaos after refacotring), I've found it difficult to remember where I put the original; and often browse through all the possibliy related files (create_taxon.rb, edit_taxon.rb). Due to his difficulty I tried something recommend by Engine Yard [cite]
+
+Organize helpers thematically (e.g. log in, buy a product, apply to be a seller) in their own files and then share these helpers with other cucumber features. This is better; but choosing the right folder is hard, and often two or three seem appropriate. In future I might create one giant helper folder.In fairness this problem exists too in Capybara, and the one folder solution makes sense to me. But, there is a key difference: Cucumber people write their reusable steps in Gherkin, instead of Ruby:
+When /^I toggle the full sample/ do 
+  steps %Q{
+    When I am on the last upload page
+    And I follow "full_samples"
+    And I press "toggle_full_sample"
+    When I refresh the page
+  }
+end
+
+Vs 
+def toggle_full_sample
+  visit upload_path(Upload.lst)
+  click_link "full_samples"
+  click_button "toggle_full_sample"
+  refresh
+end
+
+Without dealing with the fussy ENglish language syntax this is much easier. There is nothing stopping you from using the toggle_full_sample in the Cucumber step definition; and I velieve this to bes best practice; bjust people tend to stick with Cucumber mindset and write setps within steps. This, along with Web stesp should be stripped from the library. Here Cucumber doesn't force you to carry extra weight; it just encourages you.
+
+
+= But doesn't this problem exist with Capbyara? Yes, thematic organisation is necessary. But, method sharing is far easier. method names are easier to search for, editors autocomplete and tag them. And they are easier to organise into systems that intelligently call one another. ==
+
+As I type and complain about Cucumber's flaws in my situation I don't mean to say it mightn't work in situatinos I have no experience with, such as in Enterprise or in a consultancy. As someone who hired programmers before I learned to program myself I have a strong feelings that the claim that clients want, need or do collaborate on writing accpetance tests is bullshit, but I could be proven wrong.
+
+h2. Cucumber at its best
+
+= At its best Cucumber should:
+* Share global test helper modules with Rspec
+* Write declartive steps, staying the hell away from Web steps
+* Not exercise error paths
+* Define its steps in terms of Capybara instead of websteps of other steps
+* Use code exclusivly underneath
+* one big file of helper methods - in Ruby not web-steps
+* Be conise - 3 steps per scenario
+
+h2. Linchpin
+
+Cucumber has these costs. What are its benefits? 
+Communication with business via plain text stories
+[ not plain text. better done with capy]
+[ no one reads it]
+[ you're a startup or solopreneur. you are nothing less than an idiot for using it here. ]
+[ pivotal tracker makes more sense ]
+
+Documentaion
+[ as above. not plain text. but good. must maintain]
+[ easier outside]
+
+Encouraging testing
+
+True at first. It was my first foray into testing, and for that I applaud it. The English like syntax made it approachable.
+I ended up abandoning Cucumber; it cost me as much time to write and maintain and organise Cukes as it did to code new features. Granted I made some mistakes. I commited a common error, one encourage throughout the community of calling steps with steps. I used the websteps.
+[ caused me to give up]
+[capybara significantly faster to write due to eidito and tools]
+
+Cucumber is valuable if it a) fulfill its promises; and b) does so better than cheaper options 
 
 
 h2. Cucumber, as ubiquitously used, does not fulfill its promises
