@@ -1,4 +1,8 @@
+
+
 The tolls Cucumber takes.
+
+The price of using Cucumber over straight integration tests; a critical look at its supposed advantages; and conclusions on whether you should still be using it.
 
 h2. Cucumber breaks your editor
 
@@ -25,13 +29,16 @@ You might argue I'd have the same issue with regular routes file. True they can 
 
 h2. Cucumber robs you of tools of abstraction
 
-h2. Cucumber is a nightmare to organise for code re-use
+h2. Cucumber oragnisation defaults are impractical 
 
 The commonly sprouted knowledge is that if you're writing Cukes correctly (Jonas link), you're using declarative language, leaving the implemtnation details of the test defined elsewhere. He strictly prohibits pickl (and should have banned web steps too by extension). The language used is stake-holder and your client or whatever can now understand. The price, and there's always a price, is that you have to maintain a separate file where you map the english description to the code. Keeping these organised is trouble. 
 
 The auto-generated convention is to keep them in a file with the same name as the feature with _steps.rb added to the end. This makes the correlated mapped test methods easy to find, but causes problems with code-reuse. Say your feature is adding a taxon to a product. You write a feature which sets everyting up for this scenario in the add_a_taxon_to_product_post_steps.rb. Now, 12 features later when you are writing reports on the taxons and you want to set things up. If you haven' already forgotten that you did it previous (and so repeat it making your code less DRY and causing chaos after refacotring), I've found it difficult to remember where I put the original; and often browse through all the possibliy related files (create_taxon.rb, edit_taxon.rb). Due to his difficulty I tried something recommend by Engine Yard [cite]
 
-Organize helpers thematically (e.g. log in, buy a product, apply to be a seller) in their own files and then share these helpers with other cucumber features. This is better; but choosing the right folder is hard, and often two or three seem appropriate. In future I might create one giant helper folder.In fairness this problem exists too in Capybara, and the one folder solution makes sense to me. But, there is a key difference: Cucumber people write their reusable steps in Gherkin, instead of Ruby:
+Organize helpers thematically (e.g. log in, buy a product, apply to be a seller) in their own files and then share these helpers with other cucumber features. This is better; but choosing the right folder is hard, and often two or three seem appropriate. In future I might create one giant helper folder.In fairness this problem exists too in Capybara, and the one folder solution makes sense to me.
+
+
+ But, there is a key difference: Cucumber people write their reusable steps in Gherkin, instead of Ruby:
 When /^I toggle the full sample/ do 
   steps %Q{
     When I am on the last upload page
@@ -150,11 +157,6 @@ p7 Code reuse in Cucumber is lunacy. Step definitions calling step definitions. 
 [Code reuse is a good thing in tests]
 [Code reuse is easier with capybar]
 
-
-p10 Cucumber is impossible to organise
-[Show how its hard ot organise]
-[Say why its bad you cannot organise]
- [Capybara is easier to organise]
 
 Commonly pushed advantages smell like BS
 p12 Cucumber is easier to read than code.
