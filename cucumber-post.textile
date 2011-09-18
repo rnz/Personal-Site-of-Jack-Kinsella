@@ -7,15 +7,13 @@ without needing to ever type the method name in full or remember its signature e
 
 Cucumber's steps are nothing more than method names in Gherkin syntax. Because they contain white space, include their parameters at unpredictable locations within the method definition instead of at the end as in Ruby, and use regular expressions to match various calls ("and|or"), modern editor's cannot use these powerful features. Productivity is damaged. This is the first toll Cucumber takes.
 
-[breaking editor is bad]
+h2. Cucumber is a needy dependency
 
-Searching project wise also
-adding technical risk when refactoring.
+As Rails programmers we no doubt prioritise unit tests for our models, using either libraries like Test::Unit or RSpec. Bigger projects necessitate helper methods, likely kept in neat modules included as necessary into our tests. We might use Spork to start our tests quickly; or autotest or watchr to run our tests automatically. We might add gems to include functionality that enhances our ability to test, a common example being accessing emails. We evolve a system of tags, perhaps to separate slow tests from fast tests. Not only do we maintain a cleanly factored code base and its set of dependencies; we also must do so for our test suite.
 
-p2 Capybara method do not
+Cucumber doesn't like to share. It does not have access to our existing test configurations or helper methods. Our existing system of tagging test methods does not carry over. Cucumber must be setup separately, requiring duplication and introducting congnitive load, complexity and scope for error. All this must be maintained, costing time and effort. Creators of gems which aid our ability to test must cater for two masters instead of focusing efforts on the one. Cucumber takes another toll on our collective productivity.
 
-Writing pure Ruby integration tests lets you reclaim your productivity through
-your editor's full range of features; on big projects this is a god send.
+h
 
 p3 Cucumber adds requirements which need to be managed
 [extra requirements are bad]
