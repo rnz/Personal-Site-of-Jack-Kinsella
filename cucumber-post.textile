@@ -52,19 +52,29 @@ Cucumber adds an abstraction layer over Rails routes, an area which already cong
 
 I've experimented with removing the paths.rb file are automagically determining the route, but this ends up either turning the language of your Cuke into unacceptable steps such as "And then I am on the new user session page" or, if you want to preserve the non-techncial communicative dimension of Cucumber, then you'll need unacceptably complex logic. By defintion, paths.rb is a necessary part of Cuking It Right.
 
-h3. 4. Cucumber organisation defaults are impractical 
+h3. 4. Cucumber's organisation defaults are impractical 
 
-My favorite feature of Rails, is one of its simplest:everything has a home. Mailers go in one folder, models go in another and configurations go somewhere else. Presuming that a project stuck to convention, you can find the source code for any functionality effortlessly. This brings enormous productivity advantages.
+My favorite feature of Rails, is one of its simplest: everything has its right place. Mailers go in one folder, models go in another and configurations go somewhere else else. Presuming that a project sticks to convention, you can find the source code for any function effortlessly. This brings enormous productivity advantages.
 
-If you Cuke correctly (Jonas link), you write your steps in declarative style step definitions, written using the language of the stake-holder, word that he can understand. Jonas says that the only use of Pickle is to land you in one, and, carrying Jonas’s logic to its natural conclusion, one he oddly never let himself arrive at, web steps.rb should be immediately deleted. Using Cucumber this way requires you keep a mapping of your abstract definitions to their implementing code. 
+If you Cuke correctly (Jonas link), you've write your steps in declarative style step definitions, written using the language of the stake-holder, word that he can understand. This means, amongst other things, that you don't use hash tables of model attributes in your scenarios, or css selectors or any other technical details,
 
-Cucumber’s generated convention is to keep these steps in a file with the pattern FEATURE_NAME_steps.rb. The step definitions are trivial to find; that is until you begin reusing your steps to keep DRY. Say you write a feature which promotes a some content on the homepage . You’ll be prompted to define “Given I promote a post” in promote_posts_feature_steps. Twenty six weeks later you are writing a taxon feature and that depends on having a promoted post. I’ve found two things tend to happen. 
+[check convention]
+Upon running these files Cucumber will ask you to create step definitions. Cucumber’s convention is to keep these steps in a file with the pattern FEATURE_NAME_steps.rb. The step definitions are trivial to find; that is until you begin reusing your step definitions so as to get your testing code DRY. Say you write a feature which promotes a post on the homepage . You will place your step definition for “Given I promote a post” in promote_posts_feature_steps. Twenty six weeks later you are writing another feature connected to promoting posts, and you'd like to reuse the step. I’ve found two things tend to happen in this scenario: 
 
-In the happier scenario I remember the original method exists, look up it’s name and reuse it. Ideally I abstract it to a global helper, rather than leave it in the promote_posts_feature_steps.rb, since its position there suggests exclusive connection with that feature, when this is no longer true. The difficulty here is that now you need to thematically separate shared step definitions into files. This is harder than it sounds ; as the barriers in integration tests are difficult to call. If I were to use Cucumber again, I’d like to try one big file. Not pretty, but solvable. Now for the unhappy route.
+In the happier scenario I remember the original method exists, look up it’s name and reuse it. Ideally I abstract it to a global helper, rather than leave it in the promote_posts_feature_steps.rb, since its position there suggests exclusive connection with that feature, when this is no longer true. The difficulty here is that now you need to thematically separate shared step definitions into files. This is harder than it sounds; as the conceptual barriers in integration tests are blurred. If I were to use Cucumber again, I’d like to try one big file. Not pretty, but solvable. Now for the unhappy route.
 
 I might have forgotten that I previously wrote a step definition for promoting a post (or not seen that another programmer had done so), and so I repeat the knowledge of do so in the taxon_steps.rb, My code is no longer DRY and if I forget to refactor one version I will cause confusing test failures. Cucumber’s default way of organising features sets you up for these difficulties.
 
-h4. 5. Cucumber syntactically discourages simple code reuse.
+h3. 5. Increased Wordiness
+
+Brevity is the sole of wit. If you are using Ruby, Clojure, CoffeeScript, or Haskell you surely know this. Yet, you use Cucumber to write method names with two or three times as many characters as theire plainer Capybara equivalents. Compare:
+
+Given I am on the home page #27 characters
+visit root_path #15 characters
+
+Increased wordiness reduces expressiveness and power, and introduces error on the basis that there more characters typed is more places a typo can seep in. Yes this is necessary for non techncial communication, but remember we're talking about the disadvantages here.
+
+h4. 6. Cucumber syntactically discourages simple code reuse.
 
 Cucumber users tend to write their step definition in terms of other step definitions.  The library creators have implicitly encouraged this by creating ever simpler means for doing so, culminating in the current steps function:
 
@@ -77,9 +87,9 @@ When /^I toggle the full sample on the “(^”.*)” product/ do |product_name|
   }
 end
 
-This is an abomination. Why? For one you get all the disadvantages of Cucumber with none of its alleged advantages. You have increased wordiness and thus higher error rates, your editor breaks, your method names are difficult, or impossible to remember, and your tests run more slowly. Worst of all, unless you are disciplined in refactoring, your original step definitions for the nested step will remain, say in the uploads_steps.rb file. This is problematic because it’s use outside of uploads.feature is not to be expected, and so the definition may get deleting if you decide to scrap the uploads feature. To avoid this the reused step definition should be moved to clearly marked global helper step files. But even if you do this, you must still suffer Cucumber’s syntax despite there being no good argument to do so,, for the implementation of the step definitions is of no interest to the stake holder.
+This is an abomination. Why? For one you get all the disadvantages of Cucumber with none of its advantages. You have increased wordiness and thus higher error rates, your editor breaks, your method names are difficult, or impossible to remember, and your tests run more slowly. Worst of all, unless you are disciplined in refactoring, your original step definitions for the nested step will remain, say in the uploads_steps.rb file. This is problematic because it’s use outside of uploads.feature is not expected, and so the definition may get deleted when someone on the project scraps the uploads feature. To avoid this the reused step definition should be moved to clearly marked global helper step files immediately after resue. But even if you are disciplined and careful enough to do this, you still suffer the penalties of Cucumber’s syntax despite there being no non technical stake holder who will ever read this code. 
 
-This anti-pattern is rampant in the Rails community. Even Jonas, who otherwise seems to use Cucumber sensibly, promotes this.  I don’t see the point. When you are in the realm of the programmer why not take full advantage of the brevity, precision, composability, regularity and editor support of regular functions?  
+This anti-pattern is rampant in the Rails community. Even Jonas, who otherwise Cukes It Reasonably Alright, promoted this. Luncacy. When you are in the programmer territory why wouldn't you take full advantage of the brevity, precision, composability, regularity and editor support of a full programming language? It stumps me.
 
 When /^I toggle the full sample on the “(^”.*)” product/ do |product_name|
    admin do 
@@ -90,8 +100,6 @@ When /^I toggle the full sample on the “(^”.*)” product/ do |product_name|
 end
 
 The set of features in Cucumber facilitating reuse of steps, alongside the emphasis on Cucumber’s web steps over Capbyara, to the point where the seeming majority of programmers only know of the Cucumber version, is a technical tragedy.
-
-
 
 h2. When Should I Be Using Cucumber
 
