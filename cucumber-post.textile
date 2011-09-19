@@ -1,12 +1,117 @@
-How Cucumber costs developers and business thousands of hours in lost productivity
+Cucumber: The Wrong Tool For Almost Every Job
 
-I recently heard an account of how a web development gig went from the points of view of both the consultancy and the client. Talking with the designer at the consultancy, he told me about how his company doesn't compromise on what they know is right, and how on their latest gig they convinced their reluctant client to do things their way. He reasoned that although this kind of behaviour may hurt the consultancy now, in time they would be recognised for providing true long term value. According to him, the client liked them, and the gig went especially well. 
+I recently heard an account of how a web development gig went from the points of view of both the consultancy and the client. Talking with the designer at the consultancy, he told me about how his company doesn't compromise on what they know is right. During their latest gig they educated a reluctant client and him to do things the Right Way. The designer reasoned that although acting this way may hurt the consultancy in the near future, with time they will be recognised for providing long term value. According to him, the client liked them, and the gig went especially well. 
 
 A few days later I bumped into the client and inquired about their recent development work. 
 
-"....a nightmare to deal with. They wouldn't listen to what I wanted, and wasted my time with things I didn't care about. In fairness they did good technical work. But, my god, they had absolutely no business sense. I mean all I wanted was a website [it was a web app; but lots of busienss types don't distinguish]. I can't see them lasting much longer."
+"Never again. [They ] were a nightmare to deal with. They wouldn't listen to what I wanted, and wasted my time with things I didn't care about. In fairness they did good technical work. But, my god, they had absolutely no business sense. I mean all I wanted was a website*."
 
-This is an essay about inappropriate tools, sloppy thought and the Cucumber testing framework.
+* It was a web app, but lots of people don't distinguish between the two.
+
+This is an essay about how Cucumber is the wrong tool for almost every job. I'm going to look at the advantages and disadvantages to using Cucumber, contrasting this with real world usage, and then draw up a schema for when Cucumber is justified as opposed to when its use it is outright unforgivable.
+
+
+
+h2. The Advantages of Cucumber
+
+The alleged advantages of Cucumber is well trodden territory so I'll just give a summary of the most commonly cited arguments in Cucumber's favour:
+
+# Cucumber is in plain language so non-technical stake holders can read them and maybe even write them.
+# Cucumber forces you to slow down and think about the value a feature brings before delving into implementation.
+# Cucumber is high level documentation.
+# Cucumber, with its high level descriptors and understandable web steps, makes testing less scary for developers beginning automated testing.
+# Cucumber is language agnostic and therefore is ideal is hyper-polyglot projects.
+
+[references]
+
+h2. The Disadvantages of Cucumber
+
+There has not been enough thought on the downsides of using Cucumber and so I'm going to get into some detail here. I'm comparing Cucumber to old fashioned integration tests, or request specs if your prefer RSPEC.
+
+h3. 1. Cucumber breaks text editors
+
+Text editors, like VIM, multiple productivity. Auto-completion ease the use of long, descriptive method names as we no longer need to type them in full or remember their signature precisely. Compilation checks prior to saving catch many syntax errors before they cause harm. Our text editors reduce errors we introduce through typo, forgetfulness, or sloppiness.
+
+Cucumber's steps are method names in Gherkin syntax. Some argue that these steps aren't code, for example when a declarative style is used which omits the use of any paramters. This is rreleavant here because, whatever you want to call the step definitions, they still break our text editors because they contain white space, include their parameters at non-standard locations (When “john@gmail.com” has “4” unsent messages), and use regular expressions for pattern dispatch ("and|or"). Our editors are not adapted to deal with this syntax and so autocomplete, search and other features break down, slowing productivity.
+
+h3. 2. Cucumber requires maintainenance of parallel worlds
+
+I'm assuming that anyone thinking of using Cucumber already tests their models using something like Test::Unit or Rspec. Both of these libraries require you to set up a separate environment, their own worlds if you will.  We organise and manage increasingly complicated test suites by placing shared test code into helper methods shared across tests and categorising our tests using tagging systems. We use tools like Spork to speed up our tests, or watchr to run them automatically. We add Gems to gain access to helper methods which aid in testing key areas, perhaps freezing time, reading emails, or faking web requests. 
+
+Cucumber doesn't like to share. It does not automatically use many of our exsting test configurations and helper methods. Our taxonomy of tags carry no weight we must mirror the system without cucumber. We set up Cucumber separately, often duplicating code, and always increasing complexity and thus scope for error. These parallel worlds must be maintained by the project owner, and creators of testing gems must now cater for two masters. Cucumber takes another toll.
+
+h3. 3. Cucumber's routing causes you cognitive strain
+
+Cognitive strain here refers to the total weight of facts and rules we must hold in our minds to be productive using a given technology. Rails requires much of us already; All beginners face an initial period of difficulty as they acclimatize to the  labyrinthine naming patterns of routes, the rules about what does and does not get pluralized, and the subtle distinctions between ActiveRecord::Base persistence methods. Less cognitive strain is a basic good.
+
+In default Cucumber usage the mention of a certain web page, for example the login path, requires us to map our natural language description to our technical description, generally done with Rail’s baked in URL helpers.:
+
+    when /the seller's overview page/  
+        "/admin/sellers"
+
+Due to this added abstraction my productivity dropped. Frequently when I added new features I unintentionally described a page with different natural language, perhaps I might call "the login page" the "the sign in page" or "the log in page". Cucumber complained that it could not find the path and I had to look back to the paths.rb file to remind myself of my previously phrasing. For a while I was tempting to use regular expressions to match the many variations I liked to use, but I quickly stopped this in the interest of creating canonical vocabulary and keeping DRY. Adding abstraction to the already confusing route-naming system was an unwelcome strain which damaged productivity and killed enjoyment.
+
+
+h3. 4. Cucumber organisation defaults are impractical 
+
+My favorite feature of Rails, is one of its simplest:everything has a home. Mailers go in one folder, models go in another and configurations go somewhere else. Presuming that a project stuck to convention, you can find the source code for any functionality effortlessly. This brings enormous productivity advantages.
+
+If you Cuke correctly (Jonas link), you write your steps in declarative style step definitions, written using the language of the stake-holder, word that he can understand. Jonas says that the only use of Pickle is to land you in one, and, carrying Jonas’s logic to its natural conclusion, one he oddly never let himself arrive at, web steps.rb should be immediately deleted. Using Cucumber this way requires you keep a mapping of your abstract definitions to their implementing code. 
+
+Cucumber’s generated convention is to keep these steps in a file with the pattern FEATURE_NAME_steps.rb. The step definitions are trivial to find; that is until you begin reusing your steps to keep DRY. Say you write a feature which promotes a some content on the homepage . You’ll be prompted to define “Given I promote a post” in promote_posts_feature_steps. Twenty six weeks later you are writing a taxon feature and that depends on having a promoted post. I’ve found two things tend to happen. 
+
+In the happier scenario I remember the original method exists, look up it’s name and reuse it. Ideally I abstract it to a global helper, rather than leave it in the promote_posts_feature_steps.rb, since its position there suggests exclusive connection with that feature, when this is no longer true. The difficulty here is that now you need to thematically separate shared step definitions into files. This is harder than it sounds ; as the barriers in integration tests are difficult to call. If I were to use Cucumber again, I’d like to try one big file. Not pretty, but solvable. Now for the unhappy route.
+
+I might have forgotten that I previously wrote a step definition for promoting a post (or not seen that another programmer had done so), and so I repeat the knowledge of do so in the taxon_steps.rb, My code is no longer DRY and if I forget to refactor one version I will cause confusing test failures. Cucumber’s default way of organising features sets you up for these difficulties.
+
+h4. 5. Cucumber syntactically discourages simple code reuse.
+
+Cucumber users tend to write their step definition in terms of other step definitions.  The library creators have implicitly encouraged this by creating ever simpler means for doing so, culminating in the current steps function:
+
+When /^I toggle the full sample on the “(^”.*)” product/ do |product_name|
+  steps %Q{
+    When I am on the last upload page for “#{product_name}”
+    And I follow "full_samples"
+    And I press "toggle_full_sample"
+    When I refresh the page
+  }
+end
+
+This is an abomination. Why? For one you get all the disadvantages of Cucumber with none of its alleged advantages. You have increased wordiness and thus higher error rates, your editor breaks, your method names are difficult, or impossible to remember, and your tests run more slowly. Worst of all, unless you are disciplined in refactoring, your original step definitions for the nested step will remain, say in the uploads_steps.rb file. This is problematic because it’s use outside of uploads.feature is not to be expected, and so the definition may get deleting if you decide to scrap the uploads feature. To avoid this the reused step definition should be moved to clearly marked global helper step files. But even if you do this, you must still suffer Cucumber’s syntax despite there being no good argument to do so,, for the implementation of the step definitions is of no interest to the stake holder.
+
+This anti-pattern is rampant in the Rails community. Even Jonas, who otherwise seems to use Cucumber sensibly, promotes this.  I don’t see the point. When you are in the realm of the programmer why not take full advantage of the brevity, precision, composability, regularity and editor support of regular functions?  
+
+When /^I toggle the full sample on the “(^”.*)” product/ do |product_name|
+   admin do 
+        feature_latest_upload #defined as a global helper
+        refresh_page
+        should_see(sample_path, “features”)
+    end
+end
+
+The set of features in Cucumber facilitating reuse of steps, alongside the emphasis on Cucumber’s web steps over Capbyara, to the point where the seeming majority of programmers only know of the Cucumber version, is a technical tragedy.
+
+
+
+h2. When Should I Be Using Cucumber
+
+We've seen that Cucumber has advantages; we've also seen that Cucumber has its disadvantages. Whether Cucumber use makes sense is context-dependent, becaues the relative weight of the advantages are higher or lower depending on the situation.
+
+Assuming the truth of these advantages for now, we can determine a schema for helping us decide when to use Cucumber over plain
+old integration tests.
+
+|Using 3 more languages extensively? |Should I Be Cuking It?| Why? |
+|You have a project with a budget under $20k | No 
+|You are working alone| God no | You are technical and can read Capybara.|
+|You are working on an open source project | No | Everyone is technical. |
+|You ar working in an early startup| No | You are the tech department / easier to communicate with your co-founder|
+
+This logic suggests five rules about sensible usage:
+
+
+The problem is we aren't following these sensible rules.
+
+Research:
 
 h2. What clients want
 
@@ -24,25 +129,6 @@ scenario:It does what its supposed to
 I put an asterisk beside "it" to signal reference to the totality of features you'd previously agreed to - whether that was explicitly through a spec document, exchanged emails, and conversations, or implicitly, in the sense of reasonable expectations, such as 'all websites I've ever seen do that so mine ought to too'. Telling a user that they got their email/password combon is en example of this.
 
 In my experience as a consumer and producer of development services, these features are documented somewhere outside the code, either in an Excel sheet or on something like Pivotal Tracker, typically stored on a convenient single page.
-
-h2. The Advantages of Cucumber
-
-This alleged advantages of Cucumber is well trodden territory so I'll just give a summary of the most commonly bandied arguments in Cucumber's favour:
-
-# Cucumber is in plain language so non-technical stake holders can read them and maybe even write them.
-# Cucumber forces you to slow down and think about the value a feature brings before delving into implementation.
-# Cucumber is high level documentation.
-# Cucumber, with its high level descriptors and understandable web steps, makes testing less scary for developers beginning automated testing.
-# Cucumber is language agnostic and therefore is ideal is hyper-polyglot projects.
-
-With these in mind this implies three things about good use cases for Cucumber
-
-This logic suggests five rules about sensible usage:
-
-
-The problem is we aren't following these sensible rules.
-
-Research:
 
 h2. The Costs Of Cucumber
 
@@ -110,25 +196,6 @@ When /^I toggle the full sample on the “(^”.*)” product/ do |product_name|
 end
 
 The set of features in Cucumber facilitating reuse of steps, alongside the emphasis on Cucumber’s web steps over Capbyara, to the point where the seeming majority of programmers only know of the Cucumber version, is a technical tragedy.
-
-H3. What are Cucumber’s advantages?
-
-So far we’ve seen that Cucumber has its costs. Alone this is no reason to discard it, for if the advantages Cucumber brings to a project outweigh its costs, Cucumber would be an excellent deal. So, lets ask, what advantages does Cucumber allegedly bring that plain old integration tests cannot?
-
-1)	Cucumber is in plain language so non technical stake holders can read them.
-2)	Cucumber forces you to slow down and think about the value a feature brings
-3)	Cucumber is documentation
-
-To this I would add a personal and heartfelt advantage: Cucumber made testing less scary. It’s English like syntax, and high level descriptors, the very web steps I’ve grown to despise so much,  cooed me into starting TDD; and I’ve never looked back.
-
-With these in mind this implies three things about good use cases for Cucumber
-
-This logic suggests five rules about sensible usage:
-
-
-The problem is we aren't following these sensible rules.
-
-Research:
 
 h2. The Costs Of Cucumber
 
