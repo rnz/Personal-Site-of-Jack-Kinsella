@@ -8,9 +8,7 @@ A few days later I bumped into the client and inquired about their recent develo
 
 * It was a web app, but lots of people don't distinguish between the two.
 
-This is an essay about how Cucumber is the wrong tool for almost every job. I'm going to look at the advantages and disadvantages to using Cucumber, contrasting this with real world usage, and then draw up a schema for when Cucumber is justified as opposed to when its use it is outright unforgivable.
-
-
+This is an essay about how Cucumber is the wrong tool for almost every job. I'm going to look at the advantages and disadvantages to using Cucumber, compare this with real world usage, and then draw up a schema for when Cucumber is justified as opposed to when its use it is outright unforgivable. And, in case you are wondering, thsi is an opinion informed by experience: I've used Cucumber in six projects, as a lone developer, a collaborator on a larger team and as a client of programming services. 
 
 h2. The Advantages of Cucumber
 
@@ -40,17 +38,19 @@ I'm assuming that anyone thinking of using Cucumber already tests their models u
 
 Cucumber doesn't like to share. It does not automatically use many of our exsting test configurations and helper methods. Our taxonomy of tags carry no weight we must mirror the system without cucumber. We set up Cucumber separately, often duplicating code, and always increasing complexity and thus scope for error. These parallel worlds must be maintained by the project owner, and creators of testing gems must now cater for two masters. Cucumber takes another toll.
 
-h3. 3. Cucumber's routing causes you cognitive strain
+h3. 3. Cucumber's routing causes you cognitive strain 
 
-Cognitive strain here refers to the total weight of facts and rules we must hold in our minds to be productive using a given technology. Rails requires much of us already; All beginners face an initial period of difficulty as they acclimatize to the  labyrinthine naming patterns of routes, the rules about what does and does not get pluralized, and the subtle distinctions between ActiveRecord::Base persistence methods. Less cognitive strain is a basic good.
+Cognitive strain is the otal weight of facts and rules we must hold in our minds to be productive using a technology. Rails strains; When I began using Rails four years ago I faced an extended period of difficulty as I acclimatized to the labyrinthine naming patterns of routes, rules about what does and does not get pluralized, and subtle distinctions between various ActiveRecord::Base persistence methods. Strain is sometimes necessary to enable us to operate powerful tools, but all things equal, less strain for equal power is a good thing.
 
-In default Cucumber usage the mention of a certain web page, for example the login path, requires us to map our natural language description to our technical description, generally done with Rail’s baked in URL helpers.:
+When testing Rails application using Cucumber the mention of a certain web page, for example "the login page", requires us to map this natural language descript to a more technical description. Here's a reminder:
 
-    when /the seller's overview page/  
-        "/admin/sellers"
+[test that it won't pick up someting like this]
+    when /the login page/  
+       login_path
 
-Due to this added abstraction my productivity dropped. Frequently when I added new features I unintentionally described a page with different natural language, perhaps I might call "the login page" the "the sign in page" or "the log in page". Cucumber complained that it could not find the path and I had to look back to the paths.rb file to remind myself of my previously phrasing. For a while I was tempting to use regular expressions to match the many variations I liked to use, but I quickly stopped this in the interest of creating canonical vocabulary and keeping DRY. Adding abstraction to the already confusing route-naming system was an unwelcome strain which damaged productivity and killed enjoyment.
+Cucumber adds an abstraction layer over Rails routes, an area which already congitively strains. This led to pain and error on larger projects. As I added new features I presumed I would unintentionally describe some routes with numberous natural language descriptions. Perhaps I'd call "the login page" the "the sign in page" one day, and "the log in page" another. When I did this, Cucumber complained that it could not find the permuted path and so I had to look inside the paths.rb file to remind myself of my previous phrasing, then return to the step definition and fill in the correct English language mapping of the route helper mapping to the actual url. That's a lot of mental mapping, and a lot of room for error.
 
+I've experimented with removing the paths.rb file are automagically determining the route, but this ends up either turning the language of your Cuke into unacceptable steps such as "And then I am on the new user session page" or, if you want to preserve the non-techncial communicative dimension of Cucumber, then you'll need unacceptably complex logic. By defintion, paths.rb is a necessary part of Cuking It Right.
 
 h3. 4. Cucumber organisation defaults are impractical 
 
