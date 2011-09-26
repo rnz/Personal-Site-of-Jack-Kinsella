@@ -198,6 +198,7 @@ p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
+  font-size: 1.2em;
 }
 #content ul {
   list-style: square;
@@ -417,8 +418,10 @@ cite {
 }
 blockquote {
   float:right;
-  text-align:center;
+  text-align:left;
   margin-bottom: 0.5625em;
+  margin-left: 40px;
+  color: #696969;
 }
 #education {
  clear:both;
