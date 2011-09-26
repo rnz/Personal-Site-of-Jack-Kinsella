@@ -1,6 +1,6 @@
 The SuperFood Effect: Acceptance tests with cucuber, vested interests, and sloppy thought
 
-I recently heard an account of a web development project both from the point of view of the consultancy doing the work and the client receiving it. The designer on the project told me how his company didn't compromise on what they know to be right right. In their latest gig they educated a client about how to do development work the Right Way. Although breaking down the clien't assumption about how things are done might annoy them at first,once they realize the consultancy's wisdom they will have won a lasting business relationship. Indeed the founder told me that him and the client were now "good friends".
+I recently heard an account of a web development project both from the point of view of the consultancy and the client. The designer told me how his company didn't compromise on what they know to be right. In their latest gig they educated a client about how to do development work the Right Way. "Breaking the client's assumptions about how things are done might annoy them at first, but we will not do bad work. Good work leads to a solid reputation and lasting business success". The founder of the web consultancy boasted that not only have the project went well, but the client and him were now "good friends".
 
 A few days later I bumped into the client and inquired about their recent development work. 
 
@@ -8,37 +8,51 @@ A few days later I bumped into the client and inquired about their recent develo
 
 It's obvious that the consultancy screwed up; they pushed the manager to use agile methodologies when it wasn't appropriate. He was given read feature files to approve, yet he didn't give a damn. Step out of your programmer skin for a momement and pretend you are a busy manager while you read this:
 
-Feature: In order to get more people to sign up
-         As a current user
-         I want to send my friend email invitations
+Feature: In order to let customers organise their information
+         As an adminitrator of a microsite
+         I want to be able to add subpages
 
- Scenario: sends an invitation
-   Given a user with email "bob@bob.bob"
-   When I sign in as "bob@bob.bob"
-   And I follow "Invite via Email"
-   And I fill in "Invitee" with "alex@example.com"
-   And I press "Send an invitation"
-   Then I that person should have recieved an invite 
+Scenario: Adding a subpage
+  Given I am logged in
+  Given a microsite with a home page
+  When I press "Add subpage"
+  And I fill in "Title" with "Gallery"
+  And I press "Ok"
+  Then I should see a document called "Gallery"
 
-This is purportedly stake-holder language. Bullshit. I've managed two development projects before, and I've also worked on a variety of projects for other stakeholder's. The following is the stake-holder language I know:
+Scenario, not feature description taken from: http://elabs.se/blog/15-you-re-cuking-it-wrong
 
-  I should be able to send invitations to my friends via email.
+This is purportedly stake-holder language. I disagree. I've outsource two projects prior to becoming a technie, and I've also worked on a variety of projects for other stakeholders. The following is the stake-holder language I would have used:
 
-If it takes you twelves lines to communicate this idea, then you've wasted my time. And, considering that I'm the stakeholder here, why in earth's name are you "pausing to consider the business value of a feature". I, the client, have already determined the business value; in accepting a quote from you I've determine that the business benefit is worth its price. You second guessing using "in order to" steps is ficticious. This isn't your realm. Indeed, this is mild form of churning; in case you didn't know you weren't hired to play make-belief manager.
+  I can add subpages with custom titles to my microsite.
 
-Conventienly the stake-holder language is expressed best with Test::Unit integration tests.
+If it takes you ten lines to communicate this idea, then you've wasted my time. Granted, BDD experts like Elizabthe Keogh would point out that even Jonas of Elabs was Cuking it wrong even in the above example, taken from his post "You're Cucking It Wrong".  She tell us:
 
-test "i should be able to send invitations to my friends via email" 
+"If your scenario starts with “When the user enters ‘Smurf’ into ‘Search’ text box…” then that’s far too low-level. However, even “When the user adds ‘Smurf’ to his basket, then goes to the checkout, then pays for the goods” is also too low-level. You’re looking for something like, “When the user buys a Smurf.”"
+From http://sirenian.livejournal.com/71439.html
 
-Smart members of the community, like say DHH, have been testing this way since the start. But you know better right? You've read the Cucumber homeage, seen the Peepcode and the Railscast (three times), you know that "Declarative testing" over imperative testing is the key to Cuking it Right, and have seen another forty or so slide decks on SlideShare repeating the same points without ever adding a modicum of critical thought.
+Taking Elizabeth's point seriously leads us to a rather naseating conclusion: Anyone using the built-in web steps in rails-cucumber is had been doing it wrong. These web steps are too low-level and should never be condoned. But you cannot blame programmers for doing so. By providing these low level step definition in the box, Cucumber is strongly encouraging developers to do things wrong.
 
-Well you're thoroughly and demonstably wrong. You might be Cuking it right, but you shouldn't have been Cukin' at all. Don't worry though. I Cuked muy guts out for almost a year before finding some sense. It's not our fault. You see, we succumbed to the Superfood effect. 
+Lets consider another angle on the development project gone wrong. I'm the client again and I receive the Cuke above. The first thing that comes to my mind is "why in earth's name are you "pausing to consider the business value of a feature"? I, the client, have already determined the business value; in accepting a quote from you I've determined that the business benefit is worth its price. You second guessing using "in order to" steps is ficticious at best. Your job is to implement; business value isn't your realm. Indeed, this is mild form of churning; in case you forgot I didn't hire you to play make-belief analyst. Unless you are specifically employed to help the client decide on features, and are sitting down wth a client to figure out what features their business needs, Cucumber isn't inappropriate.
+
+I'd contend something further. In a lot of projects I've seen Cucumber used in it isn't appropriate. The vast majority. Having Cuked muy guts out for almost a year before finding some sense, I have an inkling of why this state of affairs exists. You see, we succumbed to the Superfood effect. 
 
 h2. The Superfood Effect
 
+Every time I open the health section of a national newspaper I'm told that they've found a new breed of Acai berry which cures Asthma, Firbomylagis, heart disease and even unwanted pregnancy. My sex drive will soar and my emotions will level. How is all this possible you ask? Because these delicious tasting, albeit expensive, superfoods contain powerful antioxidants and flavonoids.
 
+Cucumber is a nutrient dense testing framework which solves the problem of communicating with clients, by letting us write business readable tests in plain text, all whilst making it fun. I check the website for health warning; apparently there are none. Cucumber is a panacea for all your testing woes.
+
+What you probably didn't know is that the FDA made an injuncton stopping these companies using such unproven and unscientific claims in their marketing: http://www.fda.gov/NewsEvents/Newsroom/PressAnnouncements/2008/ucm116861.htm
+
+But you know better right? You've read the Cucumber homeage, seen the Peepcode and the Railscast (three times), you know that "Declarative testing" over imperative testing is the key to Cuking it Right, and have seen another forty or so slide decks on SlideShare repeating the same points without ever adding a modicum of critical thought.
 
 h2. The Advantages of Cucumber
+
+ test automation is software development, 
+that it involves significant maintenance costs, and that they can and must make deliberate, 
+vigilant effort to keep maintenance costs lo
+http://dhemery.com/pdf/writing_maintainable_automated_acceptance_tests.pdf
 
 The alleged advantages of Cucumber is well trodden territory so I'll just give a summary of the most commonly cited arguments in Cucumber's favour:
 
@@ -128,6 +142,9 @@ When /^I toggle the full sample on the “(^”.*)” product/ do |product_name|
 end
 
 The set of features in Cucumber facilitating reuse of steps, alongside the emphasis on Cucumber’s web steps over Capbyara, to the point where the seeming majority of programmers only know of the Cucumber version, is a technical tragedy.
+
+The lack of abstaction tools, I belive, is the main reason why companies attempted test automation only to abandon the effort within a few months when tey become too difficult to maintain. If you've ever had the tests get our of sync on a big project you'll know what I mean.
+
 
 h2. When Should I Be Using Cucumber
 
