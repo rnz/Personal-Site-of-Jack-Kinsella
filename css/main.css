@@ -278,7 +278,7 @@ body {
   color: #CD0021;
 }
 #content header p{
-  color: #C7C8CA;
+  color: #696969;
   font-weight: bold;
 }
 time,
@@ -639,7 +639,7 @@ p#first_about {
     max-width: none;
   }
   #logo {
-    width: 15em;
+    width: 25em;
   }
   #logo div {
     padding-left: 3.75em;
