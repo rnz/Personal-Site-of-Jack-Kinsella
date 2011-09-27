@@ -6,7 +6,7 @@ author: Jack Kinsella
 
 ---
 
-I recently heard an account of a web development project from both the point of view of the consultancy doing the work and the client. A member of the consultancy told me how they educated a technologically backward client about agile processes. While this might be tedious for the client initially, with time the client would appreciate their wisdom. Glowing business referrals would follow forever more.
+I recently heard an account of a web development project from both the point of view of the consultancy doing the work and the client. A member of the consultancy told me how they educated a technologically backward client about agile processes. Although this might be tedious for the client initially, with time the client would appreciate their wisdom. Glowing business referrals would follow forever more.
 
 A few days later I bumped into the client:
 
