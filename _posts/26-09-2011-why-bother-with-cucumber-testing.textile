@@ -52,7 +52,7 @@ My own anecotal experience isn't enough so I did some research. I browsed throug
 
 h2. The Make-Believe Analyst
 
-Let's consider the above feature file again, imagining that you are the client. You run a business and so are conscious of costs. You might reasonably ask what’s with all this ‘in order to’ stuff? Why is this developer playing make-believe analyst? Doesn’t he know that you've already communicated that you've determined the business value when you approved for development? And, most importantly of all, is the developer charging you for this work?
+Let's consider the above feature file again, imagining that you are the client. You run a business and so are conscious of costs. You might reasonably ask what’s with all this ‘in order to’ stuff? Why is this developer playing make-believe analyst? Doesn’t he know that you've already communicated that you've determined the business value when you approved development? And, most importantly of all, is the developer charging you for this work?
 
 The Cucumber way says you sit with your client and determine, feature by feature, the business value that each piece of functionality serves. That's cool, but it isn’t a realistic job description for many programmers.  High level analysts and consultants might sometimes do this, but the likelihood is that you aren’t acting as a high level consultant or analyst on your current project, and so Cucumber is inappropriate. Not only this, but using Cucumber is downright wasteful considering its cost.
 
@@ -83,7 +83,7 @@ In Cucumber steps, the mention of a specific web page, for example "the login pa
 {% endhighlight %}
 
 
-The Rails routing system is complex: in _The Rails Way_ Obie Ferndandex suggested that you could squeeze everyone who understands it into one taxi. Cucumber adds an abstraction layer over this already complex system, and this leads to slower development and increased error on larger projects.  
+The Rails routing system is complex: in _The Rails Way_ Obie Fernandez suggested that you could squeeze everyone who understands it into one taxi. Cucumber adds an abstraction layer over this already complex system, and this leads to slower development and increased error on larger projects.  
 
 A problem I faced when adding new features was that I would unintentionally describe paths using differing natural language descriptions. Perhaps I'd call "the login page" the "the sign in page" one day, and "the log in page" another. When I did this Cucumber complained that it could not find the permuted path name, and so I had to look inside the paths.rb file to remind myself of my previous phrasing. That's a lot of remembering, and a lot of room for error and slowdown.
 
@@ -97,7 +97,7 @@ Cucumber asks you to create step definitions for any custom steps you use. The c
 
 1)	If you’ve got a good memory you find the old step definition and use that method again in your new feature. This can be a terrible move. The shared helper’s presence in promote_post_feature_steps.rb file suggests exclusive connection with that feature. If you later remove the promote_posts feature file you will probably remove its step definition file too, having forgotten that it contained global step definitions. Ideally you should have extracted these shared step definitions to a global step definition file, but realistically this doesn’t always happen. We've all got deadlines.
 
-2)	If you don’t have a good memory, or it has been a long time since you last visited the project, you might have forgotten that you previously wrote a step definition for promoting a post. Alternatively you might never have created a step definition but another programmer had done so without you knowing. You write a fresh step definition in taxon_steps.rb, but now your code is no longer DRY. At a later date you might be refactoring the promotion logic and make the changes in promote_post_feature_steps.rb, and then assume you had finished refactoring. The taxon_steps.rb now contains an out of date version of the logic for this step, and this will lead to confusing test failures, since you have no good reason to suspect an issue with the recently refactored promotion logic. Cucumber’s default way of organising features sets you up for these difficulties, and it takes of discipline to avoid them.
+2)	If you don’t have a good memory, or it has been a long time since you last visited the project, you might have forgotten that you previously wrote a step definition for promoting a post. Alternatively you might never have created a step definition but another programmer had done so without you knowing. You write a fresh step definition in taxon_steps.rb, but now your code is no longer DRY. At a later date you might be refactoring the promotion logic and make the changes in promote_post_feature_steps.rb, and then assume you had finished refactoring. The taxon_steps.rb now contains an out of date version of the logic for this step, and this will lead to confusing test failures, since you have no good reason to suspect an issue with the recently refactored promotion logic. Cucumber’s default way of organising features sets you up for these difficulties, and it takes of discipine to avoid them.
 
 h3. 5. Increased Wordiness
 
