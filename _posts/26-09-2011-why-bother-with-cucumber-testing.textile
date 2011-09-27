@@ -50,7 +50,7 @@ This is a damning claim and so I offer evidence. In my experiences both as a Rub
 
 My own anecotal experience isn't enough so I did some research. I browsed through the feature files in six major open source Rails projects, including Spree, Radiant and Diaspora. All bar one, Tracks, wrote their feature files near exclusively in web steps. In effect they wrote integration tests using the Cucumber syntax.
 
-h2. Make-Believe Analyst
+h2. The Make-Believe Analyst
 
 Let's consider the above feature file again, imagining that you are the client. You run a business and so are conscious of costs. You might reasonably ask what’s with all this ‘in order to’ stuff? Why is this developer playing make-believe analyst? Doesn’t he know that you've already communicated that you've determined the business value when you approving it for development? And, most importantly of all, is the developer charging you for this work?
 
