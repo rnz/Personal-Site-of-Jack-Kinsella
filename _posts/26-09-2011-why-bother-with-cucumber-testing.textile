@@ -42,7 +42,7 @@ According to Jonas Nicklas at E-labs, the above is an example of acceptable Cucu
 
 Any more is superfluous. If it takes you ten lines to communicate the idea of adding subpages, then you've wasted my time. I’m not alone in thinking this. BDD expert "Elizabeth Keogh":http://sirenian.livejournal.com/71439.html tells us:
 
-bq. "If your scenario starts with “When the user enters ‘Smurf’ into ‘Search’ text box…” then that’s far too low-level. However, even “When the user adds ‘Smurf’ to his basket, then goes to the checkout, then pays for the goods” is also too low-level. You’re looking for something like, “When the user buys a Smurf.”"
+bq. "If your scenario starts with 'When the user enters ‘Smurf’ into ‘Search’ text box…' then that’s far too low-level. However, even “When the user adds ‘Smurf’ to his basket, then goes to the checkout, then pays for the goods” is also too low-level. You’re looking for something like, 'When the user buys a Smurf.'"
 
 If you take this view, then the overwhelming majority of the Rails community have been using Cucumber incorrectly. Despite believing otherwise, most programmers never wrote a single acceptance test; instead they wrote integration tests using the Cucumber syntax. 
 
@@ -52,7 +52,7 @@ My own anecotal experience isn't enough so I did some research. I browsed throug
 
 h2. The Make-Believe Analyst
 
-Let's consider the above feature file again, imagining that you are the client. You run a business and so are conscious of costs. You might reasonably ask what’s with all this ‘in order to’ stuff? Why is this developer playing make-believe analyst? Doesn’t he know that you've already communicated that you've determined the business value when you approving it for development? And, most importantly of all, is the developer charging you for this work?
+Let's consider the above feature file again, imagining that you are the client. You run a business and so are conscious of costs. You might reasonably ask what’s with all this ‘in order to’ stuff? Why is this developer playing make-believe analyst? Doesn’t he know that you've already communicated that you've determined the business value when you approved for development? And, most importantly of all, is the developer charging you for this work?
 
 The Cucumber way says you sit with your client and determine, feature by feature, the business value that each piece of functionality serves. That's cool, but it isn’t a realistic job description for many programmers.  High level analysts and consultants might sometimes do this, but the likelihood is that you aren’t acting as a high level consultant or analyst on your current project, and so Cucumber is inappropriate. Not only this, but using Cucumber is downright wasteful considering its cost.
 

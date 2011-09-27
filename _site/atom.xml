@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-27T11:58:27+01:00</updated>
+ <updated>2011-09-27T13:27:57+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -43,13 +43,13 @@
 &lt;/div&gt;
 &lt;p&gt;Any more is superfluous. If it takes you ten lines to communicate the idea of adding subpages, then you&amp;#8217;ve wasted my time. I’m not alone in thinking this. &lt;span class=&quot;caps&quot;&gt;BDD&lt;/span&gt; expert &lt;a href=&quot;http://sirenian.livejournal.com/71439.html&quot;&gt;Elizabeth Keogh&lt;/a&gt; tells us:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&amp;#8220;If your scenario starts with “When the user enters ‘Smurf’ into ‘Search’ text box…” then that’s far too low-level. However, even “When the user adds ‘Smurf’ to his basket, then goes to the checkout, then pays for the goods” is also too low-level. You’re looking for something like, “When the user buys a Smurf.”&amp;#8221;&lt;/p&gt;
+&lt;p&gt;&amp;#8220;If your scenario starts with &amp;#8216;When the user enters ‘Smurf’ into ‘Search’ text box…&amp;#8217; then that’s far too low-level. However, even “When the user adds ‘Smurf’ to his basket, then goes to the checkout, then pays for the goods” is also too low-level. You’re looking for something like, &amp;#8216;When the user buys a Smurf.&amp;#8217;&amp;#8221;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;If you take this view, then the overwhelming majority of the Rails community have been using Cucumber incorrectly. Despite believing otherwise, most programmers never wrote a single acceptance test; instead they wrote integration tests using the Cucumber syntax.&lt;/p&gt;
 &lt;p&gt;This is a damning claim and so I offer evidence. In my experiences both as a Ruby contractor and as an employer of programmers, most feature files I’ve seen are composed of the web steps included with Cucumber by default. These web steps are integration tests in disguise. Cucumber steps such as &amp;#8220;When I fill in &amp;#8216;search&amp;#8217; with &amp;#8216;Smurf&amp;#8217;&amp;#8221; are rampant in the Rails community, despite their position at the most fault-worthy level in Elizabeth Keogh’s schema.&lt;/p&gt;
 &lt;p&gt;My own anecotal experience isn&amp;#8217;t enough so I did some research. I browsed through the feature files in six major open source Rails projects, including Spree, Radiant and Diaspora. All bar one, Tracks, wrote their feature files near exclusively in web steps. In effect they wrote integration tests using the Cucumber syntax.&lt;/p&gt;
 &lt;h2&gt;The Make-Believe Analyst&lt;/h2&gt;
-&lt;p&gt;Let&amp;#8217;s consider the above feature file again, imagining that you are the client. You run a business and so are conscious of costs. You might reasonably ask what’s with all this ‘in order to’ stuff? Why is this developer playing make-believe analyst? Doesn’t he know that you&amp;#8217;ve already communicated that you&amp;#8217;ve determined the business value when you approving it for development? And, most importantly of all, is the developer charging you for this work?&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s consider the above feature file again, imagining that you are the client. You run a business and so are conscious of costs. You might reasonably ask what’s with all this ‘in order to’ stuff? Why is this developer playing make-believe analyst? Doesn’t he know that you&amp;#8217;ve already communicated that you&amp;#8217;ve determined the business value when you approved for development? And, most importantly of all, is the developer charging you for this work?&lt;/p&gt;
 &lt;p&gt;The Cucumber way says you sit with your client and determine, feature by feature, the business value that each piece of functionality serves. That&amp;#8217;s cool, but it isn’t a realistic job description for many programmers.  High level analysts and consultants might sometimes do this, but the likelihood is that you aren’t acting as a high level consultant or analyst on your current project, and so Cucumber is inappropriate. Not only this, but using Cucumber is downright wasteful considering its cost.&lt;/p&gt;
 &lt;h2&gt;The Cost of Using Cucumber&lt;/h2&gt;
 &lt;h3&gt;1. Cucumber breaks text editors&lt;/h3&gt;
