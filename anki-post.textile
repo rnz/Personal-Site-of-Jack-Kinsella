@@ -1,11 +1,6 @@
-h2. What is Anki
+h2. The JANKI Method 
 
-The creators of Anki describe it as a "Spaced Repetition System", which means...
-Used correctly, it can be so much more. The JANKI method helps programmers eliminate repeat error, learn from their mistakes, catalogue their knowledge, draw analogies between disparate subjects, design away from their computer, give continuing inspiration, and of course, program much faster. 
-
-h2. How to do the JANKI Method?
-
-The JANKI method starts with ANKI, an open source spaced reptition system available for free download. You begin method by creating a deck, say "Computer Science". A deck contains many facts, and each fact consists of a question, an answer, and a number of tags. For example, you might have the following fact:
+The JANKI method starts with ANKI, an open source spaced reptition system available for free download. You begin by creating a deck, say "Computer Science" within ANKI. A deck contains many facts, and each fact consists of a question, an answer, and a number of tags. For example, you might have the following fact:
 
 What linux command lists all running processes?
 ====================
@@ -13,11 +8,11 @@ ps
 
 Tags: linux
 
-Although ANKI can download shared decks, letting you use sets of facts created by others, the JANKI method forbids you to do this since this diminishes your ability to learn. Instead you must create you own decks, drawing from your experiences programming, interesting code snippets you read, insightful blog posts, documentation for libraries, and, most importantly of all, from mistakes you've made. JANKI will become your library of coding related knowledge, except unlike ordinary notesbooks, you're going to learn everything by heart.
+Although ANKI can download shared decks, letting you use facts created by others, the JANKI method forbids you to do this because you will diminish your learn. Instead you must create you own decks, drawing from your daily experiences programming, snippets of interest code you read, insightful blog posts that teach you something worth remembering, documentation for libraries you need to know, and, most importantly of all, from mistakes you make. JANKI will become your library of coding knowledge, except it has a fantastic twist. Unlike orderinary notesbooks, you're going to know everything in your JANKI notebook by heart for the rest of your life.
 
-Every morning ANKI computes a list of cards for you to revise that day. It's choice is based on the Supermemo algorithm, and the goal is for you to drill the cards the minimum number of times in your life so as to never forget them. You've probably head these figures thrown around before - you should revise 1 day after learning, then a week then a month, then 3 months, then a year and so on. RESEARCH (how many reps in life). The supermemo algorithm optimises the process in two ways. It classifies cards which you frequently get wrong as leeches and removes them from the deck, preventing you from wasting time on the pesky 2%. It also asks you how well you remember any given fact rangin from 0(forgot) to 3(easy recall). The amount of time until the next repetition is dependent on how well you remember a fact. Forget it and you'll be drilled in a minute later, say it was easy and it could be months. Telling Anki how well you remember a fact can be difficult, and the onus is on you to answer truthfully and attempt to calibrate the different eases of recall.
+Every morning ANKI computes a list of facts for you to revise. The facts it chooses are the ones you most need to revise that day, and its calculated are based on the Supermemo algorithm. The ultimate goal here is for you to drill the cards an aboslute minimum number of times throughout your life, yet retain permanent memory. You've probably head these figures thrown around before - you should revise 1 day after learning, then a week then a month, then 3 months, then a year and so on. RESEARCH (how many reps in life). The supermemo algorithm optimises the process in two ways. It classifies cards which you frequently get wrong as leeches and removes them from the deck, preventing you from using your time inefficiently on that pesky 2%. It also asks you how well you remember any given fact along a scale that ranges from 0, meaning you forgot, to 3, meaning it was an effortless recall. The amount of time until the next repetition is dependent on how well you remembered any given fact last time, and how many times you had previosuly reviewed a fact. Choose 0 and you'll be drilled the fact a minute later, choose 3 it could be months. Telling Anki how well you remember a fact can be difficult, and the onus is on you to answer truthfully and attempt to calibrate the different eases of recall. 
 
-The JANKI method requies you log in to ANKI every morning and review your cards for ten minutes. In exchange
+The hardest part of the JANKI method is not adding or finding facts; nor is it reviewing. The real difficulty is in doing it every day, for months or years on end. The JANKI method stricly requires you drill your cards for ten minutes every morning. In exchange you will get the following advantages. 
 
 h2. Why Use The JANKI Method?
 
