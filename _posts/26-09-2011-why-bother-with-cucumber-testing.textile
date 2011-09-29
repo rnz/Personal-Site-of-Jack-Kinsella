@@ -32,7 +32,7 @@ Scenario: Adding a subpage
   Then I should see a document called "Gallery"
 {% endhighlight %}
 
-Scenario, but not feature description taken from "You're Cuking It Wrong":http://elabs.se/blog/15-you-re-cuking-it-wrong.
+Scenario, but not feature description taken from "You're Cuking It Wrong":http://elabs.se/blog/15-you-re-cuking-it-wrong. (Note that Jonas doesn't give his clients Cukes to read.)
 
 According to Jonas Nicklas at E-labs, the above is an example of acceptable Cucumber style, written in the language of stake-holders. As a past consumer of development services, I have to disagree with him. The appropriate level of detail here is this:
 

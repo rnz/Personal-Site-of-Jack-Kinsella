@@ -12,11 +12,15 @@ Although ANKI can download shared decks, letting you use facts created by others
 
 Every morning ANKI computes a list of facts for you to revise. The facts it chooses are the ones you most need to revise that day, and its calculated are based on the Supermemo algorithm. The ultimate goal here is for you to drill the cards an aboslute minimum number of times throughout your life, yet retain permanent memory. You've probably head these figures thrown around before - you should revise 1 day after learning, then a week then a month, then 3 months, then a year and so on. RESEARCH (how many reps in life). The supermemo algorithm optimises the process in two ways. It classifies cards which you frequently get wrong as leeches and removes them from the deck, preventing you from using your time inefficiently on that pesky 2%. It also asks you how well you remember any given fact along a scale that ranges from 0, meaning you forgot, to 3, meaning it was an effortless recall. The amount of time until the next repetition is dependent on how well you remembered any given fact last time, and how many times you had previosuly reviewed a fact. Choose 0 and you'll be drilled the fact a minute later, choose 3 it could be months. Telling Anki how well you remember a fact can be difficult, and the onus is on you to answer truthfully and attempt to calibrate the different eases of recall. 
 
-The hardest part of the JANKI method is not adding or finding facts; nor is it reviewing. The real difficulty is in doing it every day, for months or years on end. The JANKI method stricly requires you drill your cards for ten minutes every morning. In exchange you will get the following advantages. 
+The hardest part of the JANKI method is not adding or finding facts; nor is it reviewing. The real difficulty is in doing it every day, for months or years on end. The JANKI method stricly requires you drill your cards for ten minutes every morning. . 
 
 h2. Why Use The JANKI Method?
 
 h3. 1. Reduce Repeat Error
+
+The only truly stupid thing one can do is repeat the same mistake.
+
+Furthermore, constant reminder of past errors will cause you to start seeing patterns and classes of mistakes, and you will form a new mental schema of understanding.
 
 h3. 2. Retain Memory of Unused Tools
 

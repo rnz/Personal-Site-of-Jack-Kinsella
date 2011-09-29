@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-27T23:37:40+01:00</updated>
+ <updated>2011-09-29T06:28:47+01:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -36,7 +36,7 @@
 &lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Then &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I should see a document called &amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Gallery&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;Scenario, but not feature description taken from &lt;a href=&quot;http://elabs.se/blog/15-you-re-cuking-it-wrong&quot;&gt;You&amp;#8217;re Cuking It Wrong&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Scenario, but not feature description taken from &lt;a href=&quot;http://elabs.se/blog/15-you-re-cuking-it-wrong&quot;&gt;You&amp;#8217;re Cuking It Wrong&lt;/a&gt;. (Note that Jonas doesn&amp;#8217;t give his clients Cukes to read.)&lt;/p&gt;
 &lt;p&gt;According to Jonas Nicklas at E-labs, the above is an example of acceptable Cucumber style, written in the language of stake-holders. As a past consumer of development services, I have to disagree with him. The appropriate level of detail here is this:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;gherkin&quot;&gt;&lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;I &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;can add subpages to my micro-site.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
