@@ -131,7 +131,30 @@ h4. 1. Study everyday
 
 ANKI also requires a continued committment. You cannot do it one day and then drop it the next day. Instead daily repetition is necessary, else you will owe revisision and have to do double the following day. In some ways this is an advantages is disguise - by encouraging you to study daily you will move mountains after a year of daily work.
 
+h4. 2. Refactor your deck
 
-h2. Questionts
+Your decks can get ugly. You might have cards on an outdated version of an API (e.g. Rails 2), incorrect facts, or knowledge you later deem unworthy of retaining. Immediatley correct these errors by deleting or modifiying the cards in question. Other good refactors are rewording difficult to remember facts or splitting them into multiple cards. A personal favourite is to find and record links between facts. If you find a parallel function in coffeescript and Ruby make a note on both cards about how it's the Ruby equivalent of map.
 
-h3. Does SRS work? Research For and Against?
+h4. 3. One item of knowledge per card
+
+If you want to remember a core function in Ruby you'll need a number of cards, e.g. what does link_to do? what does it return? how do I get link-to to have a custom css class? My preffered method is short questions and answers, or sometimes missing word questions. Never EVER have answers that are large blocks of text. Refer to this article on the super memo website.
+
+h4. 4. Try out code before entering it into cards
+
+You should always try out code in a console before adding it to your deck. Trying out code will reveal a few things. Firstly it will alert you of any mistakes in the flash cards you are adding. It would be wasteful to learn off incorrect information. Secondly it alerts you of gaps in your understanding. You might you truly understand what you are learning when you enter it into your deck, so a real world sanity-check is important to get a feel for what you are doing.
+
+In particular learning things like VIM shortcuts, or mac keyboard shortcuts rely on motor movemnts. I recommend switching to the editor and trying each command out for the first few reviews.
+
+h4. 5. Take it slow
+
+Due to how the repetitions are front loaded, trying to learn 100 new facts a day will quickly lead to you having 500 review per morning. not only will could this take an hour to do (initially reviews will be slow, but you will speed up with time) but it might sap your motivation and cause you to ditch the effort. Because of this I recommend you limit the number of new cards you learn per day to 20-40. It's about stamina, not spriing. Do not forget this. 
+
+h4. 7. Turn every fuck-up into a lesson
+
+Making a mistake once is human. Making the same mistake twice is unacceptable. If you do something wrong pull out ANKI and make a few cards and sit and repent.
+
+h4. 6. Reflect and look for higher order lessons
+
+After a large project, like building an app for a client, take some time to think about what went well and what didn't from a high level. Did the architecture make sense? Did you use source control correctly? How did you handle the relationship? What would you do differently? Regularly reflecting on the big questions will help you even more that focusing on individual functions.
+
+
