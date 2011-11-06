@@ -49,7 +49,11 @@ h3. 4. Design Away From Your Machine
 
 h3. 5. Inspiration
 
-h3. 6. Build a Structured Mental Model of Your Domain
+The thought collision theory of creativity says we create new ideas by combining two old ideas together. Due to how ANKI requires you to review your cards, the facts are essentially jumbled - both in their order and chronolically. I frequently found that cycling through my cards in the morning would set off the spark in my head I needed to solve the problem of the hour. 
+
+h3. 6. Build a deeper understanding of your domain 
+
+As my use of ANKI grew I began to refactor my decks. I'd see that collections of previous cards could be summed up a single higher level rule. I'd notice relationships between functions in different programming languages and scribble a note on a card to help aid memory.
 
 h3. 7. Have a Definitive Searchable Reference of All Your Programming Knowledge
 
@@ -57,7 +61,37 @@ Have you ever had a nasty bug pop up and have vague memories of having seen it b
 
 h3. 8. Feel Like You Are Making Progress
 
-h2. The Disadvantages of Anki
+Let's face it. Technology sometimes makes you feel like you are in a rut; there's always more to learn. There's always a stack of books you want to read and learn from. Sometimes you feel like you are at the bottom of a hill. Anki makes you feel better about yourself. You browse through your deck and see the thousands of lessons you've learned. You see the variety of technologies you've learned. You see yourself, months or years ago, typing in those facts. Anki encourages you to sit back and admire the hard work you've put in.
+
+On another level there is something satisying about working on a goal everyday. By reviewing your cards daily you are maintaining your skillset and knowledge, spending perhaps only 5 minutse of your day. You are doing something to sharpen and improve your skills. Like running every day you see results build up day-by-day.
+
+h3. 9. Impress Interviews
+
+So you didn't study CS at Stanford. Problem? For risk-averse companies it is. How do you convince them that despite being self taught you skill have the skills they want? Showing them 5500 flash cards in their technology stack will prove beyond doubt that you know what you are doing.
+
+h2. Objections to the JANKI method 
+
+I've introduced the JANKI method to a few friends and I usually hear the same objections. I'll address each of these below:
+
+h3. 1. The best way to learn something is by doing
+
+I'd like to separate the idea of learning by doing into two components: discovering, and learning from mistakes.
+
+Discovery is unearthing the hidden gaps in your knowledge. You read a book on Javascript, feel confident you know it, only to hen find out that the code you write from memory doesn't work. What happening here is that there you you gaps in your knowledge traceable to you having only seen the knowledge in a sterile book environment instead of having to apply it in real world situations. It is for this reason that it is vital to learn by doing - people cannot be expected to learn in sufficienlty accurate detail just by reading. For this reason I also recommend that you to only add cards to ANKI after trying the code out first, for example in IRB.
+
+The second way of learning by doing is learning from mistakes. You make a major mistake, perhaps pushing unfinished code to your live server. Your mistake costs your company and you remain scarred. The emotional punishment you receive serves as a strong memory aid and it's unlikely you'll need ANKI to learn from these major mistakes. Where ANKI is useful is for lesser errors, where the emotional element is diminished. I've found that it's only after these mistakes happen 3 times that I learn not to make the mistake again. The JANKI method reduces the number of mistake repititions needed for you to learn. If it happens once in the real world, and then you make an ANKI card that goes into regular review, then ANKI reviews will subsitute for real world errors. In short you will learn from your mistakes much more quickly. Not only this but act of recording your mistakes and trying to discern lessons from them will make you a more critical and aware programmer.
+
+h3. 2. I don't have time
+
+The primary disadvantage of ANKI is that it requires upfront time and commitment, that particular type of commitment that shows little results initially but will bear great fruits with persistence. ANKI front loads your repetitions. When you first learn a new fact you must review it a day later, a week later, a month later, 3 months later, a year , x years. The space between the repetitions is low initially, so you might have a few mamotth learning sessions to start off with.
+
+ANKI also requires a continued committment. You cannot do it one day and then drop it the next day. Instead daily repetition is necessary, else you will owe revisision and have to do double the following day. In some ways this is an advantages is disguise - by encouraging you to study daily you will move mountains after a year of daily work.
+
+h2. Download My Deck
+
+Whether you want to build your own deck, use someone else's or do a combination of the two is up to you. Personally I found it useful to view the flash card decks of other programmers, with one caveat: I would try out every function, or piece of knowledge within that deck before committing it. Also I would suspend any cards you don't think will be useful to you - there's no point in maintaining unnecessary knowledge.
+
+My deck is available for download at my startup's "website":http://www.oxbridgenotes.co.uk. The deck deals with ruby and rails 3.1 in detail, and includes sections on everything from design patterns, to refactoring, to the HTTP protocol, CSS, javascript, VIM, rspec, capybara, coffeescript, jquery, deployment issues. It's everything I've needed to know to build, manage and deploy a variety of apps using the Rails stack. Topics are tagged carefully, and I've spell checked the cards and removed incorrect past pieces. The price for the set is £20/($30). 
 
 h2. Dos and Don'ts of usage
 
