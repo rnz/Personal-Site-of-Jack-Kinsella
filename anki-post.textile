@@ -83,9 +83,9 @@ The second way of learning by doing is learning from mistakes. You make a major 
 
 h3. 2. I don't have time.
 
-The primary disadvantage of ANKI is that it requires upfront time and commitment, that particular type of commitment that shows little results initially but will bear great fruits with persistence. ANKI front loads your repetitions. When you first learn a new fact you must review it a day later, a week later, a month later, 3 months later, a year , x years. The space between the repetitions is low initially, so you might have a few mamotth learning sessions to start off with.
+ANKI requires your time in two ways. Firstly you will need to enter facts into ANKI, recording your mistakes as they happen. Secondly you will need to review your cards - the day you create them, a week later, a month after that, three months after that, a year after that, and so on. There is a cost to placing facts in your long term memory.
 
-ANKI also requires a continued committment. You cannot do it one day and then drop it the next day. Instead daily repetition is necessary, else you will owe revisision and have to do double the following day. In some ways this is an advantages is disguise - by encouraging you to study daily you will move mountains after a year of daily work.
+To this I counter two things. You will save time in the long run through increased programming speed, improved domain understanding, and superiod debugging and architechuture skills. Having a searchable repository of useful APIS and fixes for past bugs may save many hours of time. And, most of all, continuous review of your knolwedge ensures your hard-earned skills do not go to waste. If you are serious about building software, and foresee yourself doing this for at least the medium term future, using the JANKI method is one of the greatest investments you can make in yourself. Given the money people are paying for Rails expertise.
 
 h3. 3. Knowing lots of facts or APIS doesn't make you a better coder.
 
@@ -106,7 +106,18 @@ Using these points of knowledge the calcuation becomes simple: 100 (130) = 13000
 
 Using ANKI to reinforce your knowledge brings similar spped advantages in programming. By building a reposititoy of knowledge you will think in higher order chunks and solve difficult problems with ease using powerful heuristics.
 
-h3. 4. APIS and Libraries change.
+h3. 4. APIS and Libraries change and so your hard earned knowledge will become obsolete.
+
+This can be an issue, depending on how you use the ANKI. When I first began the JANKI method I was over-zelous in my addition of facts to my decks. I made cards for thir party libraries I rarely used, such as formtastic, shoulda, and so on. I would turn README's into documenation out of habit. This turned out to be wasteful since the in-vogue library would change every 6 months. I ended up deleting many of these cards.
+
+The problem you will face is to distinguish between knowledge worth keeping long term, and knowledge you don't need (perhaps a cheat sheet would do in these circumstances). I've found that certain areas have proven to be valuable: linux, refactoring, design patterns, git, regular expressions, ruby, object orientated programming principels, javascript, http protocol, sql, css, html, vim commands, rails, and jquery methods. I noticed some patterns in what proves to be useful knowledge:
+a) It's a technology that's been around for a long time, and it probably here to stay (VIM, linux)
+b) It's general wisdom about computer science (refactorign, regular expressions, object orientated programming)
+c) It's something that whilst new or a library, is in everyday use and will foreseeably be so for some time (rails, git). 
+
+I'm sure that one day I'll be repalcing my rails cards with the next-big-thing but I justifiy the continued presence of Rails cards in my deck by the size of the library, it's financail value to employers, and the value of having cards about *a web framework* since many of the concepts and terminology will be useful in future work. 
+
+
 
 h2. Download My Deck
 
@@ -115,6 +126,11 @@ Whether you want to build your own deck, use someone else's or do a combination 
 My deck is available for download at my startup's "website":http://www.oxbridgenotes.co.uk. The deck deals with ruby and rails 3.1 in detail, and includes sections on everything from design patterns, to refactoring, to the HTTP protocol, CSS, javascript, VIM, rspec, capybara, coffeescript, jquery, deployment issues. It's everything I've needed to know to build, manage and deploy a variety of apps using the Rails stack. Topics are tagged carefully, and I've spell checked the cards and removed incorrect past pieces. The price for the set is £20/($30). 
 
 h2. Dos and Don'ts of usage
+
+h4. 1. Study everyday
+
+ANKI also requires a continued committment. You cannot do it one day and then drop it the next day. Instead daily repetition is necessary, else you will owe revisision and have to do double the following day. In some ways this is an advantages is disguise - by encouraging you to study daily you will move mountains after a year of daily work.
+
 
 h2. Questionts
 
