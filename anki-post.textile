@@ -81,11 +81,32 @@ Discovery is unearthing the hidden gaps in your knowledge. You read a book on Ja
 
 The second way of learning by doing is learning from mistakes. You make a major mistake, perhaps pushing unfinished code to your live server. Your mistake costs your company and you remain scarred. The emotional punishment you receive serves as a strong memory aid and it's unlikely you'll need ANKI to learn from these major mistakes. Where ANKI is useful is for lesser errors, where the emotional element is diminished. I've found that it's only after these mistakes happen 3 times that I learn not to make the mistake again. The JANKI method reduces the number of mistake repititions needed for you to learn. If it happens once in the real world, and then you make an ANKI card that goes into regular review, then ANKI reviews will subsitute for real world errors. In short you will learn from your mistakes much more quickly. Not only this but act of recording your mistakes and trying to discern lessons from them will make you a more critical and aware programmer.
 
-h3. 2. I don't have time
+h3. 2. I don't have time.
 
 The primary disadvantage of ANKI is that it requires upfront time and commitment, that particular type of commitment that shows little results initially but will bear great fruits with persistence. ANKI front loads your repetitions. When you first learn a new fact you must review it a day later, a week later, a month later, 3 months later, a year , x years. The space between the repetitions is low initially, so you might have a few mamotth learning sessions to start off with.
 
 ANKI also requires a continued committment. You cannot do it one day and then drop it the next day. Instead daily repetition is necessary, else you will owe revisision and have to do double the following day. In some ways this is an advantages is disguise - by encouraging you to study daily you will move mountains after a year of daily work.
+
+h3. 3. Knowing lots of facts or APIS doesn't make you a better coder.
+
+This was a major concern for me when I initially began my experiment. The limiting factor to your coding productiviity surely isn't your need to consult documentaiton once in a while is it? Yea I might have 30 minutes a day in documentation look-ups and context switching, but that's no biggy right?
+
+What I've learned is that knowing the APIs gives subtler, but far more important advantages:
+
+# If you use a high level language like Ruby many algorithms are already baked into the language. You want to sort an array? Array#sort does the trick. By rolling your own sort algorithm you risk making mistakes, miss out on binary level optimisations, and alienate future users of your code, who might think there was a reason you wrote a custom algorithm instead of using the built ins. By filling your ANKI deck with built-ins from your chosen languages you will only extend the language instead of reinvent it's features.
+
+# Debugging becomes dramatically simpler. Imagine you are debugging a third party library. The code will be filled with a combination of their custom functions and built in fucntions. You will need to figure out what their custom functions do by referencing their documentation, carrying out experiments, or using the debugger. If you recognize all the built-in fucntions, and know precisiely what their expected input values are and what their output values are, you will be able to pinpoint errors much more quickly. The key is total confidence in your knowledge of what the built-ins do, since that means you only have to fiure out what their custom functions do.
+
+# Chunking. Your ability is determined by the application of your intelligence and the use of the lessons you learned through your experience. These two can be substituted to some extent. If you are highly intelligent you might be will perform above what's expected for your experience level. If you have a great deal of experience you will peform above what your intelligence level would dictate. Let me prove this point to you. Intelligence is the application of logic to knowledge so as to generate new knowledge. What's 13 * 3? You apply a few pieces of knowledge, namely that multiplation is repeated addition, and the rules of addition to arrive at the answer 39. Or maybe you didn't. Mabye you already remember that 13*3 is 39. In which case you arrived at the same answer more quickly. Taking it a step further what's 130 * 30? Using intelligence alone this becomes complex. But how can we simplify the problem using knowledge? I know that:
+a) 13 * 3 = 39
+b) Multiplicaiotn is communitive. Thus 130 * 30 = 13 * 3 * 100
+c) x * 100 = 100x
+
+Using these points of knowledge the calcuation becomes simple: 100 (130) = 13000
+
+Using ANKI to reinforce your knowledge brings similar spped advantages in programming. By building a reposititoy of knowledge you will think in higher order chunks and solve difficult problems with ease using powerful heuristics.
+
+h3. 4. APIS and Libraries change.
 
 h2. Download My Deck
 
