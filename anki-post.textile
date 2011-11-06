@@ -1,12 +1,28 @@
+---
+layout: post
+title: JANKI Method: SRS and Programming
+subtitle: Using Spaced Repetition Systems To Learn Programming Exponentially Faster
+author: Jack Kinsella
+
+---
+
 h2. The JANKI Method 
 
-In May 2010 I began an experiment involving flash cards, spaced-repitition systems, and the Ruby/Rails/Javascript/Linux web stack. The premise was simple: every time I learned anything new technologies, or gained deeper wisdom about programming, I would create a flash card and add it to my spaced-repetition system. Every morning, before starting work, I used ANKI, a spaced-repetition system, to drill those flash cards and push the knowledge into my memory. 
+On the 1st May 2010 I set myself the goal of learning Ruby,Rails,Git,Linux,Javascript,Jquery,Object Orientated Programming,Regular Expressions,Css,Html,Refactoring,Design Patterns,deployment,boolean logic,VIM,TDD and the HTTP protocol in the shortest amount of time possible. I'd dabbled in programming before, even cobbled together two websites and a replica of the old mobile phone game 'snake' which invariably crashed after 100 seconds of gameplay. But I was basically a rookie. I studied law during my college years, and so without a scientific degree I was starting programming from scratch. 
 
-I did this every day since May 2010 and I continue doing so today, Nov 4 2011.  In this essay I explain the methodology I used, the reasoning behind it, and compose my thoughts on the effectiveness of the experiment. 
+Fast forward a year and a half and I'm now capable of producing a Rails app a week, and have done so for the past five weeks for my current client. I have a 70 model Rails app which I built, designed, deployed and marketed without any external help. It pulled in over $30k in profit last year, and I expect double that in the coming year.
 
-My goal was to learn to program in a fraction of the time it takes using conventional methods. I called it the JANKI method, 
+The following is a frank and honest guide on how any reasonably intelligent and disciplined person can learn do the same within a similar time frame.
 
-The JANKI method starts with ANKI, an open source spaced reptition system available for free download. You begin by creating a deck, say "Computer Science" within ANKI. A deck contains many facts, and each fact consists of a question, an answer, and as many tags as you like (e.g. 'rails', 'git', 'coffeescript', 'refactoring'). For example, you might have the following fact:
+h2. The Initial Motivations
+
+During my college years I realized that the single biggest impediment to my ability was my memory. My logic was sharp, but I forgot facts quickly. Modules I spent a great deal of time learning only a year earlier were practically wiped from my memory when I revisted them a year later. The JANKI method began it's life as my response to my frail memory.  The premise to the JANKI method was simple: every time I learned anything new about the above technologies, or gained deeper wisdom about programming, I would create a flash card and add it to my spaced-repetition system of choice, ANKI. Every morning, before starting work, I drilled myself with the cards the ANKI algorithm determined as most in need of review.
+
+Initially I thought the only advantage of this method would be long term memory. As the days turned to weeks and months the method evolved into something more powerful that I had initialy anticipated. 
+
+h2. What is ANKI? 
+
+The JANKI method starts with ANKI, a multi-platform flash card program available for free download. You begin by creating a deck, say "Computer Science" within ANKI. A deck contains many facts, and each fact consists of a question, an answer, and as many tags as you like (e.g. 'rails', 'git', 'coffeescript', 'refactoring'). For example, you might have the following fact:
 
 What linux command lists all running processes?
 
@@ -14,6 +30,8 @@ What linux command lists all running processes?
 ps
 
 Tags: linux
+
+What makes ANKI special is the algorithm that determines when you ought to review a particular fact.
 
 Although ANKI can download shared decks, letting you use facts created by others, the JANKI method forbids you to do this because you will diminish your learn. Instead you must create you own decks, drawing from your daily experiences programming, snippets of interest code you read, insightful blog posts that teach you something worth remembering, documentation for libraries you need to know, and, most importantly of all, from mistakes you make. JANKI will become your library of coding knowledge, except it has a fantastic twist. Unlike orderinary notesbooks, you're going to know everything in your JANKI notebook by heart for the rest of your life.
 
@@ -46,6 +64,8 @@ Another way JANKI methods helps you program faster is brainstorming alternatives
 Yes, you might say that you would get the same benefits from deep knowledge of APIs gained through years of experience. That's true but it misses the point of the JANKI method - you'll gain that knowledge far more rapidly and retain it for much longer using ANKI.
 
 h3. 4. Design Away From Your Machine
+
+Complete knowledge of the API means you can design your app from a coffeeshop with nothing but a pen and few sheets of paper. You spend too much time in front of the computer - give your eyes, fingers and back a break by getting away once in a while.
 
 h3. 5. Inspiration
 
@@ -89,7 +109,7 @@ To this I counter two things. You will save time in the long run through increas
 
 h3. 3. Knowing lots of facts or APIS doesn't make you a better coder.
 
-This was a major concern for me when I initially began my experiment. The limiting factor to your coding productiviity surely isn't your need to consult documentaiton once in a while is it? Yea I might have 30 minutes a day in documentation look-ups and context switching, but that's no biggy right?
+This was a major concern for me when I initially began my experiment. The limiting factor to your coding productiviity surely isn't your need to consult documentaiton once in a while is it? Yea I might have 30 minutes a day in documentation look-ups and context switching, but that's no biggy right? At best the flash card system will prevent me from forgetting the API when I take a few months off to do something different.
 
 What I've learned is that knowing the APIs gives subtler, but far more important advantages:
 
@@ -121,7 +141,7 @@ I'm sure that one day I'll be repalcing my rails cards with the next-big-thing b
 
 h2. Download My Deck
 
-Whether you want to build your own deck, use someone else's or do a combination of the two is up to you. Personally I found it useful to view the flash card decks of other programmers, with one caveat: I would try out every function, or piece of knowledge within that deck before committing it. Also I would suspend any cards you don't think will be useful to you - there's no point in maintaining unnecessary knowledge.
+Whether you want to build your own deck, use someone else's or do a combination of the two is up to you. Personally I found it useful to view the flash card decks of other programmers, with one caveat: I would try out every function, or piece of knowledge within that deck before trying to learn it off it. Also I would suspend any cards you don't think will be useful to you - there's no point in maintaining unnecessary knowledge.
 
 My deck is available for download at my startup's "website":http://www.oxbridgenotes.co.uk. The deck deals with ruby and rails 3.1 in detail, and includes sections on everything from design patterns, to refactoring, to the HTTP protocol, CSS, javascript, VIM, rspec, capybara, coffeescript, jquery, deployment issues. It's everything I've needed to know to build, manage and deploy a variety of apps using the Rails stack. Topics are tagged carefully, and I've spell checked the cards and removed incorrect past pieces. The price for the set is £20/($30). 
 
@@ -157,4 +177,7 @@ h4. 6. Reflect and look for higher order lessons
 
 After a large project, like building an app for a client, take some time to think about what went well and what didn't from a high level. Did the architecture make sense? Did you use source control correctly? How did you handle the relationship? What would you do differently? Regularly reflecting on the big questions will help you even more that focusing on individual functions.
 
+h3. Conclusions
+
+I'm certainly not the first person to use spaced-repetition-systems to learn programming, but the lack of publically available information on the topic suggests the pratice is not common. I think this is a shame since the technique is highly effective and I feel many programmers could benefit by adopting the practice. I've felt that the technique has given me such a headstart that I initially struggled with the idea of sharing it for fear of losing that headstart. I've since matured and I wish you the best of luck. If you enjoyed this post please retweet it. I'm visiting San Fran from now until Xmas 2011 so send me a message if you'd like to lunch/coffee/beer.
 
