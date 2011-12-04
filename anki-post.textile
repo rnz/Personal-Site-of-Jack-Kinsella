@@ -16,9 +16,9 @@ Janki method evolved to solve four problems I perceived in my own learning and s
 
 h3. The Wholly Bucket 
 
-The Janki method began it's life as my response to my dissatisfaction with my memory. I always reasoned well with the facts at my disposal. The problem was that I didn't always have the correct facts, since knowledge painfully acquired mere months earlier would quickly slip from memory. I needed to reference the original material again and again, and relearn the same techniques over and over. My mind was wholly bucket and my knowledge was the liquid dripping out from under.
+The Janki method began it's life as my response to my dissatisfaction with my memory. I always reasoned well with the facts at my disposal. The problem was that I didn't always have the correct facts, since knowledge painfully acquired mere months earlier would quickly slip from memory. I needed to reference the original material again and again, and relearn the same techniques over and over. My mind was wholly bucket and my knowledge was the liquid dripping out from under.  I've read that your brain never really forgets anything, and so that knowledge is supposed to reside somewhere deep inside , but for my use case as a professional, that knowledge is no longer with me and so I needed to relearn it. This was a massive waste of time.
 
-My solution to the wholly bucket problem was this: every time I learned anything about programing, I would create a flash card and add it to a memory management program named Anki. From then on, I drilled myself daily with the cards Anki's algorithm determined as most in need of review. I reasoned that doing so would guarantee a minimal base of important knowledge as far into the future as I continued my reviews.
+My solution to the wholly bucket problem was this: every time I learned anything about programing, I would create a flash card and add it to a spaced repetition system (SRS) named Anki. From then on, I drilled myself daily with the cards Anki's algorithm determined as most in need of review. The premise of SRS systems like ANKI is that knowledge entered into the system and regularly reviewed never leaves your memory. I've found this claim to be true for 95% of facts.
 
 h3. Skill Binging
 
@@ -30,44 +30,40 @@ h3. The Chasm Between 'Knowing' And Doing
 
 Janki method requires that you try out any piece of knowledge before adding it your deck. If you learn a new function you should try it out in the console.  If you learn a new keyboard shortcut you should press it a few times. Whenever you add something to your deck without trying it out first you distance yourself from reality. There is a chasm between reading something, and being able to apply it. Perhaps the author of the blog you read assumed you had a certain configuration. Without trying to use the fact you will never realize your omission, and so your knowledge will be impotent. Similarly you might read outdated documentation, and without applying it you will accidentally commit stale knowledge to memory. Trying things out ties your knowledge reality and forces you to have a complete understanding.
 
-h3. GroundHog Day 
+h3. The Old Dog
 
-The only truly stupid thing you can do is repeat the same mistake twice. t was Groundhog Day, only I was dating the books.
+The only truly stupidity is repeating your mistakes. Everyone makes mistakes once, and that's OK. What isn't OK is making the same mistake twice, thrice or even more. They say an old dog doesn't learn new tricks. That's not completely true. Old dogs learn new tricks, they just need a lot of training.  I've found that prior to adopting the Janki method it took me three mistake repetitions before I learned my lesson. I also noted that I would eventually forget all but my most serious mistakes.
 
-h2. What is Anki?
+My problem with this is that I've making the same mistake more than once. This wasn't acceptable so I asked how I could minimize the number of failures necessary before I learned my lesson? To combat this Janki method requires you to create a new lesson in your deck following every bug solved, every error fixed, and every project completed. Everything becomes a learning experience. You no longer beat yourself up after an error, you insteads scan for take-aways. You've just improved your knowledge.
 
-Anki is a multi-platform flash card program available for free download on every device you can think of. You begin by creating a deck, say "Computer Science". A deck contains many facts, facts being a question and a corresponding answer. You can tag these facts, (question answer pairs) with the names of the categories they belong to, for example a fact might be categorised under 'rails', 'git', or 'javascript', or perhaps even all three at once.
+h2. Anki explained 
+
+Anki is a multi-platform flash card program available for free download on every device you can think of. You begin by creating a deck, say "Computer Science". A deck contains many facts, facts being a question and corresponding answer. You can tag these facts with the names of the categories they belong to, for example a fact might be categorised under 'rails', 'git', or 'javascript', or perhaps even all three at once.
 
 3 x Examples
 
-If all Anki did was let you categorize your knowledge it would, at best, be a tool for recording and accessing old insights. But Anki doesn't stop here. Every morning, it's algorithm works which facts you need to review that day. This is calculated using the Supermemo algorithm, an algorithm invented by PIOR. Most algorithms make computers efficient; this algorithm makes you efficient. It was designed to have you drill the cards the minimum number of times necessary throughout your life whilst retaining permanent memory. It works exceedingly well.
+If all Anki did was let you categorize your knowledge it would still be a useful tool for recording and documenting old insights. But Anki goes much further. Every morning, Anki presents you with a set of old facts you need to review. This is calculated using the Supermemo algorithm, an algorithm invented by PIOR??????. Most algorithms make computers efficient; the SuperMemo algorithm makes you efficient. It is based on Pior's research on the forgetting curve, and it is designed to place facts into your long term memory using the minimal number of repetitions. It works exceedingly well.
 
-The algorithm requires that you review new material 1 day after originally learning it, then a week later, then a month, then 3 months later, then a year later and so on. RESEARCH (how many reps in life). If you review a previously learned fact but fail to remember it, then that fact will beconsidered new material once again, and it must start the cycle at one day again. 
+You add a new card to your deck. Anki makes you review it one day later, then a week later, a month later, 3 months later, a year later and so on. RESEARCH (how many reps in life). If you review a previously learned fact but fail to remember it, that fact will be considered new once again, and it must start the cycle afresh. 
 
-Every day you must do your morning Ankis. You will be presented with the question, and the answer will be blocked out. You must answer in your head, then press the enter key to have the answer revealed. At the bottom of the screen will be four buttons: again, good, easy and very easy. Use these to honestly assess how easy the recall was. Again means you couldn't remember it at all, and the others represent the ease and speed with which you could make the recall. Your self evaluation is important as the algorithm will modify the number of days until your next review of that card based on how well you say you know the fact. The onus is on you to be truthful.
+h3. Eat your meat.
+
+You do your ANKIs every morning. For each fact you need to review you will see the question, and the answer will be blocked out. You must answer in your head, then press the enter key to have the answer revealed. At the bottom of the screen will be four buttons: again, good, easy and very easy. Use these to honestly assess whether you remembered the fact and, if so, how easy the recall was. Your self evaluation matters; the algorithm modifies the number of days until your next review of that card based on how well you say you know the fact. 
 
 eXample of question
 
-If you get a card wrong frequently Anki will classify it as a leech and suspend it from your deck. The reasoning here is that certain cards are time leeches, as they frequently trip you up and prevent you from using your time efficiently. I view leeches as indicators of a poor question-answer pair. Am I putting too much in one card? Would a mnemomic make the fact easier to remember? Is this worth memorising at all?
+h3. Time Leeches
+
+If you get a card wrong frequently Anki will suspend it from your deck. The reasoning here is that certain cards are time leeches, as they frequently trip you up and prevent you from using your time efficiently. I view leeches as indicators of a poor question-answer pair. Am I putting too much in one card? Would a mnemomic make the fact easier to remember? Is this worth memorising at all?
+
+h3. Every day. Including Sundays.
 
 The hardest part of the Janki method is not adding or finding facts; nor is it reviewing. The real difficulty is in doing it every day, for months or years on end. The JAnki method requires you drill your cards for ten minutes every morning. Failure to do so invalides the method completely and you should not expect any results.
 
 
 h2. Second Order Advantages Of Using Anki 
 
-h3. 1. Reduce Repeat Error
-
-The only truly stupidity is repeating your mistakes twice. You must learn. You already know this. What you mightn't have though about is the number of failure reptitions it takes you to figure out why sometthin
-
-Furthermore, constant reminder of past errors will cause you to start seeing patterns and classes of mistakes, and you will form a new mental schema of understanding.
-
-h3. 2. Retain Memory of Unused Tools
-
-Have you ever learned a technology, switch to something else for a few months, then come back to the original technology having forgotten close to everything you were supposed to know? I have, repeatedly. I've heard that your brain never really forgets anything, and so that knowledge is supposed to reside somewhere deep inside , but for my use case as a professional, that knowledge is no longer with me and so I need to relearn it. This is a massive waste of time.
-
-One of the key premises to Spaced Repetition Systems, like Anki, is that knowledge entered into the system and regaularly reviewed will enver leave your memory. I've foudn this claim to be true and if quizzed on the contents of my 5500 card Anki deck I'm confident I can recall 95% accurately. 
-
-h3. 3. Program Faster
+h3. 1. Program Faster
 
 Will having a complete picture of the API in your head make you a faster programmer? Absolutely. You'll save a ton of time you'd otherwise spend re-referring to documentaiton and other reference material. You'll read other people's code as fluently as natural language, and you'll spend your days in the console. Is this the main way the Janki method increases your productivity? 
 
@@ -77,29 +73,25 @@ Another way Janki methods helps you program faster is brainstorming alternatives
 
 Yes, you might say that you would get the same benefits from deep knowledge of APIs gained through years of experience. That's true but it misses the point of the Janki method - you'll gain that knowledge far more rapidly and retain it for much longer using Anki.
 
-h3. 4. Design Away From Your Machine
+h3. 2. Design Away From Your Machine
 
 Complete knowledge of the API means you can design your app from a coffeeshop with nothing but a pen and few sheets of paper. You spend too much time in front of the computer - give your eyes, fingers and back a break by getting away once in a while.
 
-h3. 5. Inspiration
+h3. 3. Inspiration through through collision
 
 The thought collision theory of creativity says we create new ideas by combining two old ideas together. Due to how Anki requires you to review your cards, the facts are essentially jumbled - both in their order and chronologically. I frequently found that cycling through my cards in the morning would set off the spark in my head I needed to solve the problem of the day. 
 
-h3. 6. Build a deeper understanding of your domain 
+h3. 4. Build a deeper understanding of your domain 
 
 As my use of Anki grew I began to refactor my decks. I'd see that collections of previous cards could be summed up a single higher level rule. I'd notice relationships between functions in different programming languages and scribble a note on a card to help aid memory by cementing the connection. By forming connections you create multiple paths to the same point of knowledge. If one path were to fail you can still trigger the knowledge through another route.
 
-h3. 7. Have a Definitive Searchable Reference of All Your Programming Knowledge
+h3. 4. Have a Definitive Searchable Reference of All Your Programming Knowledge
 
 Have you ever had a nasty bug pop up and have vague memories of having seen it before, yet you don't remember exactly how you fixed it? Before I started using Anki this happenend to me frequently. I would spend half a day solving the bug, forget about it, then six months later I'd face it again. This wasn't acceptable - I wanted to only ahave to solve a particular problem once. Luckily the Janki method enables you to do this. ANKI has a built in search where you find any fact containing a particular word. You can even filter by date or tags. After every nasty bug you should add a few cards to ANKI containing the knolwedge you need to prevent that bug from occurring again. Better yet abstract one level and add a card containing the knowledge needed to prevent that class of bugs from occurring again.
 
-h3. 8. Feel Like You Are Making Progress
+h3. 5. Feel Like You Are Making Progress
 
-Let's face it. Technology sometimes makes you feel like you are in a rut; there's always more to learn. There's always a stack of books you want to read and learn from. Sometimes you feel like you are at the bottom of a hill. Anki makes you feel better about yourself. You browse through your deck and see the thousands of lessons you've learned. You see the variety of technologies you've learned. You see yourself, months or years ago, typing in those facts. Anki encourages you to sit back and admire the hard work you've put in.
-
-On another level there is something satisying about working on a goal everyday. By reviewing your cards daily you are maintaining your skillset and knowledge, spending perhaps only 5 minutse of your day. You are doing something to sharpen and improve your skills. Like running every day you see results build up day-by-day.
-
-h3. 9. Impress Interviewers
+h3. 5. Impress Interviewers
 
 So you didn't study CS at Stanford. Problem? Definitely. How do you convince discerning companies that despite being self taught you skill have the skills they want? Showing them 5500 flash cards of lessons learned through application of their technology stack will help you prove to them that you know what you are doing. 
 
