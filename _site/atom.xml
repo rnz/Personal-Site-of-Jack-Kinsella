@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-09-29T06:28:47+01:00</updated>
+ <updated>2011-12-03T16:29:07-08:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -13,7 +13,7 @@
  <entry>
    <title>Why Bother With Cucumber Testing?</title>
    <link href="http://www.jackkinsella.ie/2011/09/26/why-bother-with-cucumber-testing.html"/>
-   <updated>2011-09-26T00:00:00+01:00</updated>
+   <updated>2011-09-26T00:00:00-07:00</updated>
    <id>http://tom.preston-werner.com/2011/09/26/why-bother-with-cucumber-testing</id>
    <content type="html">&lt;p&gt;I recently heard an account of a web development project from both the point of view of the consultancy doing the work and the client. A member of the consultancy told me how they educated a technologically backward client about agile processes. Although this might be tedious for the client initially, with time the client would appreciate their wisdom. Glowing business referrals would follow forever more.&lt;/p&gt;
 &lt;p&gt;A few days later I bumped into the client:&lt;/p&gt;
@@ -116,7 +116,7 @@
  <entry>
    <title>Textmate to VIM</title>
    <link href="http://www.jackkinsella.ie/2011/09/05/textmate-to-vim.html"/>
-   <updated>2011-09-05T00:00:00+01:00</updated>
+   <updated>2011-09-05T00:00:00-07:00</updated>
    <id>http://tom.preston-werner.com/2011/09/05/textmate-to-vim</id>
    <content type="html">&lt;p&gt;When I switched from Textmate to &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; I felt like a tourist lost on a Japanese subway without a guide, translator or hope. I was unable to find in &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; the features I&amp;#8217;d come to love and rely on in Textmate. I yearned for ⌘ + T to summon my models, a project drawer to manage my files, and snippets to save my fingers.&lt;/p&gt;
 &lt;p&gt;Instead of accommodating my needs, &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt; sat firm and unresponsive, save for a judgemental beep. Even though I was supposed to go cold turkey on Textmate, I met her by night for a guilty after-hours edit.&lt;/p&gt;
