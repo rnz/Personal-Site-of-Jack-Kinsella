@@ -220,16 +220,12 @@ pre {
     
 */
 ::selection {
-  background: black;
-  text-shadow: none;
-  color: #CD0021f;
+        background: #ffb7b7; /* Safari */
+        }
+::-moz-selection {
+        background: #ffb7b7; /* Firefox */
 }
 
-::-moz-selection {
-  background: black;
-  text-shadow: none;
-  color: #CD0021f;
-}
 table {
 color: black;
 background: white;
@@ -634,6 +630,14 @@ p#first_about {
     Spot-fixes for 480 px
 
 */
+
+.janki-rule {
+  background: #FFF9D8;
+  border: 1px solid #FFE972;
+  padding: 15px 15px 15px 25px;
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 30em) {
   body {
     max-width: none;
