@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Janki Method - A Faster Way to Learn Programming 
-subtitle: Using spaced repetition systems to learn and retain technical knowledge
+title: Janki Method
+subtitle: Using spaced repetition systems to learn and retain technical knowledge.
 author: Jack Kinsella
 
 ---
 
-<meta property="og:title" content="Janki Method: A Faster Way to Learn Programming"/>
+<meta property="og:title" content="Janki Method: A Much Faster Way to Learn To Program"/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
 <meta property="og:site_name" content="Jack Kinsella"/>
@@ -16,9 +16,11 @@ This is a guide to becoming a productive programmer quickly. In his book _Outlie
 
 *Janki Method* is an attempt to shorten the time needed to learn programming. It grew out of my impatient dream to build an automated web business that would free me financially, geographically and temporally. I didn't want to wait 10,000 hours. I suspect you don't either.
 
-Well-intentioned learners sometimes flop around in the dark, despite abundant smarts and enthusiasm. The main determinant of their eventual ability is volume of time expended.  Ten years sounds about right.
+!>/images/janki/anki.jpg!
 
-You’ve read that learning by doing is better than passive reading; that expressing ideas in writing forces understanding; that knowledge needs constant revision to stay fresh; that creativity comes from linking disparate ideas; and that your past mistakes are your best teachers. The question then is do you apply this knowledge systematically to your learning efforts.
+Well-intentioned learners sometimes flop around in the dark, despite abundant smarts and enthusiasm. The main determinant of their eventual ability is volume of time expended. Maybe Malcome was right. 
+
+You’ve read that learning by doing is better than passive reading; that expressing ideas in writing forces understanding; that knowledge needs constant revision to stay fresh; that creativity comes from linking disparate ideas; and that your past mistakes are your best teachers. How many of these ideas do you apply to your learning efforts.
 
 *Janki Method* is built on the assumption that Malcolm’s 10k to mastery can be hastened if you take intelligent approach to learning. The core of Janki Method is the use of a spaced repetition flashcard system, "Anki":http://ankisrs.net/.
 
@@ -48,7 +50,11 @@ Over time you will build up a repository of knowledge on programming, cleanly ca
 
 Every morning Anki calculates which cards you risk forgetting, and then prompts you to review these cards. Doing your Ankis only takes a few minutes per day, since you only need to review a fraction of your deck on any given day.
 
+!/images/janki/daily-reviews.png!
+
 For every card you review, Anki shows you the question side with the answer side initially blocked out. Your job is to answer the question in your head, and then reveal the answer and check whether you got it right. After you answer, four buttons ppear at the bottom of the screen: “again”, “good”, “easy” and “very easy”.  Assess how easily you could recall that card and then press the appropriate button. Based on which button you press, Anki determines when next to show you that card, so answering honestly is crucial if you want the algorithm to work.
+
+!/images/janki/question1.png!
 
 Do this every day and you will not forget. 
 
@@ -77,6 +83,20 @@ _The third rule of *Janki* keeps you focused on what is important in the moment:
 
 *“Learn in context. Pick a project, and learn only what you need to get it done.”*
 </div>
+
+h3. When I was writing this blog post I didn't know how to add images in the Textile language.
+
+!/images/janki/new-card1.png!
+
+h3. Step 1: I Googled it.
+
+!/images/janki/new-card2.png!
+
+h3. Step 2: I tried the code out by adding an image to the post. 
+
+!/images/janki/new-card3.png!
+
+h3. Step 3: After checking that it worked, I added my new technique to my Anki Deck.
 
 h2. Problem 4: We Think We Can Learn Without Doing
 
@@ -117,6 +137,8 @@ By applying this rule you will substitute real world mistakes with Janki reviews
 
 Ankifying your past failures doesn’t just prevent their repetition.  It also helps you understand your domain, since the act of performing a post-mortem analysis and examining the underlying causes of your error encourages deep thought.  Instead of just creating the cards you need to prevent that particular error, you might immunize yourself against that entire class of error.
 
+!/images/janki/bug2.png!
+
 Every mistake becomes a learning experience. Messing up still sucks, but you feel a small sense of victory knowing that you’ve just found a way to improve, and you will feel assured by the certainty that you will never make that mistake again.
 
 h2. Problem 6: We Do Not Reflect On The Big Picture
@@ -154,6 +176,11 @@ _The seventh rule of *Janki* keeps your decks in shape._
 
 *“Delete or modify any incorrect, outdated, difficult to remember, incomplete or unnecessary cards. Update existing cards as improved understanding dawns.”*
 </div>
+
+h3. The following shows a poor understanding of Git, later updated with a more nuanced understanding.
+
+!/images/janki/poor-understanding.png!
+!/images/janki/better-understanding.png!
 
 h2. Problem 8: Not Enough Reference To Primary Sources
 
@@ -210,6 +237,8 @@ This felt wasteful and I didn't like it. I don't like having to solve the same p
 
 Anki has a search feature that finds all matching cards in your deck. You can even filter by date or tag. For example you might search through cards containing the word "ssh" created more than 6 months ago and tagged with ‘deployment’. 
 
+!/images/janki/search.png!
+
 After solving a bug you should always add some cards to your deck containing the knowledge needed to prevent that bug from occurring again. Better yet, abstract one level and add cards containing the knowledge needed to prevent that class of bugs. Now, whenever you are faced with a bug the second time, all you need to do is search your archives.
 
 h2. Advantage 4:  Not Reinventing The Wheel
@@ -232,11 +261,9 @@ Instead you should build your own decks from scratch, drawing from your programm
 
 h2. Can I Download Your deck? 
 
-I don't recommend using other people's decks as the basis for your own, but I understand that seeing a full deck may help you understand more about how the system works. For this reason I've made my deck available for free download on my startup’s website "Oxbridge Notes":http://www.oxbridgenotes.co.uk.
+I don't recommend using other people's decks as the basis for your own, but I understand that seeing a full deck may help you understand more about how the system works. For this reason I'm going to make my deck available for download on my startup’s website next month. Please follow me on Twitter ("@jackkinsella""http://www.twitter.com/jackkinsella") to stay informed.
 
-My deck focuses on the Ruby on Rails technology stack, including cards on Ruby and Rails 3.1, the HTTP protocol, the Unix command line, git, CSS, JavaScript, VIM, Rspec, Capybara, TDD, Coffeescript, jQuery, deployment, design patterns, regular expressions, SQL, and refactoring. It's everything I've needed to build, manage and deploy a variety of web apps. This is not a commercial product, so do not expect polish or total accuracy. [*Edit* - I won't be putting my deck online until late December. Please come back then. Sorry.]
-
-_All rights reserved. In particular, you are not permitted to upload or host my deck or any part thereof online._
+My deck focuses on the Ruby on Rails technology stack, including cards on Ruby and Rails 3.1, the HTTP protocol, the Unix command line, git, CSS, JavaScript, VIM, Rspec, Capybara, TDD, Coffeescript, jQuery, deployment, design patterns, regular expressions, SQL, and refactoring. It's everything I've needed to build, manage and deploy a variety of web apps. Right now, it contains nearly 6000 facts. 
 
 h2. What Knowledge Belongs in my Decks and What Doesn’t?
 
@@ -272,13 +299,13 @@ I believe that if you follow the system exactly as described above, you will lea
 
 h2(section-title). Resources
 * "Anki - Available for Free Download":http://ankisrs.net/
-* "The 20 rules of formulating knowledge in learning":http://www.supermemo.com/articles/20rules.htm
+* "20 Rules for Formulating Knowledge in Learning":http://www.supermemo.com/articles/20rules.htm
 * "Want to Remember Everything You'll Ever Learn? Surrender to This Algorithm":http://www.wired.com/medtech/health/magazine/16-05/ff_wozniak?currentPage=all
 * "Genius and Creativity":http://www.supermemo.com/articles/genius.htm
 
 h2(section-title). In San Francisco? Let’s hang out.
 
-I'm visiting San Francisco during December 2011, so get in touch if you’d like to meet for lunch/coffee/beer. I’m looking to take on new consulting projects, or just have a friendly chat with local technies about programming, entrepreneurship, making money online, web apps, online marketing and all the usual suspects. Get in touch.
+I'm visiting San Francisco during December 2011, so get in touch if you’d like to meet for lunch/coffee/beer. I’m looking to take on new consulting projects, or just to have a friendly chat with local techies about programming, entrepreneurship, making money online, and all the usual suspects. Get in touch; I want to meet you.
 
 
 
