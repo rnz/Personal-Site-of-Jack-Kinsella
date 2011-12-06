@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-12-05T22:51:48-08:00</updated>
+ <updated>2011-12-05T23:21:20-08:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -131,7 +131,7 @@
 &lt;p&gt;Knowing thousands of commands saves time otherwise spent looking up reference materials. You instantly recall previous solutions when faced with a problem, and dozen of possibilities spring to mind when architecting a system. You will read other people&amp;#8217;s code rapidly, confident in your understanding. The closest analogy is fluency in a natural language. You will speak code.&lt;/p&gt;
 &lt;p&gt;Most of the time I spend programming is spent debugging, that is fixing errors in your code or in the code of other programmers. This is where a deep knowledge of the platform will speed you up the most. Debugging consists chiefly of gathering information. What was the system supposed to do? What data was in the system when we saw the error? What could have went wrong? Frequently a single delinquent line of code can be the cause of a bug that takes down an entire site. The hard part is figuring out which of the thousands of lines of logic caused the issue.&lt;/p&gt;
 &lt;p&gt;Let’s take an example. Say your program uses 100 functions and 70 of these are built into the language. That means that there were 30 custom defined functions. If you know with confidence the inputs and outputs of the 70 built-in functions, then debugging is simplified, since you will only need to figure out how the remaining 30 custom functions work.  Considering that custom functions are themselves defined in terms of built-ins, this task should not take too long either. Total certainty about the syntax, inputs, outputs, and uses of the built-in functions lets you quickly isolate unknowns and bring the bug to surface.&lt;/p&gt;
-&lt;p&gt;Brainstorming ability is improved through Janki Method. Deep knowledge in mind means you can try out alternatives on paper rapidly and so increase your chances of coming across a cheeky non-obvious solution to your problem.&lt;/p&gt;
+&lt;p&gt;Brainstorming ability is improved through &lt;strong&gt;Janki Method.&lt;/strong&gt; Deep knowledge in mind means you can try out alternatives on paper rapidly and so increase your chances of coming across a cheeky non-obvious solution to your problem.&lt;/p&gt;
 &lt;p&gt;You might argue that you will get the same speed boost with knowledge earned through experience. That’s true, but this argument misses the point. Janki enables you to gain that same knowledge faster, and retain it for longer. If you’ve ever forgotten how to do something after leaving it aside for a few months, then Anki is for you.&lt;/p&gt;
 &lt;h2&gt;Advantage 2: Chunking.&lt;/h2&gt;
 &lt;p&gt;Skill in a technical field is the product of your intelligence and your knowledge.  Weakness in one can be overshadowed by strength in another. Bright yet inexperienced can perform on par with dull yet experienced.&lt;/p&gt;
@@ -141,7 +141,7 @@
 &lt;p&gt;In approach 1, the problem was labour intensive because you did not use knowledge to ease your calculation. This wasn’t the case in approach 2, where you reasoned using higher order chunks of knowledge, so solving an otherwise lengthy problem with ease. I call this application of remembered chunks of knowledge to problems &lt;strong&gt;chunking&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Janki Method&lt;/strong&gt; encourages chunking. This was an unexpected benefit, yet ultimately the most useful to me. After six months of daily application you will reason about programming concepts using mental shortcuts equivalent to those used to simplify the multiplication problem in approach 2. Maximize chunking by adding increasingly abstract rules and concepts to your decks, and making an effort to draw on these ideas when solving problems.&lt;/p&gt;
 &lt;h2&gt;Advantage 3:  Searchable Archive of All Your Programming Knowledge&lt;/h2&gt;
-&lt;p&gt;Has your computer ever spat out an error message and, although you remember seeing it before, you don&amp;#8217;t remember how to fix it? Before I started Janki Method this would happened to me lots.&lt;/p&gt;
+&lt;p&gt;Has your computer ever spat out an error message and, although you remember seeing it before, you don&amp;#8217;t remember how to fix it? Before I started &lt;strong&gt;Janki Method&lt;/strong&gt; this would happened to me lots.&lt;/p&gt;
 &lt;p&gt;The first time I saw the issue I would spend half a day solving the problem.  Six months later the problem would happen again, perhaps in a slightly different form. Even though I was vaguely aware of having seen it before, I&amp;#8217;d forgotten how to fix it.&lt;/p&gt;
 &lt;p&gt;This felt wasteful and I didn&amp;#8217;t like it. I don&amp;#8217;t like having to solve the same problem twice. &lt;strong&gt;Janki Method&lt;/strong&gt; helps prevent this from happening..&lt;/p&gt;
 &lt;p&gt;Anki has a search feature that finds all matching cards in your deck. You can even filter by date or tag. For example you might search through cards containing the word &amp;#8220;ssh&amp;#8221; created more than 6 months ago and tagged with ‘deployment’.&lt;/p&gt;

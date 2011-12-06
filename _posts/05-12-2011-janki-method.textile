@@ -209,7 +209,7 @@ Most of the time I spend programming is spent debugging, that is fixing errors i
 
 Let’s take an example. Say your program uses 100 functions and 70 of these are built into the language. That means that there were 30 custom defined functions. If you know with confidence the inputs and outputs of the 70 built-in functions, then debugging is simplified, since you will only need to figure out how the remaining 30 custom functions work.  Considering that custom functions are themselves defined in terms of built-ins, this task should not take too long either. Total certainty about the syntax, inputs, outputs, and uses of the built-in functions lets you quickly isolate unknowns and bring the bug to surface.
 
-Brainstorming ability is improved through Janki Method. Deep knowledge in mind means you can try out alternatives on paper rapidly and so increase your chances of coming across a cheeky non-obvious solution to your problem. 
+Brainstorming ability is improved through *Janki Method.* Deep knowledge in mind means you can try out alternatives on paper rapidly and so increase your chances of coming across a cheeky non-obvious solution to your problem. 
 
 You might argue that you will get the same speed boost with knowledge earned through experience. That’s true, but this argument misses the point. Janki enables you to gain that same knowledge faster, and retain it for longer. If you’ve ever forgotten how to do something after leaving it aside for a few months, then Anki is for you.
 
@@ -229,7 +229,7 @@ In approach 1, the problem was labour intensive because you did not use knowledg
 
 h2. Advantage 3:  Searchable Archive of All Your Programming Knowledge
 
-Has your computer ever spat out an error message and, although you remember seeing it before, you don't remember how to fix it? Before I started Janki Method this would happened to me lots. 
+Has your computer ever spat out an error message and, although you remember seeing it before, you don't remember how to fix it? Before I started *Janki Method* this would happened to me lots. 
 
 The first time I saw the issue I would spend half a day solving the problem.  Six months later the problem would happen again, perhaps in a slightly different form. Even though I was vaguely aware of having seen it before, I'd forgotten how to fix it. 
 
