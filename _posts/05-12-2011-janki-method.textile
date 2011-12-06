@@ -178,7 +178,7 @@ h3. The following shows a poor understanding of Git, later updated with a more n
 !/images/janki/poor-understanding.png!
 !/images/janki/better-understanding.png!
 
-h2. Problem 8: Not Enough Reference To Primary Sources
+h2. Problem 8: We Do Not Reference Primary Sources
 
 Graphic designers, artists, architects and other creatives keep scrapbooks of designs they like. Later, when working on a project, they draw inspiration from these same scrapbooks. 
 

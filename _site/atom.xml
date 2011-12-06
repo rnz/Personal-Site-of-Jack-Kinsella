@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-12-06T13:58:26-08:00</updated>
+ <updated>2011-12-06T15:12:17-08:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -20,7 +20,7 @@
 &lt;p style=&quot;float:right;&quot;&gt;&lt;img src=&quot;/images/janki/anki.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Well-intentioned learners sometimes flop around in the dark, despite abundant smarts and enthusiasm. The main determinant of their eventual ability is volume of time expended. Maybe Malcolm was right.&lt;/p&gt;
 &lt;p&gt;You’ve read that learning by doing is better than passive reading; that expressing ideas in writing forces understanding; that knowledge needs constant revision to stay fresh; that creativity comes from linking disparate ideas; and that your past mistakes are your best teachers. How many of these ideas do you apply to your learning efforts?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Janki Method&lt;/strong&gt; is built on the assumption that Malcolm’s 10k to mastery can be hastened if you take intelligent approach to learning. The core of Janki Method is the use of a spaced repetition flashcard system, &lt;a href=&quot;http://ankisrs.net/&quot;&gt;Anki&lt;/a&gt;, programmed by the brilliant Damien Elmes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Janki Method&lt;/strong&gt; is built on the assumption that Malcolm’s 10k to mastery can be hastened if you take a focused approach to learning. The core of Janki Method is the use of a spaced repetition flashcard system, &lt;a href=&quot;http://ankisrs.net/&quot;&gt;Anki&lt;/a&gt;, programmed by the brilliant Damien Elmes.&lt;/p&gt;
 &lt;p&gt;By following my approach, I believe that any intelligent and disciplined reader can achieve proficiency* in a given field of programming area (e.g. web applications, iPhone applications) in less than 12 months.&lt;/p&gt;
 &lt;p&gt;I call this the &lt;strong&gt;Janki Challenge&lt;/strong&gt;, and I invite you to take part.&lt;/p&gt;
 &lt;h2 class=&quot;section-title&quot;&gt;Problems With Learning&lt;/h2&gt;
@@ -112,7 +112,7 @@
 &lt;h3&gt;The following shows a poor understanding of Git, later updated with a more nuanced understanding.&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/images/janki/poor-understanding.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
 &lt;img src=&quot;/images/janki/better-understanding.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;Problem 8: Not Enough Reference To Primary Sources&lt;/h2&gt;
+&lt;h2&gt;Problem 8: We Do Not Reference Primary Sources&lt;/h2&gt;
 &lt;p&gt;Graphic designers, artists, architects and other creatives keep scrapbooks of designs they like. Later, when working on a project, they draw inspiration from these same scrapbooks.&lt;/p&gt;
 &lt;p&gt;As a programmer your primary source of inspiration will be other people’s code. Download open source projects (e.g. on &lt;a href=&quot;http:www.github.com&quot;&gt;Github&lt;/a&gt;) and read through the code. Look up parts you don’t understand, and create new cards as necessary. Get a pen and paper, and sketch out the paths through the program. What are the inputs, and what are the expected outputs? What happens to the data as it moves throught the program? Why was it designed in this way? What techniques were used?&lt;/p&gt;
 &lt;p&gt;By reading code you will be exposed to various styles and of programming and solutions to programming problems. You will see things you like, and lots of things you don’t like. With time you will find your own style.&lt;/p&gt;
