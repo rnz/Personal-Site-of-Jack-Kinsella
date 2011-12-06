@@ -186,7 +186,7 @@ h2. Problem 8: Not Enough Reference To Primary Sources
 
 Graphic designers, artists, architects and other creatives keep scrapbooks of designs they like. Later, when working on a project, they draw inspiration from these same scrapbooks. 
 
-As a programmer your primary source of inspiration will be other people’s code. Download open source projects (e.g. on Github:http:www.github.com) and read through the code. Look up parts you don’t understand, and create new cards as necessary. Get a pen and paper, and sketch out the paths through the program. What are the inputs, and what are the expected outputs? What happens to the data as it moves throught the program? Why was it designed in this way? What techniques were used?
+As a programmer your primary source of inspiration will be other people’s code. Download open source projects (e.g. on "Github":http:www.github.com) and read through the code. Look up parts you don’t understand, and create new cards as necessary. Get a pen and paper, and sketch out the paths through the program. What are the inputs, and what are the expected outputs? What happens to the data as it moves throught the program? Why was it designed in this way? What techniques were used?
 
 By reading code you will be exposed to various styles and of programming and solutions to programming problems. You will see things you like, and lots of things you don’t like. With time you will find your own style. 
 
@@ -261,7 +261,7 @@ Instead you should build your own decks from scratch, drawing from your programm
 
 h2. Can I Download Your deck? 
 
-I don't recommend using other people's decks as the basis for your own, but I understand that seeing a full deck may help you understand more about how the system works. For this reason I'm going to make my deck available for download on my startup’s website next month. Please follow me on Twitter ("@jackkinsella""http://www.twitter.com/jackkinsella") to stay informed.
+I don't recommend using other people's decks as the basis for your own, but I understand that seeing a full deck may help you understand more about how the system works. For this reason I'm going to make my deck available for download on my startup’s website next month. Please follow me on Twitter ("@jackkinsella":http://www.twitter.com/jackkinsella") to stay informed.
 
 My deck focuses on the Ruby on Rails technology stack, including cards on Ruby and Rails 3.1, the HTTP protocol, the Unix command line, git, CSS, JavaScript, VIM, Rspec, Capybara, TDD, Coffeescript, jQuery, deployment, design patterns, regular expressions, SQL, and refactoring. It's everything I've needed to build, manage and deploy a variety of web apps. Right now, it contains nearly 6000 facts. 
 
@@ -283,11 +283,11 @@ h2. What are the main keyboard shortcuts I need to know?
 
 You will be reviewing your cards everyday so it helps to small time savings here quickly compound. Keyboard shortcuts are crucial.
 
-Press <enter> to reveal answers and then evaluate your response with the keys *0*,*1*,*2* or *3*.
+Press *Enter* to reveal answers and then evaluate your response with the keys *0*,*1*,*2* or *3*.
 
-Command + <backspace> deletes a card. Use this for troublesome/incorrect/out of date cards. 
+*Command + Backspace* deletes a card. Use this for troublesome/incorrect/out of date cards. 
 
-Command + E lets you edit a card and then <tab> moves the cursor between the question and answer panes.
+*Command + E* lets you edit a card and then *Tab* moves the cursor between the question and answer panes.
 
 h2(section-title). The Janki challenge
 
@@ -305,6 +305,7 @@ h2(section-title). Resources
 
 h2(section-title). In San Francisco? Let’s hang out.
 
+!</images/janki/jack-kinsella.jpg!
 I'm visiting San Francisco during December 2011, so get in touch if you’d like to meet for lunch/coffee/beer. I’m looking to take on new consulting projects, or just to have a friendly chat with local techies about programming, entrepreneurship, making money online, and all the usual suspects. Get in touch; I want to meet you.
 
 
