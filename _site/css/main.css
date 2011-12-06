@@ -226,6 +226,12 @@ pre {
         background: #ffb7b7; /* Firefox */
 }
 
+.section-title {
+  font-size: 45px;
+  font-weight: bolder;
+  border: none;
+}
+
 table {
 color: black;
 background: white;
@@ -294,19 +300,15 @@ body,
 }
 a {
   color: black;
-  text-decoration: none;
 }
 .entry-content a, .byline a {
   color: black;
-  border-bottom: 1px solid black;
 }
 a:hover, #articles a:hover h1 {
   color: #CD0021;
-  border-bottom-color: #CD0021;
 }
 a:active {
   color: black;
-  border-bottom-color: black;
 }
 /*  
 

@@ -104,7 +104,10 @@
     top: 3.230769230769231em;
   }
   #colophon, #projects .full {
-    padding-top: 4.5em;
+    padding-top: 1.5em;
+  }
+  #colophon p {
+    padding-bottom: 1.5em;
   }
   #copyright {
     padding-bottom: 3.75em;
