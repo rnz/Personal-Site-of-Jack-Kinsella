@@ -379,6 +379,17 @@ figcaption {
   font-weight: bolder;
   font-size: 22px;
 }
+#content .captioned-image {
+  float:right;
+  text-align:right;
+}
+#content .captioned-image p {
+  text-align:center;
+  font-weight: bold;
+  text-decoration: italic;
+  margin-top: -20px;
+  margin-bottom: 0px;
+}
 #articles a:hover, .links a:hover {
   -webkit-transform: scale(1.09);
   -moz-transform: scale(1.09);
@@ -540,10 +551,17 @@ nav .icon {
   margin: 0 auto;
   margin: 30px 0 30px 40px;
 }
-
-img#hacker-news {
-
-  margin: 0px 0px 0px 40px;
+#hacker-news {
+  background: #FFF9D8;
+  border: 1px solid #FFE972;
+  padding: 15px 15px 15px 25px;
+  margin-bottom: 20px;
+  width: 60%;
+  font:20px;
+  font-weight: bold;
+}
+#hacker-news img {
+  margin: 0px 0px 0px 10px;
 }
 #content .full {
   width: 100%;

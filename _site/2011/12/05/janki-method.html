@@ -96,9 +96,9 @@ jQuery(document).ready(function() {
 <p>This is a guide to becoming a productive programmer quickly. In his book <em>Outliers</em>, Malcolm Gladwell told the world it takes 10,000 hours to master something. Practice three hours a day, and you’ll shine in ten short years. Millions of readers felt inspired since they too could become the next Bill Gates, if only they put in the hours. As the days turned to months we discovered that 10,000 hours is a lot longer than we anticipated. Limitless potential transformed into fantasy about what might have been.</p>
 <p><strong>Janki Method</strong> is an attempt to shorten the time needed to learn programming. It grew out of my impatient dream to build an automated web business that would free me financially, geographically and temporally. I didn&#8217;t want to wait 10,000 hours. I suspect you don&#8217;t either.</p>
 <p style="float:right;"><img src="/images/janki/anki.jpg" alt="" /></p>
-<p>Well-intentioned learners sometimes flop around in the dark, despite abundant smarts and enthusiasm. The main determinant of their eventual ability is volume of time expended. Maybe Malcome was right.</p>
+<p>Well-intentioned learners sometimes flop around in the dark, despite abundant smarts and enthusiasm. The main determinant of their eventual ability is volume of time expended. Maybe Malcolm was right.</p>
 <p>You’ve read that learning by doing is better than passive reading; that expressing ideas in writing forces understanding; that knowledge needs constant revision to stay fresh; that creativity comes from linking disparate ideas; and that your past mistakes are your best teachers. How many of these ideas do you apply to your learning efforts.</p>
-<p><strong>Janki Method</strong> is built on the assumption that Malcolm’s 10k to mastery can be hastened if you take intelligent approach to learning. The core of Janki Method is the use of a spaced repetition flashcard system, <a href="http://ankisrs.net/">Anki</a>.</p>
+<p><strong>Janki Method</strong> is built on the assumption that Malcolm’s 10k to mastery can be hastened if you take intelligent approach to learning. The core of Janki Method is the use of a spaced repetition flashcard system, <a href="http://ankisrs.net/">Anki</a>, programmed by the brilliant Damien Elmes.</p>
 <p>By following my approach, I believe that any intelligent and disciplined reader can achieve proficiency* in a given field of programming area (e.g. web applications, iPhone applications) in less than 12 months.</p>
 <p>I call this the <strong>Janki Challenge</strong>, and I invite you to take part.</p>
 <h2 class="section-title">Problems With Learning</h2>
@@ -254,8 +254,10 @@ jQuery(document).ready(function() {
 	<li><a href="http://www.wired.com/medtech/health/magazine/16-05/ff_wozniak?currentPage=all">Want to Remember Everything You&#8217;ll Ever Learn? Surrender to This Algorithm</a></li>
 	<li><a href="http://www.supermemo.com/articles/genius.htm">Genius and Creativity</a></li>
 </ul>
-<p style="float:right;"><img src="/images/janki/jack-kinsella.jpg" alt="" /><br />
-<strong>Janki Face</strong></p>
+<div class="captioned-image">
+<p><img src='/images/janki/jack-kinsella.jpg'><br />
+<p>My Jankiest Face</p></p>
+</div>
 <h2 class="section-title">In San Francisco? Let’s hang out.</h2>
 <p>I&#8217;m visiting San Francisco during December 2011, so get in touch if you’d like to meet for lunch/coffee/beer. I’m looking to take on new consulting projects, or just to have a friendly chat with local techies about programming, entrepreneurship, making money online, and all the usual suspects. Get in touch; I want to meet you.</p>
 <script>(function() {
@@ -273,7 +275,7 @@ else {
 	hn_link += "&t=" + encodeURIComponent(document.title);
 }
 
-var write_string = "<img src='http://ycombinator.com/images/y18.gif' id='hacker-news' class='janki-rule' alt='Hacker News' width=18 height=18 style='border:1px #ffffff solid; margin-left:0;'/><a href="+hn_link+" alink='#000000'; vlink='#828282' style='text-decoration:none' target='_blank'>Discuss this post on Hacker News</a>";
+var write_string = "<div id='hacker-news'><img src='http://ycombinator.com/images/y18.gif' alt='Hacker News' width=18 height=18 style='border:1px #ffffff solid; margin-left:0;'/><a href="+hn_link+" alink='#000000'; vlink='#828282' style='text-decoration:none' target='_blank'>Discuss this post on Hacker News</a></div>";
 document.write(write_string);
 })()
 
