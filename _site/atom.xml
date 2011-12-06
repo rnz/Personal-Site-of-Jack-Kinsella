@@ -4,7 +4,7 @@
  <title>Jack Kinsella</title>
  <link href="http://www.jackinsella.ie/atom.xml" rel="self"/>
  <link href="http://www.jackkinsella.ie/"/>
- <updated>2011-12-06T07:24:18-08:00</updated>
+ <updated>2011-12-06T11:06:21-08:00</updated>
  <id>http://www.jackkinsella.ie/</id>
  <author>
    <name>Jack Kinsella</name>
@@ -122,7 +122,7 @@
 &lt;p&gt;As a programmer your primary source of inspiration will be other people’s code. Download open source projects (e.g. on &lt;a href=&quot;http:www.github.com&quot;&gt;Github&lt;/a&gt;) and read through the code. Look up parts you don’t understand, and create new cards as necessary. Get a pen and paper, and sketch out the paths through the program. What are the inputs, and what are the expected outputs? What happens to the data as it moves throught the program? Why was it designed in this way? What techniques were used?&lt;/p&gt;
 &lt;p&gt;By reading code you will be exposed to various styles and of programming and solutions to programming problems. You will see things you like, and lots of things you don’t like. With time you will find your own style.&lt;/p&gt;
 &lt;div class=&quot;janki-rule&quot;&gt;
-&lt;p&gt;&lt;em&gt;The eight rule of &lt;strong&gt;Janki&lt;/strong&gt; encourages you to use your readings of other people’s code as a source of learning:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The eighth rule of &lt;strong&gt;Janki&lt;/strong&gt; encourages you to use your readings of other people’s code as a source of learning:&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“Read code regularly. If you come across something interesting – be that an algorithm, a hack, or an architectural decision &amp;#8211; create a card detailing the technique and showing the code.”&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 class=&quot;section-title&quot;&gt;Janki Method: More Than Just A Memory Aid&lt;/h2&gt;
@@ -154,11 +154,10 @@
 &lt;h2 class=&quot;section-title&quot;&gt;Appendix&lt;/h2&gt;
 &lt;h2&gt;Should I Download Other People&amp;#8217;s Decks?&lt;/h2&gt;
 &lt;p&gt;Anki has an online searchable database of other people&amp;#8217;s shared decks. Although there are not many decks for computer science, you might be able to find some and piece these together as the basis for your deck.&lt;/p&gt;
-&lt;p&gt;Do not do this. You will add facts to your deck that are of no use to you. Just because something was included in the original decks doesn’t mean it will be valuable to you. Not only that, but you will likely review facts that you do not fully understand, so building a poor foundation for future knowledge.&lt;/p&gt;
-&lt;p&gt;Instead you should build your own decks from scratch, drawing from your programming experiences; your readings of other people’s code, textbooks, and screen casts; and the review of past mistakes and the analysis of previous projects. By creating your decks in this way, you keep your deck filled with well-understood real world contextual knowledge, phrased and categorized in a way that makes sense to you.&lt;/p&gt;
-&lt;h2&gt;Can I Download Your deck?&lt;/h2&gt;
-&lt;p&gt;I don&amp;#8217;t recommend using other people&amp;#8217;s decks as the basis for your own, but I understand that seeing a full deck may help you understand more about how the system works. For this reason I&amp;#8217;m going to make my deck available for download on my startup’s website next month. Please follow me on Twitter (&lt;a href=&quot;http://www.twitter.com/jackkinsella&quot;&gt;@jackkinsella&lt;/a&gt;&amp;quot;) to stay informed.&lt;/p&gt;
-&lt;p&gt;My deck focuses on the Ruby on Rails technology stack, including cards on Ruby and Rails 3.1, the &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; protocol, the Unix command line, git, &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt;, JavaScript, &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;, Rspec, Capybara, &lt;span class=&quot;caps&quot;&gt;TDD&lt;/span&gt;, Coffeescript, jQuery, deployment, design patterns, regular expressions, &lt;span class=&quot;caps&quot;&gt;SQL&lt;/span&gt;, and refactoring. It&amp;#8217;s everything I&amp;#8217;ve needed to build, manage and deploy a variety of web apps. Right now, it contains nearly 6000 facts.&lt;/p&gt;
+&lt;p&gt;Be careful with this. You might add facts to your deck that are of no use to you, and you may end up reviewing facts that you do not fully understand, thus building a poor foundation for future knowledge.&lt;/p&gt;
+&lt;p&gt;Ideally you should build your own decks from scratch, drawing from your programming experiences; your readings of other people’s code, textbooks; viewing educational screen casts; and reviewing past mistakes and previous projects. By creating your decks in this way, you keep them filled with well-understood real world contextual knowledge, phrased and categorized in a way that makes sense to you.&lt;/p&gt;
+&lt;p&gt;If you are going to use other people&amp;#8217;s decks make sure you understand every card you learn. Be sure to try the code out when you first see it; this takes more discipline that you might have. Make sure you trust the author of the deck &amp;#8211; you don&amp;#8217;t want to learn incorrect or dated knowledge, and sadly most of the decks freely available are abysmal.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I have a deck with close to 6000 cards which focuses on the Ruby on Rails technology stack&lt;/strong&gt;, including cards on Ruby and Rails 3.1, the &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; protocol, the Unix command line, Git, &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt;, JavaScript, &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;, Rspec, Capybara, &lt;span class=&quot;caps&quot;&gt;TDD&lt;/span&gt;, Coffeescript, jQuery, coffeescript, sass, deployment, design patterns, regular expressions, &lt;span class=&quot;caps&quot;&gt;SQL&lt;/span&gt;, refactoring, and algorithms. The knowledge is cleanly tagged, nicely formatted and up to date. It&amp;#8217;s everything I&amp;#8217;ve needed to build, manage and deploy a variety of web apps. I&amp;#8217;m considering cleaning it up for public consumption and releasing it. Since this would be a lot of work on my behalf I&amp;#8217;d want to be assured of public demand first. &lt;strong&gt;If you are interested in downloading my deck then tell me by sending the message &amp;#8220;i-want-your-decks&amp;#8221; to (&lt;a href=&quot;http://www.twitter.com/jackkinsella&quot;&gt;@jackkinsella&lt;/a&gt;) on Twitter.&lt;/strong&gt; If I get enough interest I&amp;#8217;ll release them and tell you they are available.&lt;/p&gt;
 &lt;h2&gt;What Knowledge Belongs in my Decks and What Doesn’t?&lt;/h2&gt;
 &lt;p&gt;When I first began &lt;strong&gt;Janki Method&lt;/strong&gt; I was over-zealous in my addition of facts to my decks. In particular, I added stacks of cards for third party code libraries. This turned out to be wasteful,  seeing as I rarely used this knowledge. Technology moves rapidly, and today’s in-vogue libraries become tomorrow’s baggage from the past. I ended up deleting many of these cards after having wastefully committed them to long-term memory.&lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s not always easy to distinguish between knowledge worth keeping long term and knowledge only needed short term To help me with the decision I came up with this schema:&lt;/p&gt;
@@ -175,16 +174,17 @@
 &lt;p&gt;Want to learn to program and start building powerful apps? Then take the Janki challenge. Download Anki (link below), pick a programming project, and publicly announce to your friends that you’ve committed to learn to program.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Why public commitment? Public commitment creates social pressure that pushes you to honour your promises to the world. This pressure will see you through the difficult first stages where you will be most tempted to give up.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I believe that if you follow the system exactly as described above, you will learn to program significantly more quickly than you would using any other approach other than one-to-one tutoring.&lt;/p&gt;
-&lt;h2 class=&quot;section-title&quot;&gt;Resources&lt;/h2&gt;
+&lt;h2 class=&quot;section-title&quot;&gt;Further Reading&lt;/h2&gt;
 &lt;ul&gt;
 	&lt;li&gt;&lt;a href=&quot;http://ankisrs.net/&quot;&gt;Anki &amp;#8211; Available for Free Download&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;http://www.supermemo.com/articles/20rules.htm&quot;&gt;20 Rules for Formulating Knowledge in Learning&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;http://www.wired.com/medtech/health/magazine/16-05/ff_wozniak?currentPage=all&quot;&gt;Want to Remember Everything You&amp;#8217;ll Ever Learn? Surrender to This Algorithm&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;http://www.supermemo.com/articles/genius.htm&quot;&gt;Genius and Creativity&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p style=&quot;float:right;&quot;&gt;&lt;img src=&quot;/images/janki/jack-kinsella.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Janki Face&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 class=&quot;section-title&quot;&gt;In San Francisco? Let’s hang out.&lt;/h2&gt;
-&lt;p style=&quot;float:left;&quot;&gt;&lt;img src=&quot;/images/janki/jack-kinsella.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-I&amp;#8217;m visiting San Francisco during December 2011, so get in touch if you’d like to meet for lunch/coffee/beer. I’m looking to take on new consulting projects, or just to have a friendly chat with local techies about programming, entrepreneurship, making money online, and all the usual suspects. Get in touch; I want to meet you.&lt;/p&gt;</content>
+&lt;p&gt;I&amp;#8217;m visiting San Francisco during December 2011, so get in touch if you’d like to meet for lunch/coffee/beer. I’m looking to take on new consulting projects, or just to have a friendly chat with local techies about programming, entrepreneurship, making money online, and all the usual suspects. Get in touch; I want to meet you.&lt;/p&gt;</content>
  </entry>
  
  <entry>

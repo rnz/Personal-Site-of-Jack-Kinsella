@@ -191,7 +191,7 @@ As a programmer your primary source of inspiration will be other people’s code
 By reading code you will be exposed to various styles and of programming and solutions to programming problems. You will see things you like, and lots of things you don’t like. With time you will find your own style. 
 
 <div class="janki-rule">
-_The eight rule of *Janki* encourages you to use your readings of other people’s code as a source of learning:_
+_The eighth rule of *Janki* encourages you to use your readings of other people’s code as a source of learning:_
 
 *“Read code regularly. If you come across something interesting – be that an algorithm, a hack, or an architectural decision - create a card detailing the technique and showing the code.”*
 </div>
@@ -255,15 +255,14 @@ h2. Should I Download Other People's Decks?
 
 Anki has an online searchable database of other people's shared decks. Although there are not many decks for computer science, you might be able to find some and piece these together as the basis for your deck.
 
-Do not do this. You will add facts to your deck that are of no use to you. Just because something was included in the original decks doesn’t mean it will be valuable to you. Not only that, but you will likely review facts that you do not fully understand, so building a poor foundation for future knowledge. 
+Be careful with this. You might add facts to your deck that are of no use to you, and you may end up reviewing facts that you do not fully understand, thus building a poor foundation for future knowledge. 
 
-Instead you should build your own decks from scratch, drawing from your programming experiences; your readings of other people’s code, textbooks, and screen casts; and the review of past mistakes and the analysis of previous projects. By creating your decks in this way, you keep your deck filled with well-understood real world contextual knowledge, phrased and categorized in a way that makes sense to you.
+Ideally you should build your own decks from scratch, drawing from your programming experiences; your readings of other people’s code, textbooks; viewing educational screen casts; and reviewing past mistakes and previous projects. By creating your decks in this way, you keep them filled with well-understood real world contextual knowledge, phrased and categorized in a way that makes sense to you.
 
-h2. Can I Download Your deck? 
+If you are going to use other people's decks make sure you understand every card you learn. Be sure to try the code out when you first see it; this takes more discipline that you might have. Make sure you trust the author of the deck - you don't want to learn incorrect or dated knowledge, and sadly most of the decks freely available are abysmal.
 
-I don't recommend using other people's decks as the basis for your own, but I understand that seeing a full deck may help you understand more about how the system works. For this reason I'm going to make my deck available for download on my startup’s website next month. Please follow me on Twitter ("@jackkinsella":http://www.twitter.com/jackkinsella") to stay informed.
+*I have a deck with close to 6000 cards which focuses on the Ruby on Rails technology stack*, including cards on Ruby and Rails 3.1, the HTTP protocol, the Unix command line, Git, CSS, JavaScript, VIM, Rspec, Capybara, TDD, Coffeescript, jQuery, coffeescript, sass, deployment, design patterns, regular expressions, SQL, refactoring, and algorithms. The knowledge is cleanly tagged, nicely formatted and up to date. It's everything I've needed to build, manage and deploy a variety of web apps. I'm considering cleaning it up for public consumption and releasing it. Since this would be a lot of work on my behalf I'd want to be assured of public demand first. *If you are interested in downloading my deck then tell me by sending the message "i-want-your-decks" to ("@jackkinsella":http://www.twitter.com/jackkinsella) on Twitter.* If I get enough interest I'll release them and tell you they are available.
 
-My deck focuses on the Ruby on Rails technology stack, including cards on Ruby and Rails 3.1, the HTTP protocol, the Unix command line, git, CSS, JavaScript, VIM, Rspec, Capybara, TDD, Coffeescript, jQuery, deployment, design patterns, regular expressions, SQL, and refactoring. It's everything I've needed to build, manage and deploy a variety of web apps. Right now, it contains nearly 6000 facts. 
 
 h2. What Knowledge Belongs in my Decks and What Doesn’t?
 
@@ -297,15 +296,17 @@ _Why public commitment? Public commitment creates social pressure that pushes yo
 
 I believe that if you follow the system exactly as described above, you will learn to program significantly more quickly than you would using any other approach other than one-to-one tutoring.
 
-h2(section-title). Resources
+h2(section-title). Further Reading 
 * "Anki - Available for Free Download":http://ankisrs.net/
 * "20 Rules for Formulating Knowledge in Learning":http://www.supermemo.com/articles/20rules.htm
 * "Want to Remember Everything You'll Ever Learn? Surrender to This Algorithm":http://www.wired.com/medtech/health/magazine/16-05/ff_wozniak?currentPage=all
 * "Genius and Creativity":http://www.supermemo.com/articles/genius.htm
 
+!>/images/janki/jack-kinsella.jpg!
+*Janki Face*
+
 h2(section-title). In San Francisco? Let’s hang out.
 
-!</images/janki/jack-kinsella.jpg!
 I'm visiting San Francisco during December 2011, so get in touch if you’d like to meet for lunch/coffee/beer. I’m looking to take on new consulting projects, or just to have a friendly chat with local techies about programming, entrepreneurship, making money online, and all the usual suspects. Get in touch; I want to meet you.
 
 
