@@ -16,7 +16,7 @@ This is a guide to becoming a productive programmer quickly. In his book _Outlie
 
 Well-intentioned learners sometimes flop around in the dark, despite abundant smarts and enthusiasm. The main determinant of their eventual ability is volume of time expended. Maybe Malcolm was right. 
 
-You’ve read that learning by doing is better than passive reading; that expressing ideas in writing forces understanding; that knowledge needs constant revision to stay fresh; that creativity comes from linking disparate ideas; and that your past mistakes are your best teachers. How many of these ideas do you apply to your learning efforts.
+You’ve read that learning by doing is better than passive reading; that expressing ideas in writing forces understanding; that knowledge needs constant revision to stay fresh; that creativity comes from linking disparate ideas; and that your past mistakes are your best teachers. How many of these ideas do you apply to your learning efforts?
 
 *Janki Method* is built on the assumption that Malcolm’s 10k to mastery can be hastened if you take intelligent approach to learning. The core of Janki Method is the use of a spaced repetition flashcard system, "Anki":http://ankisrs.net/, programmed by the brilliant Damien Elmes.
 
