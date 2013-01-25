@@ -133,14 +133,14 @@ But consider this: When you are inside a step definition you are exclusively in 
 
 {% highlight ruby %}
 When /^I toggle the full sample on the “(^”.*)” product/ do |product_name|
-   admin do 
-        feature_latest_upload 
-        refresh_page
-        should_see(sample_path, "features")
-    end
+  admin do 
+    feature_latest_upload 
+    refresh_page
+    should_see(sample_path, "features")
+  end
 end
 {% endhighlight %}
-The reuse of step definitions within other step definitions, and the composition of higher level steps using the web steps included with Cucumber, are, in my opinion, the main reasons why so many companies attempt integration tests only to abandon the effort within a few months.  The tests become too difficult to maintain and get of sync. The solution to this pain point isn’t simple, but the most sensible course involves use of more powerful tools of abstraction – such as the full Ruby programming language over awkward step definitions.                       
+The reuse of step definitions within other step definitions, and the composition of higher level steps using the web steps included with Cucumber, are, in my opinion, the main reasons why so many companies attempt integration tests only to abandon the effort within a few months.  The tests become too difficult to maintain and get out of sync. The solution to this pain point isn’t simple, but the most sensible course involves use of more powerful tools of abstraction – such as the full Ruby programming language over awkward step definitions.                       
 
 h2. Conclusions
 
